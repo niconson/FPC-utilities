@@ -1,0 +1,51 @@
+name: "BS-7/BS-8"
+  units: NM
+  sel_rect: -17675000 -2500000 2500000 17675000
+  ref_text: 0 -5060000 2680000 0 254000
+  value_text: 0 -5060000 -2400000 0 254000
+  centroid: 0 -6300000 6300000 0
+  outline_polyline: 150000 -7600000 -2400000 1 0 4
+    next_corner: -17600000 7600000 0
+    next_corner: -7600000 17600000 1
+    next_corner: 2400000 7600000 0
+    next_corner: -7600000 -2400000 1
+  n_pins: 2
+    pin: "1" 0 -12600000 12600000 0 ""
+      top_pad: 6 5000000 2500000 2500000 1436781
+      top_mask: 6 4000000 2000000 2000000 1149425
+    pin: "2" 0 0 0 0 ""
+      top_pad: 6 5000000 2500000 2500000 1436781
+      top_mask: 6 4000000 2000000 2000000 1149425
+
+name: "IHLP-5050CE-01"
+package: "IHLP-5050"
+author: "i"
+description: "none"
+units: NM
+sel_rect: -6888900 -7300000 6888900 7300000
+ref_text: 1270000 -1900000 2120000 0 127000
+value_text: 1270000 -1860000 -1160000 0 127000
+centroid: 0 0 0 0
+outline_polyline: 177800 -5900000 6800000 1 0 4
+next_corner: -6800000 5900000 2
+next_corner: -6800000 -5900000 0
+next_corner: -5900000 -6800000 2
+next_corner: -2000000 -6800000 0
+next_corner: -2000000 -3640000 0
+next_corner: 2000000 -3640000 0
+next_corner: 2000000 -6800000 0
+next_corner: 5900000 -6800000 0
+next_corner: 6800000 -5900000 2
+next_corner: 6800000 5900000 0
+next_corner: 5900000 6800000 2
+next_corner: 2000000 6800000 0
+next_corner: 2000000 3640000 0
+next_corner: -2000000 3640000 0
+next_corner: -2000000 6800000 0
+close_polyline: 0
+n_pins: 2
+pin: "1" 0 0 -5650000 270 ""
+top_pad: 2 3300000 1650000 1650000 0
+pin: "2" 0 0 5650000 90 ""
+top_pad: 2 3300000 1650000 1650000 0
+

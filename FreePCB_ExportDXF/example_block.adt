@@ -1,0 +1,10 @@
+Audit recovered database.   D:\Мои прогр\FreePCB_ExportDXF\example_block.dxf   Mon Dec 21 17:25:26 2015
+
+42 objects audited
+Total errors found during audit 5, fixed 5
+
+AcDbViewportTable(8), Viewport *Active missing, Replaced by: <Created>.
+AcDbBlockTableRecord(1D), BlockBeginId, Validation: <Invalid>, Replaced by: <Created>.
+AcDbBlockTableRecord(1D), BlockEndId, Validation: <Invalid>, Replaced by: <Created>.
+AcDbBlockTableRecord(1B), BlockBeginId, Validation: <Invalid>, Replaced by: <Created>.
+AcDbBlockTableRecord(1B), BlockEndId, Validation: <Invalid>, Replaced by: <Created>.

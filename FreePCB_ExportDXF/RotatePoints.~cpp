@@ -1,0 +1,24 @@
+//---------------------------------------------------------------------------
+
+
+#pragma hdrstop
+
+#include "RotatePoints.h"
+#include "To_DXF.h"
+#include "DXF_library.h"
+//---------------------------------------------------------------------------
+
+#pragma package(smart_init)
+
+
+ void RotatePoints(TPoint * P, int npoints, float angle)
+ {      for( int i=0; i<npoints; i++)
+                {
+                P += i;
+                float x = P->x;
+                float y = P->y;
+                Rotate_Vertex(&x,&y,angle);
+                P->x = x;
+                P->y = y;
+                }
+ }

@@ -1,0 +1,559 @@
+[options]
+
+version: 1.359
+file_version: 1.344
+project_name: "spectr-4.0bt.pcb"
+full_library_folder: "i:\рабочая папка\library for freepcb"
+CAM_folder: "D:\FOR ALL\PCB\ДАЦ(2)\CAM"
+ses_file_path: ""
+netlist_file_path: ""
+SMT_connect_copper: "1"
+default_glue_width: "635000"
+dsn_flags: "3"
+dsn_bounds_poly: "0"
+dsn_signals_poly: "0"
+autosave_interval: 600
+auto_ratline_disable: "0"
+auto_ratline_disable_min_pins: "100"
+netlist_import_flags: 904
+units: MM
+
+visible_grid_spacing: 1000000.000000
+  visible_grid_item: 100MIL
+  visible_grid_item: 125MIL
+  visible_grid_item: 200MIL
+  visible_grid_item: 250MIL
+  visible_grid_item: 400MIL
+  visible_grid_item: 500MIL
+  visible_grid_item: 1000MIL
+  visible_grid_item: 1MM
+  visible_grid_item: 2MM
+  visible_grid_item: 2.5MM
+  visible_grid_item: 4MM
+  visible_grid_item: 5MM
+  visible_grid_item: 10MM
+  visible_grid_item: 20MM
+  visible_grid_item: 25MM
+  visible_grid_item: 40MM
+  visible_grid_item: 50MM
+  visible_grid_item: 100MM
+
+placement_grid_spacing: 100000.000000
+  placement_grid_item: 10MIL
+  placement_grid_item: 20MIL
+  placement_grid_item: 25MIL
+  placement_grid_item: 40MIL
+  placement_grid_item: 50MIL
+  placement_grid_item: 100MIL
+  placement_grid_item: 200MIL
+  placement_grid_item: 250MIL
+  placement_grid_item: 400MIL
+  placement_grid_item: 500MIL
+  placement_grid_item: 1000MIL
+  placement_grid_item: 0.1MM
+  placement_grid_item: 0.2MM
+  placement_grid_item: 0.25MM
+  placement_grid_item: 0.4MM
+  placement_grid_item: 0.5MM
+  placement_grid_item: 1MM
+  placement_grid_item: 2MM
+  placement_grid_item: 2.5MM
+  placement_grid_item: 4MM
+  placement_grid_item: 5MM
+  placement_grid_item: 10MM
+
+routing_grid_spacing: 20000.000000
+  routing_grid_item: 1MIL
+  routing_grid_item: 2MIL
+  routing_grid_item: 2.5MIL
+  routing_grid_item: 3.33330709MIL
+  routing_grid_item: 4MIL
+  routing_grid_item: 5MIL
+  routing_grid_item: 6.665MIL
+  routing_grid_item: 10MIL
+  routing_grid_item: 12.5MIL
+  routing_grid_item: 16.665MIL
+  routing_grid_item: 20MIL
+  routing_grid_item: 25MIL
+  routing_grid_item: 40MIL
+  routing_grid_item: 50MIL
+  routing_grid_item: 0.01MM
+  routing_grid_item: 0.02MM
+  routing_grid_item: 0.04MM
+  routing_grid_item: 0.05MM
+  routing_grid_item: 0.1MM
+  routing_grid_item: 0.2MM
+  routing_grid_item: 0.25MM
+  routing_grid_item: 0.4MM
+  routing_grid_item: 0.5MM
+  routing_grid_item: 1MM
+  routing_grid_item: 2MM
+  routing_grid_item: 2.5MM
+  routing_grid_item: 4MM
+  routing_grid_item: 5MM
+  routing_grid_item: 10MM
+
+snap_angle: 45
+
+fp_visible_grid_spacing: 1000000.000000
+  fp_visible_grid_item: 100MIL
+  fp_visible_grid_item: 125MIL
+  fp_visible_grid_item: 200MIL
+  fp_visible_grid_item: 250MIL
+  fp_visible_grid_item: 400MIL
+  fp_visible_grid_item: 500MIL
+  fp_visible_grid_item: 1000MIL
+  fp_visible_grid_item: 1MM
+  fp_visible_grid_item: 2MM
+  fp_visible_grid_item: 2.5MM
+  fp_visible_grid_item: 4MM
+  fp_visible_grid_item: 5MM
+  fp_visible_grid_item: 10MM
+  fp_visible_grid_item: 20MM
+  fp_visible_grid_item: 25MM
+  fp_visible_grid_item: 40MM
+  fp_visible_grid_item: 50MM
+  fp_visible_grid_item: 100MM
+
+fp_placement_grid_spacing: 100000.000000
+  fp_placement_grid_item: 10MIL
+  fp_placement_grid_item: 20MIL
+  fp_placement_grid_item: 25MIL
+  fp_placement_grid_item: 40MIL
+  fp_placement_grid_item: 50MIL
+  fp_placement_grid_item: 100MIL
+  fp_placement_grid_item: 200MIL
+  fp_placement_grid_item: 250MIL
+  fp_placement_grid_item: 400MIL
+  fp_placement_grid_item: 500MIL
+  fp_placement_grid_item: 1000MIL
+  fp_placement_grid_item: 0.02MM
+  fp_placement_grid_item: 0.05MM
+  fp_placement_grid_item: 0.1MM
+  fp_placement_grid_item: 0.2MM
+  fp_placement_grid_item: 0.5MM
+  fp_placement_grid_item: 1MM
+  fp_placement_grid_item: 2MM
+  fp_placement_grid_item: 2.5MM
+  fp_placement_grid_item: 4MM
+  fp_placement_grid_item: 5MM
+  fp_placement_grid_item: 10MM
+
+fp_snap_angle: 45
+
+fill_clearance: 300000
+mask_clearance: 50000
+thermal_width: 400000
+thermal_clearance: 203200
+min_silkscreen_width: 100000
+highlight_width: 127000
+board_outline_width: 150000
+hole_clearance: 350000
+pilot_diameter: 200000
+annular_ring_for_pins: 200000
+annular_ring_for_vias: 200000
+shrink_paste_mask: 0
+cam_flags: 4192
+cam_layers: 240
+cam_drill_file: 0
+cam_units: 1
+cam_n_x: 1
+cam_n_y: 1
+cam_space_x: 0
+cam_space_y: 0
+
+report_options: 4123
+drc_check_unrouted: 1
+drc_trace_width: 278130
+drc_pad_pad: 0
+drc_pad_trace: 0
+drc_trace_trace: 198882
+drc_hole_copper: 339030
+drc_annular_ring_pins: 200000
+drc_annular_ring_vias: 200000
+drc_board_edge_copper: 0
+drc_board_edge_hole: 0
+drc_hole_hole: 1200000
+drc_copper_copper: 0
+
+default_trace_width: 279400
+default_via_pad_width: 838200
+default_via_hole_width: 431800
+n_width_menu: 9
+  width_menu_item: 1 508000 838200 431800
+  width_menu_item: 2 635000 838200 431800
+  width_menu_item: 3 762000 838200 431800
+  width_menu_item: 4 990600 838200 431800
+  width_menu_item: 5 279400 838200 431800
+  width_menu_item: 6 304800 838200 431800
+  width_menu_item: 7 330200 838200 431800
+  width_menu_item: 8 355600 838200 431800
+  width_menu_item: 9 381000 838200 431800
+
+n_copper_layers: 4
+  layer_info: "selection" 0 255 255 0 1
+  layer_info: "background" 1 74 74 74 1
+  layer_info: "visible grid" 2 255 255 255 0
+  layer_info: "highlight" 3 255 255 255 1
+  layer_info: "DRC error" 4 255 128 64 1
+  layer_info: "board outline" 5 0 0 255 1
+  layer_info: "rat line" 6 255 255 0 1
+  layer_info: "top silk" 7 255 128 255 1
+  layer_info: "bottom silk" 8 170 0 0 1
+  layer_info: "top sm cutout" 9 160 160 160 1
+  layer_info: "bot sm cutout" 10 95 95 95 1
+  layer_info: "thru pad" 11 0 0 0 1
+  layer_info: "top copper" 12 140 140 140 1
+  layer_info: "bottom copper" 13 55 0 0 1
+  layer_info: "inner 1" 14 64 128 64 1
+  layer_info: "inner 2" 15 128 64 64 1
+
+[footprints]
+
+name: "L-1154RY_1"
+  units: NM
+  sel_rect: -2775400 -2025080 2775400 1726660
+  ref_text: 300000 0 500000 0 50000
+  value_text: 300000 0 0 0 50000
+  centroid: 0 0 0 0
+  outline_polyline: 10000 -1070000 1691250 1
+    next_corner: 1050000 1691250 0
+  outline_polyline: 10000 -1500000 350 1
+    next_corner: -1467370 -311170 0
+    next_corner: -1370760 -609110 0
+    next_corner: -1214380 -880500 0
+    next_corner: -1005050 -1113490 0
+    next_corner: -751900 -1297940 0
+    next_corner: -465970 -1425790 0
+    next_corner: -159710 -1491470 0
+    next_corner: 153500 -1492120 0
+    next_corner: 459690 -1427820 0
+    next_corner: 745890 -1301400 0
+    next_corner: 999630 -1118360 0
+    next_corner: 1209880 -886670 0
+    next_corner: 1367500 -616400 0
+    next_corner: 1465620 -319310 0
+    next_corner: 1499980 -8330 0
+    next_corner: 1469070 303010 0
+    next_corner: 1373980 601810 0
+    next_corner: 1218850 874300 0
+    next_corner: 1010450 1108600 0
+    next_corner: 757900 1294440 0
+    next_corner: 472230 1423730 0
+    next_corner: 165930 1490790 0
+    next_corner: -147630 1492720 0
+    next_corner: -454400 1429520 0
+    next_corner: -741370 1303980 0
+    next_corner: -996000 1121600 0
+    next_corner: -1207210 890300 0
+    next_corner: -1365780 620190 0
+    next_corner: -1464800 323040 0
+    next_corner: -1500000 1040 0
+  outline_polyline: 10000 -1059570 1696260 1
+    next_corner: -1388740 1439240 0
+    next_corner: -1657350 1119460 0
+    next_corner: -1853690 750880 0
+    next_corner: -1969220 349550 0
+    next_corner: -1998880 -67020 0
+    next_corner: -1941380 -480660 0
+    next_corner: -1799240 -873350 0
+    next_corner: -1578640 -1227960 0
+    next_corner: -1289220 -1529030 0
+    next_corner: -943580 -1763420 0
+    next_corner: -556790 -1920930 0
+    next_corner: -145730 -1994680 0
+    next_corner: 271680 -1981460 0
+    next_corner: 676810 -1882000 0
+    next_corner: 1052500 -1700660 0
+    next_corner: 1382390 -1445330 0
+    next_corner: 1652150 -1127120 0
+    next_corner: 1850020 -759880 0
+    next_corner: 1967410 -359570 0
+    next_corner: 1999200 56380 0
+    next_corner: 1943800 470780 0
+    next_corner: 1803460 864600 0
+    next_corner: 1584310 1220640 0
+    next_corner: 1295920 1523340 0
+    next_corner: 1090180 1676760 0
+  n_pins: 3
+    pin: "2" 800000 -2000000 0 0
+      top_pad: 1 1500000 1000000 1000000 500000
+      inner_pad: 0 2000000 1000000 1000000 500000 0
+      bottom_pad: 1 1500000 1000000 1000000 500000
+    pin: "3" 800000 2000000 0 0
+      top_pad: 1 1500000 1000000 1000000 500000
+      inner_pad: 0 2000000 1000000 1000000 500000 0
+      bottom_pad: 1 1500000 1000000 1000000 500000
+    pin: "1" 800000 0 0 0
+      top_pad: 3 1500000 750000 750000 500000
+      inner_pad: 0 2000000 1000000 1000000 500000 0
+      bottom_pad: 3 1500000 750000 750000 500000
+
+[board]
+
+[solder_mask_cutouts]
+
+
+[parts]
+
+part: HL1
+  package: "L-1154RY"
+  ref_text: 750000 100000 0 1882734 -2817558 1
+  shape: "L-1154RY_1"
+  value: "L-115WEGW" 500000 50000 0 -2138680 -399210 1
+  pos: 115000000 163900000 0 0 1
+
+[nets]
+
+net: "N00045" 0 0 0 0 0 0 1
+
+net: "N00029" 0 0 0 0 0 0 1
+
+net: "NET00010" 0 0 0 0 0 0 1
+
+net: "NET00078" 0 0 0 0 0 0 1
+
+net: "N00044" 0 0 0 0 0 0 1
+
+net: "NET00039" 0 0 0 0 0 0 1
+
+net: "NET00008" 0 0 0 0 0 0 1
+
+net: "N00003" 0 0 0 0 0 0 1
+
+net: "N00028" 0 0 0 0 0 0 1
+
+net: "N00043" 0 0 0 0 0 0 1
+
+net: "NET00038" 0 0 0 0 0 0 1
+
+net: "NET00012" 0 0 0 0 0 0 1
+
+net: "A2" 0 0 0 0 0 0 1
+
+net: "+AB" 0 0 0 508000 0 0 1
+
+net: "~CS" 0 0 0 0 0 0 1
+
+net: "+20V" 0 0 0 508000 0 0 1
+
+net: "NET00009" 0 0 0 0 0 0 1
+
+net: "N00002" 0 0 0 0 0 0 1
+
+net: "SCK1" 0 0 0 0 0 0 1
+
+net: "N00042" 0 0 0 0 0 0 1
+
+net: "N00039" 0 0 0 0 0 0 1
+
+net: "+EP2" 0 0 0 508000 0 0 1
+
+net: "NET00037" 0 0 0 0 0 0 1
+
+net: "GND" 1 1 0 508000 0 0 1
+  pin: 1 HL1.1
+  connect: 1 0 -1 1 0 ""
+    vtx: 1 115000000 163900000 11 0 0 0 0
+    seg: 1 12 508000 0 0
+    vtx: 2 115000000 158480000 0 0 0 0 0
+
+net: "N00001" 0 0 0 0 0 0 1
+
+net: "PA8" 0 0 0 0 0 0 1
+
+net: "1.25a" 0 0 0 508000 0 0 1
+
+net: "N00041" 0 0 0 0 0 0 1
+
+net: "A0" 0 0 0 0 0 0 1
+
+net: "NET00036" 0 0 0 0 0 0 1
+
+net: "NET00082" 0 0 0 0 0 0 1
+
+net: "N00036" 0 0 0 0 0 0 1
+
+net: "NET00035" 1 1 0 0 0 0 1
+  pin: 1 HL1.3
+  connect: 1 0 -1 1 0 ""
+    vtx: 1 117000000 163900000 11 0 0 0 0
+    seg: 1 12 279400 0 0
+    vtx: 2 117000000 159980000 0 1 838200 431800 0
+
+net: "NET00042" 0 0 0 0 0 0 1
+
+net: "A1" 0 0 0 0 0 0 1
+
+net: "NET00029" 0 0 0 0 0 0 1
+
+net: "+EPA" 0 0 0 508000 0 0 1
+
+net: "Enable" 0 0 0 0 0 0 1
+
+net: "1.25b" 0 0 0 508000 0 0 1
+
+net: "NET00043" 0 0 0 0 0 0 1
+
+net: "NET00053" 0 0 0 0 0 0 1
+
+net: "NET00080" 0 0 0 0 0 0 1
+
+net: "NET00034" 0 0 0 0 0 0 1
+
+net: "N00010" 0 0 0 0 0 0 1
+
+net: "N00034" 0 0 0 0 0 0 1
+
+net: "NET00033" 1 2 0 0 0 0 1
+  pin: 1 HL1.2
+  connect: 1 0 -1 8 0 ""
+    vtx: 1 113000000 163900000 11 0 0 0 0
+    seg: 1 12 279400 0 0
+    vtx: 2 105460000 159940000 0 1 838200 431800 20348
+    seg: 2 12 279400 0 0
+    vtx: 3 104620000 155520000 0 1 838200 431800 0
+    seg: 3 12 279400 0 0
+    vtx: 4 96840000 155520000 0 0 838200 431800 0
+    seg: 4 14 279400 0 0
+    vtx: 5 95860000 154620000 0 0 0 0 0
+    seg: 5 14 279400 0 0
+    vtx: 6 96961376 155268341 0 0 0 0 0
+    seg: 6 14 279400 0 0
+    vtx: 7 96588341 155641376 0 0 0 0 0
+    seg: 7 14 279400 0 0
+    vtx: 8 95860000 154620000 0 0 0 0 0
+    seg: 8 14 279400 0 0
+    vtx: 9 94200000 152880000 0 1 838200 431800 0
+  connect: 2 0 -1 3 0 ""
+    vtx: 1 113000000 163900000 11 0 0 0 0
+    seg: 1 12 279400 0 0
+    vtx: 2 113000000 155640000 0 0 0 0 0
+    seg: 2 12 279400 0 0
+    vtx: 3 108600000 155640000 0 0 0 0 0
+    seg: 3 12 279400 0 0
+    vtx: 4 105460000 159940000 0 0 0 0 20348
+
+net: "NET00081" 0 0 0 0 0 0 1
+
+net: "NET00040" 0 0 0 0 0 0 1
+
+net: "+5V_USB" 0 0 0 508000 0 0 1
+
+net: "AB+USB" 0 0 0 508000 0 0 1
+
+net: "MISO1" 0 0 0 0 0 0 1
+
+net: "N00035" 0 0 0 0 0 0 1
+
+net: "NET00055" 0 0 0 0 0 0 1
+
+net: "NET00041" 0 0 0 0 0 0 1
+
+net: "NET00024" 0 0 0 0 0 0 1
+
+net: "NET00002" 0 0 0 0 0 0 1
+
+net: "N00021" 0 0 0 0 0 0 1
+
+net: "SPI-CS" 0 0 0 0 0 0 1
+
+net: "N00032" 0 0 0 0 0 0 1
+
+net: "NET00031" 0 0 0 0 0 0 1
+
+net: "NET00054" 0 0 0 0 0 0 1
+
+net: "NET00003" 0 0 0 0 0 0 1
+
+net: "N00020" 0 0 0 0 0 0 1
+
+net: "N00033" 0 0 0 0 0 0 1
+
+net: "~CS2" 0 0 0 0 0 0 1
+
+net: "NET00030" 0 0 0 0 0 0 1
+
+net: "NET00026" 0 0 0 0 0 0 1
+
+net: "NET00000" 0 0 0 0 0 0 1
+
+net: "N00014" 0 0 0 0 0 0 1
+
+net: "~+20V" 0 0 0 0 0 0 1
+
+net: "PA7" 0 0 0 0 0 0 1
+
+net: "N00030" 0 0 0 0 0 0 1
+
+net: "NET00056" 0 0 0 0 0 0 1
+
+net: "NET00027" 0 0 0 0 0 0 1
+
+net: "NET00001" 0 0 0 0 0 0 1
+
+net: "N00015" 0 0 0 0 0 0 1
+
+net: "N00022" 0 0 0 0 0 0 1
+
+net: "PA10" 0 0 0 0 0 0 1
+
+net: "N00031" 0 0 0 0 0 0 1
+
+net: "NET00061" 0 0 0 0 0 0 1
+
+net: "+EP" 0 0 0 508000 0 0 1
+
+net: "NET00006" 0 0 0 0 0 0 1
+
+net: "N00016" 0 0 0 0 0 0 1
+
+net: "N00025" 0 0 0 0 0 0 1
+
+net: "in2" 0 0 0 0 0 0 1
+
+net: "NET00062" 0 0 0 0 0 0 1
+
+net: "NET00059" 0 0 0 0 0 0 1
+
+net: "NET00014" 0 0 0 0 0 0 1
+
+net: "N00024" 0 0 0 0 0 0 1
+
+net: "N00048" 0 0 0 0 0 0 1
+
+net: "NET00017" 0 0 0 0 0 0 1
+
+net: "AB+USB_$G1" 0 0 0 0 0 0 1
+
+net: "AB+USB_$G2" 0 0 0 0 0 0 1
+
+net: "AB+USB_$G3" 0 0 0 0 0 0 1
+
+net: "+5V" 0 0 0 0 0 0 1
+
+net: "N00047" 0 0 0 0 0 0 1
+
+net: "NET00016" 0 0 0 0 0 0 1
+
+net: "NET00005" 0 0 0 0 0 0 1
+
+net: "N00019" 0 0 0 0 0 0 1
+
+net: "PB0" 0 0 0 0 0 0 1
+
+net: "AB+USB_$G2_$G3" 0 0 0 0 0 0 1
+
+net: "N00046" 0 0 0 0 0 0 1
+
+net: "NET00011" 0 0 0 0 0 0 1
+
+net: "+2.5V" 0 0 0 508000 0 0 1
+
+net: "NET00049" 0 0 0 0 0 0 1
+
+net: "NET00079" 0 0 0 0 0 0 1
+
+[texts]
+
+[end]

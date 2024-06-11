@@ -1,0 +1,49 @@
+//---------------------------------------------------------------------------
+
+
+#pragma hdrstop
+
+#include "Str_Float_Format.h"
+#include "Comp_man.h"
+//---------------------------------------------------------------------------
+
+#pragma package(smart_init)
+
+
+//---------------------------------------------------------------------------
+AnsiString Str_Float_Format (AnsiString STRING_2_DOUBLE)
+{
+STRING_2_DOUBLE = StringReplace(STRING_2_DOUBLE,".",",",TReplaceFlags()<<rfReplaceAll);
+int L = STRING_2_DOUBLE.Length();
+bool F = false;
+for (int x=1; x<=L; x++)
+        {
+        if (STRING_2_DOUBLE.SubString(1,1) == "-") continue;
+        if ((STRING_2_DOUBLE.SubString(x,1) < "0") || (STRING_2_DOUBLE.SubString(x,1) > "9"))
+        if  (F) {
+                STRING_2_DOUBLE = STRING_2_DOUBLE.SubString(1,(x-1));
+                break;
+                }
+        else    {
+                F = true;
+                AnsiString S = STRING_2_DOUBLE.SubString(x,1);
+                STRING_2_DOUBLE = StringReplace(STRING_2_DOUBLE,S,",",TReplaceFlags()<<rfReplaceAll);
+                }
+        }
+L = STRING_2_DOUBLE.Length();
+int pos = STRING_2_DOUBLE.Pos(",");
+if (pos > 0 && pos < L)
+        {
+        AnsiString posStr = STRING_2_DOUBLE.SubString(pos+1,(L-pos));
+        if (posStr.Pos(",") > 0) return 0;
+        }
+if (L > 1)
+        {
+        AnsiString posStr = STRING_2_DOUBLE.SubString(2,(L-1));
+        if (posStr.Pos("-") > 0) return 0;
+        }
+if  (((STRING_2_DOUBLE.SubString(1,1) == "-")&&(L<2))||(!L)) return 0;
+if  (STRING_2_DOUBLE.SubString(1,1) == ",") STRING_2_DOUBLE = "0" + STRING_2_DOUBLE;
+if  (STRING_2_DOUBLE.SubString(L,1) == ",") STRING_2_DOUBLE = STRING_2_DOUBLE + "0";
+return STRING_2_DOUBLE;
+}

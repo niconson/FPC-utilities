@@ -1,0 +1,66 @@
+P-CAD ASCII File Open: Htrdemo.ERR
+
+======================================================================
+
+Warning (line 34): Pad/via style 'P:MX250Y250D125 [1]' has a hole diameter that 
+extends outside the pad shapes.
+Warning (line 75): Pad/via style 'P:SX120Y120D68A' has a hole diameter that exte
+nds outside the pad shapes.
+Warning (line 85): Pad/via style 'P:EX120Y120D68A' has a hole diameter that exte
+nds outside the pad shapes.
+Warning (line 125): Pad/via style 'P:SX150Y150D80A' has a hole diameter that ext
+ends outside the pad shapes.
+Warning (line 135): Pad/via style 'P:EX150Y150D80A' has a hole diameter that ext
+ends outside the pad shapes.
+Error   (line 374): Syntax error
+
+
+Total errors:       1
+Total warnings:     5
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+----------------------------------------------------------------------
+
+10-Dec-14  20:57                                            Page    1
+

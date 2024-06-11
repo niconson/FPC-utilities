@@ -1,0 +1,115 @@
+//---------------------------------------------------------------------------
+
+
+#pragma hdrstop
+
+#include "GenerateFPC.h"
+#include "Debug_Areas.h"
+#include "ProcessMessages.h"
+#include "fstream.h"
+//---------------------------------------------------------------------------
+
+#pragma package(smart_init)
+
+
+//========
+//
+//========
+void GenerateFPC (AnsiString NET_AREA)
+{
+long i;
+char str[255];
+ifstream READFPC (OpenD.c_str());
+AnsiString A = ExtractFilePath(Application->ExeName);
+AnsiString B = A + "OnlyAreas.fpc";
+A = A + "Areas.fpc";
+ofstream WRITEFPC (A.c_str());
+ofstream OnlyArea (B.c_str());
+OnlyArea << "[options]"         << endl << endl;
+OnlyArea << "[footprints]"      << endl << endl;
+OnlyArea << "[board]"           << endl << endl;
+OnlyArea << "[solder_mask_cutouts]"<< endl << endl;
+OnlyArea << "[parts]"           << endl << endl;
+OnlyArea << "[nets]"            << endl << endl;
+AnsiString CurrentNet;
+bool Flag = false;
+while (A.SubString(1,5) != "[end]" )
+        {
+        if (Flag)
+                {
+                while (Flag)
+                        {
+                        READFPC.getline(str, 250);
+                        A = str;
+                        A = A.Trim();
+                        if (!A.Length())                        Flag = false;
+                        if (A.SubString(1,7) == "[texts]" )     Flag = false;
+                        if (A.SubString(1,5) == "net: " )       Flag = false;
+                        if (A.SubString(1,6) == "area: " )      Flag = false;
+                        }
+                }
+        else    {
+                READFPC.getline(str, 250);
+                A = str;
+                A = A.Trim();
+                }
+        if (A.SubString(1,5) == "net: " )
+                {
+                i = prob(A, 2);
+                CurrentNet = A.SubString(1,(i-1));
+                i = 1;
+                AnsiString CN = ex_str(CurrentNet, &i);
+                if (CN.SubString(1,CN.Length()) == NET_AREA.SubString(1,NET_AREA.Length()))
+                OnlyArea << ("net: \"" + NET_AREA + "\" 0 0 1 0 0 0 1").c_str() << endl;
+                }
+        if (A.SubString(1,6) == "area: " )
+                {
+                AnsiString NmArea = CurrentNet + A;
+                i = Form3->Areas->Items->IndexOf(NmArea) ;
+                if (i >= 0)
+                        {
+                        long n = i+1;
+                        while (1)
+                                {
+                                NmArea = Form3->Areas->Items->operator [](n);
+                                if (NmArea.SubString(1,3) == "net" )    break;
+                                if (!NmArea.Length())                   break;
+                                n++;
+                                if (n == Form3->Areas->Items->Count)    break;
+                                }
+                        int CCorner = n-i-1;
+                        long m = prob(A, 1);
+                        long NArea = ex_float_NM (A, &m, -1 );
+                        m = prob(A, 3);
+                        long LayArea = ex_float_NM (A, &m, -1 );
+                        WRITEFPC << ("area: " + AnsiString(NArea) + " ").c_str();
+                        WRITEFPC << (AnsiString(CCorner) + " ").c_str();
+                        WRITEFPC << (AnsiString(LayArea) + " 0").c_str() << endl;
+                        OnlyArea << "area: 1 ";
+                        OnlyArea << (AnsiString(CCorner) + " ").c_str();
+                        OnlyArea << (AnsiString(LayArea) + " 0").c_str() << endl;
+                        int StartIn = i;
+                        i++;
+                        while (i < n)
+                                {
+                                NmArea = Form3->Areas->Items->operator [](i);
+                                m = prob(NmArea, 2);
+                                WRITEFPC << ("corner: " + AnsiString(i - StartIn) + " ").c_str();
+                                WRITEFPC << (NmArea.SubString(m,(NmArea.Length()-m+1))).c_str();
+                                WRITEFPC << endl;
+                                OnlyArea << ("corner: " + AnsiString(i - StartIn) + " ").c_str();
+                                OnlyArea << (NmArea.SubString(m,(NmArea.Length()-m+1))).c_str();
+                                OnlyArea << endl;
+                                i++;
+                                }
+                        Flag = true;
+                        }
+                else    WRITEFPC << A.c_str() << endl;
+                }
+        else    WRITEFPC << A.c_str() << endl;
+        }
+OnlyArea << "[texts]" << endl << endl;
+OnlyArea << "[end]" << endl << endl;
+OnlyArea.close();
+WRITEFPC.close();
+}

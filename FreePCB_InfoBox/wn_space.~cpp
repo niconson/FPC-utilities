@@ -1,0 +1,26 @@
+//---------------------------------------------------------------------------
+
+
+#pragma hdrstop
+
+#include "wn_space.h"
+
+//---------------------------------------------------------------------------
+
+#pragma package(smart_init)
+
+AnsiString while_not_space (AnsiString ANSI, long *n)
+        {
+        while (ANSI.SubString((*n),1) == " " || *(ANSI.SubString((*n),1)).c_str() == '\t') (*n)++;
+        AnsiString returned = "";
+        long startind = *n;
+        while (ANSI.SubString((*n),1) != " " && *(ANSI.SubString((*n),1)).c_str() != '\t' && (*n) <= ANSI.Length() )(*n)++;
+        if (startind < (*n))
+                returned = ANSI.SubString(startind,((*n)-startind));
+        if ((*n) <= ANSI.Length())
+                {
+                while (ANSI.SubString((*n),1) == " " || *(ANSI.SubString((*n),1)).c_str() == '\t') (*n)++;
+                }
+        else    (*n) = 0;
+        return returned;
+        }

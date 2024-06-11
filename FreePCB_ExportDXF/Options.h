@@ -1,0 +1,36 @@
+//---------------------------------------------------------------------------
+
+#ifndef OptionsH
+#define OptionsH
+//---------------------------------------------------------------------------
+#include <Classes.hpp>
+#include <Controls.hpp>
+#include <StdCtrls.hpp>
+#include <Forms.hpp>
+//---------------------------------------------------------------------------
+class TForm3 : public TForm
+{
+__published:	// IDE-managed Components
+        TLabel *Label1;
+        TEdit *Edit1;
+        TLabel *Label2;
+        TGroupBox *GroupBox1;
+        TRadioButton *RadioButton1;
+        TRadioButton *RadioButton2;
+        TLabel *Label3;
+        TComboBox *ComboBox1;
+        TGroupBox *GroupBox2;
+        TRadioButton *RadioButton3;
+        TRadioButton *RadioButton4;
+        TCheckBox *CheckBox1;
+        TRadioButton *RadioButton5;
+        TCheckBox *BPoured;
+        void __fastcall FormClose(TObject *Sender, TCloseAction &Action);
+private:	// User declarations
+public:		// User declarations
+        __fastcall TForm3(TComponent* Owner);
+};
+//---------------------------------------------------------------------------
+extern PACKAGE TForm3 *Form3;
+//---------------------------------------------------------------------------
+#endif

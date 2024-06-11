@@ -1,0 +1,123 @@
+//---------------------------------------------------------------------------
+
+
+#pragma hdrstop
+
+#include "HighlightAll.h"
+#include "Comp_man.h"
+//---------------------------------------------------------------------------
+
+#pragma package(smart_init)
+static AnsiString mes(CDS_LONG_MAX_LEN);
+static char data[CDS_LONG_MAX_LEN];
+int mSTEP = 50;
+
+bool HighlightAll(void)
+        {
+        Form1->Caption = "Please wait...";
+        Application->ProcessMessages();
+        AnsiString part, pin, sx, sy, sw;
+        int max_index;
+        if (Form1->PageControl1->TabIndex == 0)
+                {
+                max_index = Form1->StringGridParts->RowCount;
+                mSTEP = max_index;
+                }
+        else    {
+                max_index = Form1->StringGridPins->RowCount;
+                mSTEP = 50;
+                }
+        HWND FreePCB = FindWindow( NULL,WindowHeader.c_str());
+        HWND LOG = FindWindow( NULL,"Log");
+        for( int index=0; index<max_index; index++ )
+                {
+                if (Form1->PageControl1->TabIndex == 0)
+                        mes = "parts:";
+                else    mes = "pins:";
+                for (int i=index; i<index+mSTEP; i++)
+                        {
+                        if( i >= max_index )
+                                break;
+                        pin = "";
+                        sx = "";
+                        sy = "";
+                        sw = "";
+                        if (Form1->PageControl1->TabIndex == 0)
+                                part = Form1->StringGridParts->Cells[def_RefDes][i];
+                        else    {
+                                part = Form1->StringGridPins->Cells[def_Pin][i];
+                                sx = Form1->StringGridPins->Cells[def_Xpi][i];
+                                sy = Form1->StringGridPins->Cells[def_Ypi][i];
+                                float x = StrToFloat(Str_Float_Format( sx ));
+                                float y = StrToFloat(Str_Float_Format( sy ));
+                                sx = F_str( x );
+                                sy = F_str( y );
+                                int pos = sx.Pos(",");
+                                if( pos > 0 )
+                                        sx[pos] = '.';
+                                pos = sy.Pos(",");
+                                if( pos > 0 )
+                                        sy[pos] = '.';
+                                if( part.Pos("¹")> 0 )
+                                        {
+                                        part = "*DL_CIRC#";
+                                        sw = Form1->StringGridPins->Cells[def_W][i];
+                                        float w = StrToFloat(Str_Float_Format( sw ));
+                                        sw = F_str( w );
+                                        int pos = sw.Pos(",");
+                                        if( pos > 0 )
+                                                sw[pos] = '.';
+                                        }
+                                else    {
+                                        int p = part.Pos(".");
+                                        if (p > 0)
+                                                {
+                                                pin = part.SubString((p+1),(part.Length()-p));
+                                                part = part.SubString(1,(p-1));
+                                                if (part.Pos(".") > 0)
+                                                        return false;
+                                                }
+                                        }
+                                }
+                        if( part.Length() )
+                                {
+                                mes += AnsiString(" \"" + part + "\"");
+                                if (pin.Length())
+                                        mes += AnsiString(" \"" + pin + "\"");
+                                if (sx.Length())
+                                        mes += AnsiString(" \"" + sx + "\"");
+                                if (sy.Length())
+                                        mes += AnsiString(" \"" + sy + "\"");
+                                if (sw.Length())
+                                        mes += AnsiString(" \"" + sw + "\"");
+                                }
+                        }
+                if (FreePCB)
+                        {
+                        int len = MIN(mes.Length(),(CDS_LONG_MAX_LEN-1));
+                        data[len] = '\0';
+                        for (int cp=(len-1); cp>=0; cp--)
+                                data[cp] = mes[cp+1];
+                        CDS_LONG.lpData = data;
+                        CDS_LONG.cbData = len+1;
+                        SendMessageA(FreePCB, WM_COPYDATA, 0, (LPARAM)&CDS_LONG);
+                        }
+                index += mSTEP-1;
+                }
+        if (FreePCB)
+                {
+                if(IsWindowVisible(LOG))
+                        SetForegroundWindow(LOG);
+                else
+                        SetForegroundWindow(FreePCB);
+                mes = "invalidate";
+                int len = MIN(mes.Length(),(CDS_LONG_MAX_LEN-1));
+                data[len] = '\0';
+                for (int cp=(len-1); cp>=0; cp--)
+                        data[cp] = mes[cp+1];
+                CDS_LONG.lpData = data;
+                CDS_LONG.cbData = len+1;
+                SendMessageA(FreePCB, WM_COPYDATA, 0, (LPARAM)&CDS_LONG);
+                }
+        return true;
+        }

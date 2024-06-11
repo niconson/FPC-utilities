@@ -1,0 +1,58 @@
+//---------------------------------------------------------------------------
+
+
+#pragma hdrstop
+
+#include "ADD_text_style.h"
+#include "FPC_to_PCB.h"
+#include "fstream.h"
+//---------------------------------------------------------------------------
+
+#pragma package(smart_init)
+
+
+void ADD_text_style (void)
+{
+           //запись в файл
+
+           AnsiString MEM_f_t = A;
+           AnsiString Name_text_style_ = "(textStyleDef \"T";
+           Name_text_style_ = Name_text_style_ + F_str(H);
+           Name_text_style_ = Name_text_style_ + "x";
+           Name_text_style_ = Name_text_style_ + F_str(W);
+           Name_text_style_ = Name_text_style_ + "\"";
+
+           ifstream Style ((Path + "TEXTSTYLE.TXT").c_str());
+           Style.getline(str,500);
+           bool FL = true;
+           while (get_end ())
+                 {
+                  if (get (Name_text_style_) == 0 ) FL = false;
+                  Style.getline(str,500);
+                 }
+           Style.close();
+           if (FL == true)
+              {
+               ofstream TEXTSTYLE;
+               TEXTSTYLE.open((Path + "TEXTSTYLE.TXT").c_str(), std::ios_base::app );
+               TEXTSTYLE << "  ";
+               TEXTSTYLE << Name_text_style_.c_str();
+               TEXTSTYLE << endl;
+               TEXTSTYLE << "    (font " << endl;
+               TEXTSTYLE << "      (fontType Stroke)" << endl;
+               TEXTSTYLE << "      (fontFamily SanSerif)" << endl;
+               TEXTSTYLE << "      (fontFace \"Quality\")" << endl;
+               TEXTSTYLE << "      (fontHeight ";
+               TEXTSTYLE << F_str(H*(double)7/(double)5).c_str();
+               TEXTSTYLE << ")"  << endl;
+               TEXTSTYLE << "      (strokeWidth ";
+               TEXTSTYLE << F_str(W).c_str();
+               TEXTSTYLE << ")" << endl;
+               TEXTSTYLE << "    )" << endl;
+               TEXTSTYLE << "    (textStyleAllowTType False)" << endl;
+               TEXTSTYLE << "    (textStyleDisplayTType False)" << endl;
+               TEXTSTYLE << "  )" << endl;
+               TEXTSTYLE.close();
+              }
+           A = MEM_f_t;
+}

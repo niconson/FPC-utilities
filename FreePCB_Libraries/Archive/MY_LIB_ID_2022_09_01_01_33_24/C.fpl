@@ -1,0 +1,472 @@
+name: "C_TYPE"
+package: "C_TYPE"
+author: "DESHKOV"
+description: "Capasitors"
+units: NM
+sel_rect: -3754000 -2016700 3754000 2016700
+ref_text: 700000 -2575000 2075000 0 100000
+value_text: 700000 -3025000 -300000 0 100000
+centroid: 0 0 0 0
+outline_polyline: 20000 -3200000 1400000 1 0 4
+next_corner: -2850000 1750000 1
+next_corner: 2700000 1750000 0
+next_corner: 3050000 1400000 1
+outline_polyline: 20000 -3200000 -1400000 1 0 4
+next_corner: -2850000 -1750000 2
+next_corner: 2700000 -1750000 0
+next_corner: 3050000 -1400000 2
+outline_polyline: 25400 -1850000 1400000 1 0 4
+next_corner: -1500000 1750000 1
+outline_polyline: 25400 -1840000 -1400000 1 0 4
+next_corner: -1490000 -1750000 2
+outline_polyline: 25400 -3200000 1400000 1 0 4
+next_corner: -1850000 1400000 0
+outline_polyline: 25400 -3160000 1520000 1 0 4
+next_corner: -1840000 1520000 0
+outline_polyline: 25400 -3080000 1640000 1 0 4
+next_corner: -1760000 1640000 0
+outline_polyline: 25400 -3200000 -1400000 1 0 4
+next_corner: -1840000 -1400000 0
+outline_polyline: 25400 -3160000 -1520000 1 0 4
+next_corner: -1840000 -1520000 0
+outline_polyline: 25400 -3080000 -1640000 1 0 4
+next_corner: -1760000 -1640000 0
+n_pins: 2
+pin: "1" 0 -2350000 0 90 ""
+top_pad: 3 2300000 1200000 1200000 0
+pin: "2" 0 2350000 0 90 ""
+top_pad: 3 2300000 1200000 1200000 0
+
+name: "C1812"
+author: "Ivex"
+description: "none"
+units: NM
+sel_rect: -1450400 -1400400 5350400 1400400
+ref_text: 1270000 1950000 2200000 0 177800
+value_text: 1270000 1950000 -340000 0 177800
+centroid: 0 1950000 0 0
+outline_polyline: 150000 -1350000 1300000 1 0 4
+next_corner: 5250000 1300000 0
+next_corner: 5250000 -1300000 0
+next_corner: -1350000 -1300000 0
+close_polyline: 0
+n_pins: 2
+pin: "1" 0 0 0 0 ""
+top_pad: 3 2200000 1150000 1150000 0
+top_mask: 3 1800000 950000 950000 0
+pin: "2" 0 3900000 0 0 ""
+top_pad: 3 2200000 1150000 1150000 0
+top_mask: 3 1800000 950000 950000 0
+
+name: "CAT16-J4"
+package: "CAT16-J4"
+author: "DESHKOV"
+description: "Chips"
+units: NM
+sel_rect: -2324260 -1550000 1775000 1550000
+ref_text: 300000 -1000000 100000 0 50000
+value_text: 300000 -1000000 -400000 0 50000
+centroid: 0 0 0 0
+outline_polyline: 150000 -1700000 -600000 1 0 4
+next_corner: -1700000 900000 0
+outline_polyline: 150000 -1700000 900000 1 0 4
+next_corner: -1460000 900000 0
+outline_polyline: 150000 1700000 -900000 1 0 4
+next_corner: 1700000 900000 0
+outline_polyline: 150000 1460000 -900000 1 0 4
+next_corner: 1700000 -900000 0
+outline_polyline: 150000 -940000 -900000 1 0 4
+next_corner: -660000 -900000 0
+outline_polyline: 150000 -140000 -900000 1 0 4
+next_corner: 140000 -900000 0
+outline_polyline: 150000 660000 -900000 1 0 4
+next_corner: 940000 -900000 0
+outline_polyline: 150000 1460000 900000 1 0 4
+next_corner: 1700000 900000 0
+outline_polyline: 150000 -940000 900000 1 0 4
+next_corner: -660000 900000 0
+outline_polyline: 150000 -140000 900000 1 0 4
+next_corner: 140000 900000 0
+outline_polyline: 150000 660000 900000 1 0 4
+next_corner: 940000 900000 0
+n_pins: 9
+pin: "6" 0 400000 1000000 0 ""
+top_pad: 4 1100000 225000 225000 20000
+pin: "7" 0 -400000 1000000 0 ""
+top_pad: 4 1100000 225000 225000 20000
+pin: "5" 0 1200000 1000000 0 ""
+top_pad: 4 1100000 225000 225000 20000
+pin: "2" 0 -400000 -1000000 0 ""
+top_pad: 4 1100000 225000 225000 20000
+pin: "3" 0 400000 -1000000 0 ""
+top_pad: 4 1100000 225000 225000 20000
+pin: "4" 0 1200000 -1000000 0 ""
+top_pad: 4 1100000 225000 225000 20000
+pin: "8" 0 -1200000 1000000 0 ""
+top_pad: 4 1100000 225000 225000 20000
+pin: "1" 0 -1200000 -1000000 0 ""
+top_pad: 4 1100000 225000 225000 20000
+pin: "1" 0 -1900000 -1100000 45 ""
+top_pad: 2 400000 200000 200000 0 1
+top_mask: 2 600000 300000 300000 0
+top_paste: 0 0 0 0 0
+
+name: "CC0805"
+package: "CC0805"
+author: "i"
+description: "Capasitors"
+units: NM
+sel_rect: -1912700 -1112700 1912700 1112700
+ref_text: 600000 -1300000 50000 0 100000
+value_text: 500000 -1300000 -650000 0 50000
+centroid: 0 0 0 0
+outline_polyline: 150000 1650000 900000 1 0 4
+next_corner: -1650000 900000 0
+next_corner: -1650000 -900000 0
+next_corner: 1650000 -900000 0
+next_corner: 1650000 900000 0
+outline_polyline: 25400 -1900000 1100000 0 1 4
+next_corner: -1900000 -1100000 0
+next_corner: 1900000 -1100000 0
+next_corner: 1900000 1100000 0
+next_corner: -1900000 1100000 0
+n_pins: 2
+pin: "1" 0 -920000 0 0 ""
+top_pad: 4 1300000 500000 500000 0
+pin: "2" 0 920000 0 0 ""
+top_pad: 4 1300000 500000 500000 0
+
+name: "CDRH3D16NP"
+package: "CDRH3D16NP"
+author: "Duxah"
+description: "Inductors"
+units: NM
+sel_rect: -2859000 -2844000 2859000 2844000
+ref_text: 300000 0 500000 0 50000
+value_text: 300000 0 0 0 50000
+centroid: 0 0 0 0
+outline_polyline: 100000 0 -2540000 1 0 4
+next_corner: 1587490 -952510 0
+outline_polyline: 100000 0 -2540000 1 0 4
+next_corner: -1587500 -952490 0
+outline_polyline: 100000 1587500 952490 1 0 4
+next_corner: 0 2540000 0
+outline_polyline: 100000 -1587490 952510 1 0 4
+next_corner: 0 2540000 0
+n_pins: 2
+pin: "1" 0 -1905000 0 0 ""
+top_pad: 3 1500000 700000 700000 350000
+pin: "2" 0 1905000 0 0 ""
+top_pad: 3 1500000 700000 700000 350000
+
+name: "CDRH4D28C"
+package: "CDRH4D28C/LD"
+author: "Duxah"
+description: "Inductors"
+units: NM
+sel_rect: -2900000 -3150000 2900000 3100000
+ref_text: 900000 3800000 -2450000 0 100000
+value_text: 500000 3800000 -1200000 0 100000
+centroid: 0 0 0 0
+outline_polyline: 120000 350000 -2600000 1 0 4
+next_corner: -2100000 -2600000 0
+next_corner: -2100000 -1650000 0
+outline_polyline: 120000 -350000 2600000 1 0 4
+next_corner: 2150000 2600000 0
+next_corner: 2150000 1650000 0
+n_pins: 4
+pin: "1" 0 -1900000 150000 90 ""
+top_pad: 3 2000000 1650000 1650000 0 3
+pin: "2" 0 1900000 -250000 90 ""
+top_pad: 3 2000000 1650000 1650000 0 3
+pin: "1" 0 -1650000 1850000 90 ""
+top_pad: 1 2500000 1250000 1250000 0 3
+pin: "2" 0 1650000 -1900000 90 ""
+top_pad: 1 2500000 1250000 1250000 0 3
+
+name: "CDRH5D28NP"
+package: "CDRH5D28NP"
+author: "i"
+description: "Inductors"
+units: NM
+sel_rect: -3138800 -3000000 3138750 3000000
+ref_text: 300000 0 500000 0 50000
+value_text: 300000 0 0 0 50000
+centroid: 0 0 0 0
+outline_polyline: 150000 -793750 -2857500 1 0 4
+next_corner: 793750 -2857500 0
+outline_polyline: 150000 -793750 2857500 1 0 4
+next_corner: 793750 2857500 0
+n_pins: 6
+pin: "1" 0 -2063800 0 0 ""
+top_pad: 3 6000000 1075000 1075000 0
+top_paste: 0 0 0 0 0
+pin: "2" 0 2063750 0 0 ""
+top_pad: 3 6000000 1075000 1075000 0
+top_paste: 0 0 0 0 0
+pin: "3" 0 -2050000 1650000 0 ""
+top_mask: 0 0 0 0 0
+top_paste: 2 2000000 1000000 1000000 0
+pin: "4" 0 -2050000 -1650000 0 ""
+top_mask: 0 0 0 0 0
+top_paste: 2 2000000 1000000 1000000 0
+pin: "5" 0 2050000 1650000 0 ""
+top_mask: 0 0 0 0 0
+top_paste: 2 2000000 1000000 1000000 0
+pin: "6" 0 2050000 -1650000 0 ""
+top_mask: 0 0 0 0 0
+top_paste: 2 2000000 1000000 1000000 0
+
+name: "CK05"
+package: "CK05"
+author: "Ivex"
+description: "none"
+units: NM
+sel_rect: -4525400 -3125400 4525400 2925400
+ref_text: 1270000 -2800000 -2200000 0 177800
+value_text: 1270000 -3000000 800000 0 177800
+centroid: 0 0 0 0
+text: "ьмсп 220v" 1000000 -4600000 3400000 0 100000 0 4
+outline_polyline: 200000 -2000000 2800000 1 0 4
+next_corner: -4400000 400000 2
+next_corner: -4400000 -600000 0
+next_corner: -2000000 -3000000 2
+next_corner: 2000000 -3000000 0
+next_corner: 4400000 -600000 2
+next_corner: 4400000 400000 0
+next_corner: 2000000 2800000 2
+close_polyline: 0
+n_pins: 2
+pin: "1" 0 -2000000 0 0 ""
+top_pad: 5 4000000 1500000 1500000 1500000
+pin: "2" 0 2000000 0 0 ""
+top_pad: 5 4000000 1500000 1500000 1500000
+
+name: "CK06"
+author: "Ivex"
+description: "none"
+source: "PRINTED CIRCUIT DESIGN METHODS PAGE 411"
+units: MIL
+sel_rect: -58 -58 258 58
+ref_text: 50 100 80 0 7
+outline_polyline: 7 -50 50
+next_corner: 250 50 0
+next_corner: 250 -50 0
+next_corner: -50 -50 0
+close_polyline: 0
+n_pins: 2
+pin: 1 45 0 0 0
+top_pad: 1 75 37 37
+bottom_pad: 1 75 37 37
+inner_pad: 1 75 37 37
+pin: 2 45 200 0 0
+top_pad: 1 75 37 37
+bottom_pad: 1 75 37 37
+inner_pad: 1 75 37 37
+
+name: "CK12-B"
+author: "Ivex"
+description: "none"
+source: "PRINTED CIRCUIT DESIGN METHODS PAGE 411"
+units: MIL
+sel_rect: -55 -58 455 58
+ref_text: 50 200 108 0 7
+outline_polyline: 7 90 50
+next_corner: 310 50 0
+next_corner: 310 -50 0
+next_corner: 90 -50 0
+close_polyline: 0
+n_pins: 2
+pin: 1 45 0 0 0
+top_pad: 1 94 47 47
+bottom_pad: 1 94 47 47
+inner_pad: 1 94 47 47
+pin: 2 45 400 0 0
+top_pad: 1 94 47 47
+bottom_pad: 1 94 47 47
+inner_pad: 1 94 47 47
+
+name: "CK14-B"
+author: "Ivex"
+description: "none"
+source: "PRINTED CIRCUIT DESIGN METHODS PAGE 411"
+units: MIL
+sel_rect: -55 -98 855 98
+ref_text: 50 400 148 0 7
+outline_polyline: 7 150 90
+next_corner: 650 90 0
+next_corner: 650 -90 0
+next_corner: 150 -90 0
+close_polyline: 0
+n_pins: 2
+pin: 1 45 0 0 0
+top_pad: 1 94 47 47
+bottom_pad: 1 94 47 47
+inner_pad: 1 94 47 47
+pin: 2 45 800 0 0
+top_pad: 1 94 47 47
+bottom_pad: 1 94 47 47
+inner_pad: 1 94 47 47
+
+name: "CP-16-4"
+author: "Duxah"
+description: "Chips"
+units: NM
+sel_rect: -1027000 -1584960 4977000 5077000
+ref_text: 900000 5250000 450000 0 180000
+value_text: 700000 4150000 -800000 0 180000
+centroid: 0 1975000 1975000 0
+outline_polyline: 100000 525000 4950000 1 0 4
+next_corner: 525000 3975000 0
+next_corner: 0 3450000 1
+next_corner: -900000 3450000 0
+next_corner: -900000 500000 0
+next_corner: 0 500000 0
+next_corner: 550000 -25000 1
+next_corner: 550000 -1457960 0
+next_corner: 754380 -1457960 0
+next_corner: 754380 -925000 0
+next_corner: 3450000 -925000 0
+next_corner: 3450000 25000 0
+next_corner: 3950000 500000 1
+next_corner: 4850000 500000 0
+next_corner: 4850000 3475000 0
+next_corner: 4000000 3475000 0
+next_corner: 3450000 4000000 1
+next_corner: 3450000 4950000 0
+close_polyline: 0
+n_pins: 17
+pin: "1" 0 1000000 -25000 90 ""
+top_pad: 3 350000 600000 600000 0
+pin: "2" 0 1650000 -25000 90 ""
+top_pad: 3 350000 600000 600000 0
+pin: "3" 0 2300000 -25000 90 ""
+top_pad: 3 350000 600000 600000 0
+pin: "4" 0 2950000 -25000 90 ""
+top_pad: 3 350000 600000 600000 0
+pin: "5" 0 3975000 1000000 0 ""
+top_pad: 3 350000 600000 600000 0
+pin: "6" 0 3975000 1650000 0 ""
+top_pad: 3 350000 600000 600000 0
+pin: "7" 0 3975000 2300000 0 ""
+top_pad: 3 350000 600000 600000 0
+pin: "8" 0 3975000 2950000 0 ""
+top_pad: 3 350000 600000 600000 0
+pin: "9" 0 2950000 3975000 90 ""
+top_pad: 3 350000 600000 600000 0
+pin: "10" 0 2300000 3975000 90 ""
+top_pad: 3 350000 600000 600000 0
+pin: "11" 0 1650000 3975000 90 ""
+top_pad: 3 350000 600000 600000 0
+pin: "12" 0 1000000 3975000 90 ""
+top_pad: 3 350000 600000 600000 0
+pin: "13" 0 -25000 2950000 0 ""
+top_pad: 3 350000 600000 600000 0
+pin: "14" 0 -25000 2300000 0 ""
+top_pad: 3 350000 600000 600000 0
+pin: "15" 0 -25000 1650000 0 ""
+top_pad: 3 350000 600000 600000 0
+pin: "16" 0 -25000 1000000 0 ""
+top_pad: 3 350000 600000 600000 0
+pin: "17" 0 1981200 1981200 90 ""
+top_pad: 4 2100000 1050000 1050000 120000 1
+
+name: "CR123A"
+package: "CR123A"
+author: "Ivex"
+description: "none"
+units: NM
+sel_rect: -3088900 -10088900 42088900 10088900
+ref_text: 1270000 16800000 6400000 0 177800
+value_text: 1270000 16800000 4200000 0 177800
+centroid: 0 19500000 0 0
+text: "+" 5000000 -1600000 3200000 0 500000 0 4
+text: "-" 5000000 36200000 3000000 0 500000 0 4
+outline_polyline: 177800 -3000000 10000000 1 0 4
+next_corner: 42000000 10000000 0
+next_corner: 42000000 -10000000 0
+next_corner: -3000000 -10000000 0
+close_polyline: 0
+outline_polyline: 177800 400000 7800000 1 0 4
+next_corner: -2200000 5200000 2
+next_corner: 400000 2600000 2
+next_corner: 3000000 5200000 2
+close_polyline: 2
+outline_polyline: 177800 38200000 7600000 1 0 4
+next_corner: 35600000 5000000 2
+next_corner: 38200000 2400000 2
+next_corner: 40800000 5000000 2
+close_polyline: 2
+n_pins: 2
+pin: "1" 1320800 0 0 0 ""
+top_pad: 1 3500000 1750000 1750000 0
+inner_pad: 0 0 0 0 0 0
+bottom_pad: 1 3500000 1750000 1750000 0
+pin: "2" 1320800 39000000 0 0 ""
+top_pad: 1 3500000 1750000 1750000 0
+inner_pad: 0 0 0 0 0 0
+bottom_pad: 1 3500000 1750000 1750000 0
+
+name: "CR2032"
+author: "Ivex"
+description: "none"
+units: NM
+sel_rect: -5674360 -12774930 1774190 1774190
+ref_text: 1270000 -2500000 -13200000 0 177800
+value_text: 1270000 -2500000 -15740000 0 177800
+centroid: 0 -2500000 -5500000 0
+outline_polyline: 177800 -5400000 1600000 1 0 4
+next_corner: 1400000 1600000 0
+next_corner: 1400000 -12600000 0
+next_corner: -5400000 -12600000 0
+close_polyline: 0
+n_pins: 3
+pin: "1" 1000000 0 0 0 ""
+top_pad: 1 2000000 1000000 1000000 0
+inner_pad: 0 0 0 0 0 0
+bottom_pad: 1 3500000 1750000 1750000 0
+pin: "2" 1000000 -3900000 -5500000 0 ""
+top_pad: 1 2000000 1000000 1000000 0
+inner_pad: 0 0 0 0 0 0
+bottom_pad: 1 3500000 1750000 1750000 0
+pin: "1" 1000000 0 -11000000 0 ""
+top_pad: 1 2000000 1000000 1000000 0
+inner_pad: 0 0 0 0 0 0
+bottom_pad: 1 3500000 1750000 1750000 0
+
+name: "CS13-C"
+author: "Ivex"
+  units: NM
+  sel_rect: -16250000 -9088900 16250000 9088900
+  ref_text: 1270000 220000 5359400 0 177800
+  value_text: 1270000 220000 2819400 0 177800
+  centroid: 0 0 0 0
+  outline_polyline: 177800 -11500000 9000000 1 0 4
+    next_corner: 11500000 9000000 0
+    next_corner: 11500000 -9000000 0
+    next_corner: -11500000 -9000000 0
+    close_polyline: 0
+  outline_polyline: 177800 -11500000 6000000 1 1 4
+    next_corner: -16000000 4500000 0
+    next_corner: -16000000 -4500000 0
+    next_corner: -11500000 -6000000 0
+  outline_polyline: 177800 11500000 6000000 1 1 4
+    next_corner: 16000000 4500000 0
+    next_corner: 16000000 -4500000 0
+    next_corner: 11500000 -6000000 0
+  n_pins: 2
+    pin: "1" 1000000 -13750000 0 0 ""
+      top_pad: 1 5000000 2500000 2500000 0
+      top_mask: 1 3000000 1500000 1500000 0
+      inner_pad: 0 0 0 0 0 0
+      bottom_pad: 1 3000000 1500000 1500000 0
+      bottom_mask: 0 3000000 1500000 1500000 0
+      bottom_paste: 0 0 0 0 0
+    pin: "2" 1000000 13750000 0 0 ""
+      top_pad: 1 5000000 2500000 2500000 0
+      top_mask: 1 3000000 1500000 1500000 0
+      inner_pad: 0 0 0 0 0 0
+      bottom_pad: 1 3000000 1500000 1500000 0
+      bottom_mask: 0 3000000 1500000 1500000 0
+      bottom_paste: 0 0 0 0 0
+

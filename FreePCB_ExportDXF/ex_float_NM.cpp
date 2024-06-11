@@ -1,0 +1,46 @@
+//---------------------------------------------------------------------------
+
+
+#pragma hdrstop
+
+#include "ex_float_NM.h"
+#include "To_DXF.h"
+//---------------------------------------------------------------------------
+
+#pragma package(smart_init)
+
+
+
+//---------------------------------------------------------------------------
+float ex_float_NM (AnsiString Str, long *index, AnsiString *UnitS /*NM, MM or MIL*/)
+{
+if ((*index) == 0)              *index = 1;
+if ((*index) > Str.Length())    return 0;
+AnsiString Q = "";
+while ((Str.SubString(*index,1) < "0")||(Str.SubString(*index,1) > "9"))
+        {
+        if ((*index) >= Str.Length()) return 0;
+        if (Str.SubString(*index,1) == "-") Q = Q + Str.SubString(*index,1);
+        if (Str.SubString(*index,1) == "+") Q = Q + Str.SubString(*index,1);
+        (*index)++;
+        }
+while ((Str.SubString(*index,1) >= "0")&&(Str.SubString(*index,1) <= "9"))
+        {
+        if ((*index) > Str.Length()) return 0;
+        Q = Q + Str.SubString(*index,1);
+        (*index)++;
+        if ((Str.SubString(*index,1) == ".")||(Str.SubString(*index,1) == ","))
+                {
+                Q = Q + ",";
+                (*index)++;
+                }
+        }
+if (!Q.Length()) return 0;
+while (Str.SubString((*index),1) == " ") (*index)++;
+if (Q.SubString(Q.Length(),1) == ",") Q = Q + "0";
+float DE = StrToFloat(Q);
+if ((*UnitS).UpperCase().SubString(1,2) == "MI")        DE = DE*PER_MIL;
+else if ((*UnitS).UpperCase().SubString(1,2) == "MM")   DE = DE*PER_MM;
+return DE;
+}
+//---------------------------------------------------------------------------

@@ -1,0 +1,61 @@
+[options]
+full_library_folder: "I:\Рабочая папка\library for FreePCB"
+fp_placement_grid_spacing: 2540.0
+fp_placement_grid_item: 1MM
+fp_placement_grid_item: 0.8MM
+fp_placement_grid_item: 0.65MM
+fp_placement_grid_item: 0.5MM
+fp_placement_grid_item: 0.45MM
+fp_placement_grid_item: 0.35MM
+fp_placement_grid_item: 0.3MM
+fp_placement_grid_item: 0.25MM
+fp_placement_grid_item: 0.2MM
+fp_placement_grid_item: 0.1MM
+fp_placement_grid_item: 0.05MM
+fp_placement_grid_item: 0.04MM
+fp_placement_grid_item: 0.035MM
+fp_placement_grid_item: 0.03MM
+fp_placement_grid_item: 0.025MM
+fp_placement_grid_item: 0.02MM
+fp_placement_grid_item: 0.015MM
+fp_placement_grid_item: 0.01MM
+[footprints]
+name: "HA"
+author: "DUXER"
+description: "7.5mm DXF: h=7.66 R"
+units: NM
+sel_rect: -11131000 -7381000 3631000 7381000
+ref_text: 900000 -5000000 1750000 0 127000
+value_text: 600000 -5000000 800000 0 100000
+centroid: 1 0 0 0
+outline_polyline: 254000 -3750000 7000000
+next_corner: -10750000 0 2
+next_corner: -3750000 -7000000 2
+next_corner: 3250000 0 2
+close_polyline: 2
+n_pins: 2
+pin: "1" 1000000 -7500000 0 0
+top_pad: 1 1800000 0 0 0
+inner_pad: 0 0 0 0 0 0
+bottom_pad: 1 1800000 0 0 0
+pin: "2" 1000000 0 0 0
+top_pad: 1 1800000 0 0 0
+inner_pad: 0 0 0 0 0 0
+bottom_pad: 1 1800000 0 0 0
+[board]
+outline: 4 0
+corner: 1 -12131000 -10381000 0
+corner: 2 -12131000 8381000 0
+corner: 3 4631000 8381000 0
+corner: 4 4631000 -10381000 0
+[solder_mask_cutouts]
+[parts]
+part: HA
+ref_text: 500000 100000 0 -11131000 -8381000
+value: "002pins" 500000 100000 0 -11131000 -9381000
+package: "HA"
+shape: "HA"
+pos: 0 0 0 0 0
+[nets]
+[texts]
+[end]

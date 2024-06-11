@@ -1,0 +1,49 @@
+//---------------------------------------------------------------------------
+
+
+#pragma hdrstop
+
+#include "Rotate_Vertex.h"
+#include "DXF_to_FPC_FreePCB.h"
+#include "math.h"
+//---------------------------------------------------------------------------
+
+#pragma package(smart_init)
+
+float DEFAULTRotate = 33000;
+
+void Rotate_Vertex (float *X, float *Y, float Ang)
+{
+float start_Ang = 0;
+float end_Ang;
+float radius;
+bool Flag = false;
+if (( ABS(*X) > DEFAULTRotate )||( ABS(*Y) > DEFAULTRotate ))
+        {
+        Flag = true;
+        *X = (*X)/(float)DEFAULTRotate;
+        *Y = (*Y)/(float)DEFAULTRotate;
+        }
+if (ABS(*X) < BY_ZERO)
+        {
+        if (*Y > 0) start_Ang = 90;
+        else if (*Y < 0) start_Ang = 270;
+        }
+else
+        {
+        start_Ang = (atan(*Y/(*X)))*(float)180/(float)M_PI;
+        if ((*X > 0)&&(*Y < 0)) start_Ang = (float)360 + start_Ang;
+        if (*X < 0) start_Ang = (float)180 + start_Ang;
+        }
+end_Ang = start_Ang + Ang;
+double powx = ABS(*X);
+double powy = ABS(*Y);
+if (powx > BY_ZERO) powx = pow(powx,2);
+if (powy > BY_ZERO) powy = pow(powy,2);
+if (powx > BY_ZERO || powy > BY_ZERO)   radius = sqrt(powx + powy);
+else                                    radius = powx + powy;
+*Y = radius*sin(end_Ang*(float)M_PI/(float)180);
+*X = radius*cos(end_Ang*(float)M_PI/(float)180);
+if (Flag) *X = (*X)*(float)DEFAULTRotate;
+if (Flag) *Y = (*Y)*(float)DEFAULTRotate;
+}

@@ -1,0 +1,783 @@
+//---------------------------------------------------------------------------
+
+
+#pragma hdrstop
+
+#include "PCB_file_designer.h"
+#include "FPC_to_PCB.h"
+#include "fstream.h"
+//---------------------------------------------------------------------------
+
+#pragma package(smart_init)
+double X__1;
+double Y__1;
+double X__2;
+double Y__2;
+double FX;
+double FY;
+
+void PCB_file_designer (void)
+{
+ B = ExtractFilePath(Form1->OpenDialog1->FileName);
+ if(CreateDirectory((B + "PCAD").c_str(),NULL) )
+        ShowMessage("    EN: Directory created - " + B + "PCAD\n    RU: Ñîçäàíà ïàïêà - " + B + "PCAD\n" );
+ B = B + "PCAD\\" + ExtractFileName(Form1->OpenDialog1->FileName) + ".pcb";
+ ofstream PCB (B.c_str());
+ ifstream Header ((Path + "Header.txt").c_str());
+
+ B = ExtractFileName (OpenD);
+
+ while (1)
+                {
+                Header.getline(str,2500);
+                if (get ("END") == 0) break;
+                PCB << str << endl;
+                }
+ Header.close();
+//------------
+ ifstream PAD_ST ((Path + "PADSTYLE.txt").c_str());
+ while (1)
+                {
+                PAD_ST.getline(str,2500);
+                if (get ("END") == 0) break;
+                PCB << str << endl;
+                }
+ PAD_ST.close();
+//------------
+ ifstream VIA_ST ((Path + "VIASTYLE.txt").c_str());
+ while (1)
+                {
+                VIA_ST.getline(str,2500);
+                if (get ("END") == 0) break;
+                PCB << str << endl;
+                }
+ VIA_ST.close();
+//------------
+ ifstream Def ((Path + "Default.txt").c_str());
+ while (1)
+                {
+                Def.getline(str,2500);
+                if (get ("END") == 0) break;
+                PCB << str << endl;
+                }
+ Def.close();
+//------------
+ ifstream TXT_ST ((Path + "TEXTSTYLE.txt").c_str());
+ while (1)
+                {
+                TXT_ST.getline(str,2500);
+                if (get ("END") == 0) break;
+                PCB << str << endl;
+                }
+ TXT_ST.close();
+ //------------
+ ifstream PATT ((Path + "PATTERNS.txt").c_str());
+ while (1)
+                {
+                PATT.getline(str,2500);
+                if (get ("END") == 0) break;
+                PCB << str << endl;
+                }
+ PATT.close();
+ //------------
+ ifstream compDef ((Path + "compDef.txt").c_str());
+ while (1)
+                {
+                compDef.getline(str,2500);
+                if (get ("END") == 0) break;
+                PCB << str << endl;
+                }
+ compDef.close();
+ //------------
+PCB << ")" << endl << endl;
+PCB << "(netlist \"Netlist_1\"" << endl << endl;
+
+ //------------
+ ifstream compInst ((Path + "compInst.txt").c_str());
+ while (1)
+                {
+                compInst.getline(str,2500);
+                if (get ("END") == 0) break;
+                PCB << str << endl;
+                }
+ compInst.close();
+ //------------
+ ifstream NETS ((Path + "NETLIST.txt").c_str());
+ while (1)
+                {
+                NETS.getline(str,2500);
+                if (get ("END") == 0) break;
+                PCB << str << endl;
+                }
+ NETS.close();
+ //------------
+PCB << ")" << endl << endl;
+ //------------
+ ifstream pcbDesign ((Path + "pcbDesign.txt").c_str());
+ while (1)
+                {
+                pcbDesign.getline(str,2500);
+                if (get ("(pickPointSize ") == 0)
+                                {
+                                PCB << "    (pickPointSize " << glue_width << ")" << endl;
+                                continue;
+                                }
+                if (get ("(solderSwell ") == 0)
+                                {
+                                PCB << "    (solderSwell " << mask_clearance << ")" << endl;
+                                continue;
+                                }
+                if (get ("(pasteSwell ") == 0)
+                                {
+                                PCB << "    (pasteSwell " << shrink_paste_mask << ")" << endl;
+                                continue;
+                                }
+                if (get ("(planeSwell ") == 0)
+                                {
+                                PCB << "    (planeSwell " << fill_clearance << ")" << endl;
+                                continue;
+                                }
+                if (get ("(multiLayer") == 0)
+                                {
+                                i = 0;
+                                while (Inners[i].Length() != 0)
+                                                {
+                                                PCB << Inners[i].c_str() << endl;
+                                                i++;
+                                                }
+                                }
+                if (get ("END") == 0) break;
+                PCB << str << endl;
+                }
+ pcbDesign.close();
+ //------------
+
+ //------------
+ ifstream PAR ((Path + "PARTS.TXT").c_str());
+ while (1)
+                {
+                PAR.getline(str,2500);
+                if (get ("END") == 0) break;
+                PCB << str << endl;
+                }
+ PAR.close();
+ PCB << "  )" << endl;
+
+//***********************************************//
+//=============                                  //
+//ÒÐÀÑÑÛ, ÏÎËÈÃÎÍÛ                               //
+//=============                                  //
+//***********************************************//
+//TOP
+ ifstream CUTOUTS_AREA12 ((Path + "CUTOUTS_AREA.TXT").c_str());
+ ifstream Top_copper ((Path + "TOP.TXT").c_str());
+ n = 0;
+ while (1)
+                {
+                Top_copper.getline(str,2500);
+                if (get ("END") == 0) break;
+                if (n == 0)
+                        PCB << "  (layerContents (layerNumRef 1)" << endl;
+                PCB << str << endl;
+                n++;
+                }
+ Top_copper.close();
+ n_cop--;
+ CUTOUTS_AREA12.getline(str,2500);
+ while (get_end())
+                {
+                if(A.SubString(1,2) == "15")
+                                {
+                                if (n == 0)
+                                        PCB << "  (layerContents (layerNumRef 1)" << endl;
+                                PCB << (A.SubString(3,(A.Length()-2))).c_str() << endl;
+                                n++;
+                                }
+                CUTOUTS_AREA12.getline(str,2500);
+                }
+ CUTOUTS_AREA12.close();
+if (Form1->ListBox2_Texts->Items->Count)
+                {
+                i = 0;
+                AnsiString TXT = Form1->ListBox2_Texts->Items->operator [](i);
+                while (1)
+                                {
+                                if (TXT.SubString((TXT.Length()-1),2) == "15" )
+                                                {
+                                                if (n == 0)
+                                                        PCB << "  (layerContents (layerNumRef 1)" << endl;
+                                                PCB << (TXT.SubString(1,(TXT.Length()-2))).c_str() << endl;
+                                                n++;
+                                                }
+                                i++;
+                                if (i >= Form1->ListBox2_Texts->Items->Count) break;
+                                TXT = Form1->ListBox2_Texts->Items->operator [](i);
+                                }
+                }
+ if (n) PCB << "  )" << endl;
+ //------------
+ //BOTTOM
+ ifstream CUTOUTS_AREA13 ((Path + "CUTOUTS_AREA.TXT").c_str());
+ ifstream Bottom_copper ((Path + "BOTTOM.TXT").c_str());
+ n = 0;
+ while (1)
+                {
+                Bottom_copper.getline(str,2500);
+                if (get ("END") == 0) break;
+                if (n == 0) PCB << "  (layerContents (layerNumRef 2)" << endl;
+                PCB << str << endl;
+                n++;
+                }
+ Bottom_copper.close();
+ n_cop--;
+ CUTOUTS_AREA13.getline(str,2500);
+ while (get_end())
+                {
+                if(A.SubString(1,2) == "16")
+                                {
+                                if (n == 0) PCB << "  (layerContents (layerNumRef 2)" << endl;
+                                PCB << (A.SubString(3,(A.Length()-2))).c_str() << endl;
+                                n++;
+                                }
+                CUTOUTS_AREA13.getline(str,2500);
+                }
+ CUTOUTS_AREA13.close();
+if (Form1->ListBox2_Texts->Items->Count)
+                {
+                i = 0;
+                AnsiString TXT = Form1->ListBox2_Texts->Items->operator [](i);
+                while (1)
+                                {
+                                if (TXT.SubString((TXT.Length()-1),2) == "16" )
+                                                {
+                                                if (n == 0) PCB << "  (layerContents (layerNumRef 2)" << endl;
+                                                PCB << (TXT.SubString(1,(TXT.Length()-2))).c_str() << endl;
+                                                n++;
+                                                }
+                                i++;
+                                if (i >= Form1->ListBox2_Texts->Items->Count) break;
+                                TXT = Form1->ListBox2_Texts->Items->operator [](i);
+                                }
+                }
+ if (n) PCB << "  )" << endl;
+ //------------
+ //BOARD OUTLINE
+ ifstream BOA ((Path + "BOARD.TXT").c_str());
+ n = 0;
+ while (1)
+                {
+                BOA.getline(str,2500);
+                if (get ("END") == 0) break;
+                if (get("(polyPoint") == 0)
+                                {
+                                if (n == 0)
+                                                {
+                                                PCB << "  (layerContents (layerNumRef 3)";
+                                                PCB << endl;
+                                                }
+                                i = Prob(1);
+                                X__1 = ex_float_NM(&i, -1);
+                                Y__1 = ex_float_NM(&i, -1);
+                                FX = X__1;
+                                FY = Y__1;
+                                while (get("(polyPoint") == 0)
+                                                {
+                                                i = Prob(1);
+                                                X__2 = ex_float_NM(&i, -1);
+                                                Y__2 = ex_float_NM(&i, -1);
+                                                if (Length_Line(X__1, Y__1, X__2, Y__2) > (1/(double)100))
+                                                                {
+                                                                PCB << "    (line (pt ";
+                                                                PCB << F_str(X__1).c_str();
+                                                                PCB << " ";
+                                                                PCB << F_str(Y__1).c_str();
+                                                                PCB << ") (pt ";
+                                                                PCB << F_str(X__2).c_str();
+                                                                PCB << " ";
+                                                                PCB << F_str(Y__2).c_str();
+                                                                PCB << ") (width ";
+                                                                PCB <<  F_str(board_outline_width).c_str() ;
+                                                                PCB << "))";
+                                                                PCB << endl;
+                                                                }
+                                                X__1 = X__2;
+                                                Y__1 = Y__2;
+                                                BOA.getline(str,2500);
+                                                }
+                                if (Length_Line(X__1, Y__1, FX, FY) > (1/(double)100))
+                                                {
+                                                PCB << "    (line (pt ";
+                                                PCB << F_str(X__1).c_str();
+                                                PCB << " ";
+                                                PCB << F_str(Y__1).c_str();
+                                                PCB << ") (pt ";
+                                                PCB << F_str(FX).c_str();
+                                                PCB << " ";
+                                                PCB << F_str(FY).c_str();
+                                                PCB << ") (width ";
+                                                PCB <<  F_str(board_outline_width).c_str() ;
+                                                PCB << "))";
+                                                PCB << endl;
+                                                }  
+                                n++;
+                                }//if (get("(polyPoint") == 0)
+
+                }// while (1)
+ if (n)
+        {
+        PCB << "  )";
+        PCB << endl;
+        }
+ Bottom_copper.close();
+ //-------------
+ //SOLDER MASK CUTOUT
+ ifstream SMCUT ((Path + "SOLDERMASK.TXT").c_str());
+ n = 0;
+ while (1)
+        {
+        SMCUT.getline(str,2500);
+        if (get ("END") == 0) break;
+        A = str;
+        if (A.SubString(A.Length(),1) == "T" )
+                {
+                if (n == 0) PCB << "  (layerContents (layerNumRef 4)" << endl;
+                PCB << A.SubString(1,(A.Length()-1)).c_str() << endl;
+                n++;
+                }
+        }
+ if (n) PCB << "  )" << endl;
+ SMCUT.close();
+ ifstream SMCUT2 ((Path + "SOLDERMASK.TXT").c_str());
+ n = 0;
+ while (1)
+        {
+        SMCUT2.getline(str,2500);
+        if (get ("END") == 0) break;
+        A = str;
+        if (A.SubString(A.Length(),1) == "B" )
+                {
+                if (n == 0) PCB << "  (layerContents (layerNumRef 5)" << endl;
+                PCB << A.SubString(1,(A.Length()-1)).c_str() << endl;
+                n++;
+                }
+        }
+ if (n) PCB << "  )" << endl;
+ SMCUT2.close();
+
+
+
+
+
+
+
+  //-------------
+  // Top Silk
+  n = 0;
+ if (Form1->ListBox2_Texts->Items->Count)
+        {
+        i = 0;
+        AnsiString TXT = Form1->ListBox2_Texts->Items->operator [](i);
+        while (1)
+                        {
+                        if (TXT.SubString((TXT.Length()-1),2) == "10" )
+                                        {
+                                        if (n == 0) PCB << "  (layerContents (layerNumRef 6)" << endl;
+                                        PCB << (TXT.SubString(1,(TXT.Length()-2))).c_str() << endl;
+                                        n++;
+                                        }
+                        i++;
+                        if (i >= Form1->ListBox2_Texts->Items->Count) break;
+                        TXT = Form1->ListBox2_Texts->Items->operator [](i);
+                        }
+         if (n) PCB << "  )" << endl;
+        }
+   //-------------
+ // Bottom Silk
+ n = 0;
+ if (Form1->ListBox2_Texts->Items->Count)
+        {
+        i = 0;
+        AnsiString TXT = Form1->ListBox2_Texts->Items->operator [](i);
+        while (1)
+                        {
+                        if (TXT.SubString((TXT.Length())-1,2) == "11" )
+                                        {
+                                        if (n == 0) PCB << "  (layerContents (layerNumRef 7)" << endl;
+                                        PCB << (TXT.SubString(1,(TXT.Length()-2))).c_str() << endl;
+                                        n++;
+                                        }
+                        i++;
+                        if (i >= Form1->ListBox2_Texts->Items->Count) break;
+                        TXT = Form1->ListBox2_Texts->Items->operator [](i);
+                        }
+         if (n) PCB << "  )" << endl;
+        } 
+ //-------------
+ //    INNER layers
+ n = 0;
+if (n_cop){
+        ifstream CUTOUTS_AREA14 ((Path + "CUTOUTS_AREA.TXT").c_str());
+        ifstream INN1 ((Path + "INNER1.TXT").c_str());
+        while (1)
+                {
+                INN1.getline(str,2500);
+                if (get ("END") == 0) break;
+                if (n == 0) PCB << "  (layerContents (layerNumRef 12)" << endl;
+                PCB << str << endl;
+                n++;
+                }
+        INN1.close();
+        n_cop--;
+        CUTOUTS_AREA14.getline(str,2500);
+        while (get_end())
+                {
+                if(A.SubString(1,2) == "17") PCB << (A.SubString(3,(A.Length()-2))).c_str() << endl;
+                CUTOUTS_AREA14.getline(str,2500);
+                }
+        CUTOUTS_AREA14.close();
+        if (n) PCB << "  )" << endl;
+        }
+ //------------
+ n = 0;
+if (n_cop){
+        ifstream CUTOUTS_AREA15 ((Path + "CUTOUTS_AREA.TXT").c_str());
+        ifstream INN2 ((Path + "INNER2.TXT").c_str());
+        while (1)
+                {
+                INN2.getline(str,2500);
+                if (get ("END") == 0) break;
+                if (n == 0) PCB << "  (layerContents (layerNumRef 13)" << endl;
+                PCB << str << endl;
+                n++;
+                }
+        INN2.close();
+        n_cop--;
+        CUTOUTS_AREA15.getline(str,2500);
+        while (get_end())
+                {
+                if(A.SubString(1,2) == "15") PCB << (A.SubString(3,(A.Length()-2))).c_str() << endl;
+                CUTOUTS_AREA15.getline(str,2500);
+                }
+        CUTOUTS_AREA15.close();
+        if (n) PCB << "  )" << endl;
+        }
+ //------------
+ n = 0;
+if (n_cop){
+        ifstream CUTOUTS_AREA16 ((Path + "CUTOUTS_AREA.TXT").c_str());
+        ifstream INN3 ((Path + "INNER3.TXT").c_str());
+        while (1)
+                {
+                INN3.getline(str,2500);
+                if (get ("END") == 0) break;
+                if (n == 0) PCB << "  (layerContents (layerNumRef 14)" << endl;
+                PCB << str << endl;
+                n++;
+                }
+        INN3.close();
+        n_cop--;
+        CUTOUTS_AREA16.getline(str,2500);
+        while (get_end())
+                {
+                if(A.SubString(1,2) == "16") PCB << (A.SubString(3,(A.Length()-2))).c_str() << endl;
+                CUTOUTS_AREA16.getline(str,2500);
+                }
+        CUTOUTS_AREA16.close();
+        if (n) PCB << "  )" << endl;
+        }
+ //------------
+ n = 0;
+if (n_cop){
+        ifstream CUTOUTS_AREA17 ((Path + "CUTOUTS_AREA.TXT").c_str());
+        ifstream INN4 ((Path + "INNER4.TXT").c_str());
+        n = 0;
+        while (1)
+                {
+                INN4.getline(str,2500);
+                if (get ("END") == 0) break;
+                if (n == 0) PCB << "  (layerContents (layerNumRef 15)" << endl;
+                PCB << str << endl;
+                n++;
+        }
+        INN4.close();
+        n_cop--;
+        CUTOUTS_AREA17.getline(str,2500);
+        while (get_end())
+                {
+                if(A.SubString(1,2) == "17") PCB << (A.SubString(3,(A.Length()-2))).c_str() << endl;
+                CUTOUTS_AREA17.getline(str,2500);
+                }
+        CUTOUTS_AREA17.close();
+        if (n) PCB << "  )" << endl;
+        }
+ //------------
+ n = 0;
+if (n_cop){
+        ifstream CUTOUTS_AREA18 ((Path + "CUTOUTS_AREA.TXT").c_str());
+        ifstream INN5 ((Path + "INNER5.TXT").c_str());
+        n = 0;
+        while (1)
+                {
+                INN5.getline(str,2500);
+                if (get ("END") == 0) break;
+                if (n == 0) PCB << "  (layerContents (layerNumRef 16)" << endl;
+                PCB << str << endl;
+                n++;
+                }
+        INN5.close();
+        n_cop--;
+        CUTOUTS_AREA18.getline(str,2500);
+        while (get_end())
+                {
+                if(A.SubString(1,2) == "18") PCB << (A.SubString(3,(A.Length()-2))).c_str() << endl;
+                CUTOUTS_AREA18.getline(str,2500);
+                }
+        CUTOUTS_AREA18.close();
+        if (n) PCB << "  )" << endl;
+        }
+ //------------
+ n = 0;
+if (n_cop){
+        ifstream CUTOUTS_AREA19 ((Path + "CUTOUTS_AREA.TXT").c_str());
+        ifstream INN6 ((Path + "INNER6.TXT").c_str());
+        n = 0;
+        while (1)
+                {
+                INN6.getline(str,2500);
+                if (get ("END") == 0) break;
+                if (n == 0) PCB << "  (layerContents (layerNumRef 17)" << endl;
+                PCB << str << endl;
+                n++;
+                }
+        INN6.close();
+        n_cop--;
+        CUTOUTS_AREA19.getline(str,2500);
+        while (get_end())
+                {
+                if(A.SubString(1,2) == "19") PCB << (A.SubString(3,(A.Length()-2))).c_str() << endl;
+                CUTOUTS_AREA19.getline(str,2500);
+                }
+        CUTOUTS_AREA19.close();
+        if (n) PCB << "  )" << endl;
+        }
+ //------------
+ n = 0;
+if (n_cop){
+        ifstream CUTOUTS_AREA20 ((Path + "CUTOUTS_AREA.TXT").c_str());
+        ifstream INN7 ((Path + "INNER7.TXT").c_str());
+        n = 0;
+        while (1)
+                {
+                INN7.getline(str,2500);
+                if (get ("END") == 0) break;
+                if (n == 0) PCB << "  (layerContents (layerNumRef 18)" << endl;
+                PCB << str << endl;
+                n++;
+                }
+        INN7.close();
+        n_cop--;
+        CUTOUTS_AREA20.getline(str,2500);
+        while (get_end())
+                {
+                if(A.SubString(1,2) == "20") PCB << (A.SubString(3,(A.Length()-2))).c_str() << endl;
+                CUTOUTS_AREA20.getline(str,2500);
+                }
+        CUTOUTS_AREA20.close();
+        if (n) PCB << "  )" << endl;
+        }
+ //------------
+ n = 0;
+if (n_cop){
+        ifstream CUTOUTS_AREA21 ((Path + "CUTOUTS_AREA.TXT").c_str());
+        ifstream INN8 ((Path + "INNER8.TXT").c_str());
+        n = 0;
+        while (1)
+                {
+                INN8.getline(str,2500);
+                if (get ("END") == 0) break;
+                if (n == 0) PCB << "  (layerContents (layerNumRef 19)" << endl;
+                PCB << str << endl;
+                n++;
+                }
+        INN8.close();
+        n_cop--;
+        CUTOUTS_AREA21.getline(str,2500);
+        while (get_end())
+                {
+                if(A.SubString(1,2) == "21") PCB << (A.SubString(3,(A.Length()-2))).c_str() << endl;
+                CUTOUTS_AREA21.getline(str,2500);
+                }
+        CUTOUTS_AREA21.close();
+        if (n) PCB << "  )" << endl;
+        }
+ //------------
+ n = 0;
+if (n_cop){
+        ifstream CUTOUTS_AREA22 ((Path + "CUTOUTS_AREA.TXT").c_str());
+        ifstream INN9 ((Path + "INNER9.TXT").c_str());
+        n = 0;
+        while (1)
+                {
+                INN9.getline(str,2500);
+                if (get ("END") == 0) break;
+                if (n == 0) PCB << "  (layerContents (layerNumRef 20)" << endl;
+                PCB << str << endl;
+                n++;
+                }
+        INN9.close();
+        n_cop--;
+        CUTOUTS_AREA22.getline(str,2500);
+        while (get_end())
+                {
+                if(A.SubString(1,2) == "22") PCB << (A.SubString(3,(A.Length()-2))).c_str() << endl;
+                CUTOUTS_AREA22.getline(str,2500);
+                }
+        CUTOUTS_AREA22.close();
+        if (n) PCB << "  )" << endl;
+        }
+ //------------
+ n = 0;
+if (n_cop){
+        ifstream CUTOUTS_AREA23 ((Path + "CUTOUTS_AREA.TXT").c_str());
+        ifstream INN10 ((Path + "INNER10.TXT").c_str());
+        n = 0;
+        while (1)
+                {
+                INN10.getline(str,2500);
+                if (get ("END") == 0) break;
+                if (n == 0) PCB << "  (layerContents (layerNumRef 21)" << endl;
+                PCB << str << endl;
+                n++;
+                }
+        INN10.close();
+        n_cop--;
+        CUTOUTS_AREA23.getline(str,2500);
+        while (get_end())
+                {
+                if(A.SubString(1,2) == "23") PCB << (A.SubString(3,(A.Length()-2))).c_str() << endl;
+                CUTOUTS_AREA23.getline(str,2500);
+                }
+        CUTOUTS_AREA23.close();
+        if (n) PCB << "  )" << endl;
+        }
+ //------------
+ n = 0;
+if (n_cop){
+        ifstream CUTOUTS_AREA24 ((Path + "CUTOUTS_AREA.TXT").c_str());
+        ifstream INN11 ((Path + "INNER11.TXT").c_str());
+        n = 0;
+        while (1)
+                {
+                INN11.getline(str,2500);
+                if (get ("END") == 0) break;
+                if (n == 0) PCB << "  (layerContents (layerNumRef 22)" << endl;
+                PCB << str << endl;
+                n++;
+                }
+        INN11.close();
+        n_cop--;
+        CUTOUTS_AREA24.getline(str,2500);
+        while (get_end())
+                {
+                if(A.SubString(1,2) == "24") PCB << (A.SubString(3,(A.Length()-2))).c_str() << endl;
+                CUTOUTS_AREA24.getline(str,2500);
+                }
+        CUTOUTS_AREA24.close();
+        if (n) PCB << "  )" << endl;
+        }
+ //------------
+ n = 0;
+if (n_cop){
+        ifstream CUTOUTS_AREA25 ((Path + "CUTOUTS_AREA.TXT").c_str());
+        ifstream INN12 ((Path + "INNER12.TXT").c_str());
+        n = 0;
+        while (1)
+                {
+                INN12.getline(str,2500);
+                if (get ("END") == 0) break;
+                if (n == 0) PCB << "  (layerContents (layerNumRef 23)" << endl;
+                PCB << str << endl;
+                n++;
+                }
+        INN12.close();
+        n_cop--;
+        CUTOUTS_AREA25.getline(str,2500);
+        while (get_end())
+                {
+                if(A.SubString(1,2) == "25") PCB << (A.SubString(3,(A.Length()-2))).c_str() << endl;
+                CUTOUTS_AREA25.getline(str,2500);
+                }
+        CUTOUTS_AREA25.close();
+        if (n) PCB << "  )" << endl;
+        }
+ //------------
+ n = 0;
+if (n_cop){
+        ifstream CUTOUTS_AREA26 ((Path + "CUTOUTS_AREA.TXT").c_str());
+        ifstream INN13 ((Path + "INNER13.TXT").c_str());
+        n = 0;
+        while (1)
+                {
+                INN13.getline(str,2500);
+                if (get ("END") == 0) break;
+                if (n == 0) PCB << "  (layerContents (layerNumRef 24)" << endl;
+                PCB << str << endl;
+                n++;
+                }
+        INN13.close();
+        n_cop--;
+        CUTOUTS_AREA26.getline(str,2500);
+        while (get_end())
+                {
+                if(A.SubString(1,2) == "26") PCB << (A.SubString(3,(A.Length()-2))).c_str() << endl;
+                CUTOUTS_AREA26.getline(str,2500);
+                }
+        CUTOUTS_AREA26.close();
+        if (n) PCB << "  )" << endl;
+        }
+ //------------
+ n = 0;
+if (n_cop){
+        ifstream CUTOUTS_AREA27 ((Path + "CUTOUTS_AREA.TXT").c_str());
+        ifstream INN14 ((Path + "INNER14.TXT").c_str());
+        n = 0;
+        while (1)
+                {
+                INN14.getline(str,2500);
+                if (get ("END") == 0) break;
+                if (n == 0) PCB << "  (layerContents (layerNumRef 25)" << endl;
+                PCB << str << endl;
+                n++;
+                }
+        INN14.close();
+        n_cop--;
+        CUTOUTS_AREA27.getline(str,2500);
+        while (get_end())
+                {
+                if(A.SubString(1,2) == "27") PCB << (A.SubString(3,(A.Length()-2))).c_str() << endl;
+                CUTOUTS_AREA27.getline(str,2500);
+                }
+        CUTOUTS_AREA27.close();
+        if (n) PCB << "  )" << endl;
+        }
+ //=================================
+ //===pcbPrintSettings==============
+ //=================================
+ ifstream pcbPrintSettings ((Path + "pcbPrintSettings.txt").c_str());
+ A = "";
+ while (A.SubString(1,3) != "END" )
+        {
+        if (A.Length()) PCB << A.c_str() << endl;
+        pcbPrintSettings.getline(str,2500);
+        A = str;
+        }
+ pcbPrintSettings.close();
+
+
+ //-------------
+ PCB << ")" << endl;
+ //------------
+
+ PCB.close();
+
+}

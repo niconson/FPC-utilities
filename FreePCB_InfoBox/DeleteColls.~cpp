@@ -1,0 +1,28 @@
+//---------------------------------------------------------------------------
+
+
+#pragma hdrstop
+
+#include "DeleteColls.h"
+#include "Comp_man.h"
+//---------------------------------------------------------------------------
+
+#pragma package(smart_init)
+
+
+void DeleteColls (void)
+{
+if (Form1->PageControl1->TabIndex == 0)
+        {
+        int ROW = Form1->StringGridParts->Row;
+        for (int m = ROW; m < Form1->StringGridParts->RowCount; m++)
+                for(int k = 0; k<PartsColCount; k++)
+                        {
+                        if (m == ROW && k == def_RefDes)
+                                Form1->Bufer->Items->Add(Form1->StringGridParts->Cells[def_RefDes][ROW]);
+                        if (m == (Form1->StringGridParts->RowCount-1))
+                                Form1->StringGridParts->Cells[k][m] = "";
+                        else    Form1->StringGridParts->Cells[k][m] = Form1->StringGridParts->Cells[k][m+1];
+                        }
+        }
+}

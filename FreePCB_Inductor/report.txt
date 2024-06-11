@@ -1,0 +1,40 @@
+FreePCB project report (default units = MIL)
+============================================
+Project name: Output
+Project file: d:\Мои прогр\Release Inductor\Output.fpc
+Default library folder: i:\рабочая папка\library for freepcb
+
+Board statistics
+==============
+Number of copper layers: 4
+Number of board outlines: 0
+Board outline(s) extent: X = 0 MIL; Y = 0 MIL
+Number of parts: 3
+Number of pins: 3 (3 through-hole, 0 SMT)
+Number of vias: 0
+Number of holes: 3
+
+Drill list
+==========
+NUMBER  DIAMETER
+------  --------
+    3   23.6 MIL
+
+DRC settings
+============
+Minimum trace width: 10 MIL
+Minimum pad to pad clearance: 10 MIL
+Minimum pad to trace clearance: 10 MIL
+Minimum trace to trace clearance: 10 MIL
+Minimum hole to copper clearance: 15 MIL
+Minimum hole to hole clearance: 25 MIL
+Minimum annular ring (pins): 7 MIL
+Minimum annular ring (vias): 5 MIL
+Minimum board edge to copper clearance: 25 MIL
+Minimum board edge to hole clearance: 25 MIL
+Minimum copper area to copper area clearance: 10 MIL
+
+end
+end
+end
+end

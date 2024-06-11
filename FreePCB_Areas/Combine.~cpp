@@ -1,0 +1,1070 @@
+//---------------------------------------------------------------------------
+
+
+#pragma hdrstop
+#include "Combine.h"
+#include "Debug_Areas.h"
+#include "ProcessMessages.h"
+#include "new.h"
+
+//---------------------------------------------------------------------------
+#define _2540 2540
+#pragma package(smart_init)
+
+//---------------------------------------------------------------------------
+//----------------------Class-LinesContainer---------------------------------
+//---------------------------------------------------------------------------
+// constr
+LinesContainer::LinesContainer()
+        {
+        mem1_i =  NULL;
+        mem2_i =  NULL;
+        mem1_v1 = NULL;
+        mem2_v1 = NULL;
+        mem1_v2 = NULL;
+        mem2_v2 = NULL;
+        i =       NULL;
+        v1 =      NULL;
+        v2 =      NULL;
+        MAX_LINES = 0;
+        LinesContainer::setMaxLines( DEF_MAX_LINES );
+        LinesContainer::reset(0);
+        }
+bool LinesContainer::setMaxLines( int nl )
+        {
+        int pMAX_LINES = MAX_LINES;
+        MAX_LINES = nl;
+        if( nl > L_LIMIT )
+                return 0;
+        if( mem1_i )
+                {
+                try{
+                        mem2_i = new int[MAX_LINES];
+                        mem2_v1 = new int[MAX_LINES];
+                        mem2_v2 = new int[MAX_LINES];
+                        }
+                catch(std::bad_alloc){
+                        ShowMessage("    Error of memory: int[" + AnsiString(MAX_LINES) + "]!" );
+                        exit(0);
+                        }
+                for( int cpy=0; cpy<pMAX_LINES&&cpy<MAX_LINES; cpy++ )
+                        {
+                        mem2_i[cpy] = mem1_i[cpy];
+                        mem2_v1[cpy] = mem1_v1[cpy];
+                        mem2_v2[cpy] = mem1_v2[cpy];
+                        }
+                delete [] mem1_i;
+                delete [] mem1_v1;
+                delete [] mem1_v2;
+                mem1_i = NULL;
+                mem1_v1 = NULL;
+                mem1_v2 = NULL;
+                i = mem2_i;
+                v1 = mem2_v1;
+                v2 = mem2_v2;
+                }
+        else    {
+                try{
+                        mem1_i = new int[MAX_LINES];
+                        mem1_v1 = new int[MAX_LINES];
+                        mem1_v2 = new int[MAX_LINES];
+                        }
+                catch(std::bad_alloc){
+                        ShowMessage("    Error of memory: int[" + AnsiString(MAX_LINES) + "]!" );
+                        exit(0);
+                        }
+                if( mem2_i )
+                        {
+                        for( int cpy=0; cpy<pMAX_LINES&&cpy<MAX_LINES; cpy++ )
+                                {
+                                mem1_i[cpy] = mem2_i[cpy];
+                                mem1_v1[cpy] = mem2_v1[cpy];
+                                mem1_v2[cpy] = mem2_v2[cpy];
+                                }
+                        delete [] mem2_i;
+                        delete [] mem2_v1;
+                        delete [] mem2_v2;
+                        mem2_i = NULL;
+                        mem2_v1 = NULL;
+                        mem2_v2 = NULL;
+                        }
+                i = mem1_i;
+                v1 = mem1_v1;
+                v2 = mem1_v2;
+                }
+        for( int cpy=pMAX_LINES; cpy<MAX_LINES; cpy++ )
+                {
+                i[cpy] = 0;
+                v1[cpy] = 0;
+                v2[cpy] = 0;
+                }
+        return 1;
+        }
+bool LinesContainer::set ( int ii, int vv1, int vv2, int n_str )
+        {
+        if ( ii >= cnt )
+                return false;
+        else if ( n_str >= MAX_LINES || n_str < -1 )
+                return false;
+        else if ( n_str >= 0 )
+                {
+                i[n_str] = ii;
+                v1[n_str] = vv1;
+                v2[n_str] = vv2;
+                }
+        else while( n_str<(MAX_LINES-1) )
+                {
+                n_str++;
+                i[n_str] = ii;
+                v1[n_str] = vv1;
+                v2[n_str] = vv2;
+                }
+        return true;
+        }
+void LinesContainer::reset ( int value )
+        {
+        for (int str=0; str<MAX_LINES; str++)
+                {
+                i[str] = value;
+                v1[str] = value;
+                v2[str] = value;
+                }
+        def = value;
+        cnt = 0;
+        }
+int LinesContainer::iof ( int ii, int vv1, int vv2 )
+        {
+        if (cnt)for (int str=0; str<cnt; str++)
+                {
+                if( i[str] == ii )
+                if( v1[str] == vv1 )
+                if( v2[str] == vv2 )
+                return str;
+                }
+        return -1;
+        }
+int LinesContainer::iof ( int vv1, int vv2 )
+        {
+        if (cnt)for (int str=0; str<cnt; str++)
+                {
+                if( v1[str] == vv1 )
+                if( v2[str] == vv2 )
+                return str;
+                }
+        return -1;
+        }
+int LinesContainer::iof ( int ii )
+        {
+        if (cnt)for (int str=0; str<cnt; str++)
+                {
+                if( i[str] == ii )
+                return str;
+                }
+        return -1;
+        }
+int LinesContainer::push ( int ii, int vv1, int vv2 )
+        {
+        for (int str=(cnt<MAX_LINES?cnt:(MAX_LINES-1)); str>0; str--)
+                {
+                i[str] = i[str-1];
+                v1[str] = v1[str-1];
+                v2[str] = v2[str-1];
+                }
+        i[0] = ii;
+        v1[0] = vv1;
+        v2[0] = vv2;
+        if ( cnt < MAX_LINES )
+                cnt++;
+        return cnt;
+        }
+int LinesContainer::del ( int num )
+        {
+        if ( num >= cnt || num < 0 )
+                return cnt;
+        for (int str=num; str<(cnt-1); str++)
+                {
+                i[str] = i[str+1];
+                v1[str] = v1[str+1];
+                v2[str] = v2[str+1];
+                }
+        if ( cnt > 0 )
+                cnt--;
+        i[cnt] = def;
+        v1[cnt] = def;
+        v2[cnt] = def;
+        return cnt;
+        }
+bool LinesContainer::get ( int num, int * ii, int * vv1, int * vv2 )
+        {
+        if ( num >= cnt || num < 0 )
+                return false;
+        *ii = i[num];
+        *vv1 = v1[num];
+        *vv2 = v2[num];
+        return true;
+        }
+bool LinesContainer::get_first ( int * ii, int * vv1, int * vv2 )
+        {
+        if ( cnt )
+                {
+                *ii = i[cnt-1];
+                *vv1 = v1[cnt-1];
+                *vv2 = v2[cnt-1];
+                return true;
+                }
+        return false;
+        }
+bool LinesContainer::get_last ( int * ii, int * vv1, int * vv2 )
+        {
+        if ( cnt )
+                {
+                *ii = i[0];
+                *vv1 = v1[0];
+                *vv2 = v2[0];
+                return true;
+                }
+        return false;
+        }
+//---------------------------------------------------------------------------
+//-----------------Class-CCombine--------------------------------------------
+//---------------------------------------------------------------------------
+CCombine::CCombine()
+        {
+        Lines = NULL;
+        Corners = NULL;
+        LC.MAX_LINES = 18;
+        i_Corner = 0;
+        scanDir = 0;
+        BEGIN_POINT_HORIZ = 0;
+        BEGIN_POINT_VERT = 0;
+        n_Corners = 0;
+        n_Lines = 0;
+        Th_w = 0;
+        }
+void CCombine::Ini(     MLine * lines,
+                        MPolyLine * corners,
+                        int nlines,
+                        int ncorners,
+                        int begX,
+                        int begY,
+                        int th_w,
+                        bool scanD)
+        {
+        Th_w = th_w;
+        Lines = lines;
+        n_Lines = nlines;
+        if( Corners == NULL )
+                {
+                i_Corner = 0;
+                Corners = corners;
+                ClearFlagsWrite();
+                }
+        n_Corners = ncorners;
+        scanDir = scanD;
+        BEGIN_POINT_HORIZ = begX;
+        BEGIN_POINT_VERT = begY;
+        ClearFlagsDelete();
+        ClearFlagsBegPoint();
+        }
+//---------------------------------------------------------------------------
+//    NextLine
+int CCombine::NextLine (int INDEX)
+        {
+        if(Lines[INDEX+1].First <= INDEX)
+                return (INDEX+1);
+        else
+                return Lines[INDEX].First;
+        }
+//---------------------------------------------------------------------------
+//   ClearFlags
+void CCombine::ClearFlagsWrite(void)
+        {
+        for (int q=0; q<n_Lines; q++)
+                Lines[q].FlagWrite = 0;
+        }
+void CCombine::ClearFlagsDelete(void)
+        {
+        for (int q=0; q<n_Lines; q++)
+                Lines[q].FlagDelete = 0;
+        }
+void CCombine::ClearFlagsBegPoint(void)
+        {
+        for (int q=0; q<n_Lines; q++)
+                Lines[q].FlagBegPoint = 0;
+        }
+
+
+
+
+
+
+
+//---------------------------------------------------------------------------
+//---------------------------------------------------------------------------
+//---------------------------------------------------------------------------
+int CCombine::FindLine (double x, double y, double x2, double y2, double *outX, double *outY, int IndexLine, int StartC, bool *EndContour )
+        {
+        static double MaxDst;
+        double MinLen = DEFAULT;
+        double PX;
+        double PY;
+        double BackX = *outX;
+        double BackY = *outY;
+        int OUTINDEX = -1;
+        for (int iLine=(n_Lines-1); iLine>=0; iLine--)
+                {
+                if (    Lines[iLine].FlagDelete == 1 ||
+                        ( (MIN(x,x2) - Lines[Lines[iLine].First+1].Bounds) > _102 ) ||
+                        ( (Lines[Lines[iLine].First].Bounds - MAX(x,x2)) > _102 )  )
+                        {
+                        iLine = Lines[iLine].First;
+                        }
+                else    {
+                        if ( (MIN(x,x2) - MAX(Lines[iLine].X1,Lines[iLine].X2)) > _102 )    continue;
+                        if ( (MIN(Lines[iLine].X1,Lines[iLine].X2) - MAX(x,x2)) > _102 )    continue;
+                        if ( (MIN(y,y2) - MAX(Lines[iLine].Y1,Lines[iLine].Y2)) > _102 )    continue;
+                        if ( (MIN(Lines[iLine].Y1,Lines[iLine].Y2) - MAX(y,y2)) > _102 )    continue;
+                        if (Lines[iLine].First == Lines[IndexLine].First)
+                                {
+                                iLine = Lines[iLine].First;
+                                continue;
+                                }
+                        bool Flag1_Colinear = false;
+                        bool Flag2_Colinear = false;
+                        double A1 = Angle(x2,y2,x,y);
+                        double A2 = Angle(Lines[iLine].X2,Lines[iLine].Y2,Lines[iLine].X1,Lines[iLine].Y1);
+                        double vx = x;
+                        double vy = y;
+                        double vx2 = x2;
+                        double vy2 = y2;
+                        double vx3 = Lines[iLine].X1;
+                        double vy3 = Lines[iLine].Y1;
+                        double vx4 = Lines[iLine].X2;
+                        double vy4 = Lines[iLine].Y2;
+                        Rotate_Vertex(&vx,&vy,-A1);
+                        Rotate_Vertex(&vx2,&vy2,-A1);
+                        Rotate_Vertex(&vx3,&vy3,-A1);
+                        Rotate_Vertex(&vx4,&vy4,-A1);
+                        double SWELL = 3.0;
+                        double CLNR = 30.0;
+                        if ( vy4 > vy+SWELL || vy3 < vy-SWELL )
+                                continue;
+                        if ( vy4 > vy-CLNR && vy3 > vy-CLNR && vy4 > vy2-CLNR && vy3 > vy2-CLNR )
+                                Flag1_Colinear = true;
+                        vx = x;
+                        vy = y;
+                        vx2 = x2;
+                        vy2 = y2;
+                        vx3 = Lines[iLine].X1;
+                        vy3 = Lines[iLine].Y1;
+                        vx4 = Lines[iLine].X2;
+                        vy4 = Lines[iLine].Y2;
+                        Rotate_Vertex(&vx,&vy,-A2);
+                        Rotate_Vertex(&vx2,&vy2,-A2);
+                        Rotate_Vertex(&vx3,&vy3,-A2);
+                        Rotate_Vertex(&vx4,&vy4,-A2);
+                        if ( vy > vy4+SWELL || vy2 < vy4-SWELL )
+                                continue;
+                        if ( vy > vy4-CLNR && vy2 > vy4-CLNR && vy > vy3-CLNR && vy2 > vy3-CLNR )
+                                Flag2_Colinear = true;
+                        if(ABS(vy2-vy3) < SWELL && ABS(vy-vy3) < SWELL )
+                                  Flag2_Colinear = true;
+
+                        //определяем PX PY
+                        Distance(       x,y,x2,y2,
+                                        Lines[iLine].X1,
+                                        Lines[iLine].Y1,
+                                        Lines[iLine].X2,
+                                        Lines[iLine].Y2,&PX,&PY );
+                        //
+                        if ( Flag1_Colinear && Flag2_Colinear)
+                                {
+                                double L1 = Length_Line (x,y,x2,y2);
+                                double L2 = Length_Line (x,y,Lines[iLine].X2,Lines[iLine].Y2);
+                                double Lr = Length_Line (x,y,Lines[iLine].X1,Lines[iLine].Y1);
+                                if (L1 < L2 || Lr < L2)
+                                        {
+                                        if (L1 > MinLen)continue;
+                                        if (LC.iof( iLine, x2, y2 ) >= 0)
+                                                continue;
+                                        MinLen = L1;
+                                        *outX = x2;
+                                        *outY = y2;
+                                        OUTINDEX = iLine;
+                                        }
+                                else    {
+                                        if (L2 > MinLen)continue;
+                                        if (LC.iof( IndexLine, Lines[iLine].X2, Lines[iLine].Y2 ) >= 0)
+                                                continue;
+                                        MinLen = L2;
+                                        *outX = Lines[iLine].X2;
+                                        *outY = Lines[iLine].Y2;
+                                        OUTINDEX = IndexLine;
+                                        }
+                                }
+                        else    {
+                                double L = Length_Line (x,y,PX,PY);
+                                if (L > MinLen)
+                                        continue;
+                                if (LC.iof( iLine, PX, PY ) >= 0)
+                                        continue;
+                                MinLen = L;
+                                *outX = PX;
+                                *outY = PY;
+                                OUTINDEX = iLine;
+                                }
+                        }
+                }
+        if (OUTINDEX == -1)
+                {
+                *outX = Lines[IndexLine].X2;
+                *outY = Lines[IndexLine].Y2;
+                OUTINDEX = NextLine (IndexLine);
+                }
+        if (i_Corner == StartC)
+                {
+                MaxDst = 0;
+                }
+        if ((i_Corner - StartC) > 2)
+                {
+                double Dst;
+                Dst = Distance(  Corners[StartC].X,
+                                        Corners[StartC].Y,
+                                        Corners[StartC+1].X,
+                                        Corners[StartC+1].Y,
+                                        *outX,*outY,BackX,BackY,&PX,&PY);
+                double L = Length_Line(Corners[StartC].X, Corners[StartC].Y, *outX, *outY );
+                if (L > MaxDst) MaxDst = L;
+                if (Dst < MIN_LEN_SIDE/10 && MaxDst > MIN_LEN_SIDE)
+                        (*EndContour) = true;
+                }
+        Lines[OUTINDEX].FlagWrite = true;
+        return OUTINDEX;
+        }
+//---------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+//---------------------------------------------------------------------------
+//---------------------------------------------------------------------------
+bool CCombine::PointContourInside (double X, double Y, int st, int end)
+        {
+        double back_angle = Angle(Corners[end].X,Corners[end].Y,X,Y);
+        double diff_angle;
+        double angle;
+        double SUM = 0, px,py;
+        for (int k=st; k<=end; k++)
+                {
+                angle = Angle(Corners[k].X,Corners[k].Y,X,Y);
+                diff_angle = angle - back_angle;
+                if      (diff_angle <= -180.0) diff_angle += 360.0;
+                else if (diff_angle >= 180.0)  diff_angle -= 360.0;
+                SUM += diff_angle;
+                back_angle = angle;
+                }
+        if (ABS(SUM) < 180.0) return false;
+        else                  return true;
+        }
+
+
+
+
+
+//---------------------------------------------------------------------------
+//--------------------------      DeleteLines        ------------------------
+//---------------------------------------------------------------------------
+void CCombine::DeleteLines (bool INSIDE_OUTSIDE, int st, int end)
+        {
+        AnsiString S;
+        for (int n=(n_Lines-1); n>=0; n--)
+                {
+                if (!Lines[n].FlagDelete)
+                        {
+                        if ( Lines[n].FlagWrite )
+                                {
+                                n = Lines[n].First;
+                                Lines[n].FlagDelete = 1;
+                                for (; Lines[n+1].First <= n; n++)
+                                        Lines[n+1].FlagDelete = 1;
+                                n = Lines[n].First;
+                                }
+                        else if (PointContourInside(Lines[n].X1,Lines[n].Y1,st,end) == INSIDE_OUTSIDE)
+                                {
+                                n = Lines[n].First;
+                                Lines[n].FlagDelete = 1;
+                                for (; Lines[n+1].First <= n; n++)
+                                        Lines[n+1].FlagDelete = 1;
+                                n = Lines[n].First;
+                                }
+                        }
+                else    n = Lines[n].First;
+                }
+        }
+
+
+
+
+
+
+
+
+//---------------------------------------------------------------------------
+//---------------------------------------------------------------------------
+//---------------------------------------------------------------------------
+bool CCombine::TestPoint (double Xp, double Yp, int iEXLUDE)
+        {
+        static int nPO = 0;
+        nPO++;
+        if( nPO%10 == 0 )
+                {
+                Form3->Label1->Caption = "Test points..";
+                Form3->Label3->Caption = AnsiString(iEXLUDE);
+                ///Form3->Label4->Caption = AnsiString("???");
+                Application->ProcessMessages();
+                }
+        double perx;
+        double pery;
+        double length;
+        double st_angle;
+        double back_angle;
+        double diff_angle;
+        double angle,px,py,d;
+        double SUM = 0;
+        /*for( int ii=0; ii<i_Corner; ii++ )
+                {
+                int iS = ii;
+                back_angle = 0;
+                ii -= 1;
+                do      {
+                        ii++;
+                        angle = Angle(Corners[ii].X,Corners[ii].Y,Xp,Yp);
+                        if( ABS(back_angle) > BY_ZERO )
+                                {
+                                diff_angle = angle - back_angle;
+                                if      (diff_angle < -180.0) diff_angle += 360.0;
+                                else if (diff_angle > 180.0)  diff_angle -= 360.0;
+                                SUM += diff_angle;
+                                }
+                        back_angle = angle;
+                        }while(Corners[ii].Flag==0);
+                //
+                diff_angle = Angle(Corners[iS].X,Corners[iS].Y,Xp,Yp) - back_angle;
+                if      (diff_angle < -180.0) diff_angle += 360.0;
+                else if (diff_angle > 180.0)  diff_angle -= 360.0;
+                SUM += diff_angle;
+                if (ABS(SUM) > 180.0)
+                        return false;
+                } */
+        int start = 0;
+        for( int ii=0; ii<i_Corner-1; ii++ )
+                {
+                double fX=0, fY=0;
+                double d = Distance(    Corners[ii].X,
+                                        Corners[ii].Y,
+                                        (Corners[ii].Flag? Corners[start].X : Corners[ii+1].X),
+                                        (Corners[ii].Flag? Corners[start].Y : Corners[ii+1].Y),
+                                        Xp-10.0, Yp-10.0, Xp+10.0, Yp+10.0, &fX, &fY );
+                if( Corners[ii].Flag )
+                        start = ii+1;
+                if( ABS(d) < MIN_LEN_SIDE )
+                        return false;
+                }
+        for (int q=Lines[n_Lines-1].First-1; q>0; q=Lines[q].First-1 )
+                {
+                if (    Lines[q].First == iEXLUDE ||
+                        Lines[Lines[q].First].Bounds > Xp ||
+                        Lines[Lines[q].First+1].Bounds < Xp )
+                        {
+                        continue;
+                        }  
+                SUM = 0;
+                back_angle = Angle(Lines[q].X1,Lines[q].Y1,Xp,Yp);
+                st_angle = back_angle;
+                for (int w=q-1; Lines[w].First == Lines[q].First; w--)
+                        {
+                        angle = Angle(Lines[w].X1,Lines[w].Y1,Xp,Yp);
+                        diff_angle = angle - back_angle;
+                        if      (diff_angle < -180.0) diff_angle += 360.0;
+                        else if (diff_angle > 180.0)  diff_angle -= 360.0;
+                        SUM += diff_angle;
+                        back_angle = angle;
+                        if (w == 0) break;
+                        }
+                diff_angle = st_angle - back_angle;
+                if      (diff_angle < -180.0) diff_angle += 360.0;
+                else if (diff_angle > 180.0)  diff_angle -= 360.0;
+                SUM += diff_angle;
+                if (ABS(SUM) > 180.0)
+                        return false;
+                }
+        int test = PointAreaInside(Xp,Yp,LinesArea,CntLnsArea);
+        if (test == dir___CCW)
+                ShowMessage( "    Error in SetDirection.cpp" );
+        else if (test)
+                {
+                if (Form1->cl_brd->Checked)
+                        {
+                        if (PointBoardInside(Xp,Yp)) return true;
+                        else return false;
+                        }
+                else return true;
+                }
+        return false;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+//---------------------------------------------------------------------------
+//---------------------------------------------------------------------------
+//---------------------------------------------------------------------------
+int CCombine::MinV (double * outx, double * outy)
+        {
+        int min_index = -1;
+        double my=DEFAULT, d=0, px, py, L;
+        for (int r=n_Lines-1; r>=0; r--)
+                {
+                if (    Lines[Lines[r].First].Bounds > *outx ||
+                        Lines[Lines[r].First+1].Bounds < *outx ||
+                        Lines[r].FlagDelete)
+                        {
+                        r = Lines[r].First;
+                        continue;
+                        }
+                if (    (Lines[r].X1 < *outx && Lines[r].X2 < *outx) ||
+                        (Lines[r].X1 > *outx && Lines[r].X2 > *outx) ||
+                        Lines[r].FlagBegPoint ||
+                        Lines[r].FlagWrite)
+                        {
+                        continue;
+                        }
+                d = Distance(   Lines[r].X1,Lines[r].Y1,
+                                Lines[r].X2,Lines[r].Y2,
+                                *outx, *outy, *outx, TotalRect.Top, &px, &py);
+                if (d < BY_ZERO)
+                        {
+                        if ( py < my && py > *outy )
+                                {
+                                min_index = r;
+                                my = py;
+                                }
+                        }
+                else
+                        Lines[r].FlagBegPoint = true;
+                }
+        if (min_index >= 0)
+                {
+                *outy = my;
+                BEGIN_POINT_VERT = my;
+                Lines[min_index].FlagBegPoint = true;
+                }
+        return min_index;
+        }
+//---------------------------------------------------------------------------
+//---------------------------------------------------------------------------
+//---------------------------------------------------------------------------
+int CCombine::MinH (double * outx, double * outy)
+        {
+        int min_index = -1;
+        double mx=DEFAULT, d=0, px, py, L;
+        for (int r=n_Lines-1; r>=0; r--)
+                {
+                if (    Lines[Lines[r].First+1].Bounds < *outx ||
+                        Lines[r].FlagDelete)
+                        {
+                        r = Lines[r].First;
+                        continue;
+                        }
+                if (    (Lines[r].Y1 < *outy && Lines[r].Y2 < *outy) ||
+                        (Lines[r].Y1 > *outy && Lines[r].Y2 > *outy) ||
+                        Lines[r].FlagBegPoint ||
+                        Lines[r].FlagWrite)
+                        {
+                        continue;
+                        }
+                d = Distance(   Lines[r].X1,Lines[r].Y1,
+                                Lines[r].X2,Lines[r].Y2,
+                                *outx, *outy, TotalRect.Right, *outy, &px, &py);
+                if (d < BY_ZERO)
+                        {
+                        if( px < mx && px > *outx )
+                                {
+                                min_index = r;
+                                mx = px;
+                                }
+                        }
+                else    Lines[r].FlagBegPoint = true;
+                }
+        if (min_index >= 0)
+                {
+                *outx = mx;
+                BEGIN_POINT_HORIZ = mx;
+                Lines[min_index].FlagBegPoint = true;
+                }
+        return min_index;
+        }
+
+
+
+
+
+
+
+
+
+
+
+//---------------------------------------------------------------------------
+//------------------------------ begin point --------------------------------
+//---------------------------------------------------------------------------
+int CCombine::BeginPoint (double * Xb, double * Yb)
+        {
+        double area_point_X;
+        double area_point_Y;
+        Form3->Label1->Caption = "Scanning..";
+        Application->ProcessMessages();
+        int return_index = -1;
+        if (Form1->V->Checked)
+                {
+                do      {
+                        return_index = MinV( &BEGIN_POINT_HORIZ, &BEGIN_POINT_VERT);
+                        if (return_index == -1) return -1;
+                        } while(TestPoint(BEGIN_POINT_HORIZ, BEGIN_POINT_VERT+10.0, return_index) == 0);
+                }
+        else
+                {
+                do      {
+                        return_index = MinH( &BEGIN_POINT_HORIZ, &BEGIN_POINT_VERT);
+                        if (return_index == -1) return -1;
+                        } while(TestPoint(BEGIN_POINT_HORIZ+10.0, BEGIN_POINT_VERT, return_index) == 0);
+                }
+        *Xb = BEGIN_POINT_HORIZ;
+        *Yb = BEGIN_POINT_VERT;
+        return return_index;
+        }
+
+
+
+
+
+
+
+
+
+
+//---------------------------------------------------------------------------
+//------------------------------ IndexMinXY----------------------------------
+//---------------------------------------------------------------------------
+int CCombine::IndexMinXY(int MODE, double * Xstart, double * Ystart)
+        {
+        static int number;
+        if (i_Corner == 0) number = 0;
+        int MinIndex = -1;
+        Form3->Label1->Caption = "Contours: " + AnsiString(number);
+        number++;
+        Application->ProcessMessages();
+        double MinY;
+        double MinX;
+        if (MODE == RIGHT)
+                {
+                MinY = -DEFAULT;
+                MinX = -DEFAULT;
+                }
+        else    {
+                MinY = DEFAULT;
+                MinX = DEFAULT;
+                }
+        for( int k=(n_Lines-1); k>=0; k--)
+                {
+                if (Lines[k].FlagDelete == 0)
+                        {
+                        switch (MODE)
+                                {
+                                case BOTTOM:
+                                if ( Lines[k].Y1 < MinY )
+                                        {
+                                        MinY = Lines[k].Y1;
+                                        MinX = Lines[k].X1;
+                                        MinIndex = k;
+                                        }
+                                break;
+                                case LEFT:
+                                case END:
+                                if ( Lines[k].X1 < MinX )
+                                        {
+                                        MinY = Lines[k].Y1;
+                                        MinX = Lines[k].X1;
+                                        MinIndex = k;
+                                        }
+                                break;
+                                case RIGHT:
+                                if ( Lines[k].X1 > MinX )
+                                        {
+                                        MinY = Lines[k].Y1;
+                                        MinX = Lines[k].X1;
+                                        MinIndex = k;
+                                        }
+                                break;
+                                }
+                        }
+                else    k = Lines[k].First;
+                }
+        if (MinIndex >= 0)
+                {
+                *Xstart = Lines[MinIndex].X1;
+                *Ystart = Lines[MinIndex].Y1;
+                }
+        return MinIndex;
+        }
+
+
+
+
+
+//---------------------------------------------------------------------------
+//---------------------------------------------------------------------------
+//---------------------------------------------------------------------------
+int CCombine::Combine ()
+{
+if( Corners == NULL || Lines == NULL )
+        return 0;
+if( n_Lines == 0 || n_Corners == 0 )
+        return 0;
+///return DEFAULT;
+Form3->Label2->Visible = true;
+Form3->Label3->Visible = true;
+Form3->Label4->Visible = true;
+AnsiString A;
+
+// clear LinesContainer
+LC.reset(-1);
+
+//
+double FindX = 0;
+double FindY = DEFAULT;
+IndexMinXY(BOTTOM, &FindX, &FindY);
+// indexes start, end of contour
+int StartC = i_Corner;
+IndexStartContour = i_Corner;
+IndexEndContour = 0;
+
+// clear flags
+ClearFlagsDelete();
+
+// find begin point
+FindX = BEGIN_POINT_HORIZ;
+FindY = BEGIN_POINT_VERT;
+int FindIndex = BeginPoint(&FindX, &FindY);
+if (FindIndex == -1)
+        return 0;
+
+// previous line
+MLine old;
+old.First = Lines[FindIndex].First;
+
+// flag complete
+bool EndC = false;
+int CNT = 0;
+// is corner of thermal element
+int i_ThrmlStart = -1, i_ThrmlEnd = -2;
+//int n_thrmlStart = DEFAULT;
+int n_ThrmlCount = 0;
+int pi_Corner = -1;
+int pFindIndex = Lines[FindIndex].First;
+Form3->Label4->Caption = AnsiString(n_Lines);
+while (FindIndex != -1)
+        {
+        CNT++;
+        if (CNT > n_Corners+4)
+                {
+                return IndexEndContour;
+                }
+        if (i_Corner%50 == 0)
+                {
+                Form3->Label3->Caption = AnsiString(i_Corner);
+                Application->ProcessMessages();
+                }
+        FindIndex = FindLine (FindX, FindY, Lines[FindIndex].X2, Lines[FindIndex].Y2, &FindX, &FindY, FindIndex, StartC, &EndC);
+        LC.push( FindIndex, FindX, FindY );
+        if (EndC)
+                {
+                // remove contour with <=3 corners
+                if( i_Corner-IndexStartContour >= 4 )
+                        { // remove contour with 3 corners
+                        if( Corners[i_Corner-4].Flag )
+                                i_Corner -= 3;
+                        }
+                else if( i_Corner-IndexStartContour >= 3 )
+                        { // remove contour with 2 corners
+                        if( Corners[i_Corner-3].Flag )
+                                i_Corner -= 2;
+                        }
+                else if( i_Corner-IndexStartContour >= 2 )
+                        { // remove contour with 1 corners
+                        if( Corners[i_Corner-2].Flag )
+                                i_Corner -= 1;
+                        } 
+                // end of contour
+                Corners[i_Corner-1].Flag = 1;
+                //
+                if (IndexEndContour == 0)
+                        {
+                        IndexEndContour = i_Corner-1;
+                        DeleteLines (false,IndexStartContour,IndexEndContour);
+                        }
+                else
+                        DeleteLines (true,StartC,i_Corner-1);
+                StartC = i_Corner;
+                FindIndex = IndexMinXY(BOTTOM, &FindX, &FindY);
+                if (FindIndex == -1)
+                        break;
+                i_ThrmlStart = -1;
+                //n_thrmlStart = DEFAULT;
+                n_ThrmlCount = 0;
+                i_ThrmlEnd = -2;
+                pFindIndex = Lines[FindIndex].First;
+                old.First =  Lines[FindIndex].First;
+                EndC = false;
+                LC.reset(-1);
+                }
+        else    {
+                // first corner
+                if ((i_Corner - StartC) == 0)
+                        {
+                        Corners[i_Corner].X = FindX;
+                        Corners[i_Corner].Y = FindY;
+                        Corners[i_Corner].Flag = 0;
+                        i_Corner++;
+                        Corners[i_Corner].RST();
+                        }
+                // 2 corner
+                else if ((i_Corner - StartC) < 2)
+                        {
+                        if (Length_Line(FindX,FindY,Corners[StartC].X,Corners[StartC].Y) > MIN_LEN_SIDE)
+                                {
+                                Corners[i_Corner].X = FindX;
+                                Corners[i_Corner].Y = FindY;
+                                Corners[i_Corner].Flag = 0;
+                                i_Corner++;
+                                Corners[i_Corner].RST();
+                                }
+                        }
+                /* remove colinear and short segments
+                   remove short segments */
+                else if (
+                            (
+                                (
+                                    (  // remove colinear segments
+                                    ABS(Corners[i_Corner-1].X - FindX) < MIN_LEN_SIDE &&
+                                    ABS(Corners[i_Corner-2].X - FindX) < MIN_LEN_SIDE
+                                    )||
+                                    (
+                                    ABS(Corners[i_Corner-1].Y - FindY) < MIN_LEN_SIDE &&
+                                    ABS(Corners[i_Corner-2].Y - FindY) < MIN_LEN_SIDE
+                                    )
+                                ) ||
+                                (  // remove short segments
+                                ABS(Corners[i_Corner-1].X - FindX) < MIN_LEN_SIDE &&
+                                ABS(Corners[i_Corner-1].Y - FindY) < MIN_LEN_SIDE
+                                )
+                            ) //&&
+                            //BadThrmlFlag == 0
+                        )
+                        {
+                        Corners[i_Corner-1].X = FindX;
+                        Corners[i_Corner-1].Y = FindY;
+                        Corners[i_Corner-1].Label = 0;
+                        }
+                else    {
+                        /* remove dbl ARCs
+                        remove short lines ARC    */
+                        if (    old.First != Lines[FindIndex].First &&
+                                old.Arc &&
+                                Lines[FindIndex].Arc &&
+                                Lines[Lines[FindIndex].First].n_thermal == -1)
+                                Corners[i_Corner].Label = 1;
+                        if(Corners[i_Corner-1].Label && Corners[i_Corner-1].Flag == 0 && Corners[i_Corner-2].Flag == 0)
+                                {
+                                float l1 = Length_Line(Corners[i_Corner-2].X,Corners[i_Corner-2].Y,Corners[i_Corner-1].X,Corners[i_Corner-1].Y);
+                                float l2 = Length_Line(FindX,FindY,Corners[i_Corner-1].X,Corners[i_Corner-1].Y);
+                                if( ABS(l1-l2) < _2541 )
+                                        i_Corner--;
+                                }
+                        Corners[i_Corner].X = FindX;
+                        Corners[i_Corner].Y = FindY;
+                        Corners[i_Corner].Flag = 0;
+                        i_Corner++;
+                        Corners[i_Corner].RST();
+                        }
+                }
+        if( i_ThrmlStart != -1 && pi_Corner < i_Corner )
+                n_ThrmlCount++;
+        //
+        /* remove bad thermal    */
+        //
+        if( i_Corner-1 == i_ThrmlEnd && i_ThrmlStart > 0 )
+                {
+                int d = Length_Line(    Corners[i_ThrmlStart-1].X, Corners[i_ThrmlStart-1].Y,
+                                        Corners[i_ThrmlEnd].X, Corners[i_ThrmlEnd].Y );
+                d -= Th_w;
+                if( ABS(d) < _103 )
+                        {
+                        i_Corner = i_ThrmlStart+1;
+                        Corners[i_Corner].RST();
+                        Corners[i_Corner-1].X = Corners[i_ThrmlEnd].X;
+                        Corners[i_Corner-1].Y = Corners[i_ThrmlEnd].Y;
+                        }
+                // reset thrml
+                n_ThrmlCount = DEFAULT;
+                }
+        // reset thrml
+        if( n_ThrmlCount > 3 )
+                {
+                i_ThrmlStart = -1;
+                //n_thrmlStart = DEFAULT;
+                n_ThrmlCount = 0;
+                i_ThrmlEnd = -2;
+                }
+        if( i_ThrmlStart > 0 )
+                {
+                if( Lines[Lines[FindIndex].First].n_thermal > 0 &&
+                    Lines[pFindIndex].n_thermal == -1 )
+                        {
+                        if( i_ThrmlStart != StartC )
+                                i_ThrmlEnd = i_Corner;
+                        }
+                }
+        else if(Lines[Lines[FindIndex].First].n_thermal == -1 &&
+                Lines[pFindIndex].n_thermal > 0 )
+                {
+                if( i_Corner )
+                        {
+                        i_ThrmlStart = i_Corner-1;
+                        //n_thrmlStart = Lines[pFindIndex].n_thermal;
+                        }
+                }
+        pFindIndex = Lines[FindIndex].First;
+        pi_Corner = i_Corner;
+        old.Arc = Lines[FindIndex].Arc;
+        if( Lines[FindIndex].n_thermal > 0 )
+                old.Arc = 0;
+        old.First = Lines[FindIndex].First;
+        }
+return i_Corner;
+}

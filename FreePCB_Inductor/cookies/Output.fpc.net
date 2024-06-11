@@ -1,0 +1,12 @@
+*PADS-PCB*
+*PART*
+Via0 1@ViaInductor
+Via1 3@ViaInductor
+Via2 5@ViaInductor
+Via3 2@ViaInductor
+Via4 4@ViaInductor
+
+*NET*
+*SIGNAL* Inductor
+Via0.1 Via3.1 Via1.1 Via4.1 Via2.1 
+*END*

@@ -1,0 +1,43 @@
+//---------------------------------------------------------------------------
+
+
+#pragma hdrstop
+
+#include "RTextStyle.h"
+#include "HEAD.h"
+#include "fstream.h"
+//---------------------------------------------------------------------------
+
+#pragma package(smart_init)
+
+void RTextStyle (AnsiString TextStyle, long *W, long *H)
+{
+*W = 100000;
+*H = 1000000;
+long i = 0;
+Form1->Label4->Caption = "Чтение Text Style: " + TextStyle;
+Application->ProcessMessages();
+AnsiString A = "";
+int indextext = Form1->Library->Items->IndexOf("(textStyleDef \"" + TextStyle + "\"");
+if (indextext == -1) return;
+indextext++;
+for (int b=0; b<10; b++)
+        {
+        A = Form1->Library->Items->operator [](indextext);
+        if (StrBegin (A, "(fontHeight"))
+                {
+                i = prob (A,1);
+                *H = ex_float_NM(A, &i, UNITS);
+                }
+        else if (StrBegin (A, "(strokeWidth"))
+                {
+                i = prob (A,1);
+                *W = ex_float_NM(A, &i, UNITS);
+                }
+        else if (StrBegin (A, "(textStyleDef"))         return;
+        else if (StrBegin (A, "(patternDefExtended"))   return;
+        else if (StrBegin (A, "(netlist"))              return;
+        indextext++;
+        }
+return;
+}

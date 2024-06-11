@@ -1,0 +1,5242 @@
+[options]
+
+version: 2.017
+file_version: 2.017
+project_name: "ImportDXFH"
+library_folder: "e:\рабочая папка"
+full_library_folder: "e:\рабочая папка\libraries for freepcb"
+parent_folder: "C:\FreePCB_Evolution\Debug\"
+CAM_folder: "C:\Рабочая папка\PCB\Onix-bt\cam"
+ses_file_path: ""
+netlist_file_path: "J:\Рабочая папка\PCB\Onix-bt\CXEMA\Onix-bt-1-1.net"
+SMT_connect_copper: "0"
+default_glue_width: "635000"
+dsn_flags: "3"
+dsn_bounds_poly: "0"
+dsn_signals_poly: "0"
+autosave_interval: 0
+auto_ratline_disable: "0"
+auto_ratline_disable_min_pins: "100"
+netlist_import_flags: 911
+m_client_rect_left: 0
+m_client_rect_right: 1020
+m_client_rect_bottom: 684
+m_client_rect_top: 0
+m_org_x: -19499
+m_org_y: -2140
+m_scale_factor: 27049
+units: MM
+
+m_sel_mask: 65535
+m_visible_layers: -261
+m_top_layer: 12
+visible_grid_spacing: 10000000.000000
+
+placement_grid_spacing: 2540.000000
+
+routing_grid_spacing: 2540.000000
+
+snap_angle: 45
+
+fp_visible_grid_spacing: 10000000.000000
+
+fp_placement_grid_spacing: 2540.000000
+
+fp_snap_angle: 45
+
+m_seg_clearance: 225080
+fill_clearance: 400000
+mask_clearance: 50000
+thermal_width: 400000
+thermal_clearance: 200000
+min_silkscreen_width: 10000
+highlight_width: 127000
+board_outline_width: 200000
+hole_clearance: 500000
+pilot_diameter: 200000
+annular_ring_for_pins: 200000
+annular_ring_for_vias: 200000
+shrink_paste_mask: 0
+cam_flags: 6384
+cam_layers: 1048639
+cam_drill_file: 1
+cam_units: 1
+cam_n_x: 1
+cam_n_y: 1
+cam_space_x: 0
+cam_space_y: 0
+
+report_options: 0
+drc_check_unrouted: 0
+drc_trace_width: 240000
+drc_pad_pad: 199000
+drc_pad_trace: 200000
+drc_trace_trace: 200000
+drc_hole_copper: 200000
+drc_annular_ring_pins: 200000
+drc_annular_ring_vias: 200000
+drc_board_edge_copper: 250000
+drc_board_edge_hole: 500000
+drc_hole_hole: 500000
+drc_copper_copper: 240000
+
+default_trace_width:22mil
+default_via_pad_width:70mil
+default_via_hole_width:38mil
+n_width_menu: 1
+  width_menu_item: 1 22mil 70mil 38mil
+
+n_copper_layers: 1
+
+[footprints]
+
+name: "DXF_Mories_ID1840"
+  units: NM
+  sel_rect: -254000 -2254000 25654000 254000
+  ref_text: 300000 0 0 0 10000
+  value_text: 300000 0 0 0 10000
+  centroid: 0 0 0 0
+  text: "DXF: Mories" 1000000 600000 -1400000 0 200000 0 4
+  outline_polyline: 200000 0 0 1
+    next_corner: 0 -2000000 0
+    next_corner: 25400000 -2000000 0
+    next_corner: 25400000 0 0
+    close_polyline: 0
+  n_pins: 1
+    pin: "1" 0 12700000 -1000000 0 ""
+      top_pad: 3 1450000 12500000 12500000 0
+
+name: "Line374"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 -6500000 1
+    next_corner: 0 6500000 0
+  n_pins: 0
+
+name: "Line359"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 -6500000 0 1
+    next_corner: 6500000 0 0
+  n_pins: 0
+
+name: "Line342"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 150000 1
+    next_corner: 0 -150000 0
+  outline_polyline: 0 0 -3350000 1
+    next_corner: 0 -3050000 0
+  outline_polyline: 0 0 -150000 1
+    next_corner: -251790 -172030 0
+    next_corner: -495930 -237440 0
+    next_corner: -725000 -344260 0
+    next_corner: -932040 -489230 0
+    next_corner: -1110770 -667950 0
+    next_corner: -1255740 -875010 0
+    next_corner: -1362550 -1104060 0
+    next_corner: -1427970 -1348210 0
+    next_corner: -1450000 -1600000 0
+    next_corner: -1427970 -1851790 0
+    next_corner: -1362550 -2095940 0
+    next_corner: -1255740 -2324990 0
+    next_corner: -1110770 -2532050 0
+    next_corner: -932040 -2710770 0
+    next_corner: -725000 -2855740 0
+    next_corner: -495930 -2962560 0
+    next_corner: -251790 -3027970 0
+    next_corner: 0 -3050000 0
+    next_corner: 251790 -3027970 0
+    next_corner: 495930 -2962560 0
+    next_corner: 725000 -2855740 0
+    next_corner: 932040 -2710770 0
+    next_corner: 1110770 -2532050 0
+    next_corner: 1255740 -2324990 0
+    next_corner: 1362550 -2095940 0
+    next_corner: 1427970 -1851790 0
+    next_corner: 1450000 -1600000 0
+    next_corner: 1427970 -1348210 0
+    next_corner: 1362550 -1104060 0
+    next_corner: 1255740 -875010 0
+    next_corner: 1110770 -667950 0
+    next_corner: 932040 -489230 0
+    next_corner: 725000 -344260 0
+    next_corner: 495930 -237440 0
+    next_corner: 251790 -172030 0
+    next_corner: 0 -150000 0
+  n_pins: 0
+
+name: "Line331"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 1000000 1
+    next_corner: 0 -1000000 0
+  n_pins: 0
+
+name: "Line301"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 1000000 1
+    next_corner: 0 -1000000 0
+  outline_polyline: 0 0 3500000 1
+    next_corner: 0 5000000 0
+  outline_polyline: 0 0 5000000 1
+    next_corner: 0 3500000 0
+  n_pins: 0
+
+name: "Line242"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 10050 -37500 1
+    next_corner: -10050 37500 0
+    next_corner: -64950 92410 0
+    next_corner: -139950 112500 0
+  n_pins: 0
+
+name: "Line192"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 -725000 1
+    next_corner: 0 725000 0
+  n_pins: 0
+
+name: "Line178"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 131620 1
+    next_corner: 0 -131620 0
+  n_pins: 0
+
+name: "Line114"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 -10050 37500 1
+    next_corner: 10050 -37500 0
+    next_corner: 64950 -92410 0
+    next_corner: 139950 -112500 0
+  n_pins: 0
+
+name: "Line68"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 -350000 0 1
+    next_corner: 350000 0 0
+  outline_polyline: 0 5620000 0 1
+    next_corner: 6320000 0 0
+  outline_polyline: 0 -865000 0 1
+    next_corner: -865000 2000000 0
+  n_pins: 0
+
+name: "Line35"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 17040 -129410 1
+    next_corner: -17040 129410 0
+    next_corner: -116940 370590 0
+    next_corner: -275860 577700 0
+    next_corner: -482960 736620 0
+    next_corner: -724150 836510 0
+    next_corner: -982960 870590 0
+    next_corner: -1241780 836510 0
+    next_corner: -1482960 736620 0
+    next_corner: -1690070 577700 0
+    next_corner: -1848990 370590 0
+    next_corner: -1948890 129410 0
+    next_corner: -1982960 -129410 0
+    next_corner: -1948890 -388220 0
+    next_corner: -1848990 -629410 0
+    next_corner: -1690070 -836510 0
+    next_corner: -1482960 -995440 0
+    next_corner: -1241780 -1095330 0
+    next_corner: -982960 -1129410 0
+    next_corner: -724150 -1095330 0
+    next_corner: -482960 -995440 0
+    next_corner: -275860 -836510 0
+    next_corner: -116940 -629410 0
+    next_corner: -17040 -388220 0
+    next_corner: 17040 -129410 0
+  n_pins: 0
+
+name: "Line11"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 151940 13300 1
+    next_corner: -151940 -13300 0
+    next_corner: -446590 -92240 0
+    next_corner: -723060 -221150 0
+    next_corner: -972940 -396130 0
+    next_corner: -1188630 -611820 0
+    next_corner: -1363600 -861710 0
+    next_corner: -1492520 -1138180 0
+    next_corner: -1571470 -1432820 0
+    next_corner: -1598060 -1736700 0
+    next_corner: -1571470 -2040590 0
+    next_corner: -1492520 -2335230 0
+    next_corner: -1363600 -2611700 0
+    next_corner: -1188630 -2861580 0
+    next_corner: -972940 -3077280 0
+    next_corner: -723060 -3252260 0
+    next_corner: -446590 -3381170 0
+    next_corner: -151940 -3460110 0
+    next_corner: 151940 -3486700 0
+    next_corner: 455830 -3460110 0
+    next_corner: 750480 -3381170 0
+    next_corner: 1026940 -3252260 0
+    next_corner: 1276820 -3077280 0
+    next_corner: 1492520 -2861580 0
+    next_corner: 1667490 -2611710 0
+    next_corner: 1796410 -2335230 0
+    next_corner: 1875360 -2040590 0
+    next_corner: 1901940 -1736700 0
+    next_corner: 1875360 -1432820 0
+    next_corner: 1796410 -1138180 0
+    next_corner: 1667490 -861700 0
+    next_corner: 1492520 -611820 0
+    next_corner: 1276820 -396130 0
+    next_corner: 1026940 -221150 0
+    next_corner: 750480 -92240 0
+    next_corner: 455830 -13300 0
+    next_corner: 151940 13300 0
+  n_pins: 0
+
+name: "Line399"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 -6500000 1
+    next_corner: 0 6500000 0
+  n_pins: 0
+
+name: "Line373"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 -6500000 0 1
+    next_corner: 6500000 0 0
+  n_pins: 0
+
+name: "Line358"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 -6500000 1
+    next_corner: 0 6500000 0
+  n_pins: 0
+
+name: "Line343"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 11720 -133930 1
+    next_corner: -11720 133930 0
+    next_corner: -81310 393660 0
+    next_corner: -194950 637350 0
+    next_corner: -349170 857610 0
+    next_corner: -539300 1047740 0
+    next_corner: -759560 1201960 0
+    next_corner: -1003250 1315590 0
+    next_corner: -1262970 1385190 0
+    next_corner: -1530840 1408630 0
+    next_corner: -1798700 1385190 0
+    next_corner: -2058420 1315590 0
+    next_corner: -2302120 1201960 0
+    next_corner: -2522370 1047740 0
+    next_corner: -2712500 857610 0
+    next_corner: -2866720 637350 0
+    next_corner: -2980360 393660 0
+    next_corner: -3049960 133930 0
+    next_corner: -3073390 -133930 0
+  n_pins: 0
+
+name: "Line241"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 75000 0 1
+    next_corner: -75000 0 0
+  outline_polyline: 0 75000 0 1
+    next_corner: 150000 20100 0
+    next_corner: 204900 74990 0
+    next_corner: 225000 150000 0
+  n_pins: 0
+
+name: "Line229"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 -10050 37500 1
+    next_corner: 10050 -37500 0
+    next_corner: 64950 -92410 0
+    next_corner: 139950 -112500 0
+  n_pins: 0
+
+name: "Line191"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 725000 1
+    next_corner: 0 -725000 0
+  n_pins: 0
+
+name: "Line152"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 -175000 0 1
+    next_corner: 175000 0 0
+  n_pins: 0
+
+name: "Line139"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 -37500 -10050 1
+    next_corner: 37500 10050 0
+    next_corner: 92400 64940 0
+    next_corner: 112500 139950 0
+  n_pins: 0
+
+name: "Line113"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 -150000 1
+    next_corner: 0 150000 0
+  outline_polyline: 0 0 -1350000 1
+    next_corner: 0 -1050000 0
+  outline_polyline: 0 0 -1050000 1
+    next_corner: -150000 -1050000 0
+  n_pins: 0
+
+name: "Line90"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 62500 1
+    next_corner: 0 -62500 0
+  n_pins: 0
+
+name: "Line78"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 8520 -64700 1
+    next_corner: -8520 64700 0
+    next_corner: -58460 185300 0
+    next_corner: -137930 288850 0
+    next_corner: -241480 368300 0
+    next_corner: -362070 418260 0
+    next_corner: -491480 435300 0
+    next_corner: -620890 418260 0
+    next_corner: -741480 368300 0
+    next_corner: -845030 288850 0
+    next_corner: -924500 185300 0
+    next_corner: -974440 64700 0
+    next_corner: -991480 -64700 0
+    next_corner: -974440 -194110 0
+    next_corner: -924500 -314700 0
+    next_corner: -845030 -418260 0
+    next_corner: -741480 -497710 0
+    next_corner: -620890 -547660 0
+    next_corner: -491480 -564700 0
+    next_corner: -362070 -547660 0
+    next_corner: -241480 -497710 0
+    next_corner: -137930 -418260 0
+    next_corner: -58460 -314700 0
+    next_corner: -8520 -194110 0
+    next_corner: 8520 -64700 0
+  n_pins: 0
+
+name: "Line29"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 38760 1
+    next_corner: 0 -38760 0
+  n_pins: 0
+
+name: "Line12"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 -3000000 1
+    next_corner: 0 3000000 0
+  outline_polyline: 0 0 3000000 1
+    next_corner: -6600000 3000000 0
+  outline_polyline: 0 -6600000 3000000 1
+    next_corner: -6600000 -3000000 0
+  outline_polyline: 0 -6600000 -3000000 1
+    next_corner: 0 -3000000 0
+  n_pins: 0
+
+name: "Line398"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 -6500000 0 1
+    next_corner: 6500000 0 0
+  n_pins: 0
+
+name: "Line372"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 -6500000 1
+    next_corner: 0 6500000 0
+  n_pins: 0
+
+name: "Line364"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 -6500000 1
+    next_corner: 0 6500000 0
+  n_pins: 0
+
+name: "Line340"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 -125900 -11020 1
+    next_corner: 125900 11020 0
+    next_corner: 370030 76420 0
+    next_corner: 599100 183240 0
+    next_corner: 806140 328220 0
+    next_corner: 984870 506940 0
+    next_corner: 1129840 713990 0
+    next_corner: 1236660 943050 0
+    next_corner: 1302070 1187190 0
+    next_corner: 1324100 1438980 0
+    next_corner: 1302070 1690780 0
+    next_corner: 1236660 1934920 0
+    next_corner: 1129840 2163980 0
+    next_corner: 984870 2371030 0
+    next_corner: 806140 2549750 0
+    next_corner: 599100 2694730 0
+    next_corner: 370030 2801540 0
+    next_corner: 125900 2866950 0
+    next_corner: -125900 2888980 0
+    next_corner: -377690 2866950 0
+    next_corner: -621820 2801540 0
+    next_corner: -850900 2694730 0
+    next_corner: -1057940 2549750 0
+    next_corner: -1236660 2371030 0
+    next_corner: -1381630 2163980 0
+    next_corner: -1488450 1934920 0
+    next_corner: -1553860 1690780 0
+    next_corner: -1575900 1438980 0
+    next_corner: -1553860 1187190 0
+    next_corner: -1488450 943050 0
+    next_corner: -1381630 713990 0
+    next_corner: -1236660 506940 0
+    next_corner: -1057940 328220 0
+    next_corner: -850900 183240 0
+    next_corner: -621820 76420 0
+    next_corner: -377690 11020 0
+    next_corner: -125900 -11020 0
+  n_pins: 0
+
+name: "Line337"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 -28730 0 1
+    next_corner: 28730 0 0
+  n_pins: 0
+
+name: "Line291"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 -750000 1
+    next_corner: 0 750000 0
+  outline_polyline: 0 0 -750000 1
+    next_corner: 0 750000 0
+  n_pins: 0
+
+name: "Line228"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 75000 0 1
+    next_corner: -75000 0 0
+  n_pins: 0
+
+name: "Line190"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 -200000 0 1
+    next_corner: 200000 0 0
+  outline_polyline: 0 200000 0 1
+    next_corner: 200000 160000 0
+  outline_polyline: 0 3825000 0 1
+    next_corner: 4275010 0 0
+  outline_polyline: 0 4625010 0 1
+    next_corner: 5075000 0 0
+  outline_polyline: 0 5425000 0 1
+    next_corner: 5450000 0 0
+  outline_polyline: 0 5450000 0 1
+    next_corner: 5450000 150000 0
+  n_pins: 0
+
+name: "Line151"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 175000 0 1
+    next_corner: -175000 0 0
+  n_pins: 0
+
+name: "Line138"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 300000 1
+    next_corner: 0 -300000 0
+  n_pins: 0
+
+name: "Line112"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 -116660 0 1
+    next_corner: 116660 0 0
+  outline_polyline: 0 -116660 0 1
+    next_corner: -116660 80000 0
+  n_pins: 0
+
+name: "Line49"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 -29425090 0 1
+    next_corner: 29425090 0 0
+  n_pins: 0
+
+name: "Line28"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 -6725000 0 1
+    next_corner: 6725000 0 0
+  n_pins: 0
+
+name: "Line13"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 38760 1
+    next_corner: 0 -38760 0
+  n_pins: 0
+
+name: "Line5"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 3000000 1
+    next_corner: 0 -3000000 0
+  outline_polyline: 0 0 -3000000 1
+    next_corner: 6599990 -3000000 0
+  n_pins: 0
+
+name: "Line388"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 -6500000 1
+    next_corner: 0 6500000 0
+  n_pins: 0
+
+name: "Line371"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 -6500000 0 1
+    next_corner: 6500000 0 0
+  n_pins: 0
+
+name: "Line365"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 -6500000 0 1
+    next_corner: 6500000 0 0
+  n_pins: 0
+
+name: "Line341"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 3800000 0 1
+    next_corner: -3800000 0 0
+  n_pins: 0
+
+name: "Line336"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 -150000 1
+    next_corner: 0 150000 0
+  n_pins: 0
+
+name: "Line247"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 83340 0 1
+    next_corner: -83340 0 0
+  outline_polyline: 0 -7449980 0 1
+    next_corner: -7616660 0 0
+  n_pins: 0
+
+name: "Line188"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 -275000 0 1
+    next_corner: 275000 0 0
+  outline_polyline: 0 275000 0 1
+    next_corner: 275000 -950000 0
+  n_pins: 0
+
+name: "Line150"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 -175000 0 1
+    next_corner: 175000 0 0
+  outline_polyline: 0 -175000 -1300000 1
+    next_corner: -175000 0 0
+  outline_polyline: 0 -175000 -1100000 1
+    next_corner: 175000 -1100000 0
+  outline_polyline: 0 -175000 -1300000 1
+    next_corner: -175000 -4300000 0
+  n_pins: 0
+
+name: "Line111"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 -150000 1
+    next_corner: 0 150000 0
+  n_pins: 0
+
+name: "Line48"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 -7000000 0 1
+    next_corner: 7000000 0 0
+  n_pins: 0
+
+name: "Line4"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 1250000 1
+    next_corner: 0 -1250000 0
+  n_pins: 0
+
+name: "Line389"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 -6500000 0 1
+    next_corner: 6500000 0 0
+  n_pins: 0
+
+name: "Line370"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 -6500000 1
+    next_corner: 0 6500000 0
+  n_pins: 0
+
+name: "Line366"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 -6500000 1
+    next_corner: 0 6500000 0
+  n_pins: 0
+
+name: "Line355"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 22600 101940 1
+    next_corner: -22600 -101940 0
+    next_corner: -13500 -310580 0
+  outline_polyline: 0 -13500 -310580 1
+    next_corner: 49300 -509770 0
+    next_corner: 161520 -685900 0
+    next_corner: 315490 -827000 0
+    next_corner: 500740 -923430 0
+    next_corner: 704620 -968630 0
+    next_corner: 913270 -959510 0
+  outline_polyline: 0 913270 -959510 1
+    next_corner: 1112450 -896710 0
+    next_corner: 1288580 -784500 0
+    next_corner: 1429670 -630540 0
+    next_corner: 1526100 -445290 0
+    next_corner: 1571300 -241400 0
+    next_corner: 1562200 -32760 0
+  outline_polyline: 0 1562200 -32760 1
+    next_corner: 1499400 166420 0
+    next_corner: 1387180 342550 0
+    next_corner: 1233220 483660 0
+    next_corner: 1047970 580090 0
+  n_pins: 0
+
+name: "Line346"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 -18225000 0 1
+    next_corner: 18225000 0 0
+  outline_polyline: 0 -18225000 18200000 1
+    next_corner: -18225000 0 0
+  outline_polyline: 0 18225000 18200000 1
+    next_corner: -18225000 18200000 0
+  outline_polyline: 0 18225000 0 1
+    next_corner: 18225000 18200000 0
+  n_pins: 0
+
+name: "Line250"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 200000 0 1
+    next_corner: -200000 0 0
+  outline_polyline: 0 200000 2000000 1
+    next_corner: -200000 2000000 0
+  n_pins: 0
+
+name: "Line110"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 11920 -90580 1
+    next_corner: -11920 90580 0
+    next_corner: -81860 259420 0
+    next_corner: -193100 404390 0
+    next_corner: -338080 515640 0
+    next_corner: -506900 585560 0
+    next_corner: -688080 609420 0
+    next_corner: -869250 585560 0
+    next_corner: -1038080 515640 0
+    next_corner: -1183050 404390 0
+    next_corner: -1294290 259420 0
+    next_corner: -1364230 90580 0
+    next_corner: -1388080 -90580 0
+    next_corner: -1364230 -271750 0
+    next_corner: -1294290 -440580 0
+    next_corner: -1183050 -585560 0
+    next_corner: -1038080 -696810 0
+    next_corner: -869250 -766730 0
+    next_corner: -688080 -790580 0
+    next_corner: -506900 -766730 0
+    next_corner: -338080 -696810 0
+    next_corner: -193100 -585560 0
+    next_corner: -81860 -440580 0
+    next_corner: -11920 -271750 0
+    next_corner: 11920 -90580 0
+  n_pins: 0
+
+name: "Line77"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 8520 -64700 1
+    next_corner: -8520 64700 0
+    next_corner: -58460 185300 0
+    next_corner: -137930 288850 0
+    next_corner: -241480 368300 0
+    next_corner: -362070 418260 0
+    next_corner: -491480 435300 0
+    next_corner: -620890 418260 0
+    next_corner: -741480 368300 0
+    next_corner: -845030 288850 0
+    next_corner: -924500 185300 0
+    next_corner: -974440 64700 0
+    next_corner: -991480 -64700 0
+    next_corner: -974440 -194110 0
+    next_corner: -924500 -314700 0
+    next_corner: -845030 -418260 0
+    next_corner: -741480 -497710 0
+    next_corner: -620890 -547660 0
+    next_corner: -491480 -564700 0
+    next_corner: -362070 -547660 0
+    next_corner: -241480 -497710 0
+    next_corner: -137930 -418260 0
+    next_corner: -58460 -314700 0
+    next_corner: -8520 -194110 0
+    next_corner: 8520 -64700 0
+  n_pins: 0
+
+name: "Line50"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 -138440 0 1
+    next_corner: 138440 0 0
+  n_pins: 0
+
+name: "Line38"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 3000000 1
+    next_corner: 0 -3000000 0
+  outline_polyline: 0 0 -3000000 1
+    next_corner: 6600000 -3000000 0
+  outline_polyline: 0 6600000 -3000000 1
+    next_corner: 6600000 3000000 0
+  outline_polyline: 0 6600000 3000000 1
+    next_corner: 0 3000000 0
+  n_pins: 0
+
+name: "Line7"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 -3000000 1
+    next_corner: 0 3000000 0
+  outline_polyline: 0 0 3000000 1
+    next_corner: -6599990 3000000 0
+  n_pins: 0
+
+name: "Line367"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 -6500000 0 1
+    next_corner: 6500000 0 0
+  n_pins: 0
+
+name: "Line354"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 22600 101940 1
+    next_corner: -22600 -101940 0
+    next_corner: -13500 -310580 0
+  outline_polyline: 0 -13500 -310580 1
+    next_corner: 49300 -509770 0
+    next_corner: 161520 -685900 0
+    next_corner: 315490 -827000 0
+    next_corner: 500740 -923430 0
+    next_corner: 704620 -968630 0
+    next_corner: 913270 -959510 0
+  outline_polyline: 0 913270 -959510 1
+    next_corner: 1112450 -896710 0
+    next_corner: 1288580 -784500 0
+    next_corner: 1429670 -630540 0
+    next_corner: 1526100 -445290 0
+    next_corner: 1571300 -241400 0
+    next_corner: 1562200 -32760 0
+  outline_polyline: 0 1562200 -32760 1
+    next_corner: 1499400 166420 0
+    next_corner: 1387180 342550 0
+    next_corner: 1233220 483660 0
+    next_corner: 1047970 580090 0
+  n_pins: 0
+
+name: "Line347"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 -150000 1
+    next_corner: 0 150000 0
+  outline_polyline: 0 0 3350000 1
+    next_corner: 0 3050000 0
+  outline_polyline: 0 0 150000 1
+    next_corner: 251790 172030 0
+    next_corner: 495930 237440 0
+    next_corner: 725000 344260 0
+    next_corner: 932040 489230 0
+    next_corner: 1110770 667950 0
+    next_corner: 1255740 875010 0
+    next_corner: 1362550 1104060 0
+    next_corner: 1427970 1348210 0
+    next_corner: 1450000 1600000 0
+    next_corner: 1427970 1851790 0
+    next_corner: 1362550 2095940 0
+    next_corner: 1255740 2324990 0
+    next_corner: 1110770 2532050 0
+    next_corner: 932040 2710770 0
+    next_corner: 725000 2855740 0
+    next_corner: 495930 2962560 0
+    next_corner: 251790 3027970 0
+    next_corner: 0 3050000 0
+    next_corner: -251790 3027970 0
+    next_corner: -495930 2962560 0
+    next_corner: -725000 2855740 0
+    next_corner: -932040 2710770 0
+    next_corner: -1110770 2532050 0
+    next_corner: -1255740 2324990 0
+    next_corner: -1362550 2095940 0
+    next_corner: -1427970 1851790 0
+    next_corner: -1450000 1600000 0
+    next_corner: -1427970 1348210 0
+    next_corner: -1362550 1104060 0
+    next_corner: -1255740 875010 0
+    next_corner: -1110770 667950 0
+    next_corner: -932040 489230 0
+    next_corner: -725000 344260 0
+    next_corner: -495930 237440 0
+    next_corner: -251790 172030 0
+    next_corner: 0 150000 0
+  n_pins: 0
+
+name: "Line245"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 300000 0 1
+    next_corner: -300000 0 0
+  n_pins: 0
+
+name: "Line239"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 -300000 0 1
+    next_corner: 300000 0 0
+  n_pins: 0
+
+name: "Line216"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 1375000 1
+    next_corner: 0 -1375000 0
+  n_pins: 0
+
+name: "Line140"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 75000 0 1
+    next_corner: -75000 0 0
+  n_pins: 0
+
+name: "Line74"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 -3800000 0 1
+    next_corner: 3800000 0 0
+  n_pins: 0
+
+name: "Line51"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 -57500090 0 1
+    next_corner: 57500090 0 0
+  n_pins: 0
+
+name: "Line39"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 12160 -138920 1
+    next_corner: -12160 138920 0
+    next_corner: -84340 408310 0
+    next_corner: -202200 661080 0
+    next_corner: -362180 889540 0
+    next_corner: -559390 1086740 0
+    next_corner: -787840 1246730 0
+    next_corner: -1040620 1364580 0
+    next_corner: -1310010 1436780 0
+    next_corner: -1587850 1461080 0
+    next_corner: -1865680 1436780 0
+    next_corner: -2135080 1364580 0
+    next_corner: -2387850 1246730 0
+    next_corner: -2616310 1086740 0
+    next_corner: -2813520 889540 0
+    next_corner: -2973490 661080 0
+    next_corner: -3091360 408310 0
+    next_corner: -3163540 138920 0
+    next_corner: -3187850 -138920 0
+    next_corner: -3163540 -416760 0
+    next_corner: -3091360 -686150 0
+    next_corner: -2973490 -938920 0
+    next_corner: -2813520 -1167380 0
+    next_corner: -2616310 -1364580 0
+    next_corner: -2387850 -1524570 0
+    next_corner: -2135080 -1642420 0
+    next_corner: -1865680 -1714620 0
+    next_corner: -1587850 -1738920 0
+    next_corner: -1310010 -1714620 0
+    next_corner: -1040620 -1642420 0
+    next_corner: -787840 -1524570 0
+    next_corner: -559390 -1364580 0
+    next_corner: -362180 -1167380 0
+    next_corner: -202200 -938920 0
+    next_corner: -84340 -686150 0
+    next_corner: -12160 -416760 0
+    next_corner: 12160 -138920 0
+  n_pins: 0
+
+name: "Line25"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 11595000 1
+    next_corner: 0 -11595000 0
+  n_pins: 0
+
+name: "Line6"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 -11130 11130 1
+    next_corner: 11130 -11130 0
+  n_pins: 0
+
+name: "Line386"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 -6500000 1
+    next_corner: 0 6500000 0
+  n_pins: 0
+
+name: "Line360"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 -6500000 1
+    next_corner: 0 6500000 0
+  n_pins: 0
+
+name: "Line357"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 -6500000 0 1
+    next_corner: 6500000 0 0
+  n_pins: 0
+
+name: "Line344"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 -20450000 0 1
+    next_corner: 20450000 0 0
+  outline_polyline: 0 -20450000 22190000 1
+    next_corner: -20450000 0 0
+  outline_polyline: 0 20450000 22190000 1
+    next_corner: -20450000 22190000 0
+  outline_polyline: 0 20450000 0 1
+    next_corner: 20450000 22190000 0
+  n_pins: 0
+
+name: "Line244"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 -300000 0 1
+    next_corner: 300000 0 0
+  n_pins: 0
+
+name: "Line141"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 -150000 1
+    next_corner: 0 150000 0
+  outline_polyline: 0 900000 -150000 1
+    next_corner: 0 -150000 0
+  n_pins: 0
+
+name: "Line135"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 -300000 0 1
+    next_corner: 300000 0 0
+  n_pins: 0
+
+name: "Line52"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 -32000000 1
+    next_corner: 0 32000000 0
+  n_pins: 0
+
+name: "Line24"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 2405000 1
+    next_corner: 0 -2405000 0
+  outline_polyline: 0 41900000 2405000 1
+    next_corner: 41900000 25595000 0
+  n_pins: 0
+
+name: "Line1"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 1250000 1
+    next_corner: 0 -1250000 0
+  n_pins: 0
+
+name: "Line400"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 -6500000 0 1
+    next_corner: 6500000 0 0
+  n_pins: 0
+
+name: "Line387"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 -6500000 0 1
+    next_corner: 6500000 0 0
+  n_pins: 0
+
+name: "Line361"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 -6500000 0 1
+    next_corner: 6500000 0 0
+  n_pins: 0
+
+name: "Line356"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 22600 101940 1
+    next_corner: -22600 -101940 0
+    next_corner: -13500 -310580 0
+  outline_polyline: 0 -13500 -310580 1
+    next_corner: 49300 -509770 0
+    next_corner: 161520 -685900 0
+    next_corner: 315490 -827000 0
+    next_corner: 500740 -923430 0
+    next_corner: 704620 -968630 0
+    next_corner: 913270 -959510 0
+  outline_polyline: 0 913270 -959510 1
+    next_corner: 1112450 -896710 0
+    next_corner: 1288580 -784500 0
+    next_corner: 1429670 -630540 0
+    next_corner: 1526100 -445290 0
+    next_corner: 1571300 -241400 0
+    next_corner: 1562200 -32760 0
+  outline_polyline: 0 1562200 -32760 1
+    next_corner: 1499400 166420 0
+    next_corner: 1387180 342550 0
+    next_corner: 1233220 483660 0
+    next_corner: 1047970 580090 0
+  n_pins: 0
+
+name: "Line345"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 -19225000 0 1
+    next_corner: 19225000 0 0
+  outline_polyline: 0 -19225000 20210000 1
+    next_corner: -19225000 0 0
+  outline_polyline: 0 19225000 20210000 1
+    next_corner: -19225000 20210000 0
+  outline_polyline: 0 19225000 0 1
+    next_corner: 19225000 20210000 0
+  n_pins: 0
+
+name: "Line324"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 -1000000 1
+    next_corner: 0 1000000 0
+  n_pins: 0
+
+name: "Line311"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 -2875000 1
+    next_corner: 0 2875000 0
+  outline_polyline: 0 0 4725000 1
+    next_corner: 0 -2875000 0
+  n_pins: 0
+
+name: "Line289"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 375000 1
+    next_corner: 0 -375000 0
+  n_pins: 0
+
+name: "Line154"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 -175000 0 1
+    next_corner: 175000 0 0
+  outline_polyline: 0 -175000 3000000 1
+    next_corner: 175000 3000000 0
+  outline_polyline: 0 175000 3000000 1
+    next_corner: 175000 4300000 0
+  outline_polyline: 0 -175000 3000000 1
+    next_corner: -175000 4300000 0
+  n_pins: 0
+
+name: "Line142"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 -450000 0 1
+    next_corner: 450000 0 0
+  n_pins: 0
+
+name: "Line89"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 3800000 0 1
+    next_corner: -3800000 0 0
+  n_pins: 0
+
+name: "Line72"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 -13630 103530 1
+    next_corner: 13630 -103530 0
+    next_corner: 93550 -296470 0
+    next_corner: 220680 -462150 0
+    next_corner: 386370 -589290 0
+    next_corner: 579320 -669210 0
+    next_corner: 786370 -696470 0
+    next_corner: 993430 -669210 0
+    next_corner: 1186370 -589290 0
+    next_corner: 1352060 -462150 0
+    next_corner: 1479200 -296470 0
+    next_corner: 1559120 -103530 0
+    next_corner: 1586370 103530 0
+  n_pins: 0
+
+name: "Line53"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 12150 -138920 1
+    next_corner: -12150 138920 0
+    next_corner: -84340 408310 0
+    next_corner: -202200 661080 0
+    next_corner: -362180 889540 0
+    next_corner: -559380 1086740 0
+    next_corner: -787850 1246730 0
+    next_corner: -1040620 1364580 0
+    next_corner: -1310010 1436780 0
+    next_corner: -1587850 1461080 0
+    next_corner: -1865690 1436780 0
+    next_corner: -2135080 1364580 0
+    next_corner: -2387850 1246730 0
+    next_corner: -2616310 1086740 0
+    next_corner: -2813510 889540 0
+    next_corner: -2973500 661080 0
+    next_corner: -3091350 408310 0
+    next_corner: -3163540 138920 0
+    next_corner: -3187850 -138920 0
+    next_corner: -3163540 -416760 0
+    next_corner: -3091350 -686150 0
+    next_corner: -2973500 -938920 0
+    next_corner: -2813510 -1167380 0
+    next_corner: -2616310 -1364580 0
+    next_corner: -2387850 -1524570 0
+    next_corner: -2135080 -1642420 0
+    next_corner: -1865690 -1714620 0
+    next_corner: -1587850 -1738920 0
+    next_corner: -1310010 -1714620 0
+    next_corner: -1040620 -1642420 0
+    next_corner: -787850 -1524570 0
+    next_corner: -559380 -1364580 0
+    next_corner: -362180 -1167380 0
+    next_corner: -202200 -938920 0
+    next_corner: -84340 -686150 0
+    next_corner: -12150 -416760 0
+    next_corner: 12150 -138920 0
+  n_pins: 0
+
+name: "Line27"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 199300 1
+    next_corner: 0 -199300 0
+  n_pins: 0
+
+name: "Line18"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 -8575000 0 1
+    next_corner: 8575000 0 0
+  outline_polyline: 0 -33325000 0 1
+    next_corner: -16175000 0 0
+  n_pins: 0
+
+name: "Line0"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 -151940 -13300 1
+    next_corner: 151940 13300 0
+    next_corner: 446590 92240 0
+    next_corner: 723060 221150 0
+    next_corner: 972940 396130 0
+    next_corner: 1188630 611820 0
+    next_corner: 1363600 861700 0
+    next_corner: 1492520 1138180 0
+    next_corner: 1571470 1432820 0
+    next_corner: 1598060 1736700 0
+    next_corner: 1571470 2040590 0
+    next_corner: 1492520 2335230 0
+    next_corner: 1363600 2611710 0
+    next_corner: 1188630 2861580 0
+    next_corner: 972940 3077280 0
+    next_corner: 723060 3252260 0
+    next_corner: 446590 3381170 0
+    next_corner: 151940 3460110 0
+    next_corner: -151940 3486700 0
+  n_pins: 0
+
+name: "Line384"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 -6500000 1
+    next_corner: 0 6500000 0
+  n_pins: 0
+
+name: "Line362"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 -6500000 1
+    next_corner: 0 6500000 0
+  n_pins: 0
+
+name: "Line351"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 1000000 1
+    next_corner: 0 -1000000 0
+  n_pins: 0
+
+name: "Line310"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 2875000 1
+    next_corner: 0 -2875000 0
+  n_pins: 0
+
+name: "Line308"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 1600000 1
+    next_corner: 0 -1600000 0
+  n_pins: 0
+
+name: "Line288"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 -1000000 1
+    next_corner: 0 1000000 0
+  n_pins: 0
+
+name: "Line184"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 -357450 18730 1
+    next_corner: 357450 -18730 0
+    next_corner: 907450 -47560 0
+  outline_polyline: 0 357450 252870 1
+    next_corner: 907450 252870 0
+  outline_polyline: 0 357450 -697130 1
+    next_corner: 357450 252870 0
+  outline_polyline: 0 357450 -697130 1
+    next_corner: -742550 -697130 0
+  n_pins: 0
+
+name: "Line170"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 60000 1
+    next_corner: 0 -60000 0
+  outline_polyline: 0 -1200010 60000 1
+    next_corner: 0 60000 0
+  outline_polyline: 0 -1200010 60000 1
+    next_corner: -1200010 -60000 0
+  n_pins: 0
+
+name: "Line143"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 -175000 0 1
+    next_corner: 175000 0 0
+  outline_polyline: 0 -175000 3000000 1
+    next_corner: 175000 3000000 0
+  outline_polyline: 0 175000 3000000 1
+    next_corner: 175000 4300000 0
+  n_pins: 0
+
+name: "Line137"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 10050 -37500 1
+    next_corner: -10050 37500 0
+    next_corner: -64950 92410 0
+    next_corner: -139950 112500 0
+  n_pins: 0
+
+name: "Line88"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 17040 -129410 1
+    next_corner: -17040 129410 0
+    next_corner: -116940 370590 0
+    next_corner: -275860 577700 0
+    next_corner: -482960 736620 0
+    next_corner: -724150 836510 0
+    next_corner: -982960 870590 0
+    next_corner: -1241780 836510 0
+    next_corner: -1482960 736620 0
+    next_corner: -1690070 577700 0
+    next_corner: -1848990 370590 0
+    next_corner: -1948890 129410 0
+    next_corner: -1982960 -129410 0
+    next_corner: -1948890 -388220 0
+    next_corner: -1848990 -629410 0
+    next_corner: -1690070 -836510 0
+    next_corner: -1482960 -995440 0
+    next_corner: -1241780 -1095330 0
+    next_corner: -982960 -1129410 0
+    next_corner: -724150 -1095330 0
+    next_corner: -482960 -995440 0
+    next_corner: -275860 -836510 0
+    next_corner: -116940 -629410 0
+    next_corner: -17040 -388220 0
+    next_corner: 17040 -129410 0
+  n_pins: 0
+
+name: "Line73"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 200000 0 1
+    next_corner: -200000 0 0
+  n_pins: 0
+
+name: "Line61"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 -38760 0 1
+    next_corner: 38760 0 0
+  n_pins: 0
+
+name: "Line54"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 12150 -138920 1
+    next_corner: -12150 138920 0
+    next_corner: -84340 408310 0
+    next_corner: -202200 661080 0
+    next_corner: -362180 889540 0
+    next_corner: -559380 1086740 0
+    next_corner: -787850 1246730 0
+    next_corner: -1040620 1364580 0
+    next_corner: -1310010 1436780 0
+    next_corner: -1587850 1461080 0
+    next_corner: -1865690 1436780 0
+    next_corner: -2135080 1364580 0
+    next_corner: -2387850 1246730 0
+    next_corner: -2616310 1086740 0
+    next_corner: -2813510 889540 0
+    next_corner: -2973500 661080 0
+    next_corner: -3091350 408310 0
+    next_corner: -3163540 138920 0
+    next_corner: -3187850 -138920 0
+    next_corner: -3163540 -416760 0
+    next_corner: -3091350 -686150 0
+    next_corner: -2973500 -938920 0
+    next_corner: -2813510 -1167380 0
+    next_corner: -2616310 -1364580 0
+    next_corner: -2387850 -1524570 0
+    next_corner: -2135080 -1642420 0
+    next_corner: -1865690 -1714620 0
+    next_corner: -1587850 -1738920 0
+    next_corner: -1310010 -1714620 0
+    next_corner: -1040620 -1642420 0
+    next_corner: -787850 -1524570 0
+    next_corner: -559380 -1364580 0
+    next_corner: -362180 -1167380 0
+    next_corner: -202200 -938920 0
+    next_corner: -84340 -686150 0
+    next_corner: -12150 -416760 0
+    next_corner: 12150 -138920 0
+  n_pins: 0
+
+name: "Line43"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 11920 -90580 1
+    next_corner: -11920 90580 0
+    next_corner: -81860 259420 0
+    next_corner: -193100 404390 0
+    next_corner: -338080 515640 0
+    next_corner: -506900 585560 0
+    next_corner: -688080 609420 0
+    next_corner: -869250 585560 0
+    next_corner: -1038080 515640 0
+    next_corner: -1183050 404390 0
+    next_corner: -1294290 259420 0
+    next_corner: -1364230 90580 0
+    next_corner: -1388080 -90580 0
+    next_corner: -1364230 -271750 0
+    next_corner: -1294290 -440580 0
+    next_corner: -1183050 -585560 0
+    next_corner: -1038080 -696810 0
+    next_corner: -869250 -766730 0
+    next_corner: -688080 -790580 0
+    next_corner: -506900 -766730 0
+    next_corner: -338080 -696810 0
+    next_corner: -193100 -585560 0
+    next_corner: -81860 -440580 0
+    next_corner: -11920 -271750 0
+    next_corner: 11920 -90580 0
+  n_pins: 0
+
+name: "Line26"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 -1855000 1
+    next_corner: 0 1855000 0
+  n_pins: 0
+
+name: "Line19"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 199290 0 1
+    next_corner: -199290 0 0
+  n_pins: 0
+
+name: "Line3"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 151940 13300 1
+    next_corner: -151940 -13300 0
+    next_corner: -446590 -92240 0
+    next_corner: -723060 -221150 0
+    next_corner: -972940 -396130 0
+    next_corner: -1188630 -611820 0
+    next_corner: -1363600 -861710 0
+    next_corner: -1492520 -1138180 0
+    next_corner: -1571470 -1432820 0
+    next_corner: -1598060 -1736700 0
+    next_corner: -1571470 -2040590 0
+    next_corner: -1492520 -2335230 0
+    next_corner: -1363600 -2611700 0
+    next_corner: -1188630 -2861580 0
+    next_corner: -972940 -3077280 0
+    next_corner: -723060 -3252260 0
+    next_corner: -446590 -3381170 0
+    next_corner: -151940 -3460110 0
+    next_corner: 151940 -3486700 0
+  n_pins: 0
+
+name: "Line391"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 -2700000 0 1
+    next_corner: 2700000 0 0
+  outline_polyline: 0 4600000 0 1
+    next_corner: 10000010 0 0
+  n_pins: 0
+
+name: "Line385"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 -6500000 0 1
+    next_corner: 6500000 0 0
+  n_pins: 0
+
+name: "Line363"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 -6500000 0 1
+    next_corner: 6500000 0 0
+  n_pins: 0
+
+name: "Line350"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 -1000000 1
+    next_corner: 0 1000000 0
+  n_pins: 0
+
+name: "Line339"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 28720 0 1
+    next_corner: -28720 0 0
+  n_pins: 0
+
+name: "Line313"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 200000 0 1
+    next_corner: -200000 0 0
+  outline_polyline: 0 200000 0 1
+    next_corner: -200000 0 0
+  outline_polyline: 0 7500010 0 1
+    next_corner: 7100000 0 0
+  n_pins: 0
+
+name: "Line309"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 -1600000 1
+    next_corner: 0 1600000 0
+  n_pins: 0
+
+name: "Line287"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 -200000 0 1
+    next_corner: 200000 0 0
+  n_pins: 0
+
+name: "Line278"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 550000 1
+    next_corner: 0 -550000 0
+  n_pins: 0
+
+name: "Line221"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 -200000 0 1
+    next_corner: 200000 0 0
+  n_pins: 0
+
+name: "Line199"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 200000 0 1
+    next_corner: -200000 0 0
+  n_pins: 0
+
+name: "Line185"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 237100 -12420 1
+    next_corner: -237100 12420 0
+    next_corner: -967700 50710 0
+  n_pins: 0
+
+name: "Line144"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 -175000 0 1
+    next_corner: 175000 0 0
+  outline_polyline: 0 -175000 -1300000 1
+    next_corner: -175000 0 0
+  outline_polyline: 0 -175000 -1100000 1
+    next_corner: 175000 -1100000 0
+  outline_polyline: 0 -175000 -1300000 1
+    next_corner: -175000 -4300000 0
+  outline_polyline: 0 -624990 -1300000 1
+    next_corner: -624990 -4300000 0
+  n_pins: 0
+
+name: "Line136"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 300000 0 1
+    next_corner: -300000 0 0
+  outline_polyline: 0 300000 1200000 1
+    next_corner: 300000 1500000 0
+  outline_polyline: 0 -1200000 1200000 1
+    next_corner: -1050000 1200000 0
+  n_pins: 0
+
+name: "Line87"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 -62500 1
+    next_corner: 0 62500 0
+  n_pins: 0
+
+name: "Line70"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 35720 0 1
+    next_corner: -35720 0 0
+  outline_polyline: 0 -6705720 0 1
+    next_corner: -6777160 0 0
+  outline_polyline: 0 -7220720 0 1
+    next_corner: -7054040 0 0
+  outline_polyline: 0 312600 0 1
+    next_corner: 479280 0 0
+  n_pins: 0
+
+name: "Line60"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 -1000000 1
+    next_corner: 0 1000000 0
+  outline_polyline: 0 -5970010 -1000000 1
+    next_corner: -700010 -1000000 0
+  outline_polyline: 0 -7018320 -1000000 1
+    next_corner: -6741440 -1000000 0
+  n_pins: 0
+
+name: "Line55"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 3250000 1
+    next_corner: 0 -3250000 0
+  n_pins: 0
+
+name: "Line42"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 11920 -90580 1
+    next_corner: -11920 90580 0
+    next_corner: -81860 259420 0
+    next_corner: -193100 404390 0
+    next_corner: -338080 515640 0
+    next_corner: -506900 585560 0
+    next_corner: -688080 609420 0
+    next_corner: -869250 585560 0
+    next_corner: -1038080 515640 0
+    next_corner: -1183050 404390 0
+    next_corner: -1294290 259420 0
+    next_corner: -1364230 90580 0
+    next_corner: -1388080 -90580 0
+    next_corner: -1364230 -271750 0
+    next_corner: -1294290 -440580 0
+    next_corner: -1183050 -585560 0
+    next_corner: -1038080 -696810 0
+    next_corner: -869250 -766730 0
+    next_corner: -688080 -790580 0
+    next_corner: -506900 -766730 0
+    next_corner: -338080 -696810 0
+    next_corner: -193100 -585560 0
+    next_corner: -81860 -440580 0
+    next_corner: -11920 -271750 0
+    next_corner: 11920 -90580 0
+  n_pins: 0
+
+name: "Line21"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 -2405000 1
+    next_corner: 0 2405000 0
+  n_pins: 0
+
+name: "Line2"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 -12150 138920 1
+    next_corner: 12150 -138920 0
+    next_corner: 84340 -408310 0
+    next_corner: 202210 -661080 0
+    next_corner: 362180 -889540 0
+    next_corner: 559380 -1086740 0
+    next_corner: 787850 -1246730 0
+    next_corner: 1040620 -1364580 0
+    next_corner: 1310010 -1436780 0
+    next_corner: 1587850 -1461080 0
+    next_corner: 1865690 -1436780 0
+    next_corner: 2135080 -1364580 0
+    next_corner: 2387850 -1246730 0
+    next_corner: 2616310 -1086740 0
+    next_corner: 2813520 -889540 0
+    next_corner: 2973490 -661080 0
+    next_corner: 3091360 -408310 0
+    next_corner: 3163540 -138920 0
+    next_corner: 3187850 138920 0
+  n_pins: 0
+
+name: "Line390"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 -6500000 1
+    next_corner: 0 6500000 0
+  n_pins: 0
+
+name: "Line382"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 -6500000 1
+    next_corner: 0 6500000 0
+  n_pins: 0
+
+name: "Line353"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 22600 101940 1
+    next_corner: -22600 -101940 0
+    next_corner: -13500 -310580 0
+  outline_polyline: 0 -13500 -310580 1
+    next_corner: 49300 -509770 0
+    next_corner: 161520 -685900 0
+    next_corner: 315490 -827000 0
+    next_corner: 500740 -923430 0
+    next_corner: 704620 -968630 0
+    next_corner: 913270 -959510 0
+  outline_polyline: 0 913270 -959510 1
+    next_corner: 1112450 -896710 0
+    next_corner: 1288580 -784500 0
+    next_corner: 1429670 -630540 0
+    next_corner: 1526100 -445290 0
+    next_corner: 1571300 -241400 0
+    next_corner: 1562200 -32760 0
+  outline_polyline: 0 1562200 -32760 1
+    next_corner: 1499400 166420 0
+    next_corner: 1387180 342550 0
+    next_corner: 1233220 483660 0
+    next_corner: 1047970 580090 0
+  n_pins: 0
+
+name: "Line338"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 150000 1
+    next_corner: 0 -150000 0
+  n_pins: 0
+
+name: "Line312"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 -3800000 1
+    next_corner: 0 3800000 0
+  n_pins: 0
+
+name: "Line306"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 1600000 1
+    next_corner: 0 -1600000 0
+  n_pins: 0
+
+name: "Line286"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 200000 0 1
+    next_corner: -200000 0 0
+  n_pins: 0
+
+name: "Line249"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 450000 0 1
+    next_corner: -450000 0 0
+  n_pins: 0
+
+name: "Line232"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 -75000 0 1
+    next_corner: 75000 0 0
+  outline_polyline: 0 75000 0 1
+    next_corner: 75000 300000 0
+  n_pins: 0
+
+name: "Line220"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 3375000 1
+    next_corner: 0 -3375000 0
+  n_pins: 0
+
+name: "Line198"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 -52540 47310 1
+    next_corner: 52540 -47310 0
+    next_corner: 57780 -147180 0
+  outline_polyline: 0 57780 -147180 1
+    next_corner: -36850 -252270 0
+    next_corner: -767450 -290560 0
+  n_pins: 0
+
+name: "Line186"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 37910 -39940 1
+    next_corner: -37910 39940 0
+  outline_polyline: 0 37910 -303190 1
+    next_corner: 37910 -463190 0
+  outline_polyline: 0 37910 -463190 1
+    next_corner: 437920 -463190 0
+  outline_polyline: 0 37910 -303190 1
+    next_corner: -412080 -303190 0
+  outline_polyline: 0 -412080 -303190 1
+    next_corner: -512090 -303190 0
+  outline_polyline: 0 -412080 -303190 1
+    next_corner: -412080 -1313190 0
+  n_pins: 0
+
+name: "Line145"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 -175000 0 1
+    next_corner: 175000 0 0
+  outline_polyline: 0 -175000 3000000 1
+    next_corner: 175000 3000000 0
+  outline_polyline: 0 175000 3000000 1
+    next_corner: 175000 4300000 0
+  n_pins: 0
+
+name: "Line131"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 150000 1
+    next_corner: 0 -150000 0
+  n_pins: 0
+
+name: "Line86"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 13630 -103530 1
+    next_corner: -13630 103530 0
+    next_corner: -93550 296470 0
+    next_corner: -220680 462150 0
+    next_corner: -386370 589290 0
+    next_corner: -579320 669210 0
+    next_corner: -786370 696470 0
+    next_corner: -993430 669210 0
+    next_corner: -1186370 589290 0
+    next_corner: -1352060 462150 0
+    next_corner: -1479200 296470 0
+    next_corner: -1559120 103530 0
+    next_corner: -1586370 -103530 0
+  n_pins: 0
+
+name: "Line71"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 200000 0 1
+    next_corner: -200000 0 0
+  n_pins: 0
+
+name: "Line63"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 -92680 1
+    next_corner: 0 92680 0
+  outline_polyline: 0 0 -387320 1
+    next_corner: 0 -201960 0
+  n_pins: 0
+
+name: "Line56"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 -3250000 1
+    next_corner: 0 3250000 0
+  n_pins: 0
+
+name: "Line41"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 11920 -90580 1
+    next_corner: -11920 90580 0
+    next_corner: -81860 259420 0
+    next_corner: -193100 404390 0
+    next_corner: -338080 515640 0
+    next_corner: -506900 585560 0
+    next_corner: -688080 609420 0
+    next_corner: -869250 585560 0
+    next_corner: -1038080 515640 0
+    next_corner: -1183050 404390 0
+    next_corner: -1294290 259420 0
+    next_corner: -1364230 90580 0
+    next_corner: -1388080 -90580 0
+    next_corner: -1364230 -271750 0
+    next_corner: -1294290 -440580 0
+    next_corner: -1183050 -585560 0
+    next_corner: -1038080 -696810 0
+    next_corner: -869250 -766730 0
+    next_corner: -688080 -790580 0
+    next_corner: -506900 -766730 0
+    next_corner: -338080 -696810 0
+    next_corner: -193100 -585560 0
+    next_corner: -81860 -440580 0
+    next_corner: -11920 -271750 0
+    next_corner: 11920 -90580 0
+  n_pins: 0
+
+name: "Line32"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 12150 -138920 1
+    next_corner: -12150 138920 0
+    next_corner: -84340 408310 0
+    next_corner: -202210 661080 0
+    next_corner: -362180 889540 0
+    next_corner: -559380 1086740 0
+    next_corner: -787850 1246730 0
+    next_corner: -1040620 1364580 0
+    next_corner: -1310010 1436780 0
+    next_corner: -1587850 1461080 0
+    next_corner: -1865690 1436780 0
+    next_corner: -2135080 1364580 0
+    next_corner: -2387850 1246730 0
+    next_corner: -2616310 1086740 0
+    next_corner: -2813520 889540 0
+    next_corner: -2973490 661080 0
+    next_corner: -3091360 408310 0
+    next_corner: -3163540 138920 0
+    next_corner: -3187850 -138920 0
+  n_pins: 0
+
+name: "Line20"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 -7500000 0 1
+    next_corner: 7500000 0 0
+  n_pins: 0
+
+name: "Line393"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 -2700000 0 1
+    next_corner: 2700000 0 0
+  outline_polyline: 0 4600000 0 1
+    next_corner: 10000010 0 0
+  n_pins: 0
+
+name: "Line383"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 -6500000 0 1
+    next_corner: 6500000 0 0
+  n_pins: 0
+
+name: "Line379"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 -6500000 0 1
+    next_corner: 6500000 0 0
+  n_pins: 0
+
+name: "Line352"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 -1000000 1
+    next_corner: 0 1000000 0
+  outline_polyline: 0 276880 -1000000 1
+    next_corner: 276880 1000000 0
+  n_pins: 0
+
+name: "Line348"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 1000000 1
+    next_corner: 0 -1000000 0
+  outline_polyline: 0 -276880 1000000 1
+    next_corner: -276880 -1000000 0
+  n_pins: 0
+
+name: "Line315"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 3375000 1
+    next_corner: 0 -3375000 0
+  outline_polyline: 0 -276890 3375000 1
+    next_corner: -276890 -3375000 0
+  outline_polyline: 0 -743570 3375000 1
+    next_corner: -743570 -3375000 0
+  n_pins: 0
+
+name: "Line307"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 -1600000 1
+    next_corner: 0 1600000 0
+  n_pins: 0
+
+name: "Line248"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 -450000 0 1
+    next_corner: 450000 0 0
+  n_pins: 0
+
+name: "Line233"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 -450000 0 1
+    next_corner: 450000 0 0
+  n_pins: 0
+
+name: "Line223"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 300000 0 1
+    next_corner: -300000 0 0
+  outline_polyline: 0 1200000 0 1
+    next_corner: 300000 0 0
+  n_pins: 0
+
+name: "Line187"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 -19940 -1050 1
+    next_corner: 19940 1050 0
+  outline_polyline: 0 19940 1050 1
+    next_corner: 569950 29880 0
+    next_corner: 1284860 67340 0
+  n_pins: 0
+
+name: "Line175"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 -60000 1
+    next_corner: 0 60000 0
+  n_pins: 0
+
+name: "Line146"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 -175000 0 1
+    next_corner: 175000 0 0
+  outline_polyline: 0 -175000 -1300000 1
+    next_corner: -175000 0 0
+  outline_polyline: 0 -175000 -1100000 1
+    next_corner: 175000 -1100000 0
+  outline_polyline: 0 -175000 -1300000 1
+    next_corner: -175000 -4300000 0
+  outline_polyline: 0 -625010 -1300000 1
+    next_corner: -625010 -4300000 0
+  n_pins: 0
+
+name: "Line99"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 237100 12420 1
+    next_corner: -237100 -12420 0
+    next_corner: -312910 -92310 0
+    next_corner: -312910 -355560 0
+  n_pins: 0
+
+name: "Line85"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 2000000 1
+    next_corner: 0 -2000000 0
+  outline_polyline: 0 0 -2000000 1
+    next_corner: 12500000 -2000000 0
+  outline_polyline: 0 12500000 -2000000 1
+    next_corner: 12500000 2000000 0
+  outline_polyline: 0 12500000 2000000 1
+    next_corner: 0 2000000 0
+  n_pins: 0
+
+name: "Line62"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 92680 1
+    next_corner: 0 -92680 0
+  outline_polyline: 0 0 387320 1
+    next_corner: 0 201960 0
+  outline_polyline: 0 89020 387320 1
+    next_corner: 11490 387320 0
+  n_pins: 0
+
+name: "Line57"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 151940 13300 1
+    next_corner: -151940 -13300 0
+    next_corner: -446590 -92240 0
+    next_corner: -723060 -221150 0
+    next_corner: -972940 -396130 0
+    next_corner: -1188630 -611820 0
+    next_corner: -1363600 -861710 0
+    next_corner: -1492520 -1138180 0
+    next_corner: -1571470 -1432820 0
+    next_corner: -1598060 -1736700 0
+    next_corner: -1571470 -2040590 0
+    next_corner: -1492520 -2335230 0
+    next_corner: -1363600 -2611700 0
+    next_corner: -1188630 -2861580 0
+    next_corner: -972940 -3077280 0
+    next_corner: -723060 -3252260 0
+    next_corner: -446590 -3381170 0
+    next_corner: -151940 -3460110 0
+    next_corner: 151940 -3486700 0
+    next_corner: 455830 -3460110 0
+    next_corner: 750480 -3381170 0
+    next_corner: 1026940 -3252260 0
+    next_corner: 1276820 -3077280 0
+    next_corner: 1492520 -2861580 0
+    next_corner: 1667490 -2611710 0
+    next_corner: 1796410 -2335230 0
+    next_corner: 1875360 -2040590 0
+    next_corner: 1901940 -1736700 0
+    next_corner: 1875360 -1432820 0
+    next_corner: 1796410 -1138180 0
+    next_corner: 1667490 -861700 0
+    next_corner: 1492520 -611820 0
+    next_corner: 1276820 -396130 0
+    next_corner: 1026940 -221150 0
+    next_corner: 750480 -92240 0
+    next_corner: 455830 -13300 0
+    next_corner: 151940 13300 0
+  n_pins: 0
+
+name: "Line40"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 12160 -138920 1
+    next_corner: -12160 138920 0
+    next_corner: -84340 408310 0
+    next_corner: -202200 661080 0
+    next_corner: -362180 889540 0
+    next_corner: -559390 1086740 0
+    next_corner: -787840 1246730 0
+    next_corner: -1040620 1364580 0
+    next_corner: -1310010 1436780 0
+    next_corner: -1587850 1461080 0
+    next_corner: -1865680 1436780 0
+    next_corner: -2135080 1364580 0
+    next_corner: -2387850 1246730 0
+    next_corner: -2616310 1086740 0
+    next_corner: -2813520 889540 0
+    next_corner: -2973490 661080 0
+    next_corner: -3091360 408310 0
+    next_corner: -3163540 138920 0
+    next_corner: -3187850 -138920 0
+    next_corner: -3163540 -416760 0
+    next_corner: -3091360 -686150 0
+    next_corner: -2973490 -938920 0
+    next_corner: -2813520 -1167380 0
+    next_corner: -2616310 -1364580 0
+    next_corner: -2387850 -1524570 0
+    next_corner: -2135080 -1642420 0
+    next_corner: -1865680 -1714620 0
+    next_corner: -1587850 -1738920 0
+    next_corner: -1310010 -1714620 0
+    next_corner: -1040620 -1642420 0
+    next_corner: -787840 -1524570 0
+    next_corner: -559390 -1364580 0
+    next_corner: -362180 -1167380 0
+    next_corner: -202200 -938920 0
+    next_corner: -84340 -686150 0
+    next_corner: -12160 -416760 0
+    next_corner: 12160 -138920 0
+  n_pins: 0
+
+name: "Line33"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 17040 -129410 1
+    next_corner: -17040 129410 0
+    next_corner: -116940 370590 0
+    next_corner: -275860 577700 0
+    next_corner: -482960 736620 0
+    next_corner: -724150 836510 0
+    next_corner: -982960 870590 0
+    next_corner: -1241780 836510 0
+    next_corner: -1482960 736620 0
+    next_corner: -1690070 577700 0
+    next_corner: -1848990 370590 0
+    next_corner: -1948890 129410 0
+    next_corner: -1982960 -129410 0
+    next_corner: -1948890 -388220 0
+    next_corner: -1848990 -629410 0
+    next_corner: -1690070 -836510 0
+    next_corner: -1482960 -995440 0
+    next_corner: -1241780 -1095330 0
+    next_corner: -982960 -1129410 0
+    next_corner: -724150 -1095330 0
+    next_corner: -482960 -995440 0
+    next_corner: -275860 -836510 0
+    next_corner: -116940 -629410 0
+    next_corner: -17040 -388220 0
+    next_corner: 17040 -129410 0
+  n_pins: 0
+
+name: "Line23"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 -199300 1
+    next_corner: 0 199300 0
+  n_pins: 0
+
+name: "Line392"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 -2700000 0 1
+    next_corner: 2700000 0 0
+  outline_polyline: 0 4600000 0 1
+    next_corner: 10000010 0 0
+  n_pins: 0
+
+name: "Line380"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 -6500000 1
+    next_corner: 0 6500000 0
+  n_pins: 0
+
+name: "Line378"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 -6500000 1
+    next_corner: 0 6500000 0
+  n_pins: 0
+
+name: "Line349"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 150000 1
+    next_corner: 0 -150000 0
+  outline_polyline: 0 0 -3350000 1
+    next_corner: 0 -3050000 0
+  outline_polyline: 0 0 -150000 1
+    next_corner: -251790 -172030 0
+    next_corner: -495930 -237440 0
+    next_corner: -725000 -344260 0
+    next_corner: -932040 -489230 0
+    next_corner: -1110770 -667950 0
+    next_corner: -1255740 -875010 0
+    next_corner: -1362550 -1104060 0
+    next_corner: -1427970 -1348210 0
+    next_corner: -1450000 -1600000 0
+    next_corner: -1427970 -1851790 0
+    next_corner: -1362550 -2095940 0
+    next_corner: -1255740 -2324990 0
+    next_corner: -1110770 -2532050 0
+    next_corner: -932040 -2710770 0
+    next_corner: -725000 -2855740 0
+    next_corner: -495930 -2962560 0
+    next_corner: -251790 -3027970 0
+    next_corner: 0 -3050000 0
+    next_corner: 251790 -3027970 0
+    next_corner: 495930 -2962560 0
+    next_corner: 725000 -2855740 0
+    next_corner: 932040 -2710770 0
+    next_corner: 1110770 -2532050 0
+    next_corner: 1255740 -2324990 0
+    next_corner: 1362550 -2095940 0
+    next_corner: 1427970 -1851790 0
+    next_corner: 1450000 -1600000 0
+    next_corner: 1427970 -1348210 0
+    next_corner: 1362550 -1104060 0
+    next_corner: 1255740 -875010 0
+    next_corner: 1110770 -667950 0
+    next_corner: 932040 -489230 0
+    next_corner: 725000 -344260 0
+    next_corner: 495930 -237440 0
+    next_corner: 251790 -172030 0
+    next_corner: 0 -150000 0
+  n_pins: 0
+
+name: "Line314"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 -3375000 1
+    next_corner: 0 3375000 0
+  n_pins: 0
+
+name: "Line304"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 1600000 1
+    next_corner: 0 -1600000 0
+  n_pins: 0
+
+name: "Line230"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 -550000 1
+    next_corner: 0 550000 0
+  n_pins: 0
+
+name: "Line222"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 200000 0 1
+    next_corner: -200000 0 0
+  n_pins: 0
+
+name: "Line197"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 47320 -52540 1
+    next_corner: -47320 52540 0
+    next_corner: -42080 152420 0
+  outline_polyline: 0 -42080 152420 1
+    next_corner: 63020 247040 0
+  n_pins: 0
+
+name: "Line180"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 -175000 1
+    next_corner: 0 175000 0
+  outline_polyline: 0 0 175000 1
+    next_corner: 0 2025000 0
+  outline_polyline: 0 0 2025000 1
+    next_corner: -400000 2025000 0
+  n_pins: 0
+
+name: "Line147"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 -175000 0 1
+    next_corner: 175000 0 0
+  outline_polyline: 0 -175000 3000000 1
+    next_corner: 175000 3000000 0
+  outline_polyline: 0 175000 3000000 1
+    next_corner: 175000 4300000 0
+  n_pins: 0
+
+name: "Line133"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 150000 1
+    next_corner: 0 -150000 0
+  outline_polyline: 0 0 1850000 1
+    next_corner: 0 1550000 0
+  n_pins: 0
+
+name: "Line119"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 450000 0 1
+    next_corner: -450000 0 0
+  n_pins: 0
+
+name: "Line84"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 -3800000 0 1
+    next_corner: 3800000 0 0
+  n_pins: 0
+
+name: "Line65"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 38760 0 1
+    next_corner: -38760 0 0
+  n_pins: 0
+
+name: "Line47"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 -4025000 0 1
+    next_corner: 4025000 0 0
+  n_pins: 0
+
+name: "Line30"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 20950000 0 1
+    next_corner: -20950000 0 0
+  n_pins: 0
+
+name: "Line22"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 -199290 0 1
+    next_corner: 199290 0 0
+  n_pins: 0
+
+name: "Line14"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 -38760 0 1
+    next_corner: 38760 0 0
+  outline_polyline: 0 -437350 0 1
+    next_corner: -38760 0 0
+  n_pins: 0
+
+name: "Line395"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 -6500000 1
+    next_corner: 0 6500000 0
+  n_pins: 0
+
+name: "Line381"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 -6500000 0 1
+    next_corner: 6500000 0 0
+  n_pins: 0
+
+name: "Line305"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 -1600000 1
+    next_corner: 0 1600000 0
+  n_pins: 0
+
+name: "Line231"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 37500 10050 1
+    next_corner: -37500 -10050 0
+    next_corner: -92400 -64940 0
+    next_corner: -112500 -139950 0
+  n_pins: 0
+
+name: "Line181"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 125000 1
+    next_corner: 0 -125000 0
+  outline_polyline: 0 0 -125000 1
+    next_corner: 0 -2125000 0
+  outline_polyline: 0 0 -2249990 1
+    next_corner: 0 -2375000 0
+  outline_polyline: 0 0 -2375000 1
+    next_corner: 0 -4375000 0
+  outline_polyline: 0 0 -4375000 1
+    next_corner: 0 -4625000 0
+  outline_polyline: 0 0 -4625000 1
+    next_corner: 0 -5375000 0
+  outline_polyline: 0 0 1625000 1
+    next_corner: 0 125000 0
+  n_pins: 0
+
+name: "Line148"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 -175000 0 1
+    next_corner: 175000 0 0
+  outline_polyline: 0 -175000 -1300000 1
+    next_corner: -175000 0 0
+  outline_polyline: 0 -175000 -1100000 1
+    next_corner: 175000 -1100000 0
+  outline_polyline: 0 -175000 -1300000 1
+    next_corner: -175000 -4300000 0
+  outline_polyline: 0 -624990 -1300000 1
+    next_corner: -624990 -4300000 0
+  n_pins: 0
+
+name: "Line132"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 -40000 1
+    next_corner: 0 40000 0
+  outline_polyline: 0 0 -40000 1
+    next_corner: -233310 -40000 0
+  n_pins: 0
+
+name: "Line120"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 -300000 0 1
+    next_corner: 300000 0 0
+  outline_polyline: 0 -300000 0 1
+    next_corner: -300000 -300000 0
+  n_pins: 0
+
+name: "Line118"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 -450000 0 1
+    next_corner: 450000 0 0
+  n_pins: 0
+
+name: "Line83"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 1225000 700000 1
+    next_corner: -1225000 -700000 0
+  outline_polyline: 0 1225000 2700000 1
+    next_corner: 1225000 700000 0
+  n_pins: 0
+
+name: "Line64"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 -38760 1
+    next_corner: 0 38760 0
+  outline_polyline: 0 0 563270 1
+    next_corner: 0 640790 0
+  n_pins: 0
+
+name: "Line58"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 -3000000 1
+    next_corner: 0 3000000 0
+  outline_polyline: 0 0 3000000 1
+    next_corner: -6599990 3000000 0
+  outline_polyline: 0 -6599990 3000000 1
+    next_corner: -6599990 -3000000 0
+  outline_polyline: 0 -6599990 -3000000 1
+    next_corner: 0 -3000000 0
+  n_pins: 0
+
+name: "Line46"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 12150 -138920 1
+    next_corner: -12150 138920 0
+    next_corner: -84340 408310 0
+    next_corner: -202210 661080 0
+    next_corner: -362180 889540 0
+    next_corner: -559380 1086740 0
+    next_corner: -787850 1246730 0
+    next_corner: -1040620 1364580 0
+    next_corner: -1310010 1436780 0
+    next_corner: -1587850 1461080 0
+    next_corner: -1865690 1436780 0
+    next_corner: -2135080 1364580 0
+    next_corner: -2387850 1246730 0
+    next_corner: -2616310 1086740 0
+    next_corner: -2813520 889540 0
+    next_corner: -2973490 661080 0
+    next_corner: -3091360 408310 0
+    next_corner: -3163540 138920 0
+    next_corner: -3187850 -138920 0
+    next_corner: -3163540 -416760 0
+    next_corner: -3091360 -686150 0
+    next_corner: -2973490 -938920 0
+    next_corner: -2813520 -1167380 0
+    next_corner: -2616310 -1364580 0
+    next_corner: -2387850 -1524570 0
+    next_corner: -2135080 -1642420 0
+    next_corner: -1865690 -1714620 0
+    next_corner: -1587850 -1738920 0
+    next_corner: -1310010 -1714620 0
+    next_corner: -1040620 -1642420 0
+    next_corner: -787850 -1524570 0
+    next_corner: -559380 -1364580 0
+    next_corner: -362180 -1167380 0
+    next_corner: -202210 -938920 0
+    next_corner: -84340 -686150 0
+    next_corner: -12150 -416760 0
+    next_corner: 12150 -138920 0
+  n_pins: 0
+
+name: "Line31"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 -6725000 0 1
+    next_corner: 6725000 0 0
+  outline_polyline: 0 6725000 0 1
+    next_corner: 6725000 -3710000 0
+  n_pins: 0
+
+name: "Line15"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 199290 0 1
+    next_corner: -199290 0 0
+  n_pins: 0
+
+name: "Line394"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 -6500000 0 1
+    next_corner: 6500000 0 0
+  n_pins: 0
+
+name: "Line377"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 -6500000 0 1
+    next_corner: 6500000 0 0
+  n_pins: 0
+
+name: "Line368"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 -6500000 1
+    next_corner: 0 6500000 0
+  n_pins: 0
+
+name: "Line316"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 -3375000 1
+    next_corner: 0 3375000 0
+  outline_polyline: 0 -466680 -3375000 1
+    next_corner: -466680 3375000 0
+  n_pins: 0
+
+name: "Line302"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 1600000 1
+    next_corner: 0 -1600000 0
+  n_pins: 0
+
+name: "Line282"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 200000 0 1
+    next_corner: -200000 0 0
+  n_pins: 0
+
+name: "Line182"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 93540 30390 1
+    next_corner: -93540 -30390 0
+    next_corner: -225160 -176570 0
+    next_corner: -266580 -349080 0
+  n_pins: 0
+
+name: "Line176"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 -600000 0 1
+    next_corner: 600000 0 0
+  outline_polyline: 0 -600000 -120000 1
+    next_corner: -600000 0 0
+  n_pins: 0
+
+name: "Line149"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 -175000 0 1
+    next_corner: 175000 0 0
+  outline_polyline: 0 -175000 3000000 1
+    next_corner: 175000 3000000 0
+  outline_polyline: 0 175000 3000000 1
+    next_corner: 175000 4300000 0
+  n_pins: 0
+
+name: "Line121"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 300000 0 1
+    next_corner: -300000 0 0
+  n_pins: 0
+
+name: "Line117"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 -75000 0 1
+    next_corner: 75000 0 0
+  n_pins: 0
+
+name: "Line94"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 -19940 1050 1
+    next_corner: 19940 -1050 0
+  n_pins: 0
+
+name: "Line82"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 1225000 -700000 1
+    next_corner: -1225000 700000 0
+  outline_polyline: 0 1225000 -18350000 1
+    next_corner: 1225000 -700000 0
+  outline_polyline: 0 8825000 -18350000 1
+    next_corner: 8825000 -700000 0
+  n_pins: 0
+
+name: "Line67"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 92680 0 1
+    next_corner: -92680 0 0
+  outline_polyline: 0 387320 0 1
+    next_corner: 201960 0 0
+  n_pins: 0
+
+name: "Line59"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 1000000 1
+    next_corner: 0 -1000000 0
+  n_pins: 0
+
+name: "Line45"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 12150 -138920 1
+    next_corner: -12150 138920 0
+    next_corner: -84340 408310 0
+    next_corner: -202210 661080 0
+    next_corner: -362180 889540 0
+    next_corner: -559380 1086740 0
+    next_corner: -787850 1246730 0
+    next_corner: -1040620 1364580 0
+    next_corner: -1310010 1436780 0
+    next_corner: -1587850 1461080 0
+    next_corner: -1865690 1436780 0
+    next_corner: -2135080 1364580 0
+    next_corner: -2387850 1246730 0
+    next_corner: -2616310 1086740 0
+    next_corner: -2813520 889540 0
+    next_corner: -2973490 661080 0
+    next_corner: -3091360 408310 0
+    next_corner: -3163540 138920 0
+    next_corner: -3187850 -138920 0
+    next_corner: -3163540 -416760 0
+    next_corner: -3091360 -686150 0
+    next_corner: -2973490 -938920 0
+    next_corner: -2813520 -1167380 0
+    next_corner: -2616310 -1364580 0
+    next_corner: -2387850 -1524570 0
+    next_corner: -2135080 -1642420 0
+    next_corner: -1865690 -1714620 0
+    next_corner: -1587850 -1738920 0
+    next_corner: -1310010 -1714620 0
+    next_corner: -1040620 -1642420 0
+    next_corner: -787850 -1524570 0
+    next_corner: -559380 -1364580 0
+    next_corner: -362180 -1167380 0
+    next_corner: -202210 -938920 0
+    next_corner: -84340 -686150 0
+    next_corner: -12150 -416760 0
+    next_corner: 12150 -138920 0
+  n_pins: 0
+
+name: "Line36"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 2525000 0 1
+    next_corner: -2525000 0 0
+  outline_polyline: 0 -44425000 0 1
+    next_corner: -49475000 0 0
+  outline_polyline: 0 -49475000 0 1
+    next_corner: -49475000 20000000 0
+  outline_polyline: 0 -49475000 20000000 1
+    next_corner: -44425000 20000000 0
+  outline_polyline: 0 -2525000 20000000 1
+    next_corner: 2525000 20000000 0
+  outline_polyline: 0 2525000 20000000 1
+    next_corner: 2525000 0 0
+  n_pins: 0
+
+name: "Line16"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 199300 1
+    next_corner: 0 -199300 0
+  n_pins: 0
+
+name: "Line397"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 -6500000 1
+    next_corner: 0 6500000 0
+  n_pins: 0
+
+name: "Line376"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 -6500000 1
+    next_corner: 0 6500000 0
+  n_pins: 0
+
+name: "Line369"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 -6500000 0 1
+    next_corner: 6500000 0 0
+  n_pins: 0
+
+name: "Line333"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 -1600000 1
+    next_corner: 0 1600000 0
+  n_pins: 0
+
+name: "Line303"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 -1600000 1
+    next_corner: 0 1600000 0
+  n_pins: 0
+
+name: "Line281"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 -3800000 0 1
+    next_corner: 3800000 0 0
+  outline_polyline: 0 -3800000 0 1
+    next_corner: 3800000 0 0
+  outline_polyline: 0 3800000 0 1
+    next_corner: -3800000 0 0
+  n_pins: 0
+
+name: "Line116"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 37500 10050 1
+    next_corner: -37500 -10050 0
+    next_corner: -92400 -64940 0
+    next_corner: -112500 -139950 0
+  n_pins: 0
+
+name: "Line95"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 25460 -95000 1
+    next_corner: -25460 95000 0
+    next_corner: -164540 234090 0
+    next_corner: -334660 284470 0
+  n_pins: 0
+
+name: "Line66"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 -92680 0 1
+    next_corner: 92680 0 0
+  outline_polyline: 0 -387320 0 1
+    next_corner: -201950 0 0
+  n_pins: 0
+
+name: "Line44"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 -32000000 1
+    next_corner: 0 32000000 0
+  n_pins: 0
+
+name: "Line37"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 -151940 -13300 1
+    next_corner: 151940 13300 0
+    next_corner: 446590 92240 0
+    next_corner: 723060 221150 0
+    next_corner: 972940 396130 0
+    next_corner: 1188630 611820 0
+    next_corner: 1363600 861700 0
+    next_corner: 1492520 1138180 0
+    next_corner: 1571470 1432820 0
+    next_corner: 1598060 1736700 0
+    next_corner: 1571470 2040590 0
+    next_corner: 1492520 2335230 0
+    next_corner: 1363600 2611710 0
+    next_corner: 1188630 2861580 0
+    next_corner: 972940 3077280 0
+    next_corner: 723060 3252260 0
+    next_corner: 446590 3381170 0
+    next_corner: 151940 3460110 0
+    next_corner: -151940 3486700 0
+    next_corner: -455830 3460110 0
+    next_corner: -750480 3381170 0
+    next_corner: -1026940 3252260 0
+    next_corner: -1276820 3077280 0
+    next_corner: -1492520 2861580 0
+    next_corner: -1667490 2611700 0
+    next_corner: -1796410 2335230 0
+    next_corner: -1875360 2040590 0
+    next_corner: -1901940 1736700 0
+    next_corner: -1875360 1432820 0
+    next_corner: -1796410 1138180 0
+    next_corner: -1667490 861710 0
+    next_corner: -1492520 611820 0
+    next_corner: -1276820 396130 0
+    next_corner: -1026940 221150 0
+    next_corner: -750480 92240 0
+    next_corner: -455830 13300 0
+    next_corner: -151940 -13300 0
+  n_pins: 0
+
+name: "Line17"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 -199300 1
+    next_corner: 0 199300 0
+  n_pins: 0
+
+name: "Line9"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 3800000 0 1
+    next_corner: -3800000 0 0
+  n_pins: 0
+
+name: "Line396"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 -6500000 0 1
+    next_corner: 6500000 0 0
+  n_pins: 0
+
+name: "Line375"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 -6500000 0 1
+    next_corner: 6500000 0 0
+  n_pins: 0
+
+name: "Line332"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 1600000 1
+    next_corner: 0 -1600000 0
+  n_pins: 0
+
+name: "Line300"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 -375000 1
+    next_corner: 0 375000 0
+  outline_polyline: 0 276880 -375000 1
+    next_corner: 276880 411450 0
+  n_pins: 0
+
+name: "Line280"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 -50000 0 1
+    next_corner: 50000 0 0
+  outline_polyline: 0 1750000 0 1
+    next_corner: 1650000 0 0
+  n_pins: 0
+
+name: "Line243"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 -75000 0 1
+    next_corner: 75000 0 0
+  n_pins: 0
+
+name: "Line219"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 -1375000 1
+    next_corner: 0 1375000 0
+  outline_polyline: 0 -515000 -1375000 1
+    next_corner: -515000 5375000 0
+  n_pins: 0
+
+name: "Line179"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 -125000 1
+    next_corner: 0 125000 0
+  outline_polyline: 0 0 125000 1
+    next_corner: 0 1625000 0
+  outline_polyline: 0 0 -5375000 1
+    next_corner: 0 -4625000 0
+  outline_polyline: 0 0 -4625000 1
+    next_corner: 0 -4375000 0
+  outline_polyline: 0 0 -4375000 1
+    next_corner: 0 -2375000 0
+  outline_polyline: 0 0 -2375000 1
+    next_corner: 0 -2249990 0
+  outline_polyline: 0 0 -2125000 1
+    next_corner: 0 -125000 0
+  n_pins: 0
+
+name: "Line115"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 -300000 1
+    next_corner: 0 300000 0
+  n_pins: 0
+
+name: "Line96"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 175000 1
+    next_corner: 0 -175000 0
+  outline_polyline: 0 0 175000 1
+    next_corner: 0 2025000 0
+  n_pins: 0
+
+name: "Line80"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 -1000000 1
+    next_corner: 0 1000000 0
+  n_pins: 0
+
+name: "Line69"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 1000000 1
+    next_corner: 0 -1000000 0
+  n_pins: 0
+
+name: "Line34"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 17040 -129410 1
+    next_corner: -17040 129410 0
+    next_corner: -116940 370590 0
+    next_corner: -275860 577700 0
+    next_corner: -482960 736620 0
+    next_corner: -724150 836510 0
+    next_corner: -982960 870590 0
+    next_corner: -1241780 836510 0
+    next_corner: -1482960 736620 0
+    next_corner: -1690070 577700 0
+    next_corner: -1848990 370590 0
+    next_corner: -1948890 129410 0
+    next_corner: -1982960 -129410 0
+    next_corner: -1948890 -388220 0
+    next_corner: -1848990 -629410 0
+    next_corner: -1690070 -836510 0
+    next_corner: -1482960 -995440 0
+    next_corner: -1241780 -1095330 0
+    next_corner: -982960 -1129410 0
+    next_corner: -724150 -1095330 0
+    next_corner: -482960 -995440 0
+    next_corner: -275860 -836510 0
+    next_corner: -116940 -629410 0
+    next_corner: -17040 -388220 0
+    next_corner: 17040 -129410 0
+  n_pins: 0
+
+name: "Line10"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 11130 -11130 1
+    next_corner: -11130 11130 0
+  n_pins: 0
+
+name: "Line8"
+  units: NM
+  sel_rect: -127000 -127000 127000 127000
+  ref_text: 0 0 0 0 0
+  value_text: 0 0 0 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 0 0 1075000 1
+    next_corner: 0 -1075000 0
+  outline_polyline: 0 -7600000 1075000 1
+    next_corner: -7600000 -1075000 0
+  n_pins: 0
+
+[board]
+
+[solder_mask_cutouts]
+
+
+[parts]
+
+part: Line0
+  ref_text: 0 0 0 0 0 0
+  shape: "Line0"
+  pos: 9701581 -45388416 0 180 0
+
+part: Line1
+  ref_text: 0 0 0 0 0 0
+  shape: "Line1"
+  pos: 5953527 1024884 0 180 0
+
+part: Line2
+  ref_text: 0 0 0 0 0 0
+  shape: "Line2"
+  pos: -12158631 -9186198 0 180 0
+
+part: Line3
+  ref_text: 0 0 0 0 0 0
+  shape: "Line3"
+  pos: 10005458 -48861828 0 180 0
+
+part: Line4
+  ref_text: 0 0 0 0 0 0
+  shape: "Line4"
+  pos: 13553526 1024882 0 180 0
+
+part: Line5
+  ref_text: 0 0 0 0 0 0
+  shape: "Line5"
+  pos: 13153518 -47125120 0 180 0
+
+part: Line6
+  ref_text: 0 0 0 0 0 0
+  shape: "Line6"
+  pos: -13495342 -9073991 0 180 0
+
+part: Line7
+  ref_text: 0 0 0 0 0 0
+  shape: "Line7"
+  pos: 6553522 -47125120 0 180 0
+
+part: Line8
+  ref_text: 0 0 0 0 0 0
+  shape: "Line8"
+  pos: 5953527 3349882 0 180 0
+
+part: Line9
+  ref_text: 0 0 0 0 0 0
+  shape: "Line9"
+  pos: 9753529 4424876 0 180 0
+
+part: Line10
+  ref_text: 0 0 0 0 0 0
+  shape: "Line10"
+  pos: -13997605 -9576245 0 180 0
+
+part: Line11
+  ref_text: 0 0 0 0 0 0
+  shape: "Line11"
+  pos: 23405460 -44861824 0 180 0
+
+part: Line12
+  ref_text: 0 0 0 0 0 0
+  shape: "Line12"
+  pos: 19953516 -43125132 0 180 0
+
+part: Line13
+  ref_text: 0 0 0 0 0 0
+  shape: "Line13"
+  pos: -13506472 -9024102 0 180 0
+
+part: Line14
+  ref_text: 0 0 0 0 0 0
+  shape: "Line14"
+  pos: -13445451 -9085119 0 180 0
+
+part: Line15
+  ref_text: 0 0 0 0 0 0
+  shape: "Line15"
+  pos: -13207395 -9565120 0 180 0
+
+part: Line16
+  ref_text: 0 0 0 0 0 0
+  shape: "Line16"
+  pos: -13506472 -9864192 0 180 0
+
+part: Line17
+  ref_text: 0 0 0 0 0 0
+  shape: "Line17"
+  pos: -13986474 -9864190 0 180 0
+
+part: Line18
+  ref_text: 0 0 0 0 0 0
+  shape: "Line18"
+  pos: -2621473 874880 0 180 0
+
+part: Line19
+  ref_text: 0 0 0 0 0 0
+  shape: "Line19"
+  pos: -14285553 -9565117 0 180 0
+
+part: Line20
+  ref_text: 0 0 0 0 0 0
+  shape: "Line20"
+  pos: 9753520 -225122 0 180 0
+
+part: Line21
+  ref_text: 0 0 0 0 0 0
+  shape: "Line21"
+  pos: -11196471 -1530119 0 180 0
+
+part: Line22
+  ref_text: 0 0 0 0 0 0
+  shape: "Line22"
+  pos: -14285552 -9085120 0 180 0
+
+part: Line23
+  ref_text: 0 0 0 0 0 0
+  shape: "Line23"
+  pos: -13986471 -8786047 0 180 0
+
+part: Line24
+  ref_text: 0 0 0 0 0 0
+  shape: "Line24"
+  pos: 30703528 -1530120 0 180 0
+
+part: Line25
+  ref_text: 0 0 0 0 0 0
+  shape: "Line25"
+  pos: 30703524 -15530127 0 180 0
+
+part: Line26
+  ref_text: 0 0 0 0 0 0
+  shape: "Line26"
+  pos: 2253519 -2080119 0 180 0
+
+part: Line27
+  ref_text: 0 0 0 0 0 0
+  shape: "Line27"
+  pos: -13506472 -8786048 0 180 0
+
+part: Line28
+  ref_text: 0 0 0 0 0 0
+  shape: "Line28"
+  pos: -4471476 -3935117 0 180 0
+
+part: Line29
+  ref_text: 0 0 0 0 0 0
+  shape: "Line29"
+  pos: -13506472 -9626135 0 180 0
+
+part: Line30
+  ref_text: 0 0 0 0 0 0
+  shape: "Line30"
+  pos: 9753537 -27125114 0 180 0
+
+part: Line31
+  ref_text: 0 0 0 0 0 0
+  shape: "Line31"
+  pos: 23978524 -3935122 0 180 0
+
+part: Line32
+  ref_text: 0 0 0 0 0 0
+  shape: "Line32"
+  pos: -15334328 -9464039 0 180 0
+
+part: Line33
+  ref_text: 0 0 0 0 0 0
+  shape: "Line33"
+  pos: 32270556 -9454528 0 180 0
+
+part: Line34
+  ref_text: 0 0 0 0 0 0
+  shape: "Line34"
+  pos: 32270560 -25254522 0 180 0
+
+part: Line35
+  ref_text: 0 0 0 0 0 0
+  shape: "Line35"
+  pos: -14729443 -25254528 0 180 0
+
+part: Line36
+  ref_text: 0 0 0 0 0 0
+  shape: "Line36"
+  pos: -13721476 -7125118 0 180 0
+
+part: Line37
+  ref_text: 0 0 0 0 0 0
+  shape: "Line37"
+  pos: 9801588 -35388412 0 180 0
+
+part: Line38
+  ref_text: 0 0 0 0 0 0
+  shape: "Line38"
+  pos: 13253516 -37125126 0 180 0
+
+part: Line39
+  ref_text: 0 0 0 0 0 0
+  shape: "Line39"
+  pos: 33165680 -59264032 0 180 0
+
+part: Line40
+  ref_text: 0 0 0 0 0 0
+  shape: "Line40"
+  pos: 33165676 -3264030 0 180 0
+
+part: Line41
+  ref_text: 0 0 0 0 0 0
+  shape: "Line41"
+  pos: 32565436 -25215714 0 180 0
+
+part: Line42
+  ref_text: 0 0 0 0 0 0
+  shape: "Line42"
+  pos: 32565444 -9415690 0 180 0
+
+part: Line43
+  ref_text: 0 0 0 0 0 0
+  shape: "Line43"
+  pos: -14434561 -25215704 0 180 0
+
+part: Line44
+  ref_text: 0 0 0 0 0 0
+  shape: "Line44"
+  pos: 38753520 -31125136 0 180 0
+
+part: Line45
+  ref_text: 0 0 0 0 0 0
+  shape: "Line45"
+  pos: -22834329 -3264039 0 180 0
+
+part: Line46
+  ref_text: 0 0 0 0 0 0
+  shape: "Line46"
+  pos: -22834334 -59264036 0 180 0
+
+part: Line47
+  ref_text: 0 0 0 0 0 0
+  shape: "Line47"
+  pos: 34728528 874884 0 180 0
+
+part: Line48
+  ref_text: 0 0 0 0 0 0
+  shape: "Line48"
+  pos: -10396473 7374880 0 180 0
+
+part: Line49
+  ref_text: 0 0 0 0 0 0
+  shape: "Line49"
+  pos: -46821564 874872 0 180 0
+
+part: Line50
+  ref_text: 0 0 0 0 0 0
+  shape: "Line50"
+  pos: -13791349 9374882 0 180 0
+
+part: Line51
+  ref_text: 0 0 0 0 0 0
+  shape: "Line51"
+  pos: -18746560 -63125120 0 180 0
+
+part: Line52
+  ref_text: 0 0 0 0 0 0
+  shape: "Line52"
+  pos: -76246656 -31125122 0 180 0
+
+part: Line53
+  ref_text: 0 0 0 0 0 0
+  shape: "Line53"
+  pos: -73834512 -45264028 0 180 0
+
+part: Line54
+  ref_text: 0 0 0 0 0 0
+  shape: "Line54"
+  pos: -73834508 -59264036 0 180 0
+
+part: Line55
+  ref_text: 0 0 0 0 0 0
+  shape: "Line55"
+  pos: -3396473 4124881 0 180 0
+
+part: Line56
+  ref_text: 0 0 0 0 0 0
+  shape: "Line56"
+  pos: -17396471 4124881 0 180 0
+
+part: Line57
+  ref_text: 0 0 0 0 0 0
+  shape: "Line57"
+  pos: -3494513 -44861824 0 180 0
+
+part: Line58
+  ref_text: 0 0 0 0 0 0
+  shape: "Line58"
+  pos: -6946463 -43125120 0 180 0
+
+part: Line59
+  ref_text: 0 0 0 0 0 0
+  shape: "Line59"
+  pos: -6911479 8374880 0 180 0
+
+part: Line60
+  ref_text: 0 0 0 0 0 0
+  shape: "Line60"
+  pos: -13581478 8374881 0 180 0
+
+part: Line61
+  ref_text: 0 0 0 0 0 0
+  shape: "Line61"
+  pos: -14047500 -9085119 0 180 0
+
+part: Line62
+  ref_text: 0 0 0 0 0 0
+  shape: "Line62"
+  pos: -13395199 -9177799 0 180 0
+
+part: Line63
+  ref_text: 0 0 0 0 0 0
+  shape: "Line63"
+  pos: -14097752 -9472439 0 180 0
+
+part: Line64
+  ref_text: 0 0 0 0 0 0
+  shape: "Line64"
+  pos: -13986473 -9024101 0 180 0
+
+part: Line65
+  ref_text: 0 0 0 0 0 0
+  shape: "Line65"
+  pos: -14047501 -9565119 0 180 0
+
+part: Line66
+  ref_text: 0 0 0 0 0 0
+  shape: "Line66"
+  pos: -13893792 -8973841 0 180 0
+
+part: Line67
+  ref_text: 0 0 0 0 0 0
+  shape: "Line67"
+  pos: -13599154 -9676401 0 180 0
+
+part: Line68
+  ref_text: 0 0 0 0 0 0
+  shape: "Line68"
+  pos: -7261478 9374880 0 180 0
+
+part: Line69
+  ref_text: 0 0 0 0 0 0
+  shape: "Line69"
+  pos: -14096483 8374879 0 180 0
+
+part: Line70
+  ref_text: 0 0 0 0 0 0
+  shape: "Line70"
+  pos: -13617197 9374879 0 180 0
+
+part: Line71
+  ref_text: 0 0 0 0 0 0
+  shape: "Line71"
+  pos: -6596473 2874881 0 180 0
+
+part: Line72
+  ref_text: 0 0 0 0 0 0
+  shape: "Line72"
+  pos: -12960106 -9221592 0 180 0
+
+part: Line73
+  ref_text: 0 0 0 0 0 0
+  shape: "Line73"
+  pos: -13896477 2874878 0 180 0
+
+part: Line74
+  ref_text: 0 0 0 0 0 0
+  shape: "Line74"
+  pos: 9753529 4274879 0 180 0
+
+part: Line77
+  ref_text: 0 0 0 0 0 0
+  shape: "Line77"
+  pos: 14262040 -19839824 0 180 0
+
+part: Line78
+  ref_text: 0 0 0 0 0 0
+  shape: "Line78"
+  pos: 4262040 -19839825 0 180 0
+
+part: Line80
+  ref_text: 0 0 0 0 0 0
+  shape: "Line80"
+  pos: 16003514 -20275126 0 180 0
+
+part: Line82
+  ref_text: 0 0 0 0 0 0
+  shape: "Line82"
+  pos: 14778526 -18575115 0 180 0
+
+part: Line83
+  ref_text: 0 0 0 0 0 0
+  shape: "Line83"
+  pos: 4728523 -18575120 0 180 0
+
+part: Line84
+  ref_text: 0 0 0 0 0 0
+  shape: "Line84"
+  pos: 9753530 874874 0 180 0
+
+part: Line85
+  ref_text: 0 0 0 0 0 0
+  shape: "Line85"
+  pos: 16003514 -23275124 0 180 0
+
+part: Line86
+  ref_text: 0 0 0 0 0 0
+  shape: "Line86"
+  pos: -14532852 -9428648 0 180 0
+
+part: Line87
+  ref_text: 0 0 0 0 0 0
+  shape: "Line87"
+  pos: -6396471 4187376 0 180 0
+
+part: Line88
+  ref_text: 0 0 0 0 0 0
+  shape: "Line88"
+  pos: -14729444 -9454527 0 180 0
+
+part: Line89
+  ref_text: 0 0 0 0 0 0
+  shape: "Line89"
+  pos: 9753530 874874 0 180 0
+
+part: Line90
+  ref_text: 0 0 0 0 0 0
+  shape: "Line90"
+  pos: -14096480 4187374 0 180 0
+
+part: Line94
+  ref_text: 0 0 0 0 0 0
+  shape: "Line94"
+  pos: -13716415 976360 0 180 0
+
+part: Line95
+  ref_text: 0 0 0 0 0 0
+  shape: "Line95"
+  pos: -14071016 1261880 0 180 0
+
+part: Line96
+  ref_text: 0 0 0 0 0 0
+  shape: "Line96"
+  pos: -13696471 2699881 0 180 0
+
+part: Line99
+  ref_text: 0 0 0 0 0 0
+  shape: "Line99"
+  pos: -7109384 1259320 0 180 0
+
+part: Line110
+  ref_text: 0 0 0 0 0 0
+  shape: "Line110"
+  pos: -14434556 -9415702 0 180 0
+
+part: Line111
+  ref_text: 0 0 0 0 0 0
+  shape: "Line111"
+  pos: -15196471 6224881 0 180 0
+
+part: Line112
+  ref_text: 0 0 0 0 0 0
+  shape: "Line112"
+  pos: -13813131 6624881 0 180 0
+
+part: Line113
+  ref_text: 0 0 0 0 0 0
+  shape: "Line113"
+  pos: -15196471 524882 0 180 0
+
+part: Line114
+  ref_text: 0 0 0 0 0 0
+  shape: "Line114"
+  pos: -14906520 1462373 0 180 0
+
+part: Line115
+  ref_text: 0 0 0 0 0 0
+  shape: "Line115"
+  pos: -14896472 1124878 0 180 0
+
+part: Line116
+  ref_text: 0 0 0 0 0 0
+  shape: "Line116"
+  pos: -15008972 684927 0 180 0
+
+part: Line117
+  ref_text: 0 0 0 0 0 0
+  shape: "Line117"
+  pos: -15121471 674881 0 180 0
+
+part: Line118
+  ref_text: 0 0 0 0 0 0
+  shape: "Line118"
+  pos: -14746472 374879 0 180 0
+
+part: Line119
+  ref_text: 0 0 0 0 0 0
+  shape: "Line119"
+  pos: -14746470 1874882 0 180 0
+
+part: Line120
+  ref_text: 0 0 0 0 0 0
+  shape: "Line120"
+  pos: -13996471 374879 0 180 0
+
+part: Line121
+  ref_text: 0 0 0 0 0 0
+  shape: "Line121"
+  pos: -13996471 1874882 0 180 0
+
+part: Line131
+  ref_text: 0 0 0 0 0 0
+  shape: "Line131"
+  pos: -5296470 524880 0 180 0
+
+part: Line132
+  ref_text: 0 0 0 0 0 0
+  shape: "Line132"
+  pos: -6796469 6584880 0 180 0
+
+part: Line133
+  ref_text: 0 0 0 0 0 0
+  shape: "Line133"
+  pos: -5296472 6224880 0 180 0
+
+part: Line135
+  ref_text: 0 0 0 0 0 0
+  shape: "Line135"
+  pos: -6496472 374881 0 180 0
+
+part: Line136
+  ref_text: 0 0 0 0 0 0
+  shape: "Line136"
+  pos: -6496472 1874880 0 180 0
+
+part: Line137
+  ref_text: 0 0 0 0 0 0
+  shape: "Line137"
+  pos: -5586422 787384 0 180 0
+
+part: Line138
+  ref_text: 0 0 0 0 0 0
+  shape: "Line138"
+  pos: -5596482 1124880 0 180 0
+
+part: Line139
+  ref_text: 0 0 0 0 0 0
+  shape: "Line139"
+  pos: -5483971 1564832 0 180 0
+
+part: Line140
+  ref_text: 0 0 0 0 0 0
+  shape: "Line140"
+  pos: -5371470 1574880 0 180 0
+
+part: Line141
+  ref_text: 0 0 0 0 0 0
+  shape: "Line141"
+  pos: -5296472 1724881 0 180 0
+
+part: Line142
+  ref_text: 0 0 0 0 0 0
+  shape: "Line142"
+  pos: -5746471 374880 0 180 0
+
+part: Line143
+  ref_text: 0 0 0 0 0 0
+  shape: "Line143"
+  pos: -11846469 4774880 0 180 0
+
+part: Line144
+  ref_text: 0 0 0 0 0 0
+  shape: "Line144"
+  pos: -11846471 474881 0 180 0
+
+part: Line145
+  ref_text: 0 0 0 0 0 0
+  shape: "Line145"
+  pos: -11046479 4774880 0 180 0
+
+part: Line146
+  ref_text: 0 0 0 0 0 0
+  shape: "Line146"
+  pos: -11046479 474879 0 180 0
+
+part: Line147
+  ref_text: 0 0 0 0 0 0
+  shape: "Line147"
+  pos: -10246471 4774881 0 180 0
+
+part: Line148
+  ref_text: 0 0 0 0 0 0
+  shape: "Line148"
+  pos: -10246471 474881 0 180 0
+
+part: Line149
+  ref_text: 0 0 0 0 0 0
+  shape: "Line149"
+  pos: -9446475 4774880 0 180 0
+
+part: Line150
+  ref_text: 0 0 0 0 0 0
+  shape: "Line150"
+  pos: -9446476 474880 0 180 0
+
+part: Line151
+  ref_text: 0 0 0 0 0 0
+  shape: "Line151"
+  pos: -8646476 474880 0 180 0
+
+part: Line152
+  ref_text: 0 0 0 0 0 0
+  shape: "Line152"
+  pos: -8646477 1574880 0 180 0
+
+part: Line154
+  ref_text: 0 0 0 0 0 0
+  shape: "Line154"
+  pos: -8646477 4774879 0 180 0
+
+part: Line170
+  ref_text: 0 0 0 0 0 0
+  shape: "Line170"
+  pos: -8846481 1584879 0 180 0
+
+part: Line175
+  ref_text: 0 0 0 0 0 0
+  shape: "Line175"
+  pos: -12846479 1584878 0 180 0
+
+part: Line176
+  ref_text: 0 0 0 0 0 0
+  shape: "Line176"
+  pos: -12246476 1524879 0 180 0
+
+part: Line178
+  ref_text: 0 0 0 0 0 0
+  shape: "Line178"
+  pos: -13696472 1483257 0 180 0
+
+part: Line179
+  ref_text: 0 0 0 0 0 0
+  shape: "Line179"
+  pos: -6396471 1999881 0 180 0
+
+part: Line180
+  ref_text: 0 0 0 0 0 0
+  shape: "Line180"
+  pos: -6796472 2699880 0 180 0
+
+part: Line181
+  ref_text: 0 0 0 0 0 0
+  shape: "Line181"
+  pos: -14096480 1999879 0 180 0
+
+part: Line182
+  ref_text: 0 0 0 0 0 0
+  shape: "Line182"
+  pos: -6663056 1007802 0 180 0
+
+part: Line184
+  ref_text: 0 0 0 0 0 0
+  shape: "Line184"
+  pos: -12789025 927750 0 180 0
+
+part: Line185
+  ref_text: 0 0 0 0 0 0
+  shape: "Line185"
+  pos: -13383567 1259318 0 180 0
+
+part: Line186
+  ref_text: 0 0 0 0 0 0
+  shape: "Line186"
+  pos: -13658564 1311688 0 180 0
+
+part: Line187
+  ref_text: 0 0 0 0 0 0
+  shape: "Line187"
+  pos: -6776528 976360 0 180 0
+
+part: Line188
+  ref_text: 0 0 0 0 0 0
+  shape: "Line188"
+  pos: -7071478 674881 0 180 0
+
+part: Line190
+  ref_text: 0 0 0 0 0 0
+  shape: "Line190"
+  pos: -6596470 1774880 0 180 0
+
+part: Line191
+  ref_text: 0 0 0 0 0 0
+  shape: "Line191"
+  pos: -13696472 1399880 0 180 0
+
+part: Line192
+  ref_text: 0 0 0 0 0 0
+  shape: "Line192"
+  pos: -6796471 1399880 0 180 0
+
+part: Line197
+  ref_text: 0 0 0 0 0 0
+  shape: "Line197"
+  pos: -12368555 1156064 0 180 0
+
+part: Line198
+  ref_text: 0 0 0 0 0 0
+  shape: "Line198"
+  pos: -8113927 956336 0 180 0
+
+part: Line199
+  ref_text: 0 0 0 0 0 0
+  shape: "Line199"
+  pos: -13896474 674881 0 180 0
+
+part: Line216
+  ref_text: 0 0 0 0 0 0
+  shape: "Line216"
+  pos: -6796469 7999879 0 180 0
+
+part: Line219
+  ref_text: 0 0 0 0 0 0
+  shape: "Line219"
+  pos: -13696470 7999880 0 180 0
+
+part: Line220
+  ref_text: 0 0 0 0 0 0
+  shape: "Line220"
+  pos: -7311473 5999880 0 180 0
+
+part: Line221
+  ref_text: 0 0 0 0 0 0
+  shape: "Line221"
+  pos: -13896476 2124879 0 180 0
+
+part: Line222
+  ref_text: 0 0 0 0 0 0
+  shape: "Line222"
+  pos: -13896475 4124881 0 180 0
+
+part: Line223
+  ref_text: 0 0 0 0 0 0
+  shape: "Line223"
+  pos: -13996471 4374880 0 180 0
+
+part: Line228
+  ref_text: 0 0 0 0 0 0
+  shape: "Line228"
+  pos: -15121472 6074880 0 180 0
+
+part: Line229
+  ref_text: 0 0 0 0 0 0
+  shape: "Line229"
+  pos: -14906518 5962378 0 180 0
+
+part: Line230
+  ref_text: 0 0 0 0 0 0
+  shape: "Line230"
+  pos: -14896470 5374881 0 180 0
+
+part: Line231
+  ref_text: 0 0 0 0 0 0
+  shape: "Line231"
+  pos: -15008971 4684928 0 180 0
+
+part: Line232
+  ref_text: 0 0 0 0 0 0
+  shape: "Line232"
+  pos: -15121472 4674880 0 180 0
+
+part: Line233
+  ref_text: 0 0 0 0 0 0
+  shape: "Line233"
+  pos: -14746469 6374881 0 180 0
+
+part: Line239
+  ref_text: 0 0 0 0 0 0
+  shape: "Line239"
+  pos: -13996472 6374879 0 180 0
+
+part: Line241
+  ref_text: 0 0 0 0 0 0
+  shape: "Line241"
+  pos: -5371471 6074880 0 180 0
+
+part: Line242
+  ref_text: 0 0 0 0 0 0
+  shape: "Line242"
+  pos: -5586425 4787383 0 180 0
+
+part: Line243
+  ref_text: 0 0 0 0 0 0
+  shape: "Line243"
+  pos: -5371473 4674880 0 180 0
+
+part: Line244
+  ref_text: 0 0 0 0 0 0
+  shape: "Line244"
+  pos: -6496472 6374880 0 180 0
+
+part: Line245
+  ref_text: 0 0 0 0 0 0
+  shape: "Line245"
+  pos: -6496472 4374879 0 180 0
+
+part: Line247
+  ref_text: 0 0 0 0 0 0
+  shape: "Line247"
+  pos: -14013135 6624881 0 180 0
+
+part: Line248
+  ref_text: 0 0 0 0 0 0
+  shape: "Line248"
+  pos: -5746472 6374878 0 180 0
+
+part: Line249
+  ref_text: 0 0 0 0 0 0
+  shape: "Line249"
+  pos: -5746471 4374879 0 180 0
+
+part: Line250
+  ref_text: 0 0 0 0 0 0
+  shape: "Line250"
+  pos: -6596472 4124880 0 180 0
+
+part: Line278
+  ref_text: 0 0 0 0 0 0
+  shape: "Line278"
+  pos: -5596478 5374880 0 180 0
+
+part: Line280
+  ref_text: 0 0 0 0 0 0
+  shape: "Line280"
+  pos: -12896475 -9325119 0 180 0
+
+part: Line281
+  ref_text: 0 0 0 0 0 0
+  shape: "Line281"
+  pos: 9753530 2274875 0 180 0
+
+part: Line282
+  ref_text: 0 0 0 0 0 0
+  shape: "Line282"
+  pos: -6596472 4249871 0 180 0
+
+part: Line286
+  ref_text: 0 0 0 0 0 0
+  shape: "Line286"
+  pos: -13896474 4249872 0 180 0
+
+part: Line287
+  ref_text: 0 0 0 0 0 0
+  shape: "Line287"
+  pos: -13896474 2524880 0 180 0
+
+part: Line288
+  ref_text: 0 0 0 0 0 0
+  shape: "Line288"
+  pos: -14296472 5374880 0 180 0
+
+part: Line289
+  ref_text: 0 0 0 0 0 0
+  shape: "Line289"
+  pos: -13929788 6999882 0 180 0
+
+part: Line291
+  ref_text: 0 0 0 0 0 0
+  shape: "Line291"
+  pos: -14296471 1124881 0 180 0
+
+part: Line300
+  ref_text: 0 0 0 0 0 0
+  shape: "Line300"
+  pos: -6563163 6999880 0 180 0
+
+part: Line301
+  ref_text: 0 0 0 0 0 0
+  shape: "Line301"
+  pos: -6196470 5374880 0 180 0
+
+part: Line302
+  ref_text: 0 0 0 0 0 0
+  shape: "Line302"
+  pos: -11821472 3174878 0 180 0
+
+part: Line303
+  ref_text: 0 0 0 0 0 0
+  shape: "Line303"
+  pos: -11071472 3174880 0 180 0
+
+part: Line304
+  ref_text: 0 0 0 0 0 0
+  shape: "Line304"
+  pos: -11021469 3174880 0 180 0
+
+part: Line305
+  ref_text: 0 0 0 0 0 0
+  shape: "Line305"
+  pos: -10271471 3174880 0 180 0
+
+part: Line306
+  ref_text: 0 0 0 0 0 0
+  shape: "Line306"
+  pos: -10221481 3174879 0 180 0
+
+part: Line307
+  ref_text: 0 0 0 0 0 0
+  shape: "Line307"
+  pos: -9471480 3174880 0 180 0
+
+part: Line308
+  ref_text: 0 0 0 0 0 0
+  shape: "Line308"
+  pos: -9421474 3174879 0 180 0
+
+part: Line309
+  ref_text: 0 0 0 0 0 0
+  shape: "Line309"
+  pos: -8671470 3174880 0 180 0
+
+part: Line310
+  ref_text: 0 0 0 0 0 0
+  shape: "Line310"
+  pos: -7096481 6499880 0 180 0
+
+part: Line311
+  ref_text: 0 0 0 0 0 0
+  shape: "Line311"
+  pos: -13396471 6499880 0 180 0
+
+part: Line312
+  ref_text: 0 0 0 0 0 0
+  shape: "Line312"
+  pos: -7096479 5574880 0 180 0
+
+part: Line313
+  ref_text: 0 0 0 0 0 0
+  shape: "Line313"
+  pos: -6596473 2524881 0 180 0
+
+part: Line314
+  ref_text: 0 0 0 0 0 0
+  shape: "Line314"
+  pos: -6867903 5999880 0 180 0
+
+part: Line315
+  ref_text: 0 0 0 0 0 0
+  shape: "Line315"
+  pos: -13625037 5999882 0 180 0
+
+part: Line316
+  ref_text: 0 0 0 0 0 0
+  shape: "Line316"
+  pos: -7611469 5999880 0 180 0
+
+part: Line324
+  ref_text: 0 0 0 0 0 0
+  shape: "Line324"
+  pos: -14296472 5374880 0 180 0
+
+part: Line331
+  ref_text: 0 0 0 0 0 0
+  shape: "Line331"
+  pos: -6196470 5374880 0 180 0
+
+part: Line332
+  ref_text: 0 0 0 0 0 0
+  shape: "Line332"
+  pos: -11871477 3174881 0 180 0
+
+part: Line333
+  ref_text: 0 0 0 0 0 0
+  shape: "Line333"
+  pos: -8621477 3174879 0 180 0
+
+part: Line336
+  ref_text: 0 0 0 0 0 0
+  shape: "Line336"
+  pos: 9853534 -45525116 0 180 0
+
+part: Line337
+  ref_text: 0 0 0 0 0 0
+  shape: "Line337"
+  pos: -15317753 -9325119 0 180 0
+
+part: Line338
+  ref_text: 0 0 0 0 0 0
+  shape: "Line338"
+  pos: 9853528 -48725120 0 180 0
+
+part: Line339
+  ref_text: 0 0 0 0 0 0
+  shape: "Line339"
+  pos: -12175197 -9325117 0 180 0
+
+part: Line340
+  ref_text: 0 0 0 0 0 0
+  shape: "Line340"
+  pos: 9727640 -45686136 0 180 0
+
+part: Line341
+  ref_text: 0 0 0 0 0 0
+  shape: "Line341"
+  pos: 9753530 2274875 0 180 0
+
+part: Line342
+  ref_text: 0 0 0 0 0 0
+  shape: "Line342"
+  pos: 23253516 -44725124 0 180 0
+
+part: Line343
+  ref_text: 0 0 0 0 0 0
+  shape: "Line343"
+  pos: -15277316 -9459048 0 180 0
+
+part: Line344
+  ref_text: 0 0 0 0 0 0
+  shape: "Line344"
+  pos: 9753527 -4435123 0 180 0
+
+part: Line345
+  ref_text: 0 0 0 0 0 0
+  shape: "Line345"
+  pos: 9728525 -6015117 0 180 0
+
+part: Line346
+  ref_text: 0 0 0 0 0 0
+  shape: "Line346"
+  pos: 9780523 -7025120 0 180 0
+
+part: Line347
+  ref_text: 0 0 0 0 0 0
+  shape: "Line347"
+  pos: 9953518 -35525126 0 180 0
+
+part: Line348
+  ref_text: 0 0 0 0 0 0
+  shape: "Line348"
+  pos: -13929791 8374881 0 180 0
+
+part: Line349
+  ref_text: 0 0 0 0 0 0
+  shape: "Line349"
+  pos: -3646460 -44725120 0 180 0
+
+part: Line350
+  ref_text: 0 0 0 0 0 0
+  shape: "Line350"
+  pos: -12881472 8374880 0 180 0
+
+part: Line351
+  ref_text: 0 0 0 0 0 0
+  shape: "Line351"
+  pos: -7611470 8374879 0 180 0
+
+part: Line352
+  ref_text: 0 0 0 0 0 0
+  shape: "Line352"
+  pos: -6563159 8374880 0 180 0
+
+part: Line353
+  ref_text: 0 0 0 0 0 0
+  shape: "Line353"
+  pos: -12972126 -25296792 0 180 0
+
+part: Line354
+  ref_text: 0 0 0 0 0 0
+  shape: "Line354"
+  pos: 34027876 -25296790 0 180 0
+
+part: Line355
+  ref_text: 0 0 0 0 0 0
+  shape: "Line355"
+  pos: 34027872 -9496778 0 180 0
+
+part: Line356
+  ref_text: 0 0 0 0 0 0
+  shape: "Line356"
+  pos: -12972127 -9496792 0 180 0
+
+part: Line357
+  ref_text: 0 0 0 0 0 0
+  shape: "Line357"
+  pos: -13746478 -25125120 0 180 0
+
+part: Line358
+  ref_text: 0 0 0 0 0 0
+  shape: "Line358"
+  pos: -13746478 -25125120 0 180 0
+
+part: Line359
+  ref_text: 0 0 0 0 0 0
+  shape: "Line359"
+  pos: 33253520 -25125124 0 180 0
+
+part: Line360
+  ref_text: 0 0 0 0 0 0
+  shape: "Line360"
+  pos: 33253516 -25125122 0 180 0
+
+part: Line361
+  ref_text: 0 0 0 0 0 0
+  shape: "Line361"
+  pos: 33253524 -9325128 0 180 0
+
+part: Line362
+  ref_text: 0 0 0 0 0 0
+  shape: "Line362"
+  pos: 33253520 -9325127 0 180 0
+
+part: Line363
+  ref_text: 0 0 0 0 0 0
+  shape: "Line363"
+  pos: 34753520 -59125124 0 180 0
+
+part: Line364
+  ref_text: 0 0 0 0 0 0
+  shape: "Line364"
+  pos: 34753520 -59125124 0 180 0
+
+part: Line365
+  ref_text: 0 0 0 0 0 0
+  shape: "Line365"
+  pos: 34753524 -3125115 0 180 0
+
+part: Line366
+  ref_text: 0 0 0 0 0 0
+  shape: "Line366"
+  pos: 34753524 -3125115 0 180 0
+
+part: Line367
+  ref_text: 0 0 0 0 0 0
+  shape: "Line367"
+  pos: -21246480 -3125120 0 180 0
+
+part: Line368
+  ref_text: 0 0 0 0 0 0
+  shape: "Line368"
+  pos: -21246480 -3125120 0 180 0
+
+part: Line369
+  ref_text: 0 0 0 0 0 0
+  shape: "Line369"
+  pos: -21246479 -59125120 0 180 0
+
+part: Line370
+  ref_text: 0 0 0 0 0 0
+  shape: "Line370"
+  pos: -21246479 -59125120 0 180 0
+
+part: Line371
+  ref_text: 0 0 0 0 0 0
+  shape: "Line371"
+  pos: -72246660 -59125116 0 180 0
+
+part: Line372
+  ref_text: 0 0 0 0 0 0
+  shape: "Line372"
+  pos: -72246660 -59125116 0 180 0
+
+part: Line373
+  ref_text: 0 0 0 0 0 0
+  shape: "Line373"
+  pos: -72246664 -45125112 0 180 0
+
+part: Line374
+  ref_text: 0 0 0 0 0 0
+  shape: "Line374"
+  pos: -72246664 -45125112 0 180 0
+
+part: Line375
+  ref_text: 0 0 0 0 0 0
+  shape: "Line375"
+  pos: 33253524 -9325128 0 180 0
+
+part: Line376
+  ref_text: 0 0 0 0 0 0
+  shape: "Line376"
+  pos: 33253520 -9325127 0 180 0
+
+part: Line377
+  ref_text: 0 0 0 0 0 0
+  shape: "Line377"
+  pos: 33253520 -25125124 0 180 0
+
+part: Line378
+  ref_text: 0 0 0 0 0 0
+  shape: "Line378"
+  pos: 33253516 -25125122 0 180 0
+
+part: Line379
+  ref_text: 0 0 0 0 0 0
+  shape: "Line379"
+  pos: -13746478 -25125120 0 180 0
+
+part: Line380
+  ref_text: 0 0 0 0 0 0
+  shape: "Line380"
+  pos: -13746478 -25125120 0 180 0
+
+part: Line381
+  ref_text: 0 0 0 0 0 0
+  shape: "Line381"
+  pos: 9953536 -37125116 0 180 0
+
+part: Line382
+  ref_text: 0 0 0 0 0 0
+  shape: "Line382"
+  pos: 9953536 -37125116 0 180 0
+
+part: Line383
+  ref_text: 0 0 0 0 0 0
+  shape: "Line383"
+  pos: -13746480 -9325120 0 180 0
+
+part: Line384
+  ref_text: 0 0 0 0 0 0
+  shape: "Line384"
+  pos: -13746480 -9325120 0 180 0
+
+part: Line385
+  ref_text: 0 0 0 0 0 0
+  shape: "Line385"
+  pos: -3646465 -43125120 0 180 0
+
+part: Line386
+  ref_text: 0 0 0 0 0 0
+  shape: "Line386"
+  pos: -3646465 -43125120 0 180 0
+
+part: Line387
+  ref_text: 0 0 0 0 0 0
+  shape: "Line387"
+  pos: 9853538 -47125116 0 180 0
+
+part: Line388
+  ref_text: 0 0 0 0 0 0
+  shape: "Line388"
+  pos: 9853538 -47125116 0 180 0
+
+part: Line389
+  ref_text: 0 0 0 0 0 0
+  shape: "Line389"
+  pos: 23253526 -43125116 0 180 0
+
+part: Line390
+  ref_text: 0 0 0 0 0 0
+  shape: "Line390"
+  pos: 23253526 -43125116 0 180 0
+
+part: Line391
+  ref_text: 0 0 0 0 0 0
+  shape: "Line391"
+  pos: -6596473 2524881 0 180 0
+
+part: Line392
+  ref_text: 0 0 0 0 0 0
+  shape: "Line392"
+  pos: -6596472 1999872 0 180 0
+
+part: Line393
+  ref_text: 0 0 0 0 0 0
+  shape: "Line393"
+  pos: -6596474 6499871 0 180 0
+
+part: Line394
+  ref_text: 0 0 0 0 0 0
+  shape: "Line394"
+  pos: -13746480 -9325120 0 180 0
+
+part: Line395
+  ref_text: 0 0 0 0 0 0
+  shape: "Line395"
+  pos: -13746480 -9325120 0 180 0
+
+part: Line396
+  ref_text: 0 0 0 0 0 0
+  shape: "Line396"
+  pos: 14753522 -19775119 0 180 0
+
+part: Line397
+  ref_text: 0 0 0 0 0 0
+  shape: "Line397"
+  pos: 14753522 -19775119 0 180 0
+
+part: Line398
+  ref_text: 0 0 0 0 0 0
+  shape: "Line398"
+  pos: 4753515 -19775125 0 180 0
+
+part: Line399
+  ref_text: 0 0 0 0 0 0
+  shape: "Line399"
+  pos: 4753515 -19775125 0 180 0
+
+part: Line400
+  ref_text: 0 0 0 0 0 0
+  shape: "Line400"
+  pos: -13746480 -9325120 0 180 0
+
+part: Mories
+  package: "DXF_Mories"
+  ref_text: 0 200000 0 -500000 -500000 0
+  shape: "DXF_Mories_ID1840"
+  pos: -13746479 -7782559 0 180 0
+
+[nets]
+
+[texts]
+
+[merges]
+
+
+[end]

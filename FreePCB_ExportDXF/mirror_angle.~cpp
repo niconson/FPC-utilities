@@ -1,0 +1,23 @@
+//---------------------------------------------------------------------------
+
+
+#pragma hdrstop
+
+#include "mirror_angle.h"
+
+//---------------------------------------------------------------------------
+
+#pragma package(smart_init)
+
+
+
+
+
+
+
+//---------------------------------------------------------------------------
+void mirror_angle (double Part_angle, bool Part_layer, double *X, double *Y)
+{
+if(Part_layer) (*X) = -(*X);
+Rotate_Vertex (X, Y, (-Part_angle));
+}

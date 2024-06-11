@@ -1,0 +1,174 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!-- C++Builder XML Project -->
+<PROJECT>
+  <MACROS>
+    <VERSION value="BCB.06.00"/>
+    <PROJECT value="PCB_2_FPC.exe"/>
+    <OBJFILES value="PCB_2_FPC.obj HEAD.obj count_stroke_file_func.obj read_net_list.obj 
+      Read_Part.obj get_end_PCB.obj prob.obj ex_float_NM.obj ex_str.obj go.obj 
+      Shifting.obj Create_Foot.obj Generate_ARC.obj Rotate_Vertex.obj 
+      FPC_File_Gen.obj Find_net.obj Generate_Poly.obj LSTBXS.obj 
+      CombNetList_and_Area.obj Pins_Location.obj Lines.obj Gen_Trace.obj 
+      Areas.obj StrBegin.obj RTextStyle.obj CombNetList.obj Distance.obj Scob.obj"/>
+    <RESFILES value="PCB_2_FPC.res"/>
+    <IDLFILES value=""/>
+    <IDLGENFILES value=""/>
+    <DEFFILE value=""/>
+    <RESDEPEN value="$(RESFILES) HEAD.dfm LSTBXS.dfm"/>
+    <LIBFILES value=""/>
+    <LIBRARIES value="vclx.lib rtl.lib vcl.lib"/>
+    <SPARELIBS value="vcl.lib rtl.lib vclx.lib"/>
+    <PACKAGES value="vcl.bpi rtl.bpi dbrtl.bpi adortl.bpi vcldb.bpi vclx.bpi bdertl.bpi 
+      vcldbx.bpi ibxpress.bpi dsnap.bpi cds.bpi bdecds.bpi qrpt.bpi teeui.bpi 
+      teedb.bpi tee.bpi dss.bpi teeqr.bpi visualclx.bpi visualdbclx.bpi 
+      dsnapcrba.bpi dsnapcon.bpi bcbsmp.bpi vclie.bpi xmlrtl.bpi inet.bpi 
+      inetdbbde.bpi inetdbxpress.bpi inetdb.bpi nmfast.bpi webdsnap.bpi 
+      bcbie.bpi websnap.bpi soaprtl.bpi dclocx.bpi dbexpress.bpi dbxcds.bpi 
+      indy.bpi bcb2kaxserver.bpi"/>
+    <PATHCPP value=".;"/>
+    <PATHPAS value=".;"/>
+    <PATHRC value=".;"/>
+    <PATHASM value=".;"/>
+    <DEBUGLIBPATH value="$(BCB)\lib\debug"/>
+    <RELEASELIBPATH value="$(BCB)\lib\release"/>
+    <LINKER value="ilink32"/>
+    <USERDEFINES value="_DEBUG"/>
+    <SYSDEFINES value="NO_STRICT"/>
+    <MAINSOURCE value="PCB_2_FPC.cpp"/>
+    <INCLUDEPATH value="&quot;D:\Мои прогр\Import Accel Tango&quot;;&quot;C:\Program Files\Borland\CBuilder6\Bin&quot;;&quot;C:\Documents and Settings\0\Рабочий стол\Мои прогр\Component manager&quot;;&quot;C:\Program Files\Borland\CBuilder6\Projects&quot;;&quot;C:\Documents and Settings\0\Рабочий стол\Rotate(FreePCB)&quot;;$(BCB)\include;$(BCB)\include\vcl"/>
+    <LIBPATH value="&quot;D:\Мои прогр\Import Accel Tango&quot;;&quot;C:\Program Files\Borland\CBuilder6\Bin&quot;;&quot;C:\Documents and Settings\0\Рабочий стол\Мои прогр\Component manager&quot;;&quot;C:\Program Files\Borland\CBuilder6\Projects&quot;;&quot;C:\Documents and Settings\0\Рабочий стол\Rotate(FreePCB)&quot;;$(BCB)\lib\obj;$(BCB)\lib"/>
+    <WARNINGS value="-w-par"/>
+    <OTHERFILES value=""/>
+  </MACROS>
+  <OPTIONS>
+    <IDLCFLAGS value="-I&quot;D:\Мои прогр\Import Accel Tango&quot; 
+      -I&quot;C:\Program Files\Borland\CBuilder6\Bin&quot; 
+      -I&quot;C:\Documents and Settings\0\Рабочий стол\Мои прогр\Component manager&quot; 
+      -I&quot;C:\Program Files\Borland\CBuilder6\Projects&quot; 
+      -I&quot;C:\Documents and Settings\0\Рабочий стол\Rotate(FreePCB)&quot; 
+      -I$(BCB)\include -I$(BCB)\include\vcl -src_suffix cpp -D_DEBUG -boa"/>
+    <CFLAG1 value="-Od -H=$(BCB)\lib\vcl60.csm -Hc -Vx -Ve -X- -r- -a8 -b- -k -y -v -vi- -c 
+      -tW -tWM"/>
+    <PFLAGS value="-$Y+ -$W -$O- -$A8 -v -JPHNE -M"/>
+    <RFLAGS value=""/>
+    <AFLAGS value="/mx /w2 /zi"/>
+    <LFLAGS value="-D&quot;&quot; -aa -Tpe -x -Gn -v"/>
+    <OTHERFILES value=""/>
+  </OPTIONS>
+  <LINKER>
+    <ALLOBJ value="c0w32.obj sysinit.obj $(OBJFILES)"/>
+    <ALLRES value="$(RESFILES)"/>
+    <ALLLIB value="$(LIBFILES) $(LIBRARIES) import32.lib cp32mt.lib"/>
+    <OTHERFILES value=""/>
+  </LINKER>
+  <FILELIST>
+      <FILE FILENAME="PCB_2_FPC.res" FORMNAME="" UNITNAME="PCB_2_FPC.res" CONTAINERID="ResTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="PCB_2_FPC.cpp" FORMNAME="" UNITNAME="PCB_2_FPC" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="HEAD.cpp" FORMNAME="Form1" UNITNAME="HEAD" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="count_stroke_file_func.cpp" FORMNAME="" UNITNAME="count_stroke_file_func" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="read_net_list.cpp" FORMNAME="" UNITNAME="read_net_list" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Read_Part.cpp" FORMNAME="" UNITNAME="Read_Part" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="get_end_PCB.cpp" FORMNAME="" UNITNAME="get_end_PCB" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="prob.cpp" FORMNAME="" UNITNAME="prob" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ex_float_NM.cpp" FORMNAME="" UNITNAME="ex_float_NM" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ex_str.cpp" FORMNAME="" UNITNAME="ex_str" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="go.cpp" FORMNAME="" UNITNAME="go" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Shifting.cpp" FORMNAME="" UNITNAME="Shifting" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Create_Foot.cpp" FORMNAME="" UNITNAME="Create_Foot" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Generate_ARC.cpp" FORMNAME="" UNITNAME="Generate_ARC" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Rotate_Vertex.cpp" FORMNAME="" UNITNAME="Rotate_Vertex" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="FPC_File_Gen.cpp" FORMNAME="" UNITNAME="FPC_File_Gen" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Find_net.cpp" FORMNAME="" UNITNAME="Find_net" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Generate_Poly.cpp" FORMNAME="" UNITNAME="Generate_Poly" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="LSTBXS.cpp" FORMNAME="Form2" UNITNAME="LSTBXS" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="CombNetList_and_Area.cpp" FORMNAME="" UNITNAME="CombNetList_and_Area" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Pins_Location.cpp" FORMNAME="" UNITNAME="Pins_Location" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Lines.cpp" FORMNAME="" UNITNAME="Lines" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Gen_Trace.cpp" FORMNAME="" UNITNAME="Gen_Trace" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Areas.cpp" FORMNAME="" UNITNAME="Areas" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="StrBegin.cpp" FORMNAME="" UNITNAME="StrBegin" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="RTextStyle.cpp" FORMNAME="" UNITNAME="RTextStyle" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="CombNetList.cpp" FORMNAME="" UNITNAME="CombNetList" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Distance.cpp" FORMNAME="" UNITNAME="Distance" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Scob.cpp" FORMNAME="" UNITNAME="Scob" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+  </FILELIST>
+  <BUILDTOOLS>
+  </BUILDTOOLS>
+
+  <IDEOPTIONS>
+[Version Info]
+IncludeVerInfo=0
+AutoIncBuild=0
+MajorVer=1
+MinorVer=0
+Release=0
+Build=0
+Debug=0
+PreRelease=0
+Special=0
+Private=0
+DLL=0
+Locale=1049
+CodePage=1251
+
+[Version Info Keys]
+CompanyName=
+FileDescription=
+FileVersion=1.0.0.0
+InternalName=
+LegalCopyright=
+LegalTrademarks=
+OriginalFilename=
+ProductName=
+ProductVersion=1.0.0.0
+Comments=
+
+[Excluded Packages]
+C:\Program Files (x86)\Borland\CBuilder6\Bin\dclclxstd60.bpl=Borland CLX Standard Components
+c:\program files (x86)\borland\cbuilder6\Bin\dclclxdb60.bpl=Borland CLX Database Components
+c:\program files (x86)\borland\cbuilder6\Bin\dclite60.bpl=Borland Integrated Translation Environment
+
+[HistoryLists\hlIncludePath]
+Count=2
+Item0=D:\Мои прогр\Import Accel Tango;C:\Program Files\Borland\CBuilder6\Bin;C:\Documents and Settings\0\Рабочий стол\Мои прогр\Component manager;C:\Program Files\Borland\CBuilder6\Projects;C:\Documents and Settings\0\Рабочий стол\Rotate(FreePCB);$(BCB)\include;$(BCB)\include\vcl
+Item1=C:\Program Files\Borland\CBuilder6\Bin;C:\Documents and Settings\0\Рабочий стол\Мои прогр\Component manager;C:\Program Files\Borland\CBuilder6\Projects;C:\Documents and Settings\0\Рабочий стол\Rotate(FreePCB);$(BCB)\include;$(BCB)\include\vcl
+
+[HistoryLists\hlLibraryPath]
+Count=2
+Item0=D:\Мои прогр\Import Accel Tango;C:\Program Files\Borland\CBuilder6\Bin;C:\Documents and Settings\0\Рабочий стол\Мои прогр\Component manager;C:\Program Files\Borland\CBuilder6\Projects;C:\Documents and Settings\0\Рабочий стол\Rotate(FreePCB);$(BCB)\lib\obj;$(BCB)\lib
+Item1=C:\Program Files\Borland\CBuilder6\Bin;C:\Documents and Settings\0\Рабочий стол\Мои прогр\Component manager;C:\Program Files\Borland\CBuilder6\Projects;C:\Documents and Settings\0\Рабочий стол\Rotate(FreePCB);$(BCB)\lib\obj;$(BCB)\lib
+
+[HistoryLists\hlDebugSourcePath]
+Count=1
+Item0=$(BCB)\source\vcl
+
+[HistoryLists\hlConditionals]
+Count=1
+Item0=_DEBUG
+
+[Debugging]
+DebugSourceDirs=$(BCB)\source\vcl
+
+[Parameters]
+RunParams=
+Launcher=
+UseLauncher=0
+DebugCWD=
+HostApplication=
+RemoteHost=
+RemotePath=
+RemoteLauncher=
+RemoteCWD=
+RemoteDebug=0
+
+[Compiler]
+ShowInfoMsgs=0
+LinkDebugVcl=0
+LinkCGLIB=0
+
+[CORBA]
+AddServerUnit=1
+AddClientUnit=1
+PrecompiledHeaders=1
+  </IDEOPTIONS>
+</PROJECT>

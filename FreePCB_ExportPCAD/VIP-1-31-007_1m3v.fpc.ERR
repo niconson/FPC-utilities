@@ -1,0 +1,198 @@
+P-CAD ASCII File Open: VIP-1-31-007_1m3v.fpc.ERR
+
+======================================================================
+
+Warning (line 122): Pad/via style '1.0668x1.0668' has an invalid thermal diamete
+r.  The outer diameter must be greater than the inner diameter.
+Warning (line 122): Pad/via style '1.0668x1.0668' has an invalid spoke width.  S
+poke width must be greater than 0 and less than the inner diameter.
+Warning (line 7070): Invalid (self-intersecting) polygon detected.
+Warning (line 10155): Invalid (self-intersecting) polygon detected.
+Warning (line 11483): Invalid (self-intersecting) polygon detected.
+Warning (line 11494): Invalid (self-intersecting) polygon detected.
+Warning (line 11505): Invalid (self-intersecting) polygon detected.
+Warning (line 11516): Invalid (self-intersecting) polygon detected.
+Warning (line 11529): Invalid (self-intersecting) polygon detected.
+Warning (line 11542): Invalid (self-intersecting) polygon detected.
+Warning (line 11553): Invalid (self-intersecting) polygon detected.
+Warning (line 11564): Invalid (self-intersecting) polygon detected.
+Warning (line 11667): Invalid (self-intersecting) polygon detected.
+Warning (line 11680): Invalid (self-intersecting) polygon detected.
+Warning (line 11693): Invalid (self-intersecting) polygon detected.
+Warning (line 11702): Invalid (self-intersecting) polygon detected.
+Warning (line 11777): Invalid (self-intersecting) polygon detected.
+Warning (line 11786): Invalid (self-intersecting) polygon detected.
+Warning (line 11795): Invalid (self-intersecting) polygon detected.
+Warning (line 11804): Invalid (self-intersecting) polygon detected.
+Warning (line 11813): Invalid (self-intersecting) polygon detected.
+Warning (line 11822): Invalid (self-intersecting) polygon detected.
+Warning (line 11831): Invalid (self-intersecting) polygon detected.
+Warning (line 11840): Invalid (self-intersecting) polygon detected.
+Warning (line 11853): Invalid (self-intersecting) polygon detected.
+Warning (line 11862): Invalid (self-intersecting) polygon detected.
+Warning (line 11871): Invalid (self-intersecting) polygon detected.
+Warning (line 11880): Invalid (self-intersecting) polygon detected.
+Warning (line 11889): Invalid (self-intersecting) polygon detected.
+Warning (line 11899): Invalid (self-intersecting) polygon detected.
+Warning (line 11909): Invalid (self-intersecting) polygon detected.
+Warning (line 11918): Invalid (self-intersecting) polygon detected.
+Warning (line 11927): Invalid (self-intersecting) polygon detected.
+Warning (line 11936): Invalid (self-intersecting) polygon detected.
+Warning (line 11945): Invalid (self-intersecting) polygon detected.
+Warning (line 11955): Invalid (self-intersecting) polygon detected.
+Warning (line 11965): Invalid (self-intersecting) polygon detected.
+Warning (line 11978): Invalid (self-intersecting) polygon detected.
+Warning (line 12006): Invalid (self-intersecting) polygon detected.
+Warning (line 12016): Invalid (self-intersecting) polygon detected.
+Warning (line 12026): Invalid (self-intersecting) polygon detected.
+Warning (line 12036): Invalid (self-intersecting) polygon detected.
+Warning (line 12046): Invalid (self-intersecting) polygon detected.
+Warning (line 12056): Invalid (self-intersecting) polygon detected.
+Warning (line 12066): Invalid (self-intersecting) polygon detected.
+Warning (line 12076): Invalid (self-intersecting) polygon detected.
+Warning (line 12086): Invalid (self-intersecting) polygon detected.
+Warning (line 12095): Invalid (self-intersecting) polygon detected.
+Warning (line 12104): Invalid (self-intersecting) polygon detected.
+Warning (line 12226): Invalid (self-intersecting) polygon detected.
+Warning (line 12432): Invalid (self-intersecting) polygon detected.
+Warning (line 12441): Invalid (self-intersecting) polygon detected.
+Warning (line 12452): Invalid (self-intersecting) polygon detected.
+Warning (line 12461): Invalid (self-intersecting) polygon detected.
+Warning (line 12470): Invalid (self-intersecting) polygon detected.
+Warning (line 12479): Invalid (self-intersecting) polygon detected.
+
+----------------------------------------------------------------------
+
+20-Apr-18  11:55                                            Page    1
+
+P-CAD ASCII File Open: VIP-1-31-007_1m3v.fpc.ERR
+
+======================================================================
+
+Warning (line 12488): Invalid (self-intersecting) polygon detected.
+Warning (line 12497): Invalid (self-intersecting) polygon detected.
+Warning (line 12507): Invalid (self-intersecting) polygon detected.
+Warning (line 12517): Invalid (self-intersecting) polygon detected.
+Warning (line 12526): Invalid (self-intersecting) polygon detected.
+Warning (line 12535): Invalid (self-intersecting) polygon detected.
+Warning (line 12545): Invalid (self-intersecting) polygon detected.
+Warning (line 12555): Invalid (self-intersecting) polygon detected.
+Warning (line 12564): Invalid (self-intersecting) polygon detected.
+Warning (line 12573): Invalid (self-intersecting) polygon detected.
+Warning (line 12582): Invalid (self-intersecting) polygon detected.
+Warning (line 12591): Invalid (self-intersecting) polygon detected.
+Warning (line 12600): Invalid (self-intersecting) polygon detected.
+Warning (line 12609): Invalid (self-intersecting) polygon detected.
+Warning (line 12618): Invalid (self-intersecting) polygon detected.
+Warning (line 12627): Invalid (self-intersecting) polygon detected.
+Warning (line 12636): Invalid (self-intersecting) polygon detected.
+Warning (line 12645): Invalid (self-intersecting) polygon detected.
+Warning (line 12654): Invalid (self-intersecting) polygon detected.
+Warning (line 12822): Invalid (self-intersecting) polygon detected.
+Warning (line 13548): Invalid (self-intersecting) polygon detected.
+Warning (line 14657): Invalid (self-intersecting) polygon detected.
+Warning (line 16352): Invalid (self-intersecting) polygon detected.
+Warning (line 16558): Invalid (self-intersecting) polygon detected.
+Warning (line 16571): Invalid (self-intersecting) polygon detected.
+Warning (line 16581): Invalid (self-intersecting) polygon detected.
+Warning (line 16591): Invalid (self-intersecting) polygon detected.
+Warning (line 16601): Invalid (self-intersecting) polygon detected.
+Warning (line 16611): Invalid (self-intersecting) polygon detected.
+Warning (line 16624): Invalid (self-intersecting) polygon detected.
+Warning (line 16634): Invalid (self-intersecting) polygon detected.
+Warning (line 16644): Invalid (self-intersecting) polygon detected.
+Warning (line 16766): Invalid (self-intersecting) polygon detected.
+Warning (line 16776): Invalid (self-intersecting) polygon detected.
+Warning (line 16786): Invalid (self-intersecting) polygon detected.
+Warning (line 16796): Invalid (self-intersecting) polygon detected.
+Warning (line 16806): Invalid (self-intersecting) polygon detected.
+Warning (line 16816): Invalid (self-intersecting) polygon detected.
+Warning (line 16826): Invalid (self-intersecting) polygon detected.
+Warning (line 16942): Invalid (self-intersecting) polygon detected.
+Warning (line 16952): Invalid (self-intersecting) polygon detected.
+Warning (line 16962): Invalid (self-intersecting) polygon detected.
+Warning (line 16983): Invalid (self-intersecting) polygon detected.
+Warning (line 16992): Invalid (self-intersecting) polygon detected.
+Warning (line 17001): Invalid (self-intersecting) polygon detected.
+Warning (line 17010): Invalid (self-intersecting) polygon detected.
+Warning (line 17019): Invalid (self-intersecting) polygon detected.
+Warning (line 17028): Invalid (self-intersecting) polygon detected.
+Warning (line 17037): Invalid (self-intersecting) polygon detected.
+Warning (line 17047): Invalid (self-intersecting) polygon detected.
+Warning (line 17057): Invalid (self-intersecting) polygon detected.
+Warning (line 17066): Invalid (self-intersecting) polygon detected.
+Warning (line 17075): Invalid (self-intersecting) polygon detected.
+Warning (line 17085): Invalid (self-intersecting) polygon detected.
+Warning (line 17095): Invalid (self-intersecting) polygon detected.
+Warning (line 17116): Invalid (self-intersecting) polygon detected.
+Warning (line 17125): Invalid (self-intersecting) polygon detected.
+
+----------------------------------------------------------------------
+
+20-Apr-18  11:55                                            Page    2
+
+P-CAD ASCII File Open: VIP-1-31-007_1m3v.fpc.ERR
+
+======================================================================
+
+Warning (line 17135): Invalid (self-intersecting) polygon detected.
+Warning (line 17145): Invalid (self-intersecting) polygon detected.
+Warning (line 17155): Invalid (self-intersecting) polygon detected.
+
+
+Total errors:       0
+Total warnings:   116
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+----------------------------------------------------------------------
+
+20-Apr-18  11:55                                            Page    3
+

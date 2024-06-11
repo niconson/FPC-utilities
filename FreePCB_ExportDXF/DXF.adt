@@ -1,0 +1,81 @@
+Audit recovered database.   D:\Мои прогр\FreePCB_ExportDXF\DXF.dxf   Thu Jul 21 15:16:02 2016
+
+1086 objects audited
+Total errors found during audit 76, fixed 76
+
+Dwg file, File too short, 
+AcDbViewportTable(8), Viewport *Active missing, Replaced by: <Created>.
+AcDbBlockReference(403), BlockTableRecord SJK6K61_top is missing, Validation: <Invalid>, Replaced by: <Created>.
+AcDbBlockReference(401), BlockTableRecord KX7_top is missing, Validation: <Invalid>, Replaced by: <Created>.
+AcDbBlockReference(400), BlockTableRecord MINI USB 54819_top is missing, Validation: <Invalid>, Replaced by: <Created>.
+AcDbBlockReference(3FF), BlockTableRecord PLS1.2771_top is missing, Validation: <Invalid>, Replaced by: <Created>.
+AcDbBlockReference(3FE), BlockTableRecord B2BPHKS1_top is missing, Validation: <Invalid>, Replaced by: <Created>.
+AcDbBlockReference(3FD), BlockTableRecord W210502PS_top is missing, Validation: <Invalid>, Replaced by: <Created>.
+AcDbBlockReference(3FC), BlockTableRecord SOT23_top is missing, Validation: <Invalid>, Replaced by: <Created>.
+AcDbBlockReference(3FA), BlockTableRecord via0.45x0.9_bot is missing, Validation: <Invalid>, Replaced by: <Created>.
+AcDbBlockReference(3F5), BlockTableRecord SMB_top is missing, Validation: <Invalid>, Replaced by: <Created>.
+AcDbBlockReference(3F4), BlockTableRecord PANASONIC EVQQ2_bot is missing, Validation: <Invalid>, Replaced by: <Created>.
+AcDbBlockReference(3EE), BlockTableRecord RC0805_top is missing, Validation: <Invalid>, Replaced by: <Created>.
+AcDbBlockReference(3D2), BlockTableRecord P1_top is missing, Validation: <Invalid>, Replaced by: <Created>.
+AcDbBlockReference(3D0), BlockTableRecord CDRH5D28NP_top is missing, Validation: <Invalid>, Replaced by: <Created>.
+AcDbBlockReference(3CF), BlockTableRecord PH128160T066L03Q_bot is missing, Validation: <Invalid>, Replaced by: <Created>.
+AcDbBlockReference(3CE), BlockTableRecord SFM1241_top is missing, Validation: <Invalid>, Replaced by: <Created>.
+AcDbBlockReference(3CD), BlockTableRecord m1.51.5_bot is missing, Validation: <Invalid>, Replaced by: <Created>.
+AcDbBlockReference(3CB), BlockTableRecord MINISO8_top is missing, Validation: <Invalid>, Replaced by: <Created>.
+AcDbBlockReference(3CA), BlockTableRecord SO8_top is missing, Validation: <Invalid>, Replaced by: <Created>.
+AcDbBlockReference(3C8), BlockTableRecord SOT236_top is missing, Validation: <Invalid>, Replaced by: <Created>.
+AcDbBlockReference(3C7), BlockTableRecord TQFP6410_top is missing, Validation: <Invalid>, Replaced by: <Created>.
+AcDbBlockReference(3C6), BlockTableRecord ADXL343M1_top is missing, Validation: <Invalid>, Replaced by: <Created>.
+AcDbBlockReference(3C5), BlockTableRecord SOT235_top is missing, Validation: <Invalid>, Replaced by: <Created>.
+AcDbBlockReference(3BF), BlockTableRecord CC0805_top is missing, Validation: <Invalid>, Replaced by: <Created>.
+AcDbBlockTableRecord(22E), BlockEndId, Validation: <Invalid>, Replaced by: <Created>.
+AcDbBlockTableRecord(407), BlockBeginId, Validation: <Invalid>, Replaced by: <Created>.
+AcDbBlockTableRecord(407), BlockEndId, Validation: <Invalid>, Replaced by: <Created>.
+AcDbBlockTableRecord(408), BlockBeginId, Validation: <Invalid>, Replaced by: <Created>.
+AcDbBlockTableRecord(408), BlockEndId, Validation: <Invalid>, Replaced by: <Created>.
+AcDbBlockTableRecord(409), BlockBeginId, Validation: <Invalid>, Replaced by: <Created>.
+AcDbBlockTableRecord(409), BlockEndId, Validation: <Invalid>, Replaced by: <Created>.
+AcDbBlockTableRecord(40A), BlockBeginId, Validation: <Invalid>, Replaced by: <Created>.
+AcDbBlockTableRecord(40A), BlockEndId, Validation: <Invalid>, Replaced by: <Created>.
+AcDbBlockTableRecord(40B), BlockBeginId, Validation: <Invalid>, Replaced by: <Created>.
+AcDbBlockTableRecord(40B), BlockEndId, Validation: <Invalid>, Replaced by: <Created>.
+AcDbBlockTableRecord(40C), BlockBeginId, Validation: <Invalid>, Replaced by: <Created>.
+AcDbBlockTableRecord(40C), BlockEndId, Validation: <Invalid>, Replaced by: <Created>.
+AcDbBlockTableRecord(40D), BlockBeginId, Validation: <Invalid>, Replaced by: <Created>.
+AcDbBlockTableRecord(40D), BlockEndId, Validation: <Invalid>, Replaced by: <Created>.
+AcDbBlockTableRecord(40F), BlockBeginId, Validation: <Invalid>, Replaced by: <Created>.
+AcDbBlockTableRecord(40F), BlockEndId, Validation: <Invalid>, Replaced by: <Created>.
+AcDbBlockTableRecord(410), BlockBeginId, Validation: <Invalid>, Replaced by: <Created>.
+AcDbBlockTableRecord(410), BlockEndId, Validation: <Invalid>, Replaced by: <Created>.
+AcDbBlockTableRecord(411), BlockBeginId, Validation: <Invalid>, Replaced by: <Created>.
+AcDbBlockTableRecord(411), BlockEndId, Validation: <Invalid>, Replaced by: <Created>.
+AcDbBlockTableRecord(412), BlockBeginId, Validation: <Invalid>, Replaced by: <Created>.
+AcDbBlockTableRecord(412), BlockEndId, Validation: <Invalid>, Replaced by: <Created>.
+AcDbBlockTableRecord(413), BlockBeginId, Validation: <Invalid>, Replaced by: <Created>.
+AcDbBlockTableRecord(413), BlockEndId, Validation: <Invalid>, Replaced by: <Created>.
+AcDbBlockTableRecord(414), BlockBeginId, Validation: <Invalid>, Replaced by: <Created>.
+AcDbBlockTableRecord(414), BlockEndId, Validation: <Invalid>, Replaced by: <Created>.
+AcDbBlockTableRecord(415), BlockBeginId, Validation: <Invalid>, Replaced by: <Created>.
+AcDbBlockTableRecord(415), BlockEndId, Validation: <Invalid>, Replaced by: <Created>.
+AcDbBlockTableRecord(416), BlockBeginId, Validation: <Invalid>, Replaced by: <Created>.
+AcDbBlockTableRecord(416), BlockEndId, Validation: <Invalid>, Replaced by: <Created>.
+AcDbBlockTableRecord(417), BlockBeginId, Validation: <Invalid>, Replaced by: <Created>.
+AcDbBlockTableRecord(417), BlockEndId, Validation: <Invalid>, Replaced by: <Created>.
+AcDbBlockTableRecord(418), BlockBeginId, Validation: <Invalid>, Replaced by: <Created>.
+AcDbBlockTableRecord(418), BlockEndId, Validation: <Invalid>, Replaced by: <Created>.
+AcDbBlockTableRecord(419), BlockBeginId, Validation: <Invalid>, Replaced by: <Created>.
+AcDbBlockTableRecord(419), BlockEndId, Validation: <Invalid>, Replaced by: <Created>.
+AcDbBlockTableRecord(41A), BlockBeginId, Validation: <Invalid>, Replaced by: <Created>.
+AcDbBlockTableRecord(41A), BlockEndId, Validation: <Invalid>, Replaced by: <Created>.
+AcDbBlockTableRecord(41B), BlockBeginId, Validation: <Invalid>, Replaced by: <Created>.
+AcDbBlockTableRecord(41B), BlockEndId, Validation: <Invalid>, Replaced by: <Created>.
+AcDbBlockTableRecord(41C), BlockBeginId, Validation: <Invalid>, Replaced by: <Created>.
+AcDbBlockTableRecord(41C), BlockEndId, Validation: <Invalid>, Replaced by: <Created>.
+AcDbBlockTableRecord(41D), BlockBeginId, Validation: <Invalid>, Replaced by: <Created>.
+AcDbBlockTableRecord(41D), BlockEndId, Validation: <Invalid>, Replaced by: <Created>.
+AcDbBlockTableRecord(41E), BlockBeginId, Validation: <Invalid>, Replaced by: <Created>.
+AcDbBlockTableRecord(41E), BlockEndId, Validation: <Invalid>, Replaced by: <Created>.
+AcDbBlockTableRecord(1D), BlockBeginId, Validation: <Invalid>, Replaced by: <Created>.
+AcDbBlockTableRecord(1D), BlockEndId, Validation: <Invalid>, Replaced by: <Created>.
+AcDbBlockTableRecord(1B), BlockBeginId, Validation: <Invalid>, Replaced by: <Created>.
+AcDbBlockTableRecord(1B), BlockEndId, Validation: <Invalid>, Replaced by: <Created>.

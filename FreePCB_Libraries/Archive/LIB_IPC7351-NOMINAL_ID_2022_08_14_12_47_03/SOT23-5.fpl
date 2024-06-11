@@ -1,0 +1,19 @@
+name: "SOT23-5"
+package: ""
+author: "Ivex"
+units: MIL
+sel_rect: -78 -142 78 42
+ref_text: 50 0 74 0 7
+outline_polyline: 7 -70 34
+next_corner: 70 34 0
+next_corner: 70 -134 0
+next_corner: -70 -134 0
+close_polyline: 0
+n_pins: 3
+pin: 1 0 0 0 0
+top_pad: 3 48 20 20
+pin: 2 0 -40 -90 0
+top_pad: 3 48 20 20
+pin: 3 0 40 -90 0
+top_pad: 3 48 20 20
+

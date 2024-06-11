@@ -1,0 +1,66 @@
+P-CAD ASCII File Open: DVMz-1-1.fpc.ERR
+
+======================================================================
+
+Warning (line 4943): Invalid (self-intersecting) polygon detected.
+Warning (line 5766): Invalid (self-intersecting) polygon detected.
+Warning (line 6622): Invalid (self-intersecting) polygon detected.
+Warning (line 7211): Invalid (self-intersecting) polygon detected.
+Warning (line 7701): Duplicate refdes h1 (HOLE1.0) found.  This component was no
+t loaded.
+
+
+Total errors:       0
+Total warnings:     5
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+----------------------------------------------------------------------
+
+11-Apr-19  15:46                                            Page    1
+

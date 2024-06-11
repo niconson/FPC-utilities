@@ -1,0 +1,66 @@
+P-CAD ASCII File Open: Vip-007.fpc.ERR
+
+======================================================================
+
+Warning (line 319): Pad/via style '1.0668x1.0668[2]' has an invalid thermal diam
+eter.  The outer diameter must be greater than the inner diameter.
+Warning (line 319): Pad/via style '1.0668x1.0668[2]' has an invalid spoke width.
+  Spoke width must be greater than 0 and less than the inner diameter.
+
+
+Total errors:       0
+Total warnings:     2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+----------------------------------------------------------------------
+
+28-Feb-18  17:31                                            Page    1
+

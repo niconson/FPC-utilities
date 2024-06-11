@@ -1,0 +1,183 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!-- C++Builder XML Project -->
+<PROJECT>
+  <MACROS>
+    <VERSION value="BCB.06.00"/>
+    <PROJECT value="Areas.exe"/>
+    <OBJFILES value="Areas.obj Debug_Areas.obj prob.obj ex_str.obj ex_float_NM.obj 
+      ProcessMessages.obj LoadArea.obj PointAreaInside.obj Angle.obj 
+      Length_Line.obj Distance.obj CanvasPads.obj ex_float.obj 
+      Str_Float_Format.obj Generate_Cutout.obj Rotate_Vertex.obj CanvasLines.obj 
+      CanvasBoard.obj CanvasAreas.obj Fractional.obj Generate_Line.obj 
+      Combine.obj LoadingLines.obj LinesCutToCornersConverter.obj 
+      C_area_C_board.obj LineAreaInside.obj Inversion.obj Contours.obj 
+      CornersToLinesAREA_C.obj p.obj SetDirection.obj PointBoardInside.obj 
+      CanvasThrmlP.obj CanvasMask.obj CanvasHoles.obj"/>
+    <RESFILES value="Areas.res"/>
+    <IDLFILES value=""/>
+    <IDLGENFILES value=""/>
+    <DEFFILE value=""/>
+    <RESDEPEN value="$(RESFILES) Debug_Areas.dfm ProcessMessages.dfm"/>
+    <LIBFILES value=""/>
+    <LIBRARIES value="vclx.lib rtl.lib vcl.lib"/>
+    <SPARELIBS value="vcl.lib rtl.lib vclx.lib"/>
+    <PACKAGES value="vcl.bpi rtl.bpi dbrtl.bpi adortl.bpi vcldb.bpi vclx.bpi bdertl.bpi 
+      vcldbx.bpi ibxpress.bpi dsnap.bpi cds.bpi bdecds.bpi qrpt.bpi teeui.bpi 
+      teedb.bpi tee.bpi dss.bpi teeqr.bpi visualclx.bpi visualdbclx.bpi 
+      dsnapcrba.bpi dsnapcon.bpi bcbsmp.bpi vclie.bpi xmlrtl.bpi inet.bpi 
+      inetdbbde.bpi inetdbxpress.bpi inetdb.bpi nmfast.bpi webdsnap.bpi 
+      bcbie.bpi websnap.bpi soaprtl.bpi dclocx.bpi dbexpress.bpi dbxcds.bpi 
+      indy.bpi bcb2kaxserver.bpi"/>
+    <PATHCPP value=".;"/>
+    <PATHPAS value=".;"/>
+    <PATHRC value=".;"/>
+    <PATHASM value=".;"/>
+    <DEBUGLIBPATH value="$(BCB)\lib\debug"/>
+    <RELEASELIBPATH value="$(BCB)\lib\release"/>
+    <LINKER value="ilink32"/>
+    <USERDEFINES value=""/>
+    <SYSDEFINES value="NO_STRICT"/>
+    <MAINSOURCE value="Areas.cpp"/>
+    <INCLUDEPATH value="C:\Windows\system32;&quot;D:\??? ?????\Debug Areas&quot;;&quot;C:\Program Files\Borland\CBuilder6\Bin&quot;;&quot;C:\Documents and Settings\0\??????? ????\??? ?????\Component manager&quot;;&quot;C:\Program Files\Borland\CBuilder6\Projects&quot;;&quot;C:\Documents and Settings\0\??????? ????\Rotate(FreePCB)&quot;;$(BCB)\include;$(BCB)\include\vcl"/>
+    <LIBPATH value="C:\Windows\system32;&quot;D:\??? ?????\Debug Areas&quot;;&quot;C:\Program Files\Borland\CBuilder6\Bin&quot;;&quot;C:\Documents and Settings\0\??????? ????\??? ?????\Component manager&quot;;&quot;C:\Program Files\Borland\CBuilder6\Projects&quot;;&quot;C:\Documents and Settings\0\??????? ????\Rotate(FreePCB)&quot;;$(BCB)\lib\obj;$(BCB)\lib"/>
+    <WARNINGS value="-w-par"/>
+    <OTHERFILES value=""/>
+  </MACROS>
+  <OPTIONS>
+    <IDLCFLAGS value="-IC:\Windows\system32 -I&quot;D:\??? ?????\Debug Areas&quot; 
+      -I&quot;C:\Program Files\Borland\CBuilder6\Bin&quot; 
+      -I&quot;C:\Documents and Settings\0\??????? ????\??? ?????\Component manager&quot; 
+      -I&quot;C:\Program Files\Borland\CBuilder6\Projects&quot; 
+      -I&quot;C:\Documents and Settings\0\??????? ????\Rotate(FreePCB)&quot; 
+      -I$(BCB)\include -I$(BCB)\include\vcl -src_suffix cpp -boa"/>
+    <CFLAG1 value="-O2 -H=$(BCB)\lib\vcl60.csm -Hc -Vx -Ve -X- -a8 -b- -k- -vi -c -tW -tWM"/>
+    <PFLAGS value="-$Y- -$L- -$D- -$A8 -v -JPHNE -M"/>
+    <RFLAGS value=""/>
+    <AFLAGS value="/mx /w2 /zn"/>
+    <LFLAGS value="-D&quot;&quot; -aa -Tpe -x -Gn"/>
+    <OTHERFILES value=""/>
+  </OPTIONS>
+  <LINKER>
+    <ALLOBJ value="c0w32.obj sysinit.obj $(OBJFILES)"/>
+    <ALLRES value="$(RESFILES)"/>
+    <ALLLIB value="$(LIBFILES) $(LIBRARIES) import32.lib cp32mt.lib"/>
+    <OTHERFILES value=""/>
+  </LINKER>
+  <FILELIST>
+      <FILE FILENAME="Areas.res" FORMNAME="" UNITNAME="Areas.res" CONTAINERID="ResTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Areas.cpp" FORMNAME="" UNITNAME="Areas" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Debug_Areas.cpp" FORMNAME="Form1" UNITNAME="Debug_Areas" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="prob.cpp" FORMNAME="" UNITNAME="prob" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ex_str.cpp" FORMNAME="" UNITNAME="ex_str" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ex_float_NM.cpp" FORMNAME="" UNITNAME="ex_float_NM" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ProcessMessages.cpp" FORMNAME="Form3" UNITNAME="ProcessMessages" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="LoadArea.cpp" FORMNAME="" UNITNAME="LoadArea" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="PointAreaInside.cpp" FORMNAME="" UNITNAME="PointAreaInside" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Angle.cpp" FORMNAME="" UNITNAME="Angle" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Length_Line.cpp" FORMNAME="" UNITNAME="Length_Line" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Distance.cpp" FORMNAME="" UNITNAME="Distance" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="CanvasPads.cpp" FORMNAME="" UNITNAME="CanvasPads" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ex_float.cpp" FORMNAME="" UNITNAME="ex_float" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Str_Float_Format.cpp" FORMNAME="" UNITNAME="Str_Float_Format" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Generate_Cutout.cpp" FORMNAME="" UNITNAME="Generate_Cutout" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Rotate_Vertex.cpp" FORMNAME="" UNITNAME="Rotate_Vertex" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="CanvasLines.cpp" FORMNAME="" UNITNAME="CanvasLines" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="CanvasBoard.cpp" FORMNAME="" UNITNAME="CanvasBoard" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="CanvasAreas.cpp" FORMNAME="" UNITNAME="CanvasAreas" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Fractional.cpp" FORMNAME="" UNITNAME="Fractional" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Generate_Line.cpp" FORMNAME="" UNITNAME="Generate_Line" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Combine.cpp" FORMNAME="" UNITNAME="Combine" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="LoadingLines.cpp" FORMNAME="" UNITNAME="LoadingLines" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="LinesCutToCornersConverter.cpp" FORMNAME="" UNITNAME="LinesCutToCornersConverter" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="C_area_C_board.cpp" FORMNAME="" UNITNAME="C_area_C_board" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="LineAreaInside.cpp" FORMNAME="" UNITNAME="LineAreaInside" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Inversion.cpp" FORMNAME="" UNITNAME="Inversion" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Contours.cpp" FORMNAME="" UNITNAME="Contours" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="CornersToLinesAREA_C.cpp" FORMNAME="" UNITNAME="CornersToLinesAREA_C" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="p.cpp" FORMNAME="" UNITNAME="p" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="SetDirection.cpp" FORMNAME="" UNITNAME="SetDirection" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="PointBoardInside.cpp" FORMNAME="" UNITNAME="PointBoardInside" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="CanvasThrmlP.cpp" FORMNAME="" UNITNAME="CanvasThrmlP" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="CanvasMask.cpp" FORMNAME="" UNITNAME="CanvasMask" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="CanvasHoles.cpp" FORMNAME="" UNITNAME="CanvasHoles" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+  </FILELIST>
+  <BUILDTOOLS>
+  </BUILDTOOLS>
+
+  <IDEOPTIONS>
+[Version Info]
+IncludeVerInfo=0
+AutoIncBuild=0
+MajorVer=1
+MinorVer=0
+Release=0
+Build=0
+Debug=0
+PreRelease=0
+Special=0
+Private=0
+DLL=0
+Locale=1049
+CodePage=1251
+
+[Version Info Keys]
+CompanyName=
+FileDescription=
+FileVersion=1.0.0.0
+InternalName=
+LegalCopyright=
+LegalTrademarks=
+OriginalFilename=
+ProductName=
+ProductVersion=1.0.0.0
+Comments=
+
+[Excluded Packages]
+c:\borland\cbuilder6\Bin\dclite60.bpl=Borland Integrated Translation Environment
+
+[HistoryLists\hlIncludePath]
+Count=3
+Item0=C:\Windows\system32;D:\??? ?????\Debug Areas;C:\Program Files\Borland\CBuilder6\Bin;C:\Documents and Settings\0\??????? ????\??? ?????\Component manager;C:\Program Files\Borland\CBuilder6\Projects;C:\Documents and Settings\0\??????? ????\Rotate(FreePCB);$(BCB)\include;$(BCB)\include\vcl
+Item1=D:\??? ?????\Debug Areas;C:\Program Files\Borland\CBuilder6\Bin;C:\Documents and Settings\0\??????? ????\??? ?????\Component manager;C:\Program Files\Borland\CBuilder6\Projects;C:\Documents and Settings\0\??????? ????\Rotate(FreePCB);$(BCB)\include;$(BCB)\include\vcl
+Item2=C:\Program Files\Borland\CBuilder6\Bin;C:\Documents and Settings\0\??????? ????\??? ?????\Component manager;C:\Program Files\Borland\CBuilder6\Projects;C:\Documents and Settings\0\??????? ????\Rotate(FreePCB);$(BCB)\include;$(BCB)\include\vcl
+
+[HistoryLists\hlLibraryPath]
+Count=3
+Item0=C:\Windows\system32;D:\??? ?????\Debug Areas;C:\Program Files\Borland\CBuilder6\Bin;C:\Documents and Settings\0\??????? ????\??? ?????\Component manager;C:\Program Files\Borland\CBuilder6\Projects;C:\Documents and Settings\0\??????? ????\Rotate(FreePCB);$(BCB)\lib\obj;$(BCB)\lib
+Item1=D:\??? ?????\Debug Areas;C:\Program Files\Borland\CBuilder6\Bin;C:\Documents and Settings\0\??????? ????\??? ?????\Component manager;C:\Program Files\Borland\CBuilder6\Projects;C:\Documents and Settings\0\??????? ????\Rotate(FreePCB);$(BCB)\lib\obj;$(BCB)\lib
+Item2=C:\Program Files\Borland\CBuilder6\Bin;C:\Documents and Settings\0\??????? ????\??? ?????\Component manager;C:\Program Files\Borland\CBuilder6\Projects;C:\Documents and Settings\0\??????? ????\Rotate(FreePCB);$(BCB)\lib\obj;$(BCB)\lib
+
+[HistoryLists\hlDebugSourcePath]
+Count=1
+Item0=$(BCB)\source\vcl
+
+[HistoryLists\hlConditionals]
+Count=1
+Item0=_DEBUG
+
+[Debugging]
+DebugSourceDirs=$(BCB)\source\vcl
+
+[Parameters]
+RunParams=
+Launcher=
+UseLauncher=0
+DebugCWD=
+HostApplication=
+RemoteHost=
+RemotePath=
+RemoteLauncher=
+RemoteCWD=
+RemoteDebug=0
+
+[Compiler]
+ShowInfoMsgs=0
+LinkDebugVcl=0
+LinkCGLIB=0
+
+[CORBA]
+AddServerUnit=1
+AddClientUnit=1
+PrecompiledHeaders=1
+  </IDEOPTIONS>
+</PROJECT>

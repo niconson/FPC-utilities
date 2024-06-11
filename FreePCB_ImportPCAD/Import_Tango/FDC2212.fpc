@@ -1,0 +1,2269 @@
+[options]
+
+version: 2.017
+file_version: 2.017
+project_name: "ImportTango"
+full_library_folder: "c:\freepcb_continuation\lib"
+CAM_folder: "C:\Рабочая папка\multi_pcb\mykitchen+keysign+WDE\cam"
+ses_file_path: ""
+netlist_file_path: "D:\MyKitchen\sh\Timer_New_Reference.net"
+SMT_connect_copper: "1"
+default_glue_width: "635000"
+dsn_flags: "3"
+dsn_bounds_poly: "0"
+dsn_signals_poly: "0"
+autosave_interval: 0
+auto_ratline_disable: "0"
+auto_ratline_disable_min_pins: "100"
+netlist_import_flags: 903
+units: MM
+
+visible_grid_spacing: 1000000.000000
+  visible_grid_item: 100mil
+  visible_grid_item: 125mil
+  visible_grid_item: 200mil
+  visible_grid_item: 250mil
+  visible_grid_item: 400mil
+  visible_grid_item: 500mil
+  visible_grid_item: 1000mil
+  visible_grid_item: 1mm
+  visible_grid_item: 2mm
+  visible_grid_item: 2.5mm
+  visible_grid_item: 4mm
+  visible_grid_item: 5mm
+  visible_grid_item: 10mm
+  visible_grid_item: 20mm
+  visible_grid_item: 25mm
+  visible_grid_item: 40mm
+  visible_grid_item: 50mm
+  visible_grid_item: 100mm
+
+placement_grid_spacing: 100000.000000
+  placement_grid_item: 10mil
+  placement_grid_item: 20mil
+  placement_grid_item: 25mil
+  placement_grid_item: 40mil
+  placement_grid_item: 50mil
+  placement_grid_item: 100mil
+  placement_grid_item: 200mil
+  placement_grid_item: 250mil
+  placement_grid_item: 400mil
+  placement_grid_item: 500mil
+  placement_grid_item: 1000mil
+  placement_grid_item: 0.1mm
+  placement_grid_item: 0.2mm
+  placement_grid_item: 0.25mm
+  placement_grid_item: 0.4mm
+  placement_grid_item: 0.5mm
+  placement_grid_item: 1mm
+  placement_grid_item: 2mm
+  placement_grid_item: 2.5mm
+  placement_grid_item: 4mm
+  placement_grid_item: 5mm
+  placement_grid_item: 10mm
+
+routing_grid_spacing: 20000.000000
+  routing_grid_item: 1mil
+  routing_grid_item: 2mil
+  routing_grid_item: 2.5mil
+  routing_grid_item: 3.33330709mil
+  routing_grid_item: 4mil
+  routing_grid_item: 5mil
+  routing_grid_item: 6.665mil
+  routing_grid_item: 10mil
+  routing_grid_item: 12.5mil
+  routing_grid_item: 16.665mil
+  routing_grid_item: 20mil
+  routing_grid_item: 25mil
+  routing_grid_item: 40mil
+  routing_grid_item: 50mil
+  routing_grid_item: 0.01mm
+  routing_grid_item: 0.02mm
+  routing_grid_item: 0.04mm
+  routing_grid_item: 0.05mm
+  routing_grid_item: 0.1mm
+  routing_grid_item: 0.2mm
+  routing_grid_item: 0.25mm
+  routing_grid_item: 0.4mm
+  routing_grid_item: 0.5mm
+  routing_grid_item: 1mm
+  routing_grid_item: 2mm
+  routing_grid_item: 2.5mm
+  routing_grid_item: 4mm
+  routing_grid_item: 5mm
+  routing_grid_item: 10mm
+
+snap_angle: 90
+
+fp_visible_grid_spacing: 1000000.000000
+  fp_visible_grid_item: 100mil
+  fp_visible_grid_item: 125mil
+  fp_visible_grid_item: 200mil
+  fp_visible_grid_item: 250mil
+  fp_visible_grid_item: 400mil
+  fp_visible_grid_item: 500mil
+  fp_visible_grid_item: 1000mil
+  fp_visible_grid_item: 1mm
+  fp_visible_grid_item: 2mm
+  fp_visible_grid_item: 2.5mm
+  fp_visible_grid_item: 4mm
+  fp_visible_grid_item: 5mm
+  fp_visible_grid_item: 10mm
+  fp_visible_grid_item: 20mm
+  fp_visible_grid_item: 25mm
+  fp_visible_grid_item: 40mm
+  fp_visible_grid_item: 50mm
+  fp_visible_grid_item: 100mm
+
+fp_placement_grid_spacing: 50000.000000
+  fp_placement_grid_item: 10mil
+  fp_placement_grid_item: 20mil
+  fp_placement_grid_item: 25mil
+  fp_placement_grid_item: 40mil
+  fp_placement_grid_item: 50mil
+  fp_placement_grid_item: 100mil
+  fp_placement_grid_item: 200mil
+  fp_placement_grid_item: 250mil
+  fp_placement_grid_item: 400mil
+  fp_placement_grid_item: 500mil
+  fp_placement_grid_item: 1000mil
+  fp_placement_grid_item: 0.02mm
+  fp_placement_grid_item: 0.05mm
+  fp_placement_grid_item: 0.1mm
+  fp_placement_grid_item: 0.2mm
+  fp_placement_grid_item: 0.5mm
+  fp_placement_grid_item: 1mm
+  fp_placement_grid_item: 2mm
+  fp_placement_grid_item: 2.5mm
+  fp_placement_grid_item: 4mm
+  fp_placement_grid_item: 5mm
+  fp_placement_grid_item: 10mm
+
+fp_snap_angle: 45
+
+fill_clearance: 254000
+mask_clearance: 50000
+thermal_width: 400000
+thermal_clearance: 203200
+min_silkscreen_width: 100000
+highlight_width: 127000
+board_outline_width: 150000
+hole_clearance: 400000
+pilot_diameter: 200000
+annular_ring_for_pins: 200000
+annular_ring_for_vias: 200000
+shrink_paste_mask: 0
+cam_flags: 6240
+cam_layers: 1048639
+cam_drill_file: 1
+cam_units: 1
+cam_n_x: 1
+cam_n_y: 1
+cam_space_x: 0
+cam_space_y: 0
+
+report_options: 4123
+drc_check_unrouted: 1
+drc_trace_width: 249997
+drc_pad_pad: 198998
+drc_pad_trace: 198998
+drc_trace_trace: 198998
+drc_hole_copper: 499995
+drc_annular_ring_pins: 198998
+drc_annular_ring_vias: 198998
+drc_board_edge_copper: 299997
+drc_board_edge_hole: 499995
+drc_hole_hole: 699993
+drc_copper_copper: 299997
+
+default_trace_width:12mil
+default_via_pad_width:35mil
+default_via_hole_width:19mil
+n_width_menu: 12
+  width_menu_item: 1 20mil 50mil 30mil
+  width_menu_item: 2 22mil 50mil 30mil
+  width_menu_item: 3 25mil 50mil 30mil
+  width_menu_item: 4 27mil 50mil 30mil
+  width_menu_item: 5 12mil 35mil 19mil
+  width_menu_item: 6 15mil 35mil 19mil
+  width_menu_item: 7 18mil 35mil 19mil
+  width_menu_item: 8 30mil 50mil 30mil
+  width_menu_item: 9 40mil 60mil 40mil
+  width_menu_item: 10 50mil 60mil 40mil
+  width_menu_item: 11 60mil 70mil 50mil
+  width_menu_item: 12 70mil 80mil 60mil
+
+n_copper_layers: 2
+
+[footprints]
+
+name: "3x2.6"
+  units: NM
+  sel_rect: -254000 -254000 254000 254000
+  ref_text: 300000 0 500000 0 50000
+  value_text: 300000 0 0 0 50000
+  centroid: 0 0 0 0
+  n_pins: 1
+    pin: "1" 0 0 0 0 ""
+      top_pad: 3 2600000 1500000 1500000 650000
+
+name: "SOT-23-5_1"
+  units: NM
+  sel_rect: -1682750 -1554000 1682750 1554000
+  ref_text: 300000 0 500000 0 50000
+  value_text: 300000 0 0 0 50000
+  centroid: 0 0 0 0
+  outline_polyline: 100000 -1428750 -158750 1
+    next_corner: -952500 -635000 0
+  outline_polyline: 100000 -1428750 635000 1
+    next_corner: -1428750 -158750 0
+  outline_polyline: 100000 1428750 -635000 1
+    next_corner: 1428750 635000 0
+  outline_polyline: 100000 -952500 -635000 1
+    next_corner: 1428750 -635000 0
+  outline_polyline: 100000 -1428750 635000 1
+    next_corner: 1428750 635000 0
+  n_pins: 5
+    pin: "1" 0 -1000000 -1300000 0 ""
+      top_pad: 3 1000000 350000 350000 175000
+    pin: "5" 0 -1000000 1300000 0 ""
+      top_pad: 3 1000000 350000 350000 175000
+    pin: "3" 0 1000000 -1300000 0 ""
+      top_pad: 3 1000000 350000 350000 175000
+    pin: "4" 0 1000000 1300000 0 ""
+      top_pad: 3 1000000 350000 350000 175000
+    pin: "2" 0 0 -1300000 0 ""
+      top_pad: 3 1000000 350000 350000 175000
+
+name: "ASSY_TOP_LINES_ID1646"
+  units: NM
+  sel_rect: -254000 -10254000 25654000 -7746000
+  ref_text: 300000 0 0 0 10000
+  value_text: 300000 0 0 0 10000
+  centroid: 0 0 0 0
+  text: "IMPORT P-CAD: ASSY_TOP_L..." 1000000 600000 -9400000 0 200000 0 4
+  outline_polyline: 200000 0 -8000000 1
+    next_corner: 0 -10000000 0
+    next_corner: 25400000 -10000000 0
+    next_corner: 25400000 -8000000 0
+    close_polyline: 0
+  n_pins: 1
+    pin: "1" 0 12700000 -9000000 0 ""
+      top_pad: 3 1450000 12500000 12500000 0
+
+name: "SILK_TOP_LINES_ID1646"
+  units: NM
+  sel_rect: -254000 -6254000 25654000 -3746000
+  ref_text: 300000 0 0 0 10000
+  value_text: 300000 0 0 0 10000
+  centroid: 0 0 0 0
+  text: "IMPORT P-CAD: SILK_TOP_L..." 1000000 600000 -5400000 0 200000 0 4
+  outline_polyline: 200000 0 -4000000 1
+    next_corner: 0 -6000000 0
+    next_corner: 25400000 -6000000 0
+    next_corner: 25400000 -4000000 0
+    close_polyline: 0
+  n_pins: 1
+    pin: "1" 0 12700000 -5000000 0 ""
+      top_pad: 3 1450000 12500000 12500000 0
+
+name: "SILK_BOTTOM_LINES_ID1646"
+  units: NM
+  sel_rect: -254000 -8254000 25654000 -5746000
+  ref_text: 300000 0 0 0 10000
+  value_text: 300000 0 0 0 10000
+  centroid: 0 0 0 0
+  text: "IMPORT P-CAD: SILK_BOTTO..." 1000000 600000 -7400000 0 200000 0 4
+  outline_polyline: 200000 0 -6000000 1
+    next_corner: 0 -8000000 0
+    next_corner: 25400000 -8000000 0
+    next_corner: 25400000 -6000000 0
+    close_polyline: 0
+  n_pins: 1
+    pin: "1" 0 12700000 -7000000 0 ""
+      top_pad: 3 1450000 12500000 12500000 0
+
+name: "TOP_LINES_ID1646"
+  units: NM
+  sel_rect: -254000 -2254000 25654000 254000
+  ref_text: 300000 0 0 0 10000
+  value_text: 300000 0 0 0 10000
+  centroid: 0 0 0 0
+  text: "IMPORT P-CAD: TOP_LINES...." 1000000 600000 -1400000 0 200000 0 4
+  outline_polyline: 200000 0 0 1
+    next_corner: 0 -2000000 0
+    next_corner: 25400000 -2000000 0
+    next_corner: 25400000 0 0
+    close_polyline: 0
+  outline_polyline: 25400 13744100 24568250 1
+    next_corner: 13334800 24296250 0
+  outline_polyline: 25400 13334800 24296250 1
+    next_corner: 12959700 24013150 0
+  outline_polyline: 25400 12959700 24013150 1
+    next_corner: 12621200 23721050 0
+  outline_polyline: 25400 12621200 23721050 1
+    next_corner: 12321100 23422350 0
+  outline_polyline: 25400 12321100 23422350 1
+    next_corner: 12061900 23118940 0
+  outline_polyline: 25400 12061900 23118940 1
+    next_corner: 11845400 22813550 0
+  outline_polyline: 25400 11845400 22813550 1
+    next_corner: 11673800 22508250 0
+  outline_polyline: 25400 11673800 22508250 1
+    next_corner: 11549100 22205340 0
+  outline_polyline: 25400 11549100 22205340 1
+    next_corner: 11473700 21906940 0
+  outline_polyline: 25400 11473700 21906940 1
+    next_corner: 11449300 21615550 0
+  outline_polyline: 25400 11449300 21615550 1
+    next_corner: 11478200 21333150 0
+  outline_polyline: 25400 11478200 21333150 1
+    next_corner: 11542900 21062350 0
+  outline_polyline: 25400 11542900 21062350 1
+    next_corner: 11467400 21293050 0
+  outline_polyline: 25400 11467400 21293050 1
+    next_corner: 11432600 21532540 0
+  outline_polyline: 25400 11432600 21532540 1
+    next_corner: 11437200 21779050 0
+  outline_polyline: 25400 11437200 21779050 1
+    next_corner: 11479700 22031450 0
+  outline_polyline: 25400 11479700 22031450 1
+    next_corner: 11559200 22287950 0
+  outline_polyline: 25400 11559200 22287950 1
+    next_corner: 11673900 22547550 0
+  outline_polyline: 25400 11673900 22547550 1
+    next_corner: 11822800 22808540 0
+  outline_polyline: 25400 11822800 22808540 1
+    next_corner: 12004500 23069740 0
+  outline_polyline: 25400 12004500 23069740 1
+    next_corner: 12217800 23329450 0
+  outline_polyline: 25400 12217800 23329450 1
+    next_corner: 12461200 23586540 0
+  outline_polyline: 25400 12461200 23586540 1
+    next_corner: 12733600 23839340 0
+  outline_polyline: 25400 12733600 23839340 1
+    next_corner: 13033400 24086850 0
+  outline_polyline: 25400 13033400 24086850 1
+    next_corner: 13359600 24327150 0
+  outline_polyline: 25400 13359600 24327150 1
+    next_corner: 13710600 24559250 0
+  outline_polyline: 1000000 13250000 5236250 1
+    next_corner: 13335000 5238750 0
+  outline_polyline: 300000 15726250 10815000 1
+    next_corner: 15716250 10795000 0
+  outline_polyline: 300000 15726250 10835000 1
+    next_corner: 15726250 10815000 0
+  outline_polyline: 300000 13176250 12858750 1
+    next_corner: 13176250 14922500 0
+  outline_polyline: 25400 12513900 21070850 1
+    next_corner: 12401000 21270250 0
+  outline_polyline: 25400 12401000 21270250 1
+    next_corner: 12335900 21488850 0
+  outline_polyline: 25400 12335900 21488850 1
+    next_corner: 12318900 21720350 0
+  outline_polyline: 25400 12318900 21720350 1
+    next_corner: 12348100 21962050 0
+  outline_polyline: 25400 12348100 21962050 1
+    next_corner: 12420900 22212050 0
+  outline_polyline: 25400 12535400 22467550 1
+    next_corner: 12689100 22726650 0
+  outline_polyline: 25400 12689100 22726650 1
+    next_corner: 12879900 22986650 0
+  outline_polyline: 25400 12879900 22986650 1
+    next_corner: 13105300 23245740 0
+  outline_polyline: 25400 13105300 23245740 1
+    next_corner: 13363500 23500940 0
+  outline_polyline: 25400 13363500 23500940 1
+    next_corner: 13651900 23750450 0
+  outline_polyline: 25400 13651900 23750450 1
+    next_corner: 13968300 23991740 0
+  outline_polyline: 25400 13968300 23991740 1
+    next_corner: 14310400 24222650 0
+  outline_polyline: 25400 14310400 24222650 1
+    next_corner: 14676300 24440450 0
+  outline_polyline: 25400 14676300 24440450 1
+    next_corner: 15063400 24643340 0
+  outline_polyline: 25400 15063400 24643340 1
+    next_corner: 15469500 24828650 0
+  outline_polyline: 25400 14283100 24640350 1
+    next_corner: 14098400 24290940 0
+  outline_polyline: 25400 14098400 24290940 1
+    next_corner: 13928300 23944750 0
+  outline_polyline: 25400 13928300 23944750 1
+    next_corner: 13772500 23602350 0
+  outline_polyline: 25400 13772500 23602350 1
+    next_corner: 13631400 23264050 0
+  outline_polyline: 25400 13631400 23264050 1
+    next_corner: 13504400 22930750 0
+  outline_polyline: 25400 13504400 22930750 1
+    next_corner: 13391700 22602450 0
+  outline_polyline: 25400 13391700 22602450 1
+    next_corner: 13293000 22280140 0
+  outline_polyline: 25400 13293000 22280140 1
+    next_corner: 13208600 21963740 0
+  outline_polyline: 25400 13208600 21963740 1
+    next_corner: 13137900 21654250 0
+  outline_polyline: 25400 13137900 21654250 1
+    next_corner: 13081100 21351850 0
+  outline_polyline: 25400 13081100 21351850 1
+    next_corner: 13037900 21057340 0
+  outline_polyline: 25400 14221600 20687050 1
+    next_corner: 14297200 20683250 0
+  outline_polyline: 25400 14297200 20683250 1
+    next_corner: 14372800 20680250 0
+  outline_polyline: 25400 14372800 20680250 1
+    next_corner: 14448400 20677850 0
+  outline_polyline: 25400 14448400 20677850 1
+    next_corner: 14523900 20676050 0
+  outline_polyline: 25400 14523900 20676050 1
+    next_corner: 14599500 20674850 0
+  outline_polyline: 25400 14599500 20674850 1
+    next_corner: 14675100 20674250 0
+  outline_polyline: 25400 14675100 20674250 1
+    next_corner: 14750700 20674250 0
+  outline_polyline: 25400 14750700 20674250 1
+    next_corner: 14826000 20675050 0
+  outline_polyline: 25400 14826000 20675050 1
+    next_corner: 14849500 20797150 0
+  outline_polyline: 25400 14849500 20797150 1
+    next_corner: 14873300 20919450 0
+  outline_polyline: 25400 14873300 20919450 1
+    next_corner: 14897400 21041550 0
+  outline_polyline: 25400 14897400 21041550 1
+    next_corner: 14921800 21163950 0
+  outline_polyline: 25400 14921800 21163950 1
+    next_corner: 14946800 21286140 0
+  outline_polyline: 25400 14946800 21286140 1
+    next_corner: 14972000 21408540 0
+  outline_polyline: 25400 14972000 21408540 1
+    next_corner: 14997700 21530940 0
+  outline_polyline: 25400 14997700 21530940 1
+    next_corner: 15023700 21653340 0
+  outline_polyline: 25400 15023700 21653340 1
+    next_corner: 15050400 21775450 0
+  outline_polyline: 25400 15050400 21775450 1
+    next_corner: 15077400 21897850 0
+  outline_polyline: 25400 15077400 21897850 1
+    next_corner: 15104900 22020050 0
+  outline_polyline: 25400 15104900 22020050 1
+    next_corner: 15132800 22142450 0
+  outline_polyline: 25400 15132800 22142450 1
+    next_corner: 15161400 22264540 0
+  outline_polyline: 25400 15161400 22264540 1
+    next_corner: 15190400 22386750 0
+  outline_polyline: 25400 15190400 22386750 1
+    next_corner: 15220000 22508850 0
+  outline_polyline: 25400 15220000 22508850 1
+    next_corner: 15250000 22631050 0
+  outline_polyline: 25400 15250000 22631050 1
+    next_corner: 15280900 22753450 0
+  outline_polyline: 25400 15280900 22753450 1
+    next_corner: 15312400 22875850 0
+  outline_polyline: 25400 15312400 22875850 1
+    next_corner: 15344400 22998250 0
+  outline_polyline: 25400 15344400 22998250 1
+    next_corner: 15376800 23120650 0
+  outline_polyline: 25400 15376800 23120650 1
+    next_corner: 15409900 23242850 0
+  outline_polyline: 25400 15409900 23242850 1
+    next_corner: 15443500 23365250 0
+  outline_polyline: 25400 15443500 23365250 1
+    next_corner: 15477500 23487650 0
+  outline_polyline: 25400 15477500 23487650 1
+    next_corner: 15511900 23610050 0
+  outline_polyline: 25400 15511900 23610050 1
+    next_corner: 15547000 23732140 0
+  outline_polyline: 25400 15547000 23732140 1
+    next_corner: 15582300 23854540 0
+  outline_polyline: 25400 15582300 23854540 1
+    next_corner: 15618100 23976750 0
+  outline_polyline: 25400 15618100 23976750 1
+    next_corner: 15654200 24099150 0
+  outline_polyline: 25400 15654200 24099150 1
+    next_corner: 15690900 24221450 0
+  outline_polyline: 25400 15690900 24221450 1
+    next_corner: 15727800 24343850 0
+  outline_polyline: 25400 15727800 24343850 1
+    next_corner: 15765100 24466250 0
+  outline_polyline: 25400 15765100 24466250 1
+    next_corner: 15802500 24588650 0
+  outline_polyline: 25400 15802500 24588650 1
+    next_corner: 15728700 24560250 0
+  outline_polyline: 25400 15728700 24560250 1
+    next_corner: 15654600 24531450 0
+  outline_polyline: 25400 15654600 24531450 1
+    next_corner: 15580800 24501850 0
+  outline_polyline: 25400 15580800 24501850 1
+    next_corner: 15506700 24471740 0
+  outline_polyline: 25400 15506700 24471740 1
+    next_corner: 15432900 24440750 0
+  outline_polyline: 25400 15432900 24440750 1
+    next_corner: 15358800 24409250 0
+  outline_polyline: 25400 15358800 24409250 1
+    next_corner: 15284800 24376850 0
+  outline_polyline: 25400 15284800 24376850 1
+    next_corner: 15210700 24343950 0
+  outline_polyline: 25400 15210700 24343950 1
+    next_corner: 15136900 24310050 0
+  outline_polyline: 25400 15136900 24310050 1
+    next_corner: 15062800 24275740 0
+  outline_polyline: 25400 15062800 24275740 1
+    next_corner: 14989000 24240450 0
+  outline_polyline: 25400 14989000 24240450 1
+    next_corner: 14914900 24204650 0
+  outline_polyline: 25400 14914900 24204650 1
+    next_corner: 14841100 24167950 0
+  outline_polyline: 25400 14841100 24167950 1
+    next_corner: 14767000 24130750 0
+  outline_polyline: 25400 14767000 24130750 1
+    next_corner: 14625450 24053950 0
+  outline_polyline: 12700 14625450 24053950 1
+    next_corner: 14619100 24053950 0
+  outline_polyline: 25400 14619100 24053950 1
+    next_corner: 14574100 23950140 0
+  outline_polyline: 25400 14574100 23950140 1
+    next_corner: 14529800 23846540 0
+  outline_polyline: 25400 14529800 23846540 1
+    next_corner: 14486400 23742940 0
+  outline_polyline: 25400 14486400 23742940 1
+    next_corner: 14443700 23639450 0
+  outline_polyline: 25400 14443700 23639450 1
+    next_corner: 14402100 23535950 0
+  outline_polyline: 25400 14402100 23535950 1
+    next_corner: 14361200 23432450 0
+  outline_polyline: 25400 14361200 23432450 1
+    next_corner: 14321200 23328940 0
+  outline_polyline: 25400 14321200 23328940 1
+    next_corner: 14282000 23225450 0
+  outline_polyline: 25400 14282000 23225450 1
+    next_corner: 14243900 23121650 0
+  outline_polyline: 25400 14243900 23121650 1
+    next_corner: 14206600 23018140 0
+  outline_polyline: 25400 14206600 23018140 1
+    next_corner: 14170200 22914540 0
+  outline_polyline: 25400 14170200 22914540 1
+    next_corner: 14134600 22811050 0
+  outline_polyline: 25400 14134600 22811050 1
+    next_corner: 14100000 22707250 0
+  outline_polyline: 25400 14100000 22707250 1
+    next_corner: 14066300 22603550 0
+  outline_polyline: 25400 14066300 22603550 1
+    next_corner: 14033500 22499740 0
+  outline_polyline: 25400 14033500 22499740 1
+    next_corner: 14001500 22396050 0
+  outline_polyline: 25400 14001500 22396050 1
+    next_corner: 13971000 22292650 0
+  outline_polyline: 25400 13971000 22292650 1
+    next_corner: 13941200 22189450 0
+  outline_polyline: 25400 13941200 22189450 1
+    next_corner: 13912300 22085950 0
+  outline_polyline: 25400 13912300 22085950 1
+    next_corner: 13884200 21982650 0
+  outline_polyline: 25400 13884200 21982650 1
+    next_corner: 13857300 21878940 0
+  outline_polyline: 25400 13857300 21878940 1
+    next_corner: 13831000 21775450 0
+  outline_polyline: 25400 13831000 21775450 1
+    next_corner: 13805700 21671740 0
+  outline_polyline: 25400 13805700 21671740 1
+    next_corner: 13781200 21568250 0
+  outline_polyline: 25400 13781200 21568250 1
+    next_corner: 13757800 21464450 0
+  outline_polyline: 25400 13757800 21464450 1
+    next_corner: 13735100 21360850 0
+  outline_polyline: 25400 13735100 21360850 1
+    next_corner: 13713400 21257050 0
+  outline_polyline: 25400 13713400 21257050 1
+    next_corner: 13692400 21153550 0
+  outline_polyline: 25400 13692400 21153550 1
+    next_corner: 13672500 21049740 0
+  outline_polyline: 25400 20175100 22373150 1
+    next_corner: 19884900 22127250 0
+  outline_polyline: 25400 19884900 22127250 1
+    next_corner: 19566900 21889150 0
+  outline_polyline: 25400 19566900 21889150 1
+    next_corner: 19223100 21661450 0
+  outline_polyline: 25400 19223100 21661450 1
+    next_corner: 18856100 21445950 0
+  outline_polyline: 25400 18856100 21445950 1
+    next_corner: 18468000 21245050 0
+  outline_polyline: 25400 18468000 21245050 1
+    next_corner: 18061200 21060940 0
+  outline_polyline: 25400 18061200 21060940 1
+    next_corner: 17637900 20895950 0
+  outline_polyline: 25400 17637900 20895950 1
+    next_corner: 17206100 20751450 0
+  outline_polyline: 25400 17206100 20751450 1
+    next_corner: 16773400 20628450 0
+  outline_polyline: 25400 16773400 20628450 1
+    next_corner: 16343200 20526750 0
+  outline_polyline: 25400 16343200 20526750 1
+    next_corner: 15918500 20447050 0
+  outline_polyline: 25400 15918500 20447050 1
+    next_corner: 15502700 20389150 0
+  outline_polyline: 25400 15502700 20389150 1
+    next_corner: 15098600 20353550 0
+  outline_polyline: 25400 15098600 20353550 1
+    next_corner: 14709600 20340350 0
+  outline_polyline: 25400 14709600 20340350 1
+    next_corner: 14338600 20349950 0
+  outline_polyline: 25400 14338600 20349950 1
+    next_corner: 13989100 20382250 0
+  outline_polyline: 25400 15377800 20780750 1
+    next_corner: 15431100 21036940 0
+  outline_polyline: 25400 15431100 21036940 1
+    next_corner: 15484100 21291740 0
+  outline_polyline: 25400 15484100 21291740 1
+    next_corner: 15537300 21544940 0
+  outline_polyline: 25400 15537300 21544940 1
+    next_corner: 15590800 21796940 0
+  outline_polyline: 25400 15590800 21796940 1
+    next_corner: 15645100 22047740 0
+  outline_polyline: 25400 15645100 22047740 1
+    next_corner: 15700000 22297650 0
+  outline_polyline: 25400 15700000 22297650 1
+    next_corner: 15756100 22546650 0
+  outline_polyline: 25400 15756100 22546650 1
+    next_corner: 15813300 22795150 0
+  outline_polyline: 25400 15813300 22795150 1
+    next_corner: 15872400 23042850 0
+  outline_polyline: 25400 15872400 23042850 1
+    next_corner: 15933100 23290250 0
+  outline_polyline: 25400 15933100 23290250 1
+    next_corner: 15996000 23537450 0
+  outline_polyline: 25400 15996000 23537450 1
+    next_corner: 16061000 23784750 0
+  outline_polyline: 25400 16061000 23784750 1
+    next_corner: 16128700 24031950 0
+  outline_polyline: 25400 16128700 24031950 1
+    next_corner: 16199100 24279450 0
+  outline_polyline: 25400 16199100 24279450 1
+    next_corner: 16272600 24527340 0
+  outline_polyline: 25400 16272600 24527340 1
+    next_corner: 16346000 24771250 0
+  outline_polyline: 25400 16346000 24771250 1
+    next_corner: 16490100 24816050 0
+  outline_polyline: 25400 16490100 24816050 1
+    next_corner: 16629400 24856350 0
+  outline_polyline: 25400 16629400 24856350 1
+    next_corner: 16767500 24896140 0
+  outline_polyline: 25400 16767500 24896140 1
+    next_corner: 16904700 24934940 0
+  outline_polyline: 25400 16904700 24934940 1
+    next_corner: 17041600 24971850 0
+  outline_polyline: 25400 17041600 24971850 1
+    next_corner: 17178200 25006540 0
+  outline_polyline: 25400 17178200 25006540 1
+    next_corner: 17315300 25038250 0
+  outline_polyline: 25400 17315300 25038250 1
+    next_corner: 17452900 25066350 0
+  outline_polyline: 25400 17452900 25066350 1
+    next_corner: 17591700 25090050 0
+  outline_polyline: 25400 17591700 25090050 1
+    next_corner: 17731800 25109150 0
+  outline_polyline: 25400 17731800 25109150 1
+    next_corner: 17873800 25122750 0
+  outline_polyline: 25400 17873800 25122750 1
+    next_corner: 18017900 25130450 0
+  outline_polyline: 25400 18017900 25130450 1
+    next_corner: 18164700 25131250 0
+  outline_polyline: 25400 18164700 25131250 1
+    next_corner: 18314200 25124940 0
+  outline_polyline: 25400 18314200 25124940 1
+    next_corner: 18467200 25110540 0
+  outline_polyline: 25400 18467200 25110540 1
+    next_corner: 18623600 25087850 0
+  outline_polyline: 25400 18623600 25087850 1
+    next_corner: 18703600 25068350 0
+  outline_polyline: 25400 18703600 25068350 1
+    next_corner: 18774500 25050140 0
+  outline_polyline: 25400 18774500 25050140 1
+    next_corner: 18837300 25032540 0
+  outline_polyline: 25400 18837300 25032540 1
+    next_corner: 18892800 25015740 0
+  outline_polyline: 25400 18892800 25015740 1
+    next_corner: 18942100 24999150 0
+  outline_polyline: 25400 18942100 24999150 1
+    next_corner: 18985800 24982650 0
+  outline_polyline: 25400 18985800 24982650 1
+    next_corner: 19025100 24965950 0
+  outline_polyline: 25400 19025100 24965950 1
+    next_corner: 19060600 24949050 0
+  outline_polyline: 25400 19060600 24949050 1
+    next_corner: 19093500 24931250 0
+  outline_polyline: 25400 19093500 24931250 1
+    next_corner: 19124400 24912750 0
+  outline_polyline: 25400 19124400 24912750 1
+    next_corner: 19154300 24893150 0
+  outline_polyline: 25400 19154300 24893150 1
+    next_corner: 19183800 24872250 0
+  outline_polyline: 25400 19183800 24872250 1
+    next_corner: 19214400 24849550 0
+  outline_polyline: 25400 19214400 24849550 1
+    next_corner: 19246400 24825250 0
+  outline_polyline: 25400 19246400 24825250 1
+    next_corner: 19281000 24798750 0
+  outline_polyline: 25400 19281000 24798750 1
+    next_corner: 19318900 24770050 0
+  outline_polyline: 25400 19318900 24770050 1
+    next_corner: 19353700 24735250 0
+  outline_polyline: 25400 19353700 24735250 1
+    next_corner: 19387300 24698650 0
+  outline_polyline: 25400 19387300 24698650 1
+    next_corner: 19419500 24659950 0
+  outline_polyline: 25400 19419500 24659950 1
+    next_corner: 19449900 24619340 0
+  outline_polyline: 25400 19449900 24619340 1
+    next_corner: 19478500 24576350 0
+  outline_polyline: 25400 19478500 24576350 1
+    next_corner: 19504700 24531340 0
+  outline_polyline: 25400 19504700 24531340 1
+    next_corner: 19528500 24483950 0
+  outline_polyline: 25400 19528500 24483950 1
+    next_corner: 19549200 24434350 0
+  outline_polyline: 25400 19549200 24434350 1
+    next_corner: 19567000 24382050 0
+  outline_polyline: 25400 19567000 24382050 1
+    next_corner: 19581300 24327340 0
+  outline_polyline: 25400 19581300 24327340 1
+    next_corner: 19591900 24270050 0
+  outline_polyline: 25400 19591900 24270050 1
+    next_corner: 19598400 24210250 0
+  outline_polyline: 25400 19598400 24210250 1
+    next_corner: 19600800 24147450 0
+  outline_polyline: 25400 19600800 24147450 1
+    next_corner: 19598500 24082050 0
+  outline_polyline: 25400 19598500 24082050 1
+    next_corner: 19591400 24013850 0
+  outline_polyline: 25400 19591400 24013850 1
+    next_corner: 19579000 23942750 0
+  outline_polyline: 25400 19579000 23942750 1
+    next_corner: 19563200 23866540 0
+  outline_polyline: 25400 19563200 23866540 1
+    next_corner: 19547000 23793050 0
+  outline_polyline: 25400 19547000 23793050 1
+    next_corner: 19530500 23721740 0
+  outline_polyline: 25400 19530500 23721740 1
+    next_corner: 19513100 23652650 0
+  outline_polyline: 25400 19513100 23652650 1
+    next_corner: 19495000 23585050 0
+  outline_polyline: 25400 19495000 23585050 1
+    next_corner: 19475800 23519250 0
+  outline_polyline: 25400 19475800 23519250 1
+    next_corner: 19455300 23454750 0
+  outline_polyline: 25400 19455300 23454750 1
+    next_corner: 19433200 23391450 0
+  outline_polyline: 25400 19433200 23391450 1
+    next_corner: 19409600 23328940 0
+  outline_polyline: 25400 19409600 23328940 1
+    next_corner: 19384000 23267250 0
+  outline_polyline: 25400 19384000 23267250 1
+    next_corner: 19356400 23205950 0
+  outline_polyline: 25400 19356400 23205950 1
+    next_corner: 19326300 23145050 0
+  outline_polyline: 25400 19326300 23145050 1
+    next_corner: 19293900 23084050 0
+  outline_polyline: 25400 19293900 23084050 1
+    next_corner: 19258700 23022940 0
+  outline_polyline: 25400 19258700 23022940 1
+    next_corner: 19220600 22961450 0
+  outline_polyline: 25400 19220600 22961450 1
+    next_corner: 19179200 22899450 0
+  outline_polyline: 25400 19179200 22899450 1
+    next_corner: 19106300 22796250 0
+  outline_polyline: 25400 19106300 22796250 1
+    next_corner: 19031300 22697340 0
+  outline_polyline: 25400 19031300 22697340 1
+    next_corner: 18954400 22602540 0
+  outline_polyline: 25400 18954400 22602540 1
+    next_corner: 18875100 22512250 0
+  outline_polyline: 25400 18875100 22512250 1
+    next_corner: 18793500 22425850 0
+  outline_polyline: 25400 18793500 22425850 1
+    next_corner: 18709200 22343850 0
+  outline_polyline: 25400 18709200 22343850 1
+    next_corner: 18622000 22265850 0
+  outline_polyline: 25400 18622000 22265850 1
+    next_corner: 18531600 22192050 0
+  outline_polyline: 25400 18531600 22192050 1
+    next_corner: 18438200 22121950 0
+  outline_polyline: 25400 18438200 22121950 1
+    next_corner: 18341300 22056140 0
+  outline_polyline: 25400 18341300 22056140 1
+    next_corner: 18240800 21994140 0
+  outline_polyline: 25400 18240800 21994140 1
+    next_corner: 18136200 21936350 0
+  outline_polyline: 25400 18136200 21936350 1
+    next_corner: 18027700 21882250 0
+  outline_polyline: 25400 18027700 21882250 1
+    next_corner: 17914900 21832140 0
+  outline_polyline: 25400 17914900 21832140 1
+    next_corner: 17797700 21785850 0
+  outline_polyline: 25400 17797700 21785850 1
+    next_corner: 16653300 21551740 0
+  outline_polyline: 25400 16653300 21551740 1
+    next_corner: 16496200 20943740 0
+  outline_polyline: 25400 16496200 20943740 1
+    next_corner: 16415900 20925950 0
+  outline_polyline: 25400 16415900 20925950 1
+    next_corner: 16339600 20910050 0
+  outline_polyline: 25400 16339600 20910050 1
+    next_corner: 16267000 20895550 0
+  outline_polyline: 25400 16267000 20895550 1
+    next_corner: 16197300 20882650 0
+  outline_polyline: 25400 16197300 20882650 1
+    next_corner: 16130300 20870750 0
+  outline_polyline: 25400 16130300 20870750 1
+    next_corner: 16064800 20860140 0
+  outline_polyline: 25400 16064800 20860140 1
+    next_corner: 16000800 20850450 0
+  outline_polyline: 25400 16000800 20850450 1
+    next_corner: 15937100 20841650 0
+  outline_polyline: 25400 15937100 20841650 1
+    next_corner: 15873700 20833250 0
+  outline_polyline: 25400 15873700 20833250 1
+    next_corner: 15809400 20825550 0
+  outline_polyline: 25400 15809400 20825550 1
+    next_corner: 15744200 20818050 0
+  outline_polyline: 25400 15744200 20818050 1
+    next_corner: 15676900 20810850 0
+  outline_polyline: 25400 15676900 20810850 1
+    next_corner: 15607400 20803550 0
+  outline_polyline: 25400 15607400 20803550 1
+    next_corner: 15534700 20796250 0
+  outline_polyline: 25400 15534700 20796250 1
+    next_corner: 15458400 20788650 0
+  outline_polyline: 25400 15458400 20788650 1
+    next_corner: 15377800 20780750 0
+  outline_polyline: 25400 18129900 23026140 1
+    next_corner: 18155200 23064940 0
+  outline_polyline: 25400 18155200 23064940 1
+    next_corner: 18180800 23107450 0
+  outline_polyline: 25400 18180800 23107450 1
+    next_corner: 18206100 23153250 0
+  outline_polyline: 25400 18206100 23153250 1
+    next_corner: 18231000 23201250 0
+  outline_polyline: 25400 18231000 23201250 1
+    next_corner: 18255100 23250650 0
+  outline_polyline: 25400 18255100 23250650 1
+    next_corner: 18278400 23300140 0
+  outline_polyline: 25400 18278400 23300140 1
+    next_corner: 18300200 23349340 0
+  outline_polyline: 25400 18300200 23349340 1
+    next_corner: 18320500 23397150 0
+  outline_polyline: 25400 18320500 23397150 1
+    next_corner: 18338800 23442750 0
+  outline_polyline: 25400 18338800 23442750 1
+    next_corner: 18355100 23485050 0
+  outline_polyline: 25400 18355100 23485050 1
+    next_corner: 18368800 23523450 0
+  outline_polyline: 25400 18368800 23523450 1
+    next_corner: 18379900 23556750 0
+  outline_polyline: 25400 18379900 23556750 1
+    next_corner: 18387800 23584350 0
+  outline_polyline: 25400 18387800 23584350 1
+    next_corner: 18394100 23609740 0
+  outline_polyline: 25400 18394100 23609740 1
+    next_corner: 18399600 23638250 0
+  outline_polyline: 25400 18399600 23638250 1
+    next_corner: 18404600 23669250 0
+  outline_polyline: 25400 18404600 23669250 1
+    next_corner: 18408800 23702540 0
+  outline_polyline: 25400 18408800 23702540 1
+    next_corner: 18412400 23737150 0
+  outline_polyline: 25400 18412400 23737150 1
+    next_corner: 18414900 23772940 0
+  outline_polyline: 25400 18414900 23772940 1
+    next_corner: 18416600 23809150 0
+  outline_polyline: 25400 18416600 23809150 1
+    next_corner: 18417000 23845450 0
+  outline_polyline: 25400 18417000 23845450 1
+    next_corner: 18416600 23881050 0
+  outline_polyline: 25400 18416600 23881050 1
+    next_corner: 18414800 23915550 0
+  outline_polyline: 25400 18414800 23915550 1
+    next_corner: 18411800 23948350 0
+  outline_polyline: 25400 18411800 23948350 1
+    next_corner: 18407200 23979150 0
+  outline_polyline: 25400 18407200 23979150 1
+    next_corner: 18401400 24007150 0
+  outline_polyline: 25400 18401400 24007150 1
+    next_corner: 18393900 24032140 0
+  outline_polyline: 25400 18393900 24032140 1
+    next_corner: 18384800 24053250 0
+  outline_polyline: 25400 18384800 24053250 1
+    next_corner: 18373800 24070250 0
+  outline_polyline: 25400 18373800 24070250 1
+    next_corner: 18361200 24084250 0
+  outline_polyline: 25400 18361200 24084250 1
+    next_corner: 18346400 24097150 0
+  outline_polyline: 25400 18346400 24097150 1
+    next_corner: 18329500 24109050 0
+  outline_polyline: 25400 18329500 24109050 1
+    next_corner: 18310500 24119850 0
+  outline_polyline: 25400 18310500 24119850 1
+    next_corner: 18289600 24129340 0
+  outline_polyline: 25400 18289600 24129340 1
+    next_corner: 18266400 24137740 0
+  outline_polyline: 25400 18266400 24137740 1
+    next_corner: 18241300 24144850 0
+  outline_polyline: 25400 18241300 24144850 1
+    next_corner: 18214000 24150850 0
+  outline_polyline: 25400 18214000 24150850 1
+    next_corner: 18184900 24155150 0
+  outline_polyline: 25400 18184900 24155150 1
+    next_corner: 18153600 24158350 0
+  outline_polyline: 25400 18153600 24158350 1
+    next_corner: 18120400 24160050 0
+  outline_polyline: 25400 18120400 24160050 1
+    next_corner: 18084900 24160450 0
+  outline_polyline: 25400 18084900 24160450 1
+    next_corner: 18047600 24159150 0
+  outline_polyline: 25400 18047600 24159150 1
+    next_corner: 18008100 24156540 0
+  outline_polyline: 25400 18008100 24156540 1
+    next_corner: 17966700 24152250 0
+  outline_polyline: 25400 17966700 24152250 1
+    next_corner: 17301600 24053150 0
+  outline_polyline: 25400 17301600 24053150 1
+    next_corner: 16901000 22516540 0
+  outline_polyline: 25400 16901000 22516540 1
+    next_corner: 17540500 22638540 0
+  outline_polyline: 25400 17540500 22638540 1
+    next_corner: 17588300 22649050 0
+  outline_polyline: 25400 17588300 22649050 1
+    next_corner: 17633100 22661950 0
+  outline_polyline: 25400 17633100 22661950 1
+    next_corner: 17675300 22676850 0
+  outline_polyline: 25400 17675300 22676850 1
+    next_corner: 17714800 22693740 0
+  outline_polyline: 25400 17714800 22693740 1
+    next_corner: 17752200 22711950 0
+  outline_polyline: 25400 17752200 22711950 1
+    next_corner: 17787200 22731650 0
+  outline_polyline: 25400 17787200 22731650 1
+    next_corner: 17820300 22752350 0
+  outline_polyline: 25400 17820300 22752350 1
+    next_corner: 17851500 22773950 0
+  outline_polyline: 25400 17851500 22773950 1
+    next_corner: 17881200 22795850 0
+  outline_polyline: 25400 17881200 22795850 1
+    next_corner: 17909400 22818050 0
+  outline_polyline: 25400 17909400 22818050 1
+    next_corner: 17936400 22840250 0
+  outline_polyline: 25400 17936400 22840250 1
+    next_corner: 17962000 22862450 0
+  outline_polyline: 25400 17962000 22862450 1
+    next_corner: 17986800 22883950 0
+  outline_polyline: 25400 17986800 22883950 1
+    next_corner: 18010800 22904850 0
+  outline_polyline: 25400 18010800 22904850 1
+    next_corner: 18034200 22924650 0
+  outline_polyline: 25400 18034200 22924650 1
+    next_corner: 18057100 22943250 0
+  outline_polyline: 25400 18057100 22943250 1
+    next_corner: 18080600 22964450 0
+  outline_polyline: 25400 18080600 22964450 1
+    next_corner: 18104900 22992450 0
+  outline_polyline: 25400 18104900 22992450 1
+    next_corner: 18129900 23026140 0
+  outline_polyline: 12700 17546850 22638540 1
+    next_corner: 17546850 22638540 0
+  outline_polyline: 12700 16502550 20943740 1
+    next_corner: 16502550 20943740 0
+  outline_polyline: 25400 17795000 26025450 1
+    next_corner: 18296600 26081050 0
+  outline_polyline: 25400 18296600 26081050 1
+    next_corner: 18781000 26107250 0
+  outline_polyline: 25400 18781000 26107250 1
+    next_corner: 19245400 26103950 0
+  outline_polyline: 25400 19245400 26103950 1
+    next_corner: 19686200 26071740 0
+  outline_polyline: 25400 19686200 26071740 1
+    next_corner: 20100700 26010750 0
+  outline_polyline: 25400 20100700 26010750 1
+    next_corner: 20485100 25921550 0
+  outline_polyline: 25400 20485100 25921550 1
+    next_corner: 20836700 25804350 0
+  outline_polyline: 25400 20836700 25804350 1
+    next_corner: 21151900 25659740 0
+  outline_polyline: 25400 21151900 25659740 1
+    next_corner: 21427800 25487740 0
+  outline_polyline: 25400 21427800 25487740 1
+    next_corner: 21661000 25288940 0
+  outline_polyline: 25400 21661000 25288940 1
+    next_corner: 21848400 25063550 0
+  outline_polyline: 25400 21848400 25063550 1
+    next_corner: 21986500 24812140 0
+  outline_polyline: 25400 21986500 24812140 1
+    next_corner: 22070900 24541050 0
+  outline_polyline: 25400 22070900 24541050 1
+    next_corner: 22099800 24258750 0
+  outline_polyline: 25400 22099800 24258750 1
+    next_corner: 22075500 23967250 0
+  outline_polyline: 25400 22075500 23967250 1
+    next_corner: 21999900 23668940 0
+  outline_polyline: 25400 21999900 23668940 1
+    next_corner: 21875400 23365850 0
+  outline_polyline: 25400 21875400 23365850 1
+    next_corner: 21703700 23060540 0
+  outline_polyline: 25400 21703700 23060540 1
+    next_corner: 21487300 22755150 0
+  outline_polyline: 25400 21487300 22755150 1
+    next_corner: 21227900 22452050 0
+  outline_polyline: 25400 21227900 22452050 1
+    next_corner: 20928100 22153250 0
+  outline_polyline: 25400 20928100 22153250 1
+    next_corner: 20589500 21861150 0
+  outline_polyline: 25400 20589500 21861150 1
+    next_corner: 20214500 21577950 0
+  outline_polyline: 25400 20214500 21577950 1
+    next_corner: 19805000 21306140 0
+  outline_polyline: 25400 19805000 21306140 1
+    next_corner: 19363400 21047550 0
+  outline_polyline: 25400 19363400 21047550 1
+    next_corner: 18891400 20804850 0
+  outline_polyline: 25400 18891400 20804850 1
+    next_corner: 18391500 20580050 0
+  outline_polyline: 25400 18391500 20580050 1
+    next_corner: 17865400 20375740 0
+  outline_polyline: 25400 17865400 20375740 1
+    next_corner: 17328300 20197650 0
+  outline_polyline: 25400 17328300 20197650 1
+    next_corner: 16795100 20050750 0
+  outline_polyline: 25400 16795100 20050750 1
+    next_corner: 16269400 19934540 0
+  outline_polyline: 25400 16269400 19934540 1
+    next_corner: 15754100 19848850 0
+  outline_polyline: 25400 15754100 19848850 1
+    next_corner: 15252700 19792940 0
+  outline_polyline: 25400 15252700 19792940 1
+    next_corner: 14768200 19766940 0
+  outline_polyline: 25400 14768200 19766940 1
+    next_corner: 14303900 19770250 0
+  outline_polyline: 25400 14303900 19770250 1
+    next_corner: 13862800 19802650 0
+  outline_polyline: 12700 20541350 25901340 1
+    next_corner: 20535000 25901340 0
+  outline_polyline: 25400 20535000 25901340 1
+    next_corner: 20664400 25859950 0
+  outline_polyline: 25400 20664400 25859950 1
+    next_corner: 20789100 25815050 0
+  outline_polyline: 25400 20789100 25815050 1
+    next_corner: 20909100 25766450 0
+  outline_polyline: 25400 20909100 25766450 1
+    next_corner: 21024200 25714350 0
+  outline_polyline: 25400 21024200 25714350 1
+    next_corner: 21134400 25658540 0
+  outline_polyline: 25400 21134400 25658540 1
+    next_corner: 21239100 25599250 0
+  outline_polyline: 25400 21239100 25599250 1
+    next_corner: 21338600 25536250 0
+  outline_polyline: 25400 21338600 25536250 1
+    next_corner: 21432400 25469950 0
+  outline_polyline: 25400 21432400 25469950 1
+    next_corner: 21520800 25399740 0
+  outline_polyline: 25400 21520800 25399740 1
+    next_corner: 21603200 25326250 0
+  outline_polyline: 25400 21603200 25326250 1
+    next_corner: 21679700 25249150 0
+  outline_polyline: 25400 21679700 25249150 1
+    next_corner: 21750000 25168750 0
+  outline_polyline: 25400 21750000 25168750 1
+    next_corner: 21814300 25084650 0
+  outline_polyline: 25400 21814300 25084650 1
+    next_corner: 21871900 24997250 0
+  outline_polyline: 25400 21871900 24997250 1
+    next_corner: 21922900 24906350 0
+  outline_polyline: 25400 21922900 24906350 1
+    next_corner: 21967100 24812140 0
+  outline_polyline: 25400 21967100 24812140 1
+    next_corner: 22043900 24576250 0
+  outline_polyline: 25400 22043900 24576250 1
+    next_corner: 22078200 24331650 0
+  outline_polyline: 25400 22078200 24331650 1
+    next_corner: 22071500 24079550 0
+  outline_polyline: 25400 22071500 24079550 1
+    next_corner: 22025200 23821850 0
+  outline_polyline: 25400 22025200 23821850 1
+    next_corner: 21940900 23559450 0
+  outline_polyline: 25400 21940900 23559450 1
+    next_corner: 21819700 23294350 0
+  outline_polyline: 25400 21819700 23294350 1
+    next_corner: 21663100 23027740 0
+  outline_polyline: 25400 21663100 23027740 1
+    next_corner: 21472400 22761450 0
+  outline_polyline: 25400 21472400 22761450 1
+    next_corner: 21249400 22496450 0
+  outline_polyline: 25400 21249400 22496450 1
+    next_corner: 20995000 22234850 0
+  outline_polyline: 25400 20995000 22234850 1
+    next_corner: 20710800 21977740 0
+  outline_polyline: 25400 20710800 21977740 1
+    next_corner: 20398100 21726940 0
+  outline_polyline: 25400 20398100 21726940 1
+    next_corner: 20058500 21483550 0
+  outline_polyline: 25400 20058500 21483550 1
+    next_corner: 19693200 21249340 0
+  outline_polyline: 25400 19693200 21249340 1
+    next_corner: 19303700 21025740 0
+  outline_polyline: 25400 19303700 21025740 1
+    next_corner: 18891300 20814540 0
+  outline_polyline: 25400 18891300 20814540 1
+    next_corner: 19094700 21154050 0
+  outline_polyline: 25400 19094700 21154050 1
+    next_corner: 19283900 21493550 0
+  outline_polyline: 25400 19283900 21493550 1
+    next_corner: 19459300 21832140 0
+  outline_polyline: 25400 19459300 21832140 1
+    next_corner: 19620700 22169550 0
+  outline_polyline: 25400 19620700 22169550 1
+    next_corner: 19768600 22504850 0
+  outline_polyline: 25400 19768600 22504850 1
+    next_corner: 19902900 22837740 0
+  outline_polyline: 25400 19902900 22837740 1
+    next_corner: 20023900 23167550 0
+  outline_polyline: 25400 20023900 23167550 1
+    next_corner: 20131500 23493850 0
+  outline_polyline: 25400 20131500 23493850 1
+    next_corner: 20226300 23815650 0
+  outline_polyline: 25400 20226300 23815650 1
+    next_corner: 20308000 24132750 0
+  outline_polyline: 25400 20308000 24132750 1
+    next_corner: 20377000 24444350 0
+  outline_polyline: 25400 20377000 24444350 1
+    next_corner: 20433200 24750140 0
+  outline_polyline: 25400 20433200 24750140 1
+    next_corner: 20477100 25049150 0
+  outline_polyline: 25400 20434900 22625050 1
+    next_corner: 20662400 22880250 0
+  outline_polyline: 25400 20662400 22880250 1
+    next_corner: 20854900 23136850 0
+  outline_polyline: 25400 20854900 23136850 1
+    next_corner: 21010300 23392450 0
+  outline_polyline: 25400 21010300 23392450 1
+    next_corner: 21126100 23645250 0
+  outline_polyline: 25400 21126100 23645250 1
+    next_corner: 21200300 23892540 0
+  outline_polyline: 25400 21200300 23892540 1
+    next_corner: 21230200 24132540 0
+  outline_polyline: 25400 21230200 24132540 1
+    next_corner: 21213900 24362750 0
+  outline_polyline: 25400 21213900 24362750 1
+    next_corner: 21148700 24581150 0
+  outline_polyline: 25400 21148700 24581150 1
+    next_corner: 21035800 24780650 0
+  outline_polyline: 25400 21035800 24780650 1
+    next_corner: 20879200 24956650 0
+  outline_polyline: 25400 20879200 24956650 1
+    next_corner: 20682100 25108940 0
+  outline_polyline: 25400 20682100 25108940 1
+    next_corner: 20447700 25237950 0
+  outline_polyline: 25400 20447700 25237950 1
+    next_corner: 20179400 25343340 0
+  outline_polyline: 25400 20179400 25343340 1
+    next_corner: 19880100 25425550 0
+  outline_polyline: 25400 19880100 25425550 1
+    next_corner: 19553200 25484540 0
+  outline_polyline: 25400 19553200 25484540 1
+    next_corner: 19201600 25520750 0
+  outline_polyline: 25400 19201600 25520750 1
+    next_corner: 18829000 25533740 0
+  outline_polyline: 25400 18829000 25533740 1
+    next_corner: 18438200 25524140 0
+  outline_polyline: 25400 18438200 25524140 1
+    next_corner: 18032500 25491740 0
+  outline_polyline: 25400 18032500 25491740 1
+    next_corner: 17615000 25436940 0
+  outline_polyline: 25400 17615000 25436940 1
+    next_corner: 17189200 25359550 0
+  outline_polyline: 25400 17189200 25359550 1
+    next_corner: 16758000 25260050 0
+  outline_polyline: 25400 16758000 25260050 1
+    next_corner: 16324700 25138250 0
+  outline_polyline: 25400 16324700 25138250 1
+    next_corner: 15898650 24994450 0
+  outline_polyline: 12700 15898650 24994450 1
+    next_corner: 15916000 25001250 0
+  outline_polyline: 25400 15916000 25001250 1
+    next_corner: 15386000 24791250 0
+  outline_polyline: 12700 16355450 24775950 1
+    next_corner: 16355450 24775950 0
+  outline_polyline: 25400 15646000 25481250 1
+    next_corner: 16220800 25676650 0
+  outline_polyline: 25400 16220800 25676650 1
+    next_corner: 16754000 25823550 0
+  outline_polyline: 25400 16754000 25823550 1
+    next_corner: 17279800 25939650 0
+  outline_polyline: 12700 15689750 25498850 1
+    next_corner: 15689750 25498850 0
+  outline_polyline: 25400 15689750 25498850 1
+    next_corner: 15106000 25271250 0
+  outline_polyline: 1000000 20478750 11775000 1
+    next_corner: 20506250 11747500 0
+  outline_polyline: 1000000 20478750 15108750 1
+    next_corner: 20506250 15081250 0
+  outline_polyline: 1000000 29686250 12382500 1
+    next_corner: 29495750 12573000 0
+  outline_polyline: 1000000 29495750 12573000 1
+    next_corner: 28892500 12541250 0
+  outline_polyline: 1000000 29495750 12573000 1
+    next_corner: 28575000 13493740 0
+  outline_polyline: 1000000 40322500 7620000 1
+    next_corner: 40481260 7620000 0
+  outline_polyline: 1000000 40322500 20002500 1
+    next_corner: 40481260 19843740 0
+  outline_polyline: 1000000 21590000 10450000 1
+    next_corner: 21431250 10477500 0
+  outline_polyline: 1000000 40322500 10477500 1
+    next_corner: 40481260 10477500 0
+  outline_polyline: 1000000 42200010 4762500 1
+    next_corner: 42068740 4631250 0
+  n_pins: 1
+    pin: "1" 0 12700000 -1000000 0 ""
+      top_pad: 3 1450000 12500000 12500000 0
+
+name: "IND9_1"
+  units: NM
+  sel_rect: -3504000 -6504000 8504000 1504000
+  ref_text: 300000 0 500000 0 50000
+  value_text: 300000 0 0 0 50000
+  centroid: 0 0 0 0
+  outline_polyline: 100000 -2000000 500000 1
+    next_corner: -3250000 500000 0
+  outline_polyline: 100000 -3250000 500000 1
+    next_corner: -3250000 -750000 0
+  outline_polyline: 100000 -3250000 -750000 1
+    next_corner: -2000000 -750000 0
+  outline_polyline: 100000 -2000000 1250000 1
+    next_corner: -2000000 -6250000 0
+  outline_polyline: 100000 8250000 -6250000 1
+    next_corner: 8250000 1250000 0
+  outline_polyline: 100000 3281250 -6250000 1
+    next_corner: 7781250 -6250000 0
+  outline_polyline: 100000 7463750 1250000 1
+    next_corner: 2963750 1250000 0
+  n_pins: 4
+    pin: "4" 0 7000000 -5000000 0 ""
+    pin: "3" 0 7000000 0 0 ""
+    pin: "2" 0 0 -5000000 0 ""
+    pin: "1" 0 0 0 0 ""
+
+name: "2.3x4"
+  units: NM
+  sel_rect: -254000 -254000 254000 254000
+  ref_text: 300000 0 500000 0 50000
+  value_text: 300000 0 0 0 50000
+  centroid: 0 0 0 0
+  n_pins: 1
+    pin: "1" 0 0 0 0 ""
+      top_pad: 3 4000000 1150000 1150000 575000
+
+name: "INNERS_LINES_ID1646"
+  units: NM
+  sel_rect: -254000 -14254000 25654000 -11746000
+  ref_text: 300000 0 0 0 10000
+  value_text: 300000 0 0 0 10000
+  centroid: 0 0 0 0
+  text: "IMPORT P-CAD: INNERS_LIN..." 1000000 600000 -13400000 0 200000 0 4
+  outline_polyline: 200000 0 -12000000 1
+    next_corner: 0 -14000000 0
+    next_corner: 25400000 -14000000 0
+    next_corner: 25400000 -12000000 0
+    close_polyline: 0
+  n_pins: 1
+    pin: "1" 0 12700000 -13000000 0 ""
+      top_pad: 3 1450000 12500000 12500000 0
+
+name: "IND9_2"
+  units: NM
+  sel_rect: -3504000 -6504000 8504000 1504000
+  ref_text: 300000 0 500000 0 50000
+  value_text: 300000 0 0 0 50000
+  centroid: 0 0 0 0
+  outline_polyline: 100000 -2000000 500000 1
+    next_corner: -3250000 500000 0
+  outline_polyline: 100000 -3250000 500000 1
+    next_corner: -3250000 -750000 0
+  outline_polyline: 100000 -3250000 -750000 1
+    next_corner: -2000000 -750000 0
+  outline_polyline: 100000 -2000000 1250000 1
+    next_corner: -2000000 -6250000 0
+  outline_polyline: 100000 8250000 -6250000 1
+    next_corner: 8250000 1250000 0
+  outline_polyline: 100000 3122500 -6250000 1
+    next_corner: 7622500 -6250000 0
+  outline_polyline: 100000 7781250 1250000 1
+    next_corner: 3281250 1250000 0
+  n_pins: 4
+    pin: "4" 0 7000000 -5000000 0 ""
+    pin: "3" 0 7000000 0 0 ""
+    pin: "2" 0 0 -5000000 0 ""
+    pin: "1" 0 0 0 0 ""
+
+name: "BOTTOM_LINES_ID1646"
+  units: NM
+  sel_rect: -254000 -4254000 25654000 -1746000
+  ref_text: 300000 0 0 0 10000
+  value_text: 300000 0 0 0 10000
+  centroid: 0 0 0 0
+  text: "IMPORT P-CAD: BOTTOM_LIN..." 1000000 600000 -3400000 0 200000 0 4
+  outline_polyline: 200000 0 -2000000 1
+    next_corner: 0 -4000000 0
+    next_corner: 25400000 -4000000 0
+    next_corner: 25400000 -2000000 0
+    close_polyline: 0
+  n_pins: 1
+    pin: "1" 0 12700000 -3000000 0 ""
+      top_pad: 3 1450000 12500000 12500000 0
+
+name: "ASSY_BOTTOM_LINES_ID1646"
+  units: NM
+  sel_rect: -254000 -12254000 25654000 -9746000
+  ref_text: 300000 0 0 0 10000
+  value_text: 300000 0 0 0 10000
+  centroid: 0 0 0 0
+  text: "IMPORT P-CAD: ASSY_BOTTO..." 1000000 600000 -11400000 0 200000 0 4
+  outline_polyline: 200000 0 -10000000 1
+    next_corner: 0 -12000000 0
+    next_corner: 25400000 -12000000 0
+    next_corner: 25400000 -10000000 0
+    close_polyline: 0
+  n_pins: 1
+    pin: "1" 0 12700000 -11000000 0 ""
+      top_pad: 3 1450000 12500000 12500000 0
+
+name: "m2-1"
+  units: NM
+  sel_rect: -254000 -254000 254000 254000
+  ref_text: 300000 0 500000 0 50000
+  value_text: 300000 0 0 0 50000
+  centroid: 0 0 0 0
+  n_pins: 1
+    pin: "1" 400000 0 0 0 ""
+      top_pad: 1 2000000 1000000 1000000 500000
+      inner_pad: 1 2000000 1000000 1000000 500000 0
+      bottom_pad: 1 2000000 1000000 1000000 500000
+
+name: "RC0805_1"
+  units: NM
+  sel_rect: -1254000 -254000 1254000 254000
+  ref_text: 300000 0 500000 0 50000
+  value_text: 300000 0 0 0 50000
+  centroid: 0 0 0 0
+  n_pins: 2
+    pin: "1" 0 -1000000 0 0 ""
+      top_pad: 3 1300000 500000 500000 250000
+    pin: "2" 0 1000000 0 0 ""
+      top_pad: 3 1300000 500000 500000 250000
+
+name: "CC0805_2"
+  units: NM
+  sel_rect: -1179000 -254000 1179000 254000
+  ref_text: 300000 0 500000 0 50000
+  value_text: 300000 0 0 0 50000
+  centroid: 0 0 0 0
+  n_pins: 2
+    pin: "1" 0 -925000 0 0 ""
+      top_pad: 3 1300000 500000 500000 250000
+    pin: "2" 0 925000 0 0 ""
+      top_pad: 3 1300000 500000 500000 250000
+
+name: "CC0805_1"
+  units: NM
+  sel_rect: -1179000 -254000 1179000 254000
+  ref_text: 300000 0 500000 0 50000
+  value_text: 300000 0 0 0 50000
+  centroid: 0 0 0 0
+  n_pins: 2
+    pin: "1" 0 -925000 0 0 ""
+      top_pad: 3 1300000 500000 500000 250000
+    pin: "2" 0 925000 0 0 ""
+      top_pad: 3 1300000 500000 500000 250000
+
+name: "FDC2212_1"
+  units: NM
+  sel_rect: -3420260 -2254000 2354000 2254000
+  ref_text: 300000 0 500000 0 50000
+  value_text: 300000 0 0 0 50000
+  centroid: 0 0 0 0
+  outline_polyline: 100000 -2000000 -2000000 1
+    next_corner: -2000000 -1500000 0
+  outline_polyline: 100000 -2000000 1700000 1
+    next_corner: -1700000 2000000 0
+  outline_polyline: 300000 -3166260 1753780 1
+    next_corner: -3163000 1722630 0
+    next_corner: -3153330 1692840 0
+    next_corner: -3137700 1665700 0
+    next_corner: -3116760 1642400 0
+    next_corner: -3091450 1623960 0
+    next_corner: -3062860 1611170 0
+    next_corner: -3032230 1604600 0
+    next_corner: -3000910 1604540 0
+    next_corner: -2970290 1610970 0
+    next_corner: -2941670 1623610 0
+    next_corner: -2916300 1641910 0
+    next_corner: -2895270 1665080 0
+    next_corner: -2879510 1692110 0
+    next_corner: -2869700 1721820 0
+    next_corner: -2866260 1752920 0
+    next_corner: -2869350 1784050 0
+    next_corner: -2878860 1813930 0
+    next_corner: -2894380 1841180 0
+    next_corner: -2915220 1864610 0
+    next_corner: -2940470 1883190 0
+    next_corner: -2969040 1896120 0
+    next_corner: -2999670 1902830 0
+    next_corner: -3031020 1903020 0
+    next_corner: -3061700 1896700 0
+    next_corner: -3090400 1884150 0
+    next_corner: -3115860 1865910 0
+    next_corner: -3136980 1842780 0
+    next_corner: -3152840 1815770 0
+    next_corner: -3162740 1786050 0
+    next_corner: -3166260 1753850 0
+  outline_polyline: 100000 -2000000 1500000 1
+    next_corner: -2000000 1700000 0
+  outline_polyline: 100000 2000000 -1500000 1
+    next_corner: 2000000 -2000000 0
+  outline_polyline: 100000 2000000 2000000 1
+    next_corner: 2000000 1500000 0
+  outline_polyline: 100000 2000000 -2000000 1
+    next_corner: -2000000 -2000000 0
+  outline_polyline: 100000 2000000 2000000 1
+    next_corner: -1700000 2000000 0
+  n_pins: 13
+    pin: "6" 0 -2100000 -1250000 90 ""
+      top_pad: 3 1000000 140000 140000 70000
+    pin: "5" 0 -2100000 -750000 90 ""
+      top_pad: 3 1000000 140000 140000 70000
+    pin: "4" 0 -2100000 -250000 90 ""
+      top_pad: 3 1000000 140000 140000 70000
+    pin: "1" 0 -2100000 1250000 270 ""
+      top_pad: 3 1000000 140000 140000 70000
+    pin: "8" 0 2100000 -750000 90 ""
+      top_pad: 3 1000000 140000 140000 70000
+    pin: "9" 0 2100000 -250000 90 ""
+      top_pad: 3 1000000 140000 140000 70000
+    pin: "7" 0 2100000 -1250000 90 ""
+      top_pad: 3 1000000 140000 140000 70000
+    pin: "12" 0 2100000 1250000 90 ""
+      top_pad: 3 1000000 140000 140000 70000
+    pin: "2" 0 -2100000 750000 90 ""
+      top_pad: 3 1000000 140000 140000 70000
+    pin: "3" 0 -2100000 250000 90 ""
+      top_pad: 3 1000000 140000 140000 70000
+    pin: "11" 0 2100000 750000 90 ""
+      top_pad: 3 1000000 140000 140000 70000
+    pin: "10" 0 2100000 250000 270 ""
+      top_pad: 3 1000000 140000 140000 70000
+    pin: "13" 0 0 0 90 ""
+      top_pad: 3 2600000 1500000 1500000 650000
+
+[board]
+
+outline: 5 0 -1
+  corner: 1 102235000 124301248 0
+  corner: 2 102235000 96678752 0
+  corner: 3 148113744 96678752 0
+  corner: 4 148113744 124301248 0
+  corner: 5 102235000 124301248 0
+
+[solder_mask_cutouts]
+
+
+[parts]
+
+part: FreePad__1
+  ref_text: 0 0 180 0 0 0
+  shape: "m2-1"
+  pos: 103981250 110172500 0 180 0
+
+part: FreePad__2
+  ref_text: 0 0 270 0 0 0
+  shape: "m2-1"
+  pos: 112712500 101917500 0 270 0
+
+part: FreePad__3
+  ref_text: 0 0 180 0 0 0
+  shape: "3x2.6"
+  pos: 117792500 109696250 0 270 0
+
+part: FreePad__4
+  ref_text: 0 0 270 0 0 0
+  shape: "m2-1"
+  pos: 123825000 103028750 0 270 0
+
+part: FreePad__5
+  ref_text: 0 0 180 0 0 0
+  shape: "m2-1"
+  pos: 126682500 103028750 0 270 0
+
+part: FreePad__6
+  ref_text: 0 0 270 0 0 0
+  shape: "2.3x4"
+  pos: 131921249 109061250 0 270 0
+
+part: FreePad__7
+  ref_text: 0 0 270 0 0 0
+  shape: "m2-1"
+  pos: 142716250 104298750 0 180 0
+
+part: FreePad__8
+  ref_text: 0 0 270 0 0 0
+  shape: "m2-1"
+  pos: 142716250 119380000 0 180 0
+
+part: FreePad__9
+  ref_text: 0 0 270 0 0 0
+  shape: "m2-1"
+  pos: 142716250 116522500 0 180 0
+
+part: FreePad__10
+  ref_text: 0 0 270 0 0 0
+  shape: "m2-1"
+  pos: 146526250 104298750 0 180 0
+
+part: FreePad__11
+  ref_text: 0 0 270 0 0 0
+  shape: "m2-1"
+  pos: 146526250 119380000 0 180 0
+
+part: FreePad__12
+  ref_text: 0 0 270 0 0 0
+  shape: "m2-1"
+  pos: 146526250 116522500 0 180 0
+
+part: FreePad__13
+  ref_text: 0 0 270 0 0 0
+  shape: "m2-1"
+  pos: 103981250 107315000 0 180 0
+
+part: R1
+  package: "RC0805"
+  ref_text: 750000 150000 270 -2539999 -587 1
+  shape: "RC0805_1"
+  value: "5,1k" 500000 100000 0 527590 -786188 1
+  pos: 111442500 108108750 0 90 0
+
+part: FreePad__14
+  ref_text: 750000 150000 180 -293 2539999 0
+  shape: "m2-1"
+  pos: 112712500 98107500 0 270 0
+
+part: FreePad__15
+  ref_text: 750000 150000 270 2539999 0 0
+  shape: "3x2.6"
+  pos: 117792500 106838750 0 270 0
+
+part: DA1
+  package: "FDC2212"
+  ref_text: 750000 150000 0 -1111250 3333750 1
+  shape: "FDC2212_1"
+  value: "FDC2212" 750000 150000 0 -2857500 4921250 1
+  pos: 117792500 108267500 0 0 0
+
+part: C10
+  package: "CC0805"
+  ref_text: 750000 150000 180 3090000 24999 1
+  shape: "CC0805_2"
+  value: "0,01" 500000 100000 270 531250 -916250 1
+  pos: 119295000 98291250 0 180 0
+
+part: FreePad__16
+  ref_text: 750000 150000 270 25356 -3089997 0
+  shape: "m2-1"
+  pos: 123825000 98107500 0 270 0
+
+part: FreePad__17
+  ref_text: 750000 150000 180 -3090005 -24283 0
+  shape: "m2-1"
+  pos: 126682500 98107500 0 270 0
+
+part: C3
+  package: "CC0805"
+  ref_text: 750000 150000 270 -606 1746249 1
+  shape: "CC0805_1"
+  value: "1,0" 500000 100000 0 515076 -657440 1
+  pos: 123825000 106203750 0 90 0
+
+part: FreePad__18
+  ref_text: 750000 150000 180 1746249 403 0
+  shape: "2.3x4"
+  pos: 132238750 100171250 0 270 0
+
+part: FreePad__19
+  ref_text: 750000 150000 0 -1746248 -807 0
+  shape: "m2-1"
+  pos: 142716250 107156250 0 180 0
+
+part: FreePad__20
+  ref_text: 750000 150000 180 1746248 807 0
+  shape: "m2-1"
+  pos: 146526250 107156250 0 180 0
+
+part: DA2
+  package: "SOT-23-5"
+  ref_text: 750000 150000 270 -3626149 -867919 1
+  shape: "SOT-23-5_1"
+  value: "LP3985IM5-3,0" 500000 100000 0 -1879569 -3725217 1
+  pos: 118501250 100831250 0 90 0
+
+part: C11
+  package: "CC0805"
+  ref_text: 750000 150000 90 -184440 -1989936 1
+  shape: "CC0805_2"
+  value: "2,2" 500000 100000 0 -568669 700065 1
+  pos: 121358750 101148750 0 270 0
+
+part: C9
+  package: "CC0805"
+  ref_text: 750000 150000 90 -818521 1978844 1
+  shape: "CC0805_2"
+  value: "2,2" 500000 100000 0 -519917 716310 1
+  pos: 115485000 100990000 0 270 0
+
+part: FreePad__21
+  ref_text: 750000 150000 90 818521 -1978844 0
+  shape: "m2-1"
+  pos: 107791250 110172500 0 180 0
+
+part: C1
+  package: "CC0805"
+  ref_text: 750000 150000 270 793970 1904908 1
+  shape: "CC0805_1"
+  value: "33pF" 500000 100000 0 547626 -1094936 1
+  pos: 122713750 109378750 0 90 0
+
+part: R2
+  package: "RC0805"
+  ref_text: 750000 150000 270 -2539999 -587 1
+  shape: "RC0805_1"
+  value: "5,1k" 500000 100000 0 527590 -786188 1
+  pos: 113506250 109061250 0 90 0
+
+part: C5
+  package: "CC0805"
+  ref_text: 750000 150000 0 2857500 158750 1
+  shape: "CC0805_1"
+  value: "*" 500000 100000 270 476250 -317500 1
+  pos: 143510000 101441250 0 0 0
+
+part: C6
+  package: "CC0805"
+  ref_text: 750000 150000 180 -2857463 159411 1
+  shape: "CC0805_1"
+  value: "*" 500000 100000 270 476250 -317499 1
+  pos: 143510000 109537500 0 180 0
+
+part: FreePad__22
+  ref_text: 750000 150000 0 2857463 -159410 0
+  shape: "m2-1"
+  pos: 107791250 107315000 0 180 0
+
+part: C4
+  package: "CC0805"
+  ref_text: 750000 150000 270 793970 -1904908 1
+  shape: "CC0805_1"
+  value: "0,1" 500000 100000 0 515076 -657440 1
+  pos: 121920000 106203750 0 90 0
+
+part: C8
+  package: "CC0805"
+  ref_text: 750000 150000 180 -2857499 -661 1
+  shape: "CC0805_1"
+  value: "*" 500000 100000 270 476250 -317499 1
+  pos: 143510000 122237500 0 180 0
+
+part: C7
+  package: "CC0805"
+  ref_text: 750000 150000 0 2698750 0 1
+  shape: "CC0805_1"
+  value: "*" 500000 100000 270 476250 -317500 1
+  pos: 143351250 113665000 0 0 0
+
+part: FreePad__23
+  ref_text: 750000 150000 90 312 -2698749 0
+  shape: "2.3x4"
+  pos: 131445000 113506250 0 270 0
+
+part: FreePad__24
+  ref_text: 750000 150000 0 -2698748 624 0
+  shape: "2.3x4"
+  pos: 131603749 122396250 0 270 0
+
+part: L2
+  package: "IND9"
+  ref_text: 750000 150000 0 3333750 1905000 1
+  shape: "IND9_2"
+  value: "18,0" 750000 150000 0 1746250 -3016250 1
+  pos: 131127500 120491250 0 0 0
+
+part: L1
+  package: "IND9"
+  ref_text: 750000 150000 0 3016250 -9048750 1
+  shape: "IND9_1"
+  value: "18,0" 750000 150000 0 1905000 -3492500 1
+  pos: 131286250 106521250 0 0 0
+
+part: C2
+  package: "CC0805"
+  ref_text: 750000 150000 270 793988 2063658 1
+  shape: "CC0805_1"
+  value: "33pF" 500000 100000 0 547626 -1094936 1
+  pos: 122713750 112712500 0 90 0
+
+[nets]
+
+net: "SDA" 3 2 0 0 0 0 1
+  pin: 1 FreePad__22.1
+  pin: 2 DA1.2
+  pin: 3 R1.1
+  connect: 1 2 0 4 0 -1
+    vtx: 1 111442500 109108750 12 0 0 0 0
+    seg: 1 12 254000 0 0
+    vtx: 2 111395000 109061248 0 0 0 0 0
+    seg: 2 12 500000 0 0
+    vtx: 3 110013752 109061248 0 0 0 0 0
+    seg: 3 12 500000 0 0
+    vtx: 4 108267504 107315000 0 0 0 0 0
+    seg: 4 12 254000 0 0
+    vtx: 5 107791250 107315000 9 0 0 0 0
+  connect: 2 1 2 3 0 -1
+    vtx: 1 115692500 109017500 12 0 0 0 0
+    seg: 1 12 254000 0 0
+    vtx: 2 115648752 109021248 0 0 0 0 0
+    seg: 2 12 300000 0 0
+    vtx: 3 111442496 109021248 0 0 0 0 0
+    seg: 3 12 254000 0 0
+    vtx: 4 111442500 109108750 12 0 0 0 0
+
+net: "Unconnected_Area." 0 0 0 0 0 0 1
+
+net: "GND" 15 14 0 0 0 0 1
+  pin: 1 FreePad__3.1
+  pin: 2 FreePad__5.1
+  pin: 3 FreePad__15.1
+  pin: 4 C7.2
+  pin: 5 C8.1
+  pin: 6 C4.1
+  pin: 7 C6.1
+  pin: 8 C5.2
+  pin: 9 C9.1
+  pin: 10 C11.1
+  pin: 11 DA2.2
+  pin: 12 C3.1
+  pin: 13 C10.2
+  pin: 14 DA1.13
+  pin: 15 DA1.8
+  connect: 1 10 9 5 0 -1
+    vtx: 1 117201250 100831250 12 0 0 0 0
+    seg: 1 12 254000 0 0
+    vtx: 2 117231248 100831248 0 0 0 0 0
+    seg: 2 12 500000 0 0
+    vtx: 3 118501248 100831248 0 0 0 0 5001
+    seg: 3 12 500000 0 0
+    vtx: 4 120565000 100831248 0 0 0 0 0
+    seg: 4 12 500000 0 0
+    vtx: 5 120882496 100513752 0 0 0 0 0
+    seg: 5 12 254000 0 0
+    vtx: 6 121358750 100223750 12 0 0 0 0
+  connect: 2 8 10 4 0 -1
+    vtx: 1 115485000 100065000 12 0 0 0 0
+    seg: 1 12 254000 0 0
+    vtx: 2 115802496 100196248 0 0 0 0 0
+    seg: 2 12 500000 0 0
+    vtx: 3 116437504 100831248 0 0 0 0 0
+    seg: 3 12 500000 0 0
+    vtx: 4 116755000 100831248 0 0 0 0 0
+    seg: 4 12 254000 0 0
+    vtx: 5 117201250 100831250 12 0 0 0 0
+  connect: 3 13 0 2 0 -1
+    vtx: 1 117792500 108267500 12 0 0 0 0
+    seg: 1 12 254000 0 0
+    vtx: 2 117792496 108267504 0 0 0 0 0
+    seg: 2 12 300000 0 0
+    vtx: 3 117792500 109696250 12 0 0 0 0
+  connect: 4 14 5 3 0 -1
+    vtx: 1 119892500 107517500 12 0 0 0 0
+    seg: 1 12 254000 0 0
+    vtx: 2 119926248 107513752 0 0 0 0 0
+    seg: 2 12 300000 0 0
+    vtx: 3 121751248 107513752 0 0 0 0 0
+    seg: 3 12 254000 0 0
+    vtx: 4 121920000 107128750 12 0 0 0 0
+  connect: 5 14 2 3 0 -1
+    vtx: 1 119892500 107517500 12 0 0 0 0
+    seg: 1 12 254000 0 0
+    vtx: 2 119858752 107513752 0 0 0 0 0
+    seg: 2 12 300000 0 0
+    vtx: 3 117961248 107513752 0 0 0 0 0
+    seg: 3 12 254000 0 0
+    vtx: 4 117792500 106838750 12 0 0 0 0
+  connect: 6 7 1 7 0 -1
+    vtx: 1 144435000 101441250 12 0 0 0 0
+    seg: 1 12 254000 0 0
+    vtx: 2 144303744 101310000 0 0 0 0 0
+    seg: 2 12 1000000 0 0
+    vtx: 3 144303744 99695000 0 0 0 0 0
+    seg: 3 12 1000000 0 0
+    vtx: 4 142557504 97948752 0 0 0 0 0
+    seg: 4 12 1000000 0 0
+    vtx: 5 129698752 97948752 0 0 0 0 0
+    seg: 5 12 1000000 0 0
+    vtx: 6 127317504 100330000 0 0 0 0 0
+    seg: 6 12 1000000 0 0
+    vtx: 7 126682496 100330000 0 0 0 0 5003
+    seg: 7 12 1000000 0 0
+    vtx: 8 126682500 103028750 9 0 0 0 0
+  connect: 7 12 -1 2 0 -1
+    vtx: 1 118370000 98291250 12 0 0 0 0
+    seg: 1 12 254000 0 0
+    vtx: 2 118501248 98450000 0 0 0 0 0
+    seg: 2 12 500000 0 0
+    vtx: 3 118501248 100831248 0 0 0 0 5001
+  connect: 8 1 11 5 0 -1
+    vtx: 1 126682500 103028750 9 0 0 0 0
+    seg: 1 12 254000 0 0
+    vtx: 2 126682496 103028752 0 0 0 0 0
+    seg: 2 12 1000000 0 0
+    vtx: 3 126682496 106203752 0 0 0 0 0
+    seg: 3 12 1000000 0 0
+    vtx: 4 125730000 107156248 0 0 0 0 0
+    seg: 4 12 1000000 0 0
+    vtx: 5 123666248 107156248 0 0 0 0 0
+    seg: 5 12 254000 0 0
+    vtx: 6 123825000 107128750 12 0 0 0 0
+  connect: 9 6 3 3 0 -1
+    vtx: 1 144435000 109537500 12 0 0 0 0
+    seg: 1 12 254000 0 0
+    vtx: 2 144621248 109855000 0 0 0 0 0
+    seg: 2 12 1000000 0 0
+    vtx: 3 144621248 113375000 0 0 0 0 0
+    seg: 3 12 254000 0 0
+    vtx: 4 144276250 113665000 12 0 0 0 0
+  connect: 10 5 11 3 0 -1
+    vtx: 1 121920000 107128750 12 0 0 0 0
+    seg: 1 12 254000 0 0
+    vtx: 2 121947504 107156248 0 0 0 0 0
+    seg: 2 12 1000000 0 0
+    vtx: 3 123666248 107156248 0 0 0 0 0
+    seg: 3 12 254000 0 0
+    vtx: 4 123825000 107128750 12 0 0 0 0
+  connect: 11 3 4 3 0 -1
+    vtx: 1 144276250 113665000 12 0 0 0 0
+    seg: 1 12 254000 0 0
+    vtx: 2 144621248 113982496 0 0 0 0 0
+    seg: 2 12 1000000 0 0
+    vtx: 3 144621248 122237504 0 0 0 0 0
+    seg: 3 12 254000 0 0
+    vtx: 4 144435000 122237500 12 0 0 0 0
+  connect: 12 7 6 3 0 -1
+    vtx: 1 144435000 101441250 12 0 0 0 0
+    seg: 1 12 254000 0 0
+    vtx: 2 144621248 101468752 0 0 0 0 0
+    seg: 2 12 1000000 0 0
+    vtx: 3 144621248 109537504 0 0 0 0 0
+    seg: 3 12 254000 0 0
+    vtx: 4 144435000 109537500 12 0 0 0 0
+  connect: 13 9 -1 2 0 -1
+    vtx: 1 121358750 100223750 12 0 0 0 0
+    seg: 1 12 254000 0 0
+    vtx: 2 121411248 100330000 0 0 0 0 0
+    seg: 2 12 1000000 0 0
+    vtx: 3 126682496 100330000 0 0 0 0 5003
+  connect: 14 13 2 1 0 -1
+    vtx: 1 117792500 108267500 12 0 0 0 0
+    seg: 1 6 0 0 0
+    vtx: 2 117792500 106838750 12 0 0 0 0
+
+net: "+3.3V" 4 3 0 0 0 0 1
+  pin: 1 FreePad__2.1
+  pin: 2 C9.2
+  pin: 3 DA2.3
+  pin: 4 DA2.1
+  connect: 1 1 3 3 0 -1
+    vtx: 1 115485000 101915000 12 0 0 0 0
+    seg: 1 12 254000 0 0
+    vtx: 2 115485000 101942496 0 0 0 0 0
+    seg: 2 12 500000 0 0
+    vtx: 3 117072496 101942496 0 0 0 0 0
+    seg: 3 12 254000 0 0
+    vtx: 4 117201250 101831249 12 0 0 0 0
+  connect: 2 2 1 8 0 -1
+    vtx: 1 117201251 99831250 12 0 0 0 0
+    seg: 1 12 254000 0 0
+    vtx: 2 117201248 99831248 0 0 0 0 0
+    seg: 2 12 500000 0 0
+    vtx: 3 116296248 98926248 0 0 0 0 0
+    seg: 3 12 500000 0 0
+    vtx: 4 114691248 98926248 0 0 0 0 0
+    seg: 4 12 500000 0 0
+    vtx: 5 114141248 99536248 0 0 0 0 0
+    seg: 5 12 500000 0 0
+    vtx: 6 114141248 101758752 0 0 0 0 0
+    seg: 6 12 500000 0 0
+    vtx: 7 114666248 101917504 0 0 0 0 5002
+    seg: 7 12 1000000 0 0
+    vtx: 8 115570000 101917504 0 0 0 0 0
+    seg: 8 12 254000 0 0
+    vtx: 9 115485000 101915000 12 0 0 0 0
+  connect: 3 0 -1 2 0 -1
+    vtx: 1 112712500 101917500 9 0 0 0 0
+    seg: 1 12 254000 0 0
+    vtx: 2 112712496 101917504 0 0 0 0 0
+    seg: 2 12 1000000 0 0
+    vtx: 3 114666248 101917504 0 0 0 0 5002
+
+net: "NET00002" 5 4 0 0 0 0 1
+  pin: 1 FreePad__7.1
+  pin: 2 FreePad__18.1
+  pin: 3 C5.1
+  pin: 4 C1.2
+  pin: 5 DA1.9
+  connect: 1 4 3 5 0 -1
+    vtx: 1 119892500 108017500 12 0 0 0 0
+    seg: 1 12 254000 0 0
+    vtx: 2 120030000 108020000 0 0 0 0 0
+    seg: 2 12 300000 0 0
+    vtx: 3 121355000 108020000 0 0 0 0 0
+    seg: 3 12 300000 0 0
+    vtx: 4 121761248 108426248 0 0 0 0 0
+    seg: 4 12 300000 0 0
+    vtx: 5 122555000 108426248 0 0 0 0 0
+    seg: 5 12 254000 0 0
+    vtx: 6 122713750 108453750 12 0 0 0 0
+  connect: 2 3 1 5 0 -1
+    vtx: 1 122713750 108453750 12 0 0 0 0
+    seg: 1 12 254000 0 0
+    vtx: 2 122741248 108426248 0 0 0 0 0
+    seg: 2 12 1000000 0 0
+    vtx: 3 127476248 108426248 0 0 0 0 0
+    seg: 3 12 1000000 0 0
+    vtx: 4 131921248 103981248 0 0 0 0 0
+    seg: 4 12 1000000 0 0
+    vtx: 5 131921248 100395120 0 0 0 0 0
+    seg: 5 12 254000 0 0
+    vtx: 6 132238750 100171250 12 0 0 0 0
+  connect: 3 2 0 3 0 -1
+    vtx: 1 142585000 101441250 12 0 0 0 0
+    seg: 1 12 254000 0 0
+    vtx: 2 142557504 101282496 0 0 0 0 0
+    seg: 2 12 1000000 0 0
+    vtx: 3 142557504 104298752 0 0 0 0 0
+    seg: 3 12 254000 0 0
+    vtx: 4 142716250 104298750 9 0 0 0 0
+  connect: 4 2 1 4 0 -1
+    vtx: 1 142585000 101441250 12 0 0 0 0
+    seg: 1 12 254000 0 0
+    vtx: 2 142557504 101282496 0 0 0 0 0
+    seg: 2 12 1000000 0 0
+    vtx: 3 142557504 100330000 0 0 0 0 0
+    seg: 3 12 1000000 0 0
+    vtx: 4 131921248 100395120 0 0 0 0 0
+    seg: 4 12 254000 0 0
+    vtx: 5 132238750 100171250 12 0 0 0 0
+
+net: "NET00003" 5 4 0 0 0 0 1
+  pin: 1 FreePad__6.1
+  pin: 2 FreePad__19.1
+  pin: 3 C6.2
+  pin: 4 C1.1
+  pin: 5 DA1.10
+  connect: 1 4 3 5 0 -1
+    vtx: 1 119892500 108517500 12 0 0 0 0
+    seg: 1 12 254000 0 0
+    vtx: 2 120073752 108516248 0 0 0 0 0
+    seg: 2 12 280000 0 0
+    vtx: 3 121057504 108516248 0 0 0 0 0
+    seg: 3 12 280000 0 0
+    vtx: 4 121126248 108585000 0 0 0 0 0
+    seg: 4 12 300000 0 0
+    vtx: 5 122713752 110172496 0 0 0 0 0
+    seg: 5 12 254000 0 0
+    vtx: 6 122713750 110303750 12 0 0 0 0
+  connect: 2 1 2 3 0 -1
+    vtx: 1 142716250 107156250 9 0 0 0 0
+    seg: 1 12 254000 0 0
+    vtx: 2 142557504 107156248 0 0 0 0 0
+    seg: 2 12 1000000 0 0
+    vtx: 3 142557504 109220000 0 0 0 0 0
+    seg: 3 12 254000 0 0
+    vtx: 4 142585000 109537500 12 0 0 0 0
+  connect: 3 2 0 3 0 -1
+    vtx: 1 142585000 109537500 12 0 0 0 0
+    seg: 1 12 254000 0 0
+    vtx: 2 142557504 109220000 0 0 0 0 0
+    seg: 2 12 1000000 0 0
+    vtx: 3 131730752 109251752 0 0 0 0 0
+    seg: 3 12 254000 0 0
+    vtx: 4 131921249 109061250 12 0 0 0 0
+  connect: 4 0 3 3 0 -1
+    vtx: 1 131921249 109061250 12 0 0 0 0
+    seg: 1 12 254000 0 0
+    vtx: 2 130810000 110172496 0 0 0 0 0
+    seg: 2 12 1000000 0 0
+    vtx: 3 122713752 110172496 0 0 0 0 0
+    seg: 3 12 254000 0 0
+    vtx: 4 122713750 110303750 12 0 0 0 0
+
+net: "SCL" 3 3 0 0 0 0 1
+  pin: 1 FreePad__21.1
+  pin: 2 R2.1
+  pin: 3 DA1.1
+  connect: 1 0 1 3 0 -1
+    vtx: 1 107791250 110172500 9 0 0 0 0
+    seg: 1 12 254000 0 0
+    vtx: 2 107791248 110172496 0 0 0 0 0
+    seg: 2 12 500000 0 0
+    vtx: 3 113395000 110172496 0 0 0 0 0
+    seg: 3 12 254000 0 0
+    vtx: 4 113506250 110061250 12 0 0 0 0
+  connect: 2 2 1 5 0 -1
+    vtx: 1 115692500 109517500 12 0 0 0 0
+    seg: 1 12 254000 0 0
+    vtx: 2 115672496 109537504 0 0 0 0 0
+    seg: 2 12 300000 0 0
+    vtx: 3 114776248 109537504 0 0 0 0 0
+    seg: 3 12 300000 0 0
+    vtx: 4 114300000 110013752 0 0 0 0 0
+    seg: 4 12 300000 0 0
+    vtx: 5 113347504 110013752 0 0 0 0 0
+    seg: 5 12 254000 0 0
+    vtx: 6 113506250 110061250 12 0 0 0 0
+  connect: 3 2 -1 1 0 -1
+    vtx: 1 115692500 109517500 12 0 0 0 0
+    seg: 1 12 300000 0 0
+    vtx: 2 115692500 111000000 0 0 0 0 0
+
+net: "NET00000" 2 1 0 0 0 0 1
+  pin: 1 DA2.4
+  pin: 2 C10.1
+  connect: 1 0 1 3 0 -1
+    vtx: 1 119801250 99831250 12 0 0 0 0
+    seg: 1 12 254000 0 0
+    vtx: 2 119930000 99702496 0 0 0 0 0
+    seg: 2 12 500000 0 0
+    vtx: 3 119930000 98450000 0 0 0 0 0
+    seg: 3 12 254000 0 0
+    vtx: 4 120220000 98291250 12 0 0 0 0
+
+net: "+EP" 9 8 0 0 0 0 1
+  pin: 1 FreePad__4.1
+  pin: 2 C4.2
+  pin: 3 R2.2
+  pin: 4 C11.2
+  pin: 5 DA2.5
+  pin: 6 C3.2
+  pin: 7 DA1.7
+  pin: 8 DA1.4
+  pin: 9 R1.2
+  connect: 1 6 1 6 0 -1
+    vtx: 1 119892500 107017500 12 0 0 0 0
+    seg: 1 12 254000 0 0
+    vtx: 2 119912496 106997504 0 0 0 0 0
+    seg: 2 12 300000 0 0
+    vtx: 3 120491248 106997504 0 0 0 0 0
+    seg: 3 12 300000 0 0
+    vtx: 4 120808752 106680000 0 0 0 0 0
+    seg: 4 12 300000 0 0
+    vtx: 5 120808752 105886248 0 0 0 0 0
+    seg: 5 12 300000 0 0
+    vtx: 6 121285000 105410000 0 0 0 0 0
+    seg: 6 12 254000 0 0
+    vtx: 7 121920000 105278750 12 0 0 0 0
+  connect: 2 2 1 8 0 -1
+    vtx: 1 113506250 108061250 12 0 0 0 0
+    seg: 1 12 254000 0 0
+    vtx: 2 113506248 107950000 0 0 0 0 0
+    seg: 2 12 1000000 0 0
+    vtx: 3 113506248 107156248 0 0 0 0 5000
+    seg: 3 12 1000000 0 0
+    vtx: 4 113506248 106997504 0 0 0 0 0
+    seg: 4 12 1000000 0 0
+    vtx: 5 116522496 103981248 0 0 0 0 0
+    seg: 5 12 1000000 0 0
+    vtx: 6 119538752 103981248 0 0 0 0 0
+    seg: 6 12 1000000 0 0
+    vtx: 7 120808752 105251248 0 0 0 0 0
+    seg: 7 12 1000000 0 0
+    vtx: 8 121920000 105251248 0 0 0 0 0
+    seg: 8 12 254000 0 0
+    vtx: 9 121920000 105278750 12 0 0 0 0
+  connect: 3 3 4 3 0 -1
+    vtx: 1 121358750 102073750 12 0 0 0 0
+    seg: 1 12 254000 0 0
+    vtx: 2 121200000 101942496 0 0 0 0 0
+    seg: 2 12 500000 0 0
+    vtx: 3 119771248 101942496 0 0 0 0 0
+    seg: 3 12 254000 0 0
+    vtx: 4 119801250 101831249 12 0 0 0 0
+  connect: 4 5 0 2 0 -1
+    vtx: 1 123825000 105278750 12 0 0 0 0
+    seg: 1 12 254000 0 0
+    vtx: 2 123825000 105251248 0 0 0 0 0
+    seg: 2 12 1000000 0 0
+    vtx: 3 123825000 103028750 9 0 0 0 0
+  connect: 5 3 0 3 0 -1
+    vtx: 1 121358750 102073750 12 0 0 0 0
+    seg: 1 12 254000 0 0
+    vtx: 2 121225000 101917504 0 0 0 0 0
+    seg: 2 12 1000000 0 0
+    vtx: 3 122713752 101917504 0 0 0 0 0
+    seg: 3 12 1000000 0 0
+    vtx: 4 123825000 103028750 9 0 0 0 0
+  connect: 6 8 -1 2 0 -1
+    vtx: 1 111442500 107108750 12 0 0 0 0
+    seg: 1 12 254000 0 0
+    vtx: 2 111442496 107156248 0 0 0 0 0
+    seg: 2 12 1000000 0 0
+    vtx: 3 113506248 107156248 0 0 0 0 5000
+  connect: 7 1 5 3 0 -1
+    vtx: 1 121920000 105278750 12 0 0 0 0
+    seg: 1 12 254000 0 0
+    vtx: 2 121920000 105251248 0 0 0 0 0
+    seg: 2 12 1000000 0 0
+    vtx: 3 123825000 105251248 0 0 0 0 0
+    seg: 3 12 254000 0 0
+    vtx: 4 123825000 105278750 12 0 0 0 0
+  connect: 8 7 2 3 0 -1
+    vtx: 1 115692500 108017500 12 0 0 0 0
+    seg: 1 12 254000 0 0
+    vtx: 2 115645000 108010000 0 0 0 0 0
+    seg: 2 12 300000 0 0
+    vtx: 3 113526248 108010000 0 0 0 0 0
+    seg: 3 12 254000 0 0
+    vtx: 4 113506250 108061250 12 0 0 0 0
+
+net: "NET00004" 5 4 0 0 0 0 1
+  pin: 1 FreePad__9.1
+  pin: 2 FreePad__23.1
+  pin: 3 C2.2
+  pin: 4 C7.1
+  pin: 5 DA1.11
+  connect: 1 4 2 7 0 -1
+    vtx: 1 119892500 109017500 12 0 0 0 0
+    seg: 1 12 254000 0 0
+    vtx: 2 119896248 109021248 0 0 0 0 0
+    seg: 2 12 300000 0 0
+    vtx: 3 120768752 109021248 0 0 0 0 0
+    seg: 3 12 300000 0 0
+    vtx: 4 121285000 109537504 0 0 0 0 0
+    seg: 4 12 300000 0 0
+    vtx: 5 121285000 111125000 0 0 0 0 0
+    seg: 5 12 300000 0 0
+    vtx: 6 121920000 111760000 0 0 0 0 0
+    seg: 6 12 300000 0 0
+    vtx: 7 122555000 111760000 0 0 0 0 0
+    seg: 7 12 254000 0 0
+    vtx: 8 122713750 111787500 12 0 0 0 0
+  connect: 2 2 1 4 0 -1
+    vtx: 1 122713750 111787500 12 0 0 0 0
+    seg: 1 12 254000 0 0
+    vtx: 2 122741248 111760000 0 0 0 0 0
+    seg: 2 12 1000000 0 0
+    vtx: 3 128587504 111760000 0 0 0 0 0
+    seg: 3 12 1000000 0 0
+    vtx: 4 130651248 113823752 0 0 0 0 0
+    seg: 4 12 254000 0 0
+    vtx: 5 131445000 113506250 12 0 0 0 0
+  connect: 3 0 3 3 0 -1
+    vtx: 1 142716250 116522500 9 0 0 0 0
+    seg: 1 12 254000 0 0
+    vtx: 2 142557504 116681248 0 0 0 0 0
+    seg: 2 12 1000000 0 0
+    vtx: 3 142557504 113506248 0 0 0 0 0
+    seg: 3 12 254000 0 0
+    vtx: 4 142426250 113665000 12 0 0 0 0
+  connect: 4 1 3 3 0 -1
+    vtx: 1 131445000 113506250 12 0 0 0 0
+    seg: 1 12 254000 0 0
+    vtx: 2 131445000 113506248 0 0 0 0 0
+    seg: 2 12 1000000 0 0
+    vtx: 3 142398752 113506248 0 0 0 0 0
+    seg: 3 12 254000 0 0
+    vtx: 4 142426250 113665000 12 0 0 0 0
+
+net: "NET00005" 5 4 0 0 0 0 1
+  pin: 1 FreePad__8.1
+  pin: 2 FreePad__24.1
+  pin: 3 C2.1
+  pin: 4 C8.2
+  pin: 5 DA1.12
+  connect: 1 4 2 7 0 -1
+    vtx: 1 119892500 109517500 12 0 0 0 0
+    seg: 1 12 254000 0 0
+    vtx: 2 119912496 109537504 0 0 0 0 0
+    seg: 2 12 300000 0 0
+    vtx: 3 120491248 109537504 0 0 0 0 0
+    seg: 3 12 300000 0 0
+    vtx: 4 120650000 109696248 0 0 0 0 0
+    seg: 4 12 300000 0 0
+    vtx: 5 120650000 112871248 0 0 0 0 0
+    seg: 5 12 300000 0 0
+    vtx: 6 121285000 113506248 0 0 0 0 0
+    seg: 6 12 300000 0 0
+    vtx: 7 122555000 113506248 0 0 0 0 0
+    seg: 7 12 254000 0 0
+    vtx: 8 122713750 113637500 12 0 0 0 0
+  connect: 2 2 1 5 0 -1
+    vtx: 1 122713750 113637500 12 0 0 0 0
+    seg: 1 12 254000 0 0
+    vtx: 2 122713752 113637504 0 0 0 0 0
+    seg: 2 12 1000000 0 0
+    vtx: 3 126047504 116971248 0 0 0 0 0
+    seg: 3 12 1000000 0 0
+    vtx: 4 126047504 120491248 0 0 0 0 0
+    seg: 4 12 1000000 0 0
+    vtx: 5 127952496 122396248 0 0 0 0 0
+    seg: 5 12 1000000 0 0
+    vtx: 6 131603749 122396250 12 0 0 0 0
+  connect: 3 0 3 3 0 -1
+    vtx: 1 142716250 119380000 9 0 0 0 0
+    seg: 1 12 254000 0 0
+    vtx: 2 142557504 119380000 0 0 0 0 0
+    seg: 2 12 1000000 0 0
+    vtx: 3 142557504 122396248 0 0 0 0 0
+    seg: 3 12 254000 0 0
+    vtx: 4 142585000 122237500 12 0 0 0 0
+  connect: 4 1 3 3 0 -1
+    vtx: 1 131603749 122396250 12 0 0 0 0
+    seg: 1 12 254000 0 0
+    vtx: 2 131603752 122396248 0 0 0 0 0
+    seg: 2 12 1000000 0 0
+    vtx: 3 142557504 122396248 0 0 0 0 0
+    seg: 3 12 254000 0 0
+    vtx: 4 142585000 122237500 12 0 0 0 0
+
+[texts]
+
+text: "+3.3V" 106997500 101123750 12 0 0 750000 75000 0 -1
+
+text: "C0" 139700000 104775000 12 0 0 750000 75000 0 -1
+
+text: "C1" 140017500 117316250 12 0 0 750000 75000 0 -1
+
+text: "SDA" 104457500 104616250 12 0 0 750000 75000 0 -1
+
+text: "SCL" 104457500 111283750 12 0 0 750000 75000 0 -1
+
+text: "GND" 127952500 103663750 12 90 0 750000 75000 0 -1
+
+text: "FDC2212" 102870000 113347500 12 0 0 1500000 150000 0 -1
+
+text: "+3V" 120967500 99695000 12 90 0 750000 75000 0 -1
+
+text: "C1" 148590000 117157500 7 0 0 750000 75000 0 -1
+
+text: "C0" 149225000 105092500 7 0 0 750000 75000 0 -1
+
+text: "SCL" 99060000 109378750 7 0 0 750000 75000 0 -1
+
+text: "SDA" 98901250 106362500 7 0 0 750000 75000 0 -1
+
+text: "FDC2212" 125730000 125095000 7 0 0 1500000 150000 0 -1
+
+[merges]
+
+
+[end]

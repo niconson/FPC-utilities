@@ -1,0 +1,56 @@
+//---------------------------------------------------------------------------
+
+
+#pragma hdrstop
+
+#include "Ptr.h"
+#include "math.h"
+#include "Debug_Areas.h"
+//---------------------------------------------------------------------------
+
+#pragma package(smart_init)
+// генерация новой вершины полилинии для создания зазора вокруг
+// или увеличения/уменьшения полигонов
+//
+int Ptr (       double Xback,
+                double Yback,
+                double X,
+                double Y,
+                double Xnext,
+                double Ynext,
+                double *outX,
+                double *outY,
+                double *outX2,
+                double *outY2,
+                double swell
+                )
+                {
+                double angleSeg1 = Angle (X,Y,Xback,Yback);
+                double angleSeg2 = Angle (Xnext,Ynext,X,Y);
+                double ang = angleSeg2 - angleSeg1;
+                if (ang < 180) ang = ang + 360;
+                else if (ang > 180) ang = ang - 360;
+                double Seg1_X1 = X + swell*(cos((angleSeg1+90)*(double)10/(double)573));
+                double Seg1_Y1 = Y + swell*(sin((angleSeg1+90)*(double)10/(double)573));
+                double Seg1_X2 = Xback + swell*(cos((angleSeg1+90)*(double)10/(double)573));
+                double Seg1_Y2 = Yback + swell*(sin((angleSeg1+90)*(double)10/(double)573));
+                double Seg2_X1 = Xnext + swell*(cos((angleSeg2+90)*(double)10/(double)573));
+                double Seg2_Y1 = Ynext + swell*(sin((angleSeg2+90)*(double)10/(double)573));
+                double Seg2_X2 = X + swell*(cos((angleSeg2+90)*(double)10/(double)573));
+                double Seg2_Y2 = Y + swell*(sin((angleSeg2+90)*(double)10/(double)573));
+                double dis = Distance (Seg1_X1,Seg1_Y1,Seg1_X2,Seg1_Y2,Seg2_X1,Seg2_Y1,Seg2_X2,Seg2_Y2,outX,outY);
+                if (ang > 90)
+                        {
+                        *outX = X + swell*(cos((angleSeg1+45)*(double)10/(double)573))*sqrt(2);
+                        *outY = Y + swell*(sin((angleSeg1+45)*(double)10/(double)573))*sqrt(2);
+                        *outX2 = X + swell*(cos((-angleSeg2-45)*(double)10/(double)573))*sqrt(2);
+                        *outY2 = Y + swell*(sin((-angleSeg2-45)*(double)10/(double)573))*sqrt(2);
+                        return 2;
+                        }
+                else if (ang < -90)
+                        {
+                        if (dis)        return 0;
+                        else            return 1;
+                        }
+                else return 1;
+                }

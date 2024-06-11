@@ -1,0 +1,27 @@
+name: "2SIP79"
+author: "Duxah"
+description: "Connectors"
+units: NM
+sel_rect: -1300400 -900400 3300400 900400
+ref_text: 900000 -200000 1100000 0 127000
+value_text: 600000 -400000 -1600000 0 100000
+centroid: 0 1000000 0 0
+outline_polyline: 150000 -400000 800000 1 0 4
+next_corner: -1200000 0 2
+next_corner: -400000 -800000 2
+next_corner: 2400000 -800000 0
+next_corner: 3200000 0 2
+next_corner: 2400000 800000 2
+close_polyline: 0
+n_pins: 2
+pin: "1" 400000 -400000 0 270 ""
+top_pad: 1 1000000 500000 500000 0
+inner_pad: 0 0 0 0 0 0
+bottom_pad: 1 1000000 500000 500000 0
+bottom_mask: 0 0 0 0 0
+pin: "2" 400000 2400000 0 270 ""
+top_pad: 1 1000000 500000 500000 0
+inner_pad: 0 0 0 0 0 0
+bottom_pad: 1 1000000 500000 500000 0
+bottom_mask: 0 0 0 0 0
+

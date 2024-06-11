@@ -1,0 +1,160 @@
+//---------------------------------------------------------------------------
+#include <vcl.h>
+
+#pragma hdrstop
+
+#include "Replace.h"
+#include "ABClibrary.h"
+#include "fstream.h"
+//---------------------------------------------------------------------------
+
+#pragma package(smart_init)
+
+void Replace ( AnsiString Name, long StartIndex, long EndIndex)
+        {
+        if (!FileName.Length()) return;         //extern!
+        long i;
+        char s[2501];
+        // Чтение фаила
+        A = ExtractFilePath(Application->ExeName);
+        A = A + "\\Replace.fpc";
+        ifstream R (FileName.c_str());
+        ofstream W (A.c_str());
+        if (Name.Length())
+                {
+                while   (A.SubString(1,A.Length()) != Name.SubString(1,Name.Length()))
+                        {
+                        R.getline(s,2500);
+                        A = s;
+                        A = A.Trim();
+                        W << A.c_str() << endl;
+                        if (A.SubString(1,5) == "[end]" )
+                                {
+                                ShowMessage ("   FootPrint " + A + " not found!");
+                                return;
+                                }
+                        }
+                i = StartIndex+1;
+                while (i <= EndIndex)
+                        {
+                        W << footprints[i].c_str() << endl;
+                        i++;
+                        }
+                W << endl;
+                while (1)
+                        {
+                        R.getline(s,2500);
+                        A = s;
+                        A = A.Trim();
+                        if ((A.SubString(1,5) == "name:" ) || (A.SubString(1,7) == "[board]" ))
+                                {
+                                W << A.c_str() << endl;
+                                break;
+                                }
+                        }
+                while   (A.SubString(1,5) != "[end]" )
+                        {
+                        R.getline(s,2500);
+                        A = s;
+                        A = A.Trim();
+                        W << A.c_str() << endl;
+                        }
+                ShowMessage ("   FootPrint replace successfully!");
+                }
+        else    {
+                Form1->ListBox5->Clear();               //Список замененных футпринтов
+                while (A.SubString(1,5) != "[end]" )
+                        {
+                        R.getline(s,2500);
+                        A = s;
+                        A = A.Trim();
+                        while (A.SubString(1,5) == "name:" )
+                                {
+                                i = 0;
+                                Form1->Label10->Caption = " Replace: " + A;
+                                Application->ProcessMessages();
+                                while (1)
+                                        {
+                                        if (A.SubString(1,A.Length()) == HEADERS[i].SubString(1,HEADERS[i].Length()))
+                                                {
+                                                W << HEADERS[i].c_str() << endl;
+                                                break;
+                                                }
+                                        if (HEADERS[i].SubString(1,HEADERS[i].Length()) == "end" )
+                                                {
+                                                i = -1;
+                                                break;
+                                                }
+                                        i++;
+                                        }
+                                if (i != -1)
+                                        {
+                                        Form1->ListBox5->Items->Add(HEADERS[i]);
+                                        long index = n_str[i] + 1;
+                                        while (index <= end_str[i])
+                                                {
+                                                W << footprints[index].c_str() << endl;
+                                                index++;
+                                                }
+                                        W << endl;
+                                        while (1)
+                                                {
+                                                R.getline(s,250);
+                                                A = s;
+                                                A = A.Trim();
+                                                if (A.SubString(1,5) == "name:" )        break;
+                                                if (A.SubString(1,7) == "[board]" )     break;
+                                                }       //while (1)
+                                        }       //if (i != -1)
+                                else    break;
+                                }       //while (A.SubString(1,5) == "name:" )
+                        W << A.c_str() << endl;
+                        }       //while (A.SubString(1,5) != "[end]" )
+                i = 0;
+                A = "";
+                while (i < Form1->ListBox5->Count)
+                        {
+                        A = A + "   " + Form1->ListBox5->Items->operator [](i);
+                        A = A + "\n";
+                        if (A.Length() > 150)
+                                {
+                                ShowMessage ("   FootPrint replace successfully: \n\n" + A);
+                                A = "";
+                                }
+                        i++;
+                        }
+                if (A.Length())
+                        {
+                        ShowMessage ("   FootPrint replace successfully: \n\n" + A);
+                        A = "";
+                        }
+                }
+        R.close();
+        W.close();
+        Application->ProcessMessages();
+        Sleep(500);
+        //-------------запуск ------------
+        AnsiString fn = ExtractFilePath(Application->ExeName);
+        AnsiString B = fn + "Replace.fpc";
+        //
+        SHELLEXECUTEINFO info = {0};
+        fn.SetLength(fn.Length()-1);
+        fn = ExtractFilePath(fn);
+        fn.SetLength(fn.Length()-1);
+        fn = ExtractFilePath(fn) + "freepcb.exe";
+        AnsiString FN = ("\""+fn+"\"");
+        AnsiString ps = B;
+        AnsiString PS = ("\""+ps+"\"");
+        info.cbSize = sizeof(SHELLEXECUTEINFO);
+        info.fMask = NULL;
+        info.hwnd = NULL;
+        info.lpVerb = NULL;
+        info.lpFile = FN.c_str();
+        info.lpParameters = PS.c_str();
+        info.lpDirectory = NULL;
+        info.nShow = SW_SHOW;//SW_MAXIMIZE; //SW_HIDE
+        info.hInstApp = NULL;
+        int INF = ShellExecuteEx(&info);
+        if( INF == 0 )
+                ShowMessage("Something went wrong .. If the problem persists more than once, report it to support at freepcb.dev");
+        }

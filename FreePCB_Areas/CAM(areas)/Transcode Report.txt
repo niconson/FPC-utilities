@@ -1,0 +1,29 @@
+
+
+   ---- Transcoding 'C:\FreePcbDev\FreePCB_2\Debug\FPC_EXE\FreePCB_Areas\CAM(areas)\INNER_2.gbr' ----   Mon Dec 28 15:53:30 2020
+
+D11   --> D100
+D13   --> D101
+D14   --> D102
+D15   --> D103
+-----------------------------------------------------------------
+
+
+   ---- Transcoding 'C:\FreePcbDev\FreePCB_2\Debug\FPC_EXE\FreePCB_Areas\CAM(areas)\INNER_2.gbr' ----   Mon Dec 28 16:02:44 2020
+
+D11   --> D100
+D12   --> D101
+D13   --> D102
+D14   --> D103
+D15   --> D104
+-----------------------------------------------------------------
+
+
+   ---- Transcoding 'C:\FreePcbDev\FreePCB_2\Debug\FPC_EXE\FreePCB_Areas\CAM(areas)\INNER_2.gbr' ----   Mon Dec 28 16:26:23 2020
+
+D11   --> D100
+D12   --> D101
+D13   --> D102
+D14   --> D103
+D15   --> D104
+-----------------------------------------------------------------

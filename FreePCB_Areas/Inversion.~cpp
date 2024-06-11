@@ -1,0 +1,47 @@
+//---------------------------------------------------------------------------
+
+
+#pragma hdrstop
+
+#include "Inversion.h"
+#include "Debug_Areas.h"
+//---------------------------------------------------------------------------
+
+#pragma package(smart_init)
+
+static int pos=0;
+
+//---------------------------------------------------------------------------
+int Inversion (int cc)
+        {
+        if (pos == CountLinesCut)
+                return 0;
+        if( pos == LinesCut[CountLinesCut-1].First )
+                {
+                Corners[cc].X = TotalRect.Left;
+                Corners[cc].Y = TotalRect.Bottom;
+                cc++;
+                Corners[cc].X = TotalRect.Left;
+                Corners[cc].Y = TotalRect.Top;
+                cc++;
+                Corners[cc].X = TotalRect.Right;
+                Corners[cc].Y = TotalRect.Top;
+                cc++;
+                Corners[cc].X = TotalRect.Right;
+                Corners[cc].Y = TotalRect.Bottom;
+                Corners[cc].Flag = 1;
+                cc++;
+                }
+        for( int ii=pos; ii<CountLinesCut; ii++ )
+                {
+                Corners[cc].X = LinesCut[ii].X1;
+                Corners[cc].Y = LinesCut[ii].Y1;
+                cc++;
+                pos++;
+                if(LinesCut[ii].First != LinesCut[ii+1].First)
+                        break;
+                }
+        if(cc)
+                Corners[cc-1].Flag = 1;
+        return cc;
+        }

@@ -1,0 +1,164 @@
+//---------------------------------------------------------------------------
+
+
+#pragma hdrstop
+
+#include "WR_part.h"
+#include "FPC_to_PCB.h"
+#include "fstream.h"
+#include "math.h"
+//---------------------------------------------------------------------------
+
+#pragma package(smart_init)
+
+
+void WR_part (void)
+{
+ if (Package.SubString(1,Package.Length()) == "Error" )
+        return;
+ if (!Package.Length())
+        return;
+ ofstream PARTS ;
+ PARTS.open((Path + "PARTS.TXT").c_str(), std::ios_base::app );
+
+ //PATTERN
+
+ PARTS << "    (pattern (patternRef \"";
+ PARTS << Package.c_str();
+ PARTS << "_0\") (refDesRef \"";
+ PARTS << Reference.c_str();
+ PARTS << "\") (pt ";
+ if ((ABS(Xpos) < 30)||(ABS(Ypos) < 30)) Flag_Warning1 = true;
+ if ((ABS(Xpos) > 870)||(ABS(Ypos) > 870)) Flag_Warning1 = true;
+ PARTS << F_str(Xpos).c_str();
+ PARTS << " ";
+ PARTS << F_str(Ypos).c_str();
+ PARTS << ") (rotation ";
+ if(Side == 0 && Angle > 0.01)
+        {
+        Angle = 360 - Angle;
+        }
+ PARTS << Angle;
+ if (Side)
+        {
+        PARTS << ") (isFlipped True";
+        }
+ PARTS << ")(patternGraphicsNameRef \"Primary\")" << endl;
+ PARTS << "      (patternGraphicsRef " << endl;
+ PARTS << "        (patternGraphicsNameRef \"Primary\")" << endl;
+ //TYPE
+
+ PARTS << "        (attr \"Type\" \"";
+ int ind_of = Form1->LB_Pack_for_T->Items->IndexOf(Package);
+ Package_for_Type = Package;
+ if( ind_of >= 0 && ind_of%2 == 0 )
+        Package_for_Type = Form1->LB_Pack_for_T->Items->operator [](ind_of+1);
+ PARTS << Package_for_Type.c_str();
+ PARTS << "\" (pt 0.0 0.0) (textStyleRef \"(Default)\") )" << endl;
+
+ //VALUE
+ if (Value.Length() != 0)
+ {
+ PARTS << "        (attr \"Value\" \"";
+ PARTS << Value.c_str();
+ PARTS << "\" (pt ";
+ if (Angle)
+        {
+        X = X_val;
+        Y = Y_val;
+        Rotate_Vertex (&X, &Y, Angle);
+        X_val = X;
+        Y_val = Y;
+        }
+ if (Side)
+        X_val = -X_val;
+ PARTS << F_str(X_val).c_str();
+ PARTS << " ";
+ PARTS << F_str(Y_val).c_str();
+ PARTS << ") (rotation ";
+
+ ANG_val = ANG_val - Angle;
+ if (ANG_val < 0) ANG_val = ANG_val + 360;
+ ANG_val = 360 - ANG_val;
+ PARTS << ANG_val;
+ if (Side)
+        {
+        PARTS << ") (isFlipped True";
+        }
+ PARTS << ") (isVisible ";
+ if (Vis_val)
+        PARTS << "True" ;
+ else
+        PARTS << "False" ;
+ PARTS << ") (textStyleRef \"";
+ PARTS << "T";
+ PARTS << (F_str(H_val)).c_str();
+ PARTS << "x";
+ PARTS << (F_str(W_val)).c_str();
+ PARTS << "\") )" << endl;
+ }//if (Value.Length() != 0)
+
+ //REFDES
+
+ PARTS << "        (attr \"RefDes\" \"";
+ PARTS << Reference.c_str() ;
+ PARTS << "\" (pt ";
+ if (Angle)
+        {
+        X = X_ref;
+        Y = Y_ref;
+        Rotate_Vertex (&X, &Y, Angle);
+        X_ref = X;
+        Y_ref = Y;
+        }
+ if (Side)
+        X_ref = -X_ref;
+ PARTS << F_str(X_ref).c_str();
+ PARTS << " ";
+ PARTS << F_str(Y_ref).c_str();
+ PARTS << ") (rotation ";
+
+ ANG_ref = ANG_ref - Angle;
+ if (ANG_ref < 0) ANG_ref = ANG_ref + 360;
+ ANG_ref = 360 - ANG_ref;
+ PARTS << ANG_ref;
+ if (Side)
+        {
+        PARTS << ") (isFlipped True";
+        }
+ PARTS << ") (isVisible " ;
+ if (Vis_ref)
+        PARTS << "True" ;
+ else
+        PARTS << "False" ;
+ PARTS << ") (textStyleRef \"";
+ PARTS << "T";
+ PARTS << (F_str(H_ref)).c_str();
+ PARTS << "x";
+ PARTS << (F_str(W_ref)).c_str();
+ PARTS << "\") )" << endl;
+ PARTS << "      )" << endl;
+ PARTS << "    )" << endl;
+ PARTS.close();
+ //--------------------
+ //--------------------
+ //--------------------
+ ofstream WR_compInst ;
+ WR_compInst.open((Path + "compInst.TXT").c_str(), std::ios_base::app );
+ WR_compInst << "  (compInst \"";
+ WR_compInst << Reference.c_str();
+ WR_compInst << "\"" << endl;
+ WR_compInst << "    (compRef \"";
+ WR_compInst << Package.c_str();
+ WR_compInst << "_0\")" << endl;
+ WR_compInst << "    (originalName \"";
+ WR_compInst << Package.c_str();
+
+ WR_compInst << "\")"<< endl;
+ //WR_compInst << "    (compValue \"";
+ //WR_compInst << Value.c_str();
+ //WR_compInst << "\")" << endl;
+ WR_compInst << "  )" << endl;
+
+ WR_compInst.close();
+}

@@ -1,0 +1,46 @@
+//---------------------------------------------------------------------------
+
+
+#pragma hdrstop
+
+#include "Angle.h"
+#include "Debug_Areas.h"
+#include "math.h"
+//---------------------------------------------------------------------------
+
+#pragma package(smart_init)
+
+
+double Angle (double dx, double dy, double x0, double y0)
+        {
+        double ANG_s;
+        dx = dx - x0;
+        dy = dy - y0;
+        if (ABS(dx) < BY_ZERO)
+                {
+                if (dy > BY_ZERO)       ANG_s = 90.0;
+                else if (dy < -BY_ZERO) ANG_s = 270.0;
+                else                    return 0;
+                }
+        else
+                {
+                double Dxy = dy/dx;
+                ANG_s = (atan(Dxy))*(double)180.0/(double)M_PI;
+                if ((dx > 0)&&(dy < 0)) ANG_s = 360.0 + ANG_s;
+                if (dx < 0) ANG_s = 180.0 + ANG_s;
+                }
+        return ANG_s;
+        }
+
+/*
+double Angle( double x1, double y1, double xc, double yc )
+{
+	double d = Length_Line(xc, yc, x1, y1); // calc distance between two points
+        if (d < BY_ZERO) return 0;
+	double a1;
+	if ( asin( (y1-yc)/d ) >= 0 )
+		a1 = acos( (x1-xc)/d );
+	else
+		a1 = 2*M_PI - acos( (x1-xc)/d );
+	return a1;
+}    */

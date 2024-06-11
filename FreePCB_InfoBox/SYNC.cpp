@@ -1,0 +1,219 @@
+//---------------------------------------------------------------------------
+
+
+#pragma hdrstop
+
+#include "SYNC.h"
+#include "Comp_man.h"
+#include "Path_EXE.h"
+#include "Find_Files.h"
+//---------------------------------------------------------------------------
+
+#pragma package(smart_init)
+
+
+
+
+
+
+
+bool SYNC (void)
+{
+AnsiString CAT;
+Form4->FILES->Items->Clear();
+Wind = GetForegroundWindow();
+char WN[200];
+GetWindowText(Wind, WN, 200);
+AnsiString Window = WN;
+A = Form1->Caption;
+if (Window.SubString(1,Window.Length()) == A.SubString(1,A.Length()))
+        return false;
+//------------------
+if (Window.SubString(Window.Length(),1) == "*") Window = Window.SubString(1,(Window.Length()-1)) ;
+WindowHeader = Window;
+//------------------
+i = 0;
+bool FlagHWF = false;
+while (i < Form2->HeaderWind->Items->Count)
+        {
+        AnsiString HWF = Form2->HeaderWind->Items->operator [](i);  //Header window FreePcb
+        if (Window.SubString(1,HWF.Length()) == HWF.SubString(1,HWF.Length()))
+        if (HWF.Length())
+                {
+                FlagHWF = true;
+                A = HWF;
+                break;
+                }
+        i++;
+        }
+if (HeaderBack.SubString(1,HeaderBack.Length()) == Window.SubString(1,Window.Length()) )
+        {
+        Form1->Visible = true;
+        FileName = FileNameBack;
+        return false;
+        }
+else if (FlagHWF)
+        {
+        Form1->Visible = true;
+        HeaderBack = Window;
+        }
+else    {
+        if (FileName.Length())
+                {
+                FileNameBack = FileName;
+                }
+        //FileName = "";
+        Form1->Visible = false;
+        return false;
+        }
+//-------------- индекс начала названия файла в заголовке окна ------------
+//if (!A.Length())
+//        {
+//        FileName = "";
+//        return false;
+//        }
+//int K = 1;
+//K = A.Length() + 1;
+//FileName = WindowHeader.SubString(K,(WindowHeader.Length()-K+1)) ;
+//if (!FileName.Length())
+//        return false;
+
+//------------------
+/*
+if (Form2->PrFolder->Text.Length() < 2)
+        {
+        if (Form2->Language->Checked)   ShowMessage("   Пусто!");
+        else                            ShowMessage("   Empty!");
+        Form2->PrFolder->Color = clRed;
+        Form2->Visible = true;
+        return true;
+        }
+Form4->FILES->Items->Clear();
+//------------------
+if (Form2->Language->Checked)   Form1->Caption = "  Сканирование...";
+else                            Form1->Caption = "  Scan...";
+Application->ProcessMessages();
+AnsiString save[99];//пути каталогов в которые уже заходили
+#define _set 1
+#define _out 2
+#define _in  3
+#define _none 4
+for (int Number = 1; Number < Form2->PrFolder->Items->Count; Number++)
+        {
+        if (Form2->PrFolder->ItemIndex) CAT = Form2->PrFolder->Items->operator [](Form2->PrFolder->ItemIndex);
+        else                            CAT = Form2->PrFolder->Items->operator [](Number);
+        if (CAT.SubString(CAT.Length(),1) == "\\")      CAT = CAT.SubString(1,(CAT.Length()-1));
+        long str = 0;        //номер подкаталога
+        TSearchRec sr;
+        int COMMAND = _none;
+        while(1)
+                {//НАЧАЛО ПОИСКА
+                if (FindFirst((CAT+"\\*"), faAnyFile, sr) == 0)
+                        {
+                        do
+                                {
+                                if (COMMAND == _set )
+                                        {
+                                        COMMAND = _none;
+                                        while (save[str].SubString(1,save[str].Length()) != sr.Name)   FindNext(sr);
+                                        if (!(sr.Attr & faDirectory))
+                                        while (save[str].SubString(1,save[str].Length()) != sr.Name)   FindNext(sr);
+                                        if (FindNext(sr))
+                                                {
+                                                COMMAND = _out;
+                                                break;
+                                                }
+                                        }
+                                if (!(sr.Attr & faVolumeID))
+                                if (!(sr.Attr & faSysFile) )
+                                if (sr.Attr & faDirectory) // directory     //если каталог
+                                        {
+                                        if ((sr.Name!=".")&&(sr.Name!=".."))   //если не две точки
+                                                {
+                                                COMMAND = _in;
+                                                break;
+                                                }
+                                        }
+                                else     //file...
+                                        {
+                                        if ((sr.Name!=".")&&(sr.Name!=".."))
+                                                {
+                                                A = CAT + "\\" + sr.Name;
+                                                int Len1 = sr.Name.Length();
+                                                int Len2 = FileName.Length();
+                                                if (sr.Name.LowerCase().SubString(1,Len1) == FileName.LowerCase().SubString(1,Len2))
+                                                        {
+                                                        int In = Form4->FILES->Items->IndexOf(A);
+                                                        if (In == -1)   Form4->FILES->Items->Add(A) ;
+                                                        }
+                                                COMMAND = _out;
+                                                }
+                                        }
+                                }while (FindNext(sr) == 0);
+                        if (COMMAND == _out )
+                                {                                                     //выходим в директорию выше
+                                if (str == 0) break;
+                                FindClose(sr);
+                                str--;
+                                CAT = ExtractFilePath(CAT);
+                                CAT = CAT.SubString(1,(CAT.Length()-1)) ;                              //убираем символ'\'
+                                FindClose(sr);
+                                COMMAND = _set;
+                                }
+                        else if (COMMAND == _in )
+                                {
+                                save[str] = sr.Name;
+                                CAT = CAT+"\\"+sr.Name;
+                                str++;
+                                FindClose(sr);
+                                COMMAND = _out;
+                                }
+                        }//if (FindFirst(CAT+"\\*", faAnyFile, sr) == 0)
+                else    {                                                     //выходим в директорию выше
+                        if (str == 0) break;
+                        FindClose(sr);
+                        str--;
+                        CAT = ExtractFilePath(CAT);
+                        CAT = CAT.SubString(1,(CAT.Length()-1)) ;                              //убираем символ'\'
+                        FindClose(sr);
+                        COMMAND = _set;
+                        }
+                }//КОНЕЦ ПОИСКА  while(1)
+        FindClose(sr);
+        if (Form2->PrFolder->ItemIndex) break;
+        }
+#undef _set 
+#undef _out
+#undef _in  
+#undef _none     */
+if (Form2->Language->Checked)   Form1->Caption = "  Запрос";
+else                            Form1->Caption = "  Enquary";
+//Application->ProcessMessages();
+//------------------
+/*if (Form4->FILES->Items->Count == 0)
+        {
+        if (Form2->Language->Checked)   Form1->Caption = "  Файл " + FileName + " не найден";
+        else                            Form1->Caption = "  File " + FileName + " not found";
+        Application->ProcessMessages();
+        Form2->PrFolder->Color = clRed;
+        if (FileName.Length()) FileNameBack = FileName;
+        FileName = "";
+        HeaderBack = "";
+        return false;
+        }
+else if (Form4->FILES->Items->Count > 1)
+        {
+        if (Form2->Language->Checked)   Form1->Caption = "  Найдено несколько файлов";
+        else                            Form1->Caption = "  Found a few files";
+        Application->ProcessMessages();
+        Form4->Visible = true;
+        Form4->FormStyle = fsStayOnTop;
+        return false;
+        }
+else FileName = Form4->FILES->Items->operator [](0);  */
+//Form2->PrFolder->Color = clWhite;
+//Form1->Caption = FileName;
+Application->ProcessMessages();
+return true;
+}
+

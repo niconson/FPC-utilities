@@ -1,0 +1,66 @@
+P-CAD ASCII File Open: spectr-4-42bt.fpc.ERR
+
+======================================================================
+
+Warning (line 421): Pad/via style '6.5000x1.9000' has an invalid thermal diamete
+r.  The outer diameter must be greater than the inner diameter.
+Warning (line 421): Pad/via style '6.5000x1.9000' has an invalid spoke width.  S
+poke width must be greater than 0 and less than the inner diameter.
+Warning (line 432): Pad/via style '0.4000x0.4000' has an invalid spoke width.  S
+poke width must be greater than 0 and less than the inner diameter.
+Warning (line 8621): Invalid (self-intersecting) polygon detected.
+Warning (line 8880): Invalid (self-intersecting) polygon detected.
+Warning (line 9049): Invalid (self-intersecting) polygon detected.
+Warning (line 9155): Invalid (self-intersecting) polygon detected.
+Warning (line 9361): Invalid (self-intersecting) polygon detected.
+
+
+Total errors:       0
+Total warnings:     8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+----------------------------------------------------------------------
+
+28-Apr-18  11:42                                            Page    1
+

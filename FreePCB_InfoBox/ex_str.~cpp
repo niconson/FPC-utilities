@@ -1,0 +1,26 @@
+//---------------------------------------------------------------------------
+
+
+#pragma hdrstop
+
+#include "ex_str.h"
+#include "Comp_man.h"
+//---------------------------------------------------------------------------
+
+#pragma package(smart_init)
+
+
+AnsiString ex_str (AnsiString ANSI, long *n)
+{
+  while ((ANSI.SubString(*n,1) != "\"")&&((*n) <= ANSI.Length())) (*n)++;
+  if ((*n) > ANSI.Length()) return "";
+  (*n)++;
+  long Startin = (*n);
+  AnsiString RETURNED = "";
+  while ((ANSI.SubString((*n),1) != "\"")&&((*n) <= ANSI.Length())) (*n)++;
+  if ((*n) > ANSI.Length()) return "";
+  if ((*n) > Startin)   RETURNED = ANSI.SubString(Startin,(*n - Startin));
+  while (ANSI.SubString((*n),1) == "\"") (*n)++;
+  if ((*n) > ANSI.Length()) (*n) = 0;
+  return RETURNED;
+}

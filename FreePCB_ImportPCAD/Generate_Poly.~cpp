@@ -1,0 +1,341 @@
+//---------------------------------------------------------------------------
+
+
+#pragma hdrstop
+
+#include "Generate_Poly.h"
+#include "HEAD.h"
+#include "LSTBXS.h"
+#include "fstream.h"
+#include "math.h"
+//---------------------------------------------------------------------------
+
+#pragma package(smart_init)
+
+
+
+//=================================
+//Œ“–¿∆≈Õ»≈ œŒ ’, œŒ¬Œ–Œ“  ŒŒ–ƒ»Õ¿“
+void mirror_angle (double Part_angle, bool Part_layer, double *X, double *Y)
+{
+double D;
+if(Part_layer == 0)
+        {
+        Rotate_Vertex (X, Y, -Part_angle);
+        }
+else
+        {
+        *X = -(*X);
+        Rotate_Vertex (X, Y, (-Part_angle));
+        }
+}
+
+
+
+//========================
+//√≈Õ≈–¿÷»ﬂ “Œ◊ » œŒÀ»√ŒÕ¿
+void Generate_POINT (double *PARAM , long CASE, double *Xout, double *Yout)
+{
+  double Type2 = *(PARAM + 0);
+     double W2 = *(PARAM + 1)/2;
+     double L2 = *(PARAM + 2)/2;
+     double R2 = *(PARAM + 3);
+double A_Part2 = *(PARAM + 4);
+  double A_Pi2 = *(PARAM + 5);
+   double Ang2 = *(PARAM + 6);
+  double X_Pi2 = *(PARAM + 7);
+  double Y_Pi2 = *(PARAM + 8);
+  double X_Po2 = *(PARAM + 9);
+  double Y_Po2 = *(PARAM + 10);
+    double LR2 = *(PARAM + 11);
+//-----------------
+if (Type2 != 7)
+        {
+        if ((Type2 == 2) || (Type2 == 6)) {L2 = W2; R2 = W2*2/(2 + sqrt(2)); }
+        if (Type2 == 5)
+                {
+                if (W2 < L2) R2 = W2;
+                else         R2 = L2;
+                }
+        double RX = R2;
+        double RY = R2;
+        //----------------------------------------------------
+        if ((CASE >= 4) && (CASE <= 11)) {L2 = -L2; RX = -R2;}
+        if ((CASE >= 8) && (CASE <= 15)) {W2 = -W2; RY = -R2;}
+        if ((CASE == 17) || (CASE == 18)) L2 = -L2;
+        if ((CASE == 18) || (CASE == 19)) W2 = -W2;
+        //-----------------------------------------
+        if (CASE < 16)
+                {
+                if (CASE > 11) CASE = CASE - 3;
+                else if (CASE > 7) CASE = CASE - 2;
+                else if (CASE > 3) CASE = CASE - 1;
+                *Yout = W2 - RY + abs(RY)*sin((double)CASE*(double)300/(double)573);
+                *Xout = L2 - RX + abs(RX)*cos((double)CASE*(double)300/(double)573);
+                }
+        else if (CASE >= 16)
+                {
+                *Yout = W2;
+                *Xout = L2;
+                }
+        }
+//-----------------------------------------
+if (A_Pi2) Rotate_Vertex (Xout, Yout, A_Pi2);
+*Xout += X_Pi2;
+*Yout += Y_Pi2;
+if (LR2 > 1)
+        {
+        Ang2 = -Ang2;
+        mirror_angle (A_Part2, 1, Xout, Yout);
+        }
+else    mirror_angle (A_Part2, 0, Xout, Yout);
+Rotate_Vertex (Xout, Yout, Ang2);
+*Xout += X_Po2;
+*Yout += Y_Po2;
+}
+
+
+
+//==================
+//√≈Õ≈–¿÷»ﬂ œŒÀ»√ŒÕ¿
+//==================
+void Generate_Poly ( double *PARAM, AnsiString NET_name )
+{
+        double Type = *(PARAM + 0);
+        double W = *(PARAM + 1);
+        double L = *(PARAM + 2);
+//      double R = *(PARAM + 3);
+//      double A_Part = *(PARAM + 4);
+        double A_Pi = *(PARAM + 5);
+        double Ang = *(PARAM + 6);
+//      double X_Pi = *(PARAM + 7);
+//      double Y_Pi = *(PARAM + 8);
+//      double X_Po = *(PARAM + 9);
+//      double Y_Po = *(PARAM + 10);
+        double LR = *(PARAM + 11);
+
+if (!NET_name.Length())return;
+bool PasteFlag = false;
+bool SMFlag = false;
+//-------------------
+// –ËÒÓ‚‡ÌËÂ ÔÓÎË„ÓÌ‡
+if ((!Ang)&&(Type != 7)&&(!A_Pi))       return;
+if (LR > 3)                             return;
+if ((Type == 0) || (Type == 1))         return;
+if ((!W) || (!L))                       return;
+if ((Type == 5) && (W == L))            return;
+
+AnsiString S = ExtractFilePath (Application->ExeName);
+S = S + "Import_Tango\\";
+
+if      (NET_name.SubString(1,8) == "__Solder")
+        {
+        SMFlag = true;
+        NET_name = "";
+        }
+else if (NET_name.SubString(1,7) == "__Paste")
+        {
+        PasteFlag = true;
+        NET_name = "";
+        }
+
+if (NET_name.Length())  S = S + "Area.txt";
+else                    S = S + "SM.txt";
+ofstream P;
+P.open (S.c_str(), std::ios_base::app);
+if (NET_name.Length())
+        {
+        P << ("net: \"" + NET_name + "\"").c_str() << endl;
+        P << "area: ";
+        }
+else    P << "sm_cutout: ";
+//
+double Point_X;
+double Point_Y;
+if ((Type == 4) || (Type == 5))   //RND RECT
+        {
+        if (NET_name.Length())
+                {
+                P << "1 16 ";
+                if ((LR == 1)||(LR == 3))       P << (AnsiString(LBOT)+" 0").c_str();
+                else                            P << (AnsiString(LTOP)+" 0").c_str();
+                P << endl;
+                }
+        else    {
+                P << "16 ";
+                if      (SMFlag)        P << "0 ";
+                else if (PasteFlag)     P << "2 ";
+                if ((LR == 1)||(LR == 3))       P << AnsiString(LBSM).c_str();
+                else                            P << AnsiString(LTSM).c_str();
+                P << endl;
+                }
+        long  CS = 0;
+        while (CS < 16)
+                {
+                Generate_POINT (PARAM , CS, &Point_X, &Point_Y);
+                P << (AnsiString("corner: ") + AnsiString(CS + 1) + " ").c_str() ;
+                P << (AnsiString((long )Point_X) + " " + (long )Point_Y).c_str();
+                if (CS == 15) P << " 0 1" << endl;
+                else          P << " 0 0" << endl;
+                CS++;
+                }
+        }
+else if (Type == 6)       //OCTAGON
+        {
+        if (NET_name.Length())
+                {
+                P << "1 8 ";
+                if ((LR == 1)||(LR == 3))       P << (AnsiString(LBOT)+" 0").c_str();
+                else                            P << (AnsiString(LTOP)+" 0").c_str();
+                P << endl;
+                }
+        else    {
+                P << "8 ";
+                if      (SMFlag)        P << "0 ";
+                else if (PasteFlag)     P << "2 ";
+                if ((LR == 1)||(LR == 3))       P << AnsiString(LBSM).c_str();
+                else                            P << AnsiString(LTSM).c_str();
+                P << endl;
+                }
+        Generate_POINT (PARAM , 0, &Point_X, &Point_Y);
+        P << (AnsiString("corner: 1 ")).c_str() ;
+        P << (AnsiString((long )Point_X) + " " + (long )Point_Y).c_str();
+        P << " 0 0" << endl;
+        Generate_POINT (PARAM , 3, &Point_X, &Point_Y);
+        P << (AnsiString("corner: 2 ")).c_str() ;
+        P << (AnsiString((long )Point_X) + " " + (long )Point_Y).c_str();
+        P << " 0 0" << endl;
+        Generate_POINT (PARAM , 4, &Point_X, &Point_Y);
+        P << (AnsiString("corner: 3 ")).c_str() ;
+        P << (AnsiString((long )Point_X) + " " + (long )Point_Y).c_str();
+        P << " 0 0" << endl;
+        Generate_POINT (PARAM , 7, &Point_X, &Point_Y);
+        P << (AnsiString("corner: 4 ")).c_str() ;
+        P << (AnsiString((long )Point_X) + " " + (long )Point_Y).c_str();
+        P << " 0 0" << endl;
+        Generate_POINT (PARAM , 8, &Point_X, &Point_Y);
+        P << (AnsiString("corner: 5 ")).c_str() ;
+        P << (AnsiString((long )Point_X) + " " + (long )Point_Y).c_str();
+        P << " 0 0" << endl;
+        Generate_POINT (PARAM , 11, &Point_X, &Point_Y);
+        P << (AnsiString("corner: 6 ")).c_str() ;
+        P << (AnsiString((long )Point_X) + " " + (long )Point_Y).c_str();
+        P << " 0 0" << endl;
+        Generate_POINT (PARAM , 12, &Point_X, &Point_Y);
+        P << (AnsiString("corner: 7 ")).c_str() ;
+        P << (AnsiString((long )Point_X) + " " + (long )Point_Y).c_str();
+        P << " 0 0" << endl;
+        Generate_POINT (PARAM , 15, &Point_X, &Point_Y);
+        P << (AnsiString("corner: 8 ")).c_str() ;
+        P << (AnsiString((long)Point_X) + " " + (long )Point_Y).c_str();
+        P << " 0 1" << endl;
+        }
+else if (Type == 7)       //POLYGON
+        {
+        long i;
+        double SwellSM = StrToFloat(Form1->ComboBox2->Items->operator [](Form1->ComboBox2->ItemIndex));
+        SwellSM = SwellSM*1000000;
+        if ((LR == 1)||(LR == 3))       i = Form1->ListBox1->Items->IndexOf("CountBottomCorner");
+        else                            i = Form1->ListBox1->Items->IndexOf("CountTopCorner");
+        AnsiString PADLAYER = Form1->ListBox1->Items->operator [](i);
+        PADLAYER = PADLAYER.SubString(6,3);
+        AnsiString Str;
+        if (i >= 0) Str = Form1->ListBox1->Items->operator [](i+1);
+        else Str = "0";
+        int CCorner = StrToInt(Str);
+        if (NET_name.Length())
+                {
+                P << ("1 " + AnsiString(CCorner) + " ").c_str();
+                if ((LR == 1)||(LR == 3))       P << (AnsiString(LBOT)+" 0").c_str();
+                else                            P << (AnsiString(LTOP)+" 0").c_str();
+                P << endl;
+                }
+        else    {
+                P << (AnsiString(CCorner) + " ").c_str();
+                if      (SMFlag)        P << "0 ";
+                else if (PasteFlag)     P << "2 ";
+                if ((LR == 1)||(LR == 3))       P << AnsiString(LBSM).c_str();
+                else                            P << AnsiString(LTSM).c_str();
+                P << endl;
+                }
+        i = 0;
+        int ncor = 1;
+        while (i < Form1->ListBox1->Items->Count)
+                {
+                AnsiString S = Form1->ListBox1->Items->operator [](i);
+                long n = prob(S,1);
+                Point_X = ex_float_NM(S, &n, UNITS);
+                Point_Y = ex_float_NM(S, &n, UNITS);
+                if (!NET_name.Length())
+                        {
+                        if      (SMFlag)
+                                {
+                                if (Point_X > 0)             Point_X += SwellSM;
+                                else if (Point_X < 0)        Point_X -= SwellSM;
+                                if (Point_Y > 0)             Point_Y += SwellSM;
+                                else if (Point_Y < 0)        Point_Y -= SwellSM;
+                                }
+                        else if (PasteFlag)
+                                {
+                                if (Point_X > 0)             Point_X -= SwellSM;
+                                else if (Point_X < 0)        Point_X += SwellSM;
+                                if (Point_Y > 0)             Point_Y -= SwellSM;
+                                else if (Point_Y < 0)        Point_Y += SwellSM;
+                                }
+                        }
+                if (S.SubString(1,3) == PADLAYER.SubString(1,3))
+                        {
+                        Generate_POINT (PARAM , 20, &Point_X, &Point_Y);
+                        P << (AnsiString("corner: ") + AnsiString(ncor) + " ").c_str() ;
+                        P << (AnsiString((long)Point_X) + " " + (long)Point_Y).c_str();
+                        if (i == CCorner)       P << " 0 1" << endl;
+                        else                    P << " 0 0" << endl;
+                        ncor++;
+                        }
+                i++;
+                }
+        }
+else    //RECT
+        {
+        if (NET_name.Length())
+                {
+                P << "1 8 ";
+                if (LR) P << AnsiString(LBOT)+" 0";
+                else    P << AnsiString(LTOP)+" 0";
+                P << endl;
+                }
+        else    {
+                P << "4 ";
+                if      (SMFlag)        P << "0 ";
+                else if (PasteFlag)     P << "2 ";
+                if ((LR == 1)||(LR == 3))       P << AnsiString(LBSM);
+                else                            P << AnsiString(LTSM);
+                P << endl;
+                }
+        long CSR = 16;
+        while (CSR < 20)
+                {
+                if (NET_name.Length())
+                        {
+                        Generate_POINT (PARAM , CSR, &Point_X, &Point_Y);
+                        P << (AnsiString("corner: ") + AnsiString(CSR*2 - 31) + " ").c_str() ;
+                        P << (AnsiString((long)Point_X) + " " + (long)Point_Y).c_str();
+                        P << " 0 0" << endl;
+                        P << (AnsiString("corner: ") + AnsiString(CSR*2 - 30) + " ").c_str() ;
+                        P << (AnsiString((long)Point_X) + " " + (long)Point_Y).c_str();
+                        if (CSR == 19) P << " 0 1" << endl;
+                        else           P << " 0 0" << endl;
+                        }
+                else
+                        {
+                        Generate_POINT (PARAM , CSR, &Point_X, &Point_Y);
+                        P << (AnsiString("corner: ") + AnsiString(CSR - 15) + " ").c_str() ;
+                        P << (AnsiString((long)Point_X) + " " + (long)Point_Y).c_str();
+                        if (CSR == 19) P << " 0 1" << endl;
+                        else           P << " 0 0" << endl;
+                        }
+                CSR++;
+                }
+        }
+P.close();
+}

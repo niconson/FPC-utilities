@@ -1,0 +1,95 @@
+//---------------------------------------------------------------------------
+
+
+#pragma hdrstop
+
+#include "Trace.h"
+#include "FPC_to_PCB.h"
+#include "fstream.h"
+//---------------------------------------------------------------------------
+
+#pragma package(smart_init)
+
+
+void Trace (AnsiString Str1, AnsiString Str2, AnsiString Str3,AnsiString net)
+{
+AnsiString memmo = A;
+A = Str1;
+//
+i = Prob(2);
+X = ex_float_NM(&i, units_mm);            //X 1
+Y = ex_float_NM(&i, units_mm);            //Y 1
+i = Prob(6);
+F = ex_float_NM(&i, units_mm);            //via diam
+H = ex_float_NM(&i, units_mm);            //via hole
+A = Str2;
+i = Prob(2);
+D = ex_float_NM(&i, -1);                  //слой линии
+if( (int)D == 9 )
+        return;
+W = ex_float_NM(&i, units_mm);            //толщина линии
+A = Str3;
+i = Prob(2);
+Xpos = ex_float_NM(&i, units_mm);         //X 2
+Ypos = ex_float_NM(&i, units_mm);         //Y 2
+int layr  = D;
+switch(layr)
+        {
+        case 15: B = "TOP.TXT"; break;
+        case 16: B = "BOTTOM.TXT"; break;
+        case 17: B = "INNER1.TXT"; break;
+        case 18: B = "INNER2.TXT"; break;
+        case 19: B = "INNER3.TXT"; break;
+        case 20: B = "INNER4.TXT"; break;
+        case 21: B = "INNER5.TXT"; break;
+        case 22: B = "INNER6.TXT"; break;
+        case 23: B = "INNER7.TXT"; break;
+        case 24: B = "INNER8.TXT"; break;
+        case 25: B = "INNER9.TXT"; break;
+        case 26: B = "INNER0.TXT"; break;
+        case 27: B = "INNER11.TXT"; break;
+        case 28: B = "INNER12.TXT"; break;
+        case 29: B = "INNER13.TXT"; break;
+        case 30: B = "INNER14.TXT"; break;
+        default: Flag_Warning5 = true;
+        }
+if (Length_Line(X, Y, Xpos, Ypos) > (1/(double)100))
+        {
+        ofstream TracE;
+        TracE.open((Path + B).c_str(), std::ios_base::app );
+        TracE << "    (line (pt " ;
+        TracE << F_str(X).c_str();
+        TracE << " ";
+        TracE << F_str(Y).c_str();
+        TracE << ") (pt ";
+        TracE << F_str(Xpos).c_str();
+        TracE << " ";
+        TracE << F_str(Ypos).c_str();
+        TracE << ") (width ";
+        TracE << F_str(W).c_str();
+        TracE << ") (netNameRef \"";
+        TracE << net.c_str();
+        TracE << "\") )" << endl;
+        TracE.close();
+        }
+if ((F)&&(H))
+   {
+     B = viaStyle();
+     ofstream PRTS ;
+     PRTS.open((Path + "PARTS.TXT").c_str(), std::ios_base::app );
+     PRTS << "    (via (viaStyleRef \"";
+     PRTS << B.c_str();
+     PRTS << "\") (pt ";
+     PRTS << F_str(X).c_str();
+     PRTS << " ";
+     PRTS << F_str(Y).c_str();
+     PRTS << ") (netNameRef \"";
+     PRTS << net.c_str();
+     PRTS << "\") )";
+     PRTS << endl;
+     PRTS.close();
+   }
+
+//
+A = memmo;
+}

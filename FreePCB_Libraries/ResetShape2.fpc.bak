@@ -1,0 +1,2086 @@
+[options]
+
+version: 1.359
+file_version: 1.344
+project_name: "ImportTango"
+full_library_folder: "i:\рабочая папка\library for freepcb"
+CAM_folder: ""
+ses_file_path: ""
+netlist_file_path: ""
+SMT_connect_copper: "1"
+default_glue_width: "635000"
+dsn_flags: "3"
+dsn_bounds_poly: "0"
+dsn_signals_poly: "0"
+autosave_interval: 0
+auto_ratline_disable: "0"
+auto_ratline_disable_min_pins: "100"
+netlist_import_flags: 903
+units: MM
+
+visible_grid_spacing: 1000000.000000
+  visible_grid_item: 100MIL
+  visible_grid_item: 125MIL
+  visible_grid_item: 200MIL
+  visible_grid_item: 250MIL
+  visible_grid_item: 400MIL
+  visible_grid_item: 500MIL
+  visible_grid_item: 1000MIL
+  visible_grid_item: 1MM
+  visible_grid_item: 2MM
+  visible_grid_item: 2.5MM
+  visible_grid_item: 4MM
+  visible_grid_item: 5MM
+  visible_grid_item: 10MM
+  visible_grid_item: 20MM
+  visible_grid_item: 25MM
+  visible_grid_item: 40MM
+  visible_grid_item: 50MM
+  visible_grid_item: 100MM
+
+placement_grid_spacing: 100000.000000
+  placement_grid_item: 10MIL
+  placement_grid_item: 20MIL
+  placement_grid_item: 25MIL
+  placement_grid_item: 40MIL
+  placement_grid_item: 50MIL
+  placement_grid_item: 100MIL
+  placement_grid_item: 200MIL
+  placement_grid_item: 250MIL
+  placement_grid_item: 400MIL
+  placement_grid_item: 500MIL
+  placement_grid_item: 1000MIL
+  placement_grid_item: 0.1MM
+  placement_grid_item: 0.2MM
+  placement_grid_item: 0.25MM
+  placement_grid_item: 0.4MM
+  placement_grid_item: 0.5MM
+  placement_grid_item: 1MM
+  placement_grid_item: 2MM
+  placement_grid_item: 2.5MM
+  placement_grid_item: 4MM
+  placement_grid_item: 5MM
+  placement_grid_item: 10MM
+
+routing_grid_spacing: 100000.000000
+  routing_grid_item: 1MIL
+  routing_grid_item: 2MIL
+  routing_grid_item: 2.5MIL
+  routing_grid_item: 3.33330709MIL
+  routing_grid_item: 4MIL
+  routing_grid_item: 5MIL
+  routing_grid_item: 6.665MIL
+  routing_grid_item: 10MIL
+  routing_grid_item: 12.5MIL
+  routing_grid_item: 16.665MIL
+  routing_grid_item: 20MIL
+  routing_grid_item: 25MIL
+  routing_grid_item: 40MIL
+  routing_grid_item: 50MIL
+  routing_grid_item: 0.01MM
+  routing_grid_item: 0.02MM
+  routing_grid_item: 0.04MM
+  routing_grid_item: 0.05MM
+  routing_grid_item: 0.1MM
+  routing_grid_item: 0.2MM
+  routing_grid_item: 0.25MM
+  routing_grid_item: 0.4MM
+  routing_grid_item: 0.5MM
+  routing_grid_item: 1MM
+  routing_grid_item: 2MM
+  routing_grid_item: 2.5MM
+  routing_grid_item: 4MM
+  routing_grid_item: 5MM
+  routing_grid_item: 10MM
+
+snap_angle: 45
+
+fp_visible_grid_spacing: 1000000.000000
+  fp_visible_grid_item: 100MIL
+  fp_visible_grid_item: 125MIL
+  fp_visible_grid_item: 200MIL
+  fp_visible_grid_item: 250MIL
+  fp_visible_grid_item: 400MIL
+  fp_visible_grid_item: 500MIL
+  fp_visible_grid_item: 1000MIL
+  fp_visible_grid_item: 1MM
+  fp_visible_grid_item: 2MM
+  fp_visible_grid_item: 2.5MM
+  fp_visible_grid_item: 4MM
+  fp_visible_grid_item: 5MM
+  fp_visible_grid_item: 10MM
+  fp_visible_grid_item: 20MM
+  fp_visible_grid_item: 25MM
+  fp_visible_grid_item: 40MM
+  fp_visible_grid_item: 50MM
+  fp_visible_grid_item: 100MM
+
+fp_placement_grid_spacing: 50000.000000
+  fp_placement_grid_item: 10MIL
+  fp_placement_grid_item: 20MIL
+  fp_placement_grid_item: 25MIL
+  fp_placement_grid_item: 40MIL
+  fp_placement_grid_item: 50MIL
+  fp_placement_grid_item: 100MIL
+  fp_placement_grid_item: 200MIL
+  fp_placement_grid_item: 250MIL
+  fp_placement_grid_item: 400MIL
+  fp_placement_grid_item: 500MIL
+  fp_placement_grid_item: 1000MIL
+  fp_placement_grid_item: 0.02MM
+  fp_placement_grid_item: 0.05MM
+  fp_placement_grid_item: 0.1MM
+  fp_placement_grid_item: 0.2MM
+  fp_placement_grid_item: 0.5MM
+  fp_placement_grid_item: 1MM
+  fp_placement_grid_item: 2MM
+  fp_placement_grid_item: 2.5MM
+  fp_placement_grid_item: 4MM
+  fp_placement_grid_item: 5MM
+  fp_placement_grid_item: 10MM
+
+fp_snap_angle: 45
+
+fill_clearance: 600000
+mask_clearance: 50000
+thermal_width: 400000
+min_silkscreen_width: 100000
+board_outline_width: 150000
+hole_clearance: 400000
+pilot_diameter: 200000
+annular_ring_for_pins: 200000
+annular_ring_for_vias: 200000
+shrink_paste_mask: 0
+cam_flags: 6240
+cam_layers: 1048831
+cam_drill_file: 1
+cam_units: 1
+cam_n_x: 1
+cam_n_y: 1
+cam_space_x: 0
+cam_space_y: 0
+
+report_options: 4123
+drc_check_unrouted: 1
+drc_trace_width: 249997
+drc_pad_pad: 198998
+drc_pad_trace: 198998
+drc_trace_trace: 198998
+drc_hole_copper: 499995
+drc_annular_ring_pins: 198998
+drc_annular_ring_vias: 198998
+drc_board_edge_copper: 299997
+drc_board_edge_hole: 499995
+drc_hole_hole: 699993
+drc_copper_copper: 299997
+
+default_trace_width: 304796
+default_via_pad_width: 888991
+default_via_hole_width: 482595
+n_width_menu: 12
+  width_menu_item: 1 507994 1269987 761992
+  width_menu_item: 2 558794 1269987 761992
+  width_menu_item: 3 634993 1269987 761992
+  width_menu_item: 4 685793 1269987 761992
+  width_menu_item: 5 304796 888991 482595
+  width_menu_item: 6 380996 888991 482595
+  width_menu_item: 7 457195 888991 482595
+  width_menu_item: 8 761992 1269987 761992
+  width_menu_item: 9 1015989 1523984 1015989
+  width_menu_item: 10 1269987 1523984 1015989
+  width_menu_item: 11 1523984 1777982 1269987
+  width_menu_item: 12 1777982 2031979 1523984
+
+n_copper_layers: 4
+  layer_info: "selection" 0 255 255 0 1
+  layer_info: "background" 1 74 74 74 1
+  layer_info: "visible grid" 2 255 255 255 0
+  layer_info: "highlight" 3 255 255 255 1
+  layer_info: "DRC error" 4 255 128 64 1
+  layer_info: "board outline" 5 0 0 255 1
+  layer_info: "rat line" 6 0 0 255 1
+  layer_info: "top silk" 7 255 255 119 1
+  layer_info: "bottom silk" 8 170 0 0 1
+  layer_info: "top sm cutout" 9 160 160 160 1
+  layer_info: "bot sm cutout" 10 95 95 95 1
+  layer_info: "thru pad" 11 0 0 0 1
+  layer_info: "top copper" 12 140 140 140 1
+  layer_info: "bottom copper" 13 55 0 0 1
+  layer_info: "inner 1" 14 64 128 64 1
+  layer_info: "inner 2" 15 128 64 64 1
+
+[footprints]
+
+name: "MINI-SO8"
+author: "DUXER"
+description: "E=0.65 C=4.5 DXF: dx=1.3  dy=2.25  h=1.1"
+  units: NM
+  sel_rect: -904000 -2313090 2831000 6231000
+  ref_text: 900000 800000 800000 270 110000
+  value_text: 750000 2000000 0 270 100000
+  centroid: 0 975000 2250000 0
+  text: "*" 1000000 -550000 -2050000 0 100000 0 4
+  outline_polyline: 254000 -500000 5850000
+    next_corner: -500000 -1300000 0
+    next_corner: 2450000 -1300000 0
+    next_corner: 2450000 5850000 0
+    close_polyline: 0
+  n_pins: 8
+    pin: "1" 0 0 0 90
+      top_pad: 3 400000 1000000 1000000 120000
+    pin: "2" 0 650000 0 90
+      top_pad: 3 400000 1000000 1000000 120000
+    pin: "3" 0 1300000 0 90
+      top_pad: 3 400000 1000000 1000000 120000
+    pin: "4" 0 1950000 0 90
+      top_pad: 3 400000 1000000 1000000 120000
+    pin: "5" 0 1950000 4500000 90
+      top_pad: 3 400000 1000000 1000000 120000
+    pin: "6" 0 1300000 4500000 90
+      top_pad: 3 400000 1000000 1000000 120000
+    pin: "7" 0 650000 4500000 90
+      top_pad: 3 400000 1000000 1000000 120000
+    pin: "8" 0 0 4500000 90
+      top_pad: 3 400000 1000000 1000000 120000
+
+name: "SOT-23-5"
+author: "DUXER"
+  units: NM
+  sel_rect: -939000 -1119000 2819000 3719000
+  ref_text: 300000 -200000 100000 0 50000
+  value_text: 300000 -200000 -400000 0 50000
+  centroid: 0 952500 1295400 0
+  outline_polyline: 50000 -660000 3440000
+    next_corner: -660000 -840000 0
+    next_corner: 2540000 -840000 0
+    next_corner: 2540000 3440000 0
+    close_polyline: 0
+  n_pins: 5
+    pin: "1" 0 0 0 0
+      top_pad: 4 990600 330200 330200 0 3
+    pin: "2" 0 939800 0 0
+      top_pad: 4 990600 330200 330200 0 3
+    pin: "3" 0 1905000 0 0
+      top_pad: 4 990600 330200 330200 0 3
+    pin: "4" 0 1905000 2590800 0
+      top_pad: 4 990600 330200 330200 0 3
+    pin: "5" 0 0 2590800 0
+      top_pad: 4 990600 330200 330200 0 3
+
+name: "BNC"
+  units: NM
+  sel_rect: -7804000 -14054000 7804000 17804000
+  ref_text: 300000 0 500000 0 50000
+  value_text: 300000 0 0 0 50000
+  centroid: 0 0 0 0
+  outline_polyline: 100000 -7500000 -50000
+    next_corner: -7500000 -13750000 0
+  outline_polyline: 100000 7500000 -13750000
+    next_corner: 7500000 0 0
+  outline_polyline: 100000 -7500000 -13750000
+    next_corner: 7500000 -13750000 0
+  outline_polyline: 100000 -5000000 8750000
+    next_corner: -5000000 17500000 0
+  outline_polyline: 100000 -260 14250000
+    next_corner: 155500 14266300 0
+    next_corner: 304320 14314510 0
+    next_corner: 439900 14392550 0
+    next_corner: 556340 14497020 0
+    next_corner: 648580 14623370 0
+    next_corner: 712600 14766110 0
+    next_corner: 745620 14919020 0
+    next_corner: 746190 15075460 0
+    next_corner: 714200 15228940 0
+    next_corner: 651000 15372420 0
+    next_corner: 559360 15499620 0
+    next_corner: 443260 15604990 0
+    next_corner: 307800 15683930 0
+    next_corner: 158890 15732980 0
+    next_corner: 3040 15749990 0
+    next_corner: -152950 15734240 0
+    next_corner: -302100 15686470 0
+    next_corner: -438070 15608770 0
+    next_corner: -554940 15504520 0
+    next_corner: -647620 15378280 0
+    next_corner: -712050 15235540 0
+    next_corner: -745450 15082530 0
+    next_corner: -746330 14925930 0
+    next_corner: -714680 14772550 0
+    next_corner: -651860 14629090 0
+    next_corner: -560630 14501800 0
+    next_corner: -444940 14396240 0
+    next_corner: -309860 14317000 0
+    next_corner: -161270 14267540 0
+    next_corner: -610 14250000 0
+  outline_polyline: 100000 5000000 8750000
+    next_corner: 5000000 17500000 0
+  outline_polyline: 100000 -6250000 0
+    next_corner: -6250000 8750000 0
+  outline_polyline: 100000 6250000 8750000
+    next_corner: 6250000 0 0
+  outline_polyline: 100000 -6250000 8750000
+    next_corner: 6250000 8750000 0
+  outline_polyline: 100000 -5000000 17500000
+    next_corner: 5000000 17500000 0
+  outline_polyline: 100000 7500000 0
+    next_corner: -7500000 0 0
+  n_pins: 4
+    pin: "2" 1000000 -2500000 -12500000 90
+      top_pad: 1 1600000 800000 800000 400000
+      inner_pad: 1 1600000 800000 800000 400000 0
+      bottom_pad: 1 1600000 800000 800000 400000
+    pin: "1" 1000000 0 -12500000 90
+      top_pad: 1 1600000 800000 800000 400000
+      inner_pad: 1 1600000 800000 800000 400000 0
+      bottom_pad: 1 1600000 800000 800000 400000
+    pin: "3" 2000000 5000000 -7500000 90
+      top_pad: 1 4500000 2250000 2250000 1125000
+      inner_pad: 1 4500000 2250000 2250000 1125000 0
+      bottom_pad: 1 4500000 2250000 2250000 1125000
+    pin: "4" 2000000 -5000000 -7500000 90
+      top_pad: 1 4500000 2250000 2250000 1125000
+      inner_pad: 1 4500000 2250000 2250000 1125000 0
+      bottom_pad: 1 4500000 2250000 2250000 1125000
+
+name: "SMW5,7"
+  units: NM
+  sel_rect: -3927000 -2754000 3927000 2754000
+  ref_text: 900000 -1200000 1450000 0 100000
+  value_text: 700000 -1650000 300000 0 100000
+  centroid: 0 0 0 0
+  n_pins: 2
+    pin: "1" 0 -3048000 0 0
+      top_pad: 3 5000000 625000 625000 312500
+    pin: "2" 0 3048000 0 0
+      top_pad: 3 5000000 625000 625000 312500
+
+name: "SO-8"
+author: "Ivex"
+description: "Chips"
+  units: NM
+  sel_rect: -1254000 -2617640 4931000 7231000
+  ref_text: 300000 100000 -500000 270 50000
+  value_text: 300000 1500000 -500000 270 50000
+  centroid: 1 1905000 2600000 0
+  text: "*" 1000000 -900000 -2400000 0 100000 0 4
+  outline_polyline: 254000 -850000 6850000
+    next_corner: -850000 -1600000 0
+    next_corner: 4550000 -1600000 0
+    next_corner: 4550000 6850000 0
+    close_polyline: 0
+  n_pins: 8
+    pin: "1" 0 0 0 0
+      top_pad: 3 2400000 350000 350000 200000
+    pin: "2" 0 1270000 0 0
+      top_pad: 3 2400000 350000 350000 200000
+    pin: "3" 0 2540000 0 0
+      top_pad: 3 2400000 350000 350000 200000
+    pin: "4" 0 3810000 0 0
+      top_pad: 3 2400000 350000 350000 200000
+    pin: "5" 0 3810000 5200000 0
+      top_pad: 3 2400000 350000 350000 200000
+    pin: "6" 0 2540000 5200000 0
+      top_pad: 3 2400000 350000 350000 200000
+    pin: "7" 0 1270000 5200000 0
+      top_pad: 3 2400000 350000 350000 200000
+    pin: "8" 0 0 5200000 0
+      top_pad: 3 2400000 350000 350000 200000
+
+name: "W2105-04PS_1"
+  units: NM
+  sel_rect: -3004000 -2366960 8254000 2954000
+  ref_text: 300000 0 500000 0 50000
+  value_text: 300000 0 0 0 50000
+  centroid: 0 0 0 0
+  outline_polyline: 100000 -2000000 -700000
+    next_corner: -1000000 -1700000 0
+  outline_polyline: 100000 7000000 -1700000
+    next_corner: 8000000 -700000 0
+  outline_polyline: 100000 8000000 2700000
+    next_corner: 8000000 -1700000 0
+  outline_polyline: 300000 -2750000 -1963720
+    next_corner: -2746740 -1994870 0
+    next_corner: -2737080 -2024660 0
+    next_corner: -2721440 -2051800 0
+    next_corner: -2700500 -2075100 0
+    next_corner: -2675190 -2093540 0
+    next_corner: -2646600 -2106330 0
+    next_corner: -2615970 -2112900 0
+    next_corner: -2584650 -2112960 0
+    next_corner: -2554030 -2106530 0
+    next_corner: -2525410 -2093890 0
+    next_corner: -2500040 -2075590 0
+    next_corner: -2479010 -2052420 0
+    next_corner: -2463250 -2025390 0
+    next_corner: -2453440 -1995680 0
+    next_corner: -2450000 -1964580 0
+    next_corner: -2453090 -1933450 0
+    next_corner: -2462600 -1903570 0
+    next_corner: -2478120 -1876320 0
+    next_corner: -2498960 -1852890 0
+    next_corner: -2524210 -1834310 0
+    next_corner: -2552780 -1821380 0
+    next_corner: -2583410 -1814670 0
+    next_corner: -2614760 -1814480 0
+    next_corner: -2645440 -1820800 0
+    next_corner: -2674140 -1833350 0
+    next_corner: -2699600 -1851590 0
+    next_corner: -2720720 -1874720 0
+    next_corner: -2736580 -1901730 0
+    next_corner: -2746480 -1931450 0
+    next_corner: -2750000 -1963650 0
+  outline_polyline: 100000 -2000000 -1700000
+    next_corner: 8000000 -1700000 0
+  outline_polyline: 100000 2000000 2700000
+    next_corner: 8000000 2700000 0
+  n_pins: 4
+    pin: "1" 800000 0 0 90
+      top_pad: 3 1500000 750000 750000 375000
+      inner_pad: 3 1500000 750000 750000 375000 0
+      bottom_pad: 3 1500000 750000 750000 375000
+    pin: "3" 800000 4000000 0 90
+      top_pad: 1 1500000 750000 750000 375000
+      inner_pad: 1 1500000 750000 750000 375000 0
+      bottom_pad: 1 1500000 750000 750000 375000
+    pin: "4" 800000 6000000 0 90
+      top_pad: 1 1500000 750000 750000 375000
+      inner_pad: 1 1500000 750000 750000 375000 0
+      bottom_pad: 1 1500000 750000 750000 375000
+    pin: "2" 800000 2000000 0 90
+      top_pad: 1 1500000 750000 750000 375000
+      inner_pad: 1 1500000 750000 750000 375000 0
+      bottom_pad: 1 1500000 750000 750000 375000
+
+name: "MINI-SO10"
+author: "DUXE"
+description: "Chips"
+  units: NM
+  sel_rect: -574000 -2237640 3131000 6131000
+  ref_text: 300000 400000 -400000 270 50000
+  value_text: 300000 1000000 -400000 270 50000
+  centroid: 0 1300000 2250000 0
+  text: "*" 1000000 -100000 -1900000 0 220000 0 4
+  outline_polyline: 254000 -150000 5750000
+    next_corner: -150000 -1250000 0
+    next_corner: 2750000 -1250000 0
+    next_corner: 2750000 5750000 0
+    close_polyline: 0
+  n_pins: 10
+    pin: "1" 0 300000 0 90
+      top_pad: 3 300000 900000 900000 100000
+    pin: "2" 0 800000 0 90
+      top_pad: 3 300000 900000 900000 100000
+    pin: "3" 0 1300000 0 90
+      top_pad: 3 300000 900000 900000 100000
+    pin: "4" 0 1800000 0 90
+      top_pad: 3 300000 900000 900000 100000
+    pin: "5" 0 2300000 0 90
+      top_pad: 3 300000 900000 900000 100000
+    pin: "6" 0 2300000 4500000 90
+      top_pad: 3 300000 900000 900000 100000
+    pin: "7" 0 1800000 4500000 90
+      top_pad: 3 300000 900000 900000 100000
+    pin: "8" 0 1300000 4500000 90
+      top_pad: 3 300000 900000 900000 100000
+    pin: "9" 0 800000 4500000 90
+      top_pad: 3 300000 900000 900000 100000
+    pin: "10" 0 300000 4500000 90
+      top_pad: 3 300000 900000 900000 100000
+
+name: "CC0805"
+author: "DUXE"
+description: "TwoPins"
+  units: NM
+  sel_rect: -2079000 -1279000 2079000 1279000
+  ref_text: 300000 -1250000 -100000 0 30000
+  value_text: 700000 345440 -853440 270 80000
+  centroid: 0 0 0 0
+  outline_polyline: 50000 -1400000 1000000
+    next_corner: -1800000 600000 2
+    next_corner: -1800000 -600000 0
+    next_corner: -1400000 -1000000 2
+    next_corner: 1400000 -1000000 0
+    next_corner: 1800000 -600000 2
+    next_corner: 1800000 600000 0
+    next_corner: 1400000 1000000 2
+    close_polyline: 0
+  outline_polyline: 50000 0 1000000
+    next_corner: 0 300000 0
+  outline_polyline: 50000 0 -300000
+    next_corner: 0 -1000000 0
+  outline_polyline: 50000 -100000 300000
+    next_corner: 100000 300000 0
+  outline_polyline: 50000 -100000 -300000
+    next_corner: 100000 -300000 0
+  n_pins: 2
+    pin: "1" 0 -920000 0 270
+      top_pad: 3 1000000 650000 650000 0
+    pin: "2" 0 920000 0 270
+      top_pad: 3 1000000 650000 650000 0
+
+name: "RC0805"
+author: "DUXE"
+description: "TwoPins"
+  units: NM
+  sel_rect: -2179000 -1279000 2179000 1279000
+  ref_text: 300000 -1400000 -100000 0 30000
+  value_text: 750000 381000 -914400 270 80000
+  centroid: 0 0 0 0
+  outline_polyline: 50000 -1500000 1000000
+    next_corner: -1900000 600000 2
+    next_corner: -1900000 -600000 0
+    next_corner: -1500000 -1000000 2
+    next_corner: 1500000 -1000000 0
+    next_corner: 1900000 -600000 2
+    next_corner: 1900000 600000 0
+    next_corner: 1500000 1000000 2
+    close_polyline: 0
+  outline_polyline: 50000 100000 600000
+    next_corner: -100000 400000 0
+    next_corner: 100000 200000 0
+    next_corner: -100000 0 0
+    next_corner: 100000 -200000 0
+    next_corner: -100000 -400000 0
+    next_corner: 100000 -600000 0
+  n_pins: 2
+    pin: "1" 0 -1000000 0 270
+      top_pad: 3 1000000 650000 650000 0
+    pin: "2" 0 1000000 0 270
+      top_pad: 3 1000000 650000 650000 0
+
+name: "Via42-Hole26"
+author: "DUXER"
+  units: NM
+  sel_rect: -787400 -787400 787400 787400
+  ref_text: 0 2540000 5080000 0 254000
+  value_text: 300000 -700000 -100000 0 50000
+  centroid: 0 0 0 0
+  n_pins: 1
+    pin: "1" 660400 0 0 0
+      top_pad: 1 1066800 0 0 0 3
+      inner_pad: 0 0 0 0 0 3
+      bottom_pad: 1 1066800 0 0 0 3
+
+[board]
+
+[solder_mask_cutouts]
+
+
+[parts]
+
+part: R109
+  ref_text: 750000 150000 270 1111598 3016121 -842150451
+  package: "RC0805"
+  shape: "RC0805"
+  pos: -104933750 187801250 0 90 0
+
+part: C104
+  ref_text: 500000 100000 0 128 -1111249 -842150451
+  package: "CC0805"
+  shape: "CC0805"
+  pos: -111442500 202406250 0 90 0
+
+part: R101
+  ref_text: 500000 100000 180 1111396 -1269871 -842150451
+  package: "RC0805"
+  shape: "RC0805"
+  pos: -111760000 215423750 0 270 0
+
+part: C105
+  ref_text: 750000 150000 0 -3334025 792592 -842150451
+  package: "CC0805"
+  shape: "CC0805"
+  pos: -118268750 207645000 0 90 0
+
+part: R117
+  ref_text: 750000 150000 270 1587775 2381066 -842150451
+  package: "RC0805"
+  shape: "RC0805"
+  pos: -104933750 184308750 0 90 0
+
+part: R116
+  ref_text: 750000 150000 90 -2540716 -2062868 -842150451
+  package: "RC0805"
+  shape: "RC0805"
+  pos: -104933750 220821250 0 270 0
+
+part: C112
+  ref_text: 500000 100000 90 -1847785 381133 -842150451
+  package: "CC0805"
+  shape: "CC0805"
+  pos: -111918750 189388750 0 270 0
+
+part: C113
+  ref_text: 750000 150000 90 2698896 -1269687 -842150451
+  package: "CC0805"
+  shape: "CC0805"
+  pos: -110172500 189388750 0 270 0
+
+part: R106
+  ref_text: 500000 100000 0 -952995 1428419 -842150451
+  package: "RC0805"
+  shape: "RC0805"
+  pos: -110172500 198120000 0 90 0
+
+part: R103
+  ref_text: 500000 100000 270 -2063566 794227 -842150451
+  package: "RC0805"
+  shape: "RC0805"
+  pos: -112712500 212883750 0 180 0
+
+part: RP10
+  ref_text: 500000 100000 270 -2063676 -635238 -842150451
+  package: "RC0805"
+  shape: "RC0805"
+  pos: -108267500 220821250 0 90 0
+
+part: R100
+  ref_text: 500000 100000 270 2063750 0 -842150451
+  package: "RC0805"
+  shape: "RC0805"
+  pos: -109855000 220821250 0 90 0
+
+part: RP13
+  ref_text: 500000 100000 90 2063768 -158511 -842150451
+  package: "RC0805"
+  shape: "RC0805"
+  pos: -111601250 220821250 0 270 0
+
+part: R113
+  ref_text: 500000 100000 180 -2539852 -635587 -842150451
+  package: "RC0805"
+  shape: "RC0805"
+  pos: -112236250 227806250 0 180 0
+
+part: C114
+  ref_text: 750000 150000 0 165 -1428749 -842150451
+  package: "CC0805"
+  shape: "CC0805"
+  pos: -110200000 181100000 0 0 0
+
+part: C109
+  ref_text: 750000 150000 270 317775 -2381213 -842150451
+  package: "CC0805"
+  shape: "CC0805"
+  pos: -117157500 191770000 0 90 0
+
+part: DA103
+  ref_text: 750000 150000 270 476250 -5715000 -842150451
+  package: "MINI-SO10"
+  shape: "MINI-SO10"
+  pos: -115860000 199900000 0 180 0
+
+part: RP14
+  ref_text: 500000 100000 90 -1905054 -158088 -842150451
+  package: "RC0805"
+  shape: "RC0805"
+  pos: -116522500 220821250 0 270 0
+
+part: R112
+  ref_text: 750000 150000 90 -635881 -2539779 -842150451
+  package: "RC0805"
+  shape: "RC0805"
+  pos: -107300000 180300000 0 270 0
+
+part: R111
+  ref_text: 750000 150000 90 -475956 2540055 -842150451
+  package: "RC0805"
+  shape: "RC0805"
+  pos: -113100000 180200000 0 270 0
+
+part: R108
+  ref_text: 750000 150000 270 -1110974 -2381378 -842150451
+  package: "RC0805"
+  shape: "RC0805"
+  pos: -115411250 187801250 0 90 0
+
+part: C108
+  ref_text: 750000 150000 270 -1322 3809999 -842150451
+  package: "CC0805"
+  shape: "CC0805"
+  pos: -104140000 196056250 0 90 0
+
+part: C107
+  ref_text: 750000 150000 180 -2380956 1270550 -842150451
+  package: "CC0805"
+  shape: "CC0805"
+  pos: -107632500 193516250 0 180 0
+
+part: C110
+  ref_text: 500000 100000 0 317500 -1111250 -842150451
+  package: "CC0805"
+  shape: "CC0805"
+  pos: -115252500 202406250 0 0 0
+
+part: C106
+  ref_text: 750000 150000 180 -5873713 -160109 -842150451
+  package: "SMW5,7"
+  shape: "SMW5,7"
+  pos: -106362500 202723750 0 180 0
+
+part: C101
+  ref_text: 750000 150000 180 -6032463 -160145 -842150451
+  package: "SMW5,7"
+  shape: "SMW5,7"
+  pos: -106362500 208597500 0 180 0
+
+part: R102
+  ref_text: 500000 100000 270 -2063676 -635238 -842150451
+  package: "RC0805"
+  shape: "RC0805"
+  pos: -113665000 215423750 0 90 0
+
+part: R114
+  ref_text: 500000 100000 270 1905000 -317499 -842150451
+  package: "RC0805"
+  shape: "RC0805"
+  pos: -112236250 226218750 0 180 0
+
+part: C119
+  ref_text: 500000 100000 0 -1270000 1111250 -842150451
+  package: "CC0805"
+  shape: "CC0805"
+  pos: -112236250 223996250 0 0 0
+
+part: R110
+  ref_text: 750000 150000 270 2381323 634724 -842150451
+  package: "RC0805"
+  shape: "RC0805"
+  pos: -115411250 184308750 0 90 0
+
+part: C115
+  ref_text: 500000 100000 270 1746360 952297 -842150451
+  package: "CC0805"
+  shape: "CC0805"
+  pos: -108426250 189388750 0 90 0
+
+part: C111
+  ref_text: 750000 150000 180 1587665 1428566 -842150451
+  package: "CC0805"
+  shape: "CC0805"
+  pos: -113665000 189388750 0 270 0
+
+part: C120
+  ref_text: 750000 150000 270 -1429631 2539503 -842150451
+  package: "CC0805"
+  shape: "CC0805"
+  pos: -106680000 189388750 0 90 0
+
+part: R107
+  ref_text: 750000 150000 0 3333750 317500 -842150451
+  package: "RC0805"
+  shape: "RC0805"
+  pos: -106680000 198913750 0 0 0
+
+part: C100
+  ref_text: 750000 150000 0 6032500 0 -842150451
+  package: "SMW5,7"
+  shape: "SMW5,7"
+  pos: -106362500 214471250 0 0 0
+
+part: DA102
+  ref_text: 750000 150000 270 -1587242 -1111617 -842150451
+  package: "MINI-SO8"
+  shape: "MINI-SO8"
+  pos: -112380000 197800000 0 180 0
+
+part: DA101
+  ref_text: 500000 100000 90 1905073 -634779 -842150451
+  package: "SOT-23-5"
+  shape: "SOT-23-5"
+  pos: -105800000 195000000 0 270 0
+
+part: R105
+  ref_text: 750000 150000 90 -2222554 -157978 -842150451
+  package: "RC0805"
+  shape: "RC0805"
+  pos: -116522500 215423750 0 270 0
+
+part: DA100
+  ref_text: 750000 150000 270 -3651249 -844 -842150451
+  package: "SO-8"
+  shape: "SO-8"
+  pos: -112700000 210300000 0 180 0
+
+part: RP11
+  ref_text: 500000 100000 270 -2063749 -477 -842150451
+  package: "RC0805"
+  shape: "RC0805"
+  pos: -106680000 220821250 0 90 0
+
+part: C102
+  ref_text: 500000 100000 270 -1904834 -1428970 -842150451
+  package: "CC0805"
+  shape: "CC0805"
+  pos: -114776250 220821250 0 90 0
+
+part: RP12
+  ref_text: 500000 100000 90 2063823 634761 -842150451
+  package: "RC0805"
+  shape: "RC0805"
+  pos: -113188750 220821250 0 270 0
+
+part: R115
+  ref_text: 750000 150000 90 476598 -3016194 -842150451
+  package: "RC0805"
+  shape: "RC0805"
+  pos: -103346250 220821250 0 270 0
+
+part: C103
+  ref_text: 750000 150000 270 -793456 -2540091 -842150451
+  package: "CC0805"
+  shape: "CC0805"
+  pos: -118110000 220821250 0 90 0
+
+part: DA105
+  ref_text: 750000 150000 270 953253 6508639 -842150451
+  package: "SO-8"
+  shape: "SO-8"
+  pos: -108900000 227700000 0 90 0
+
+part: X10
+  ref_text: 1150000 250000 270 -477682 4127334 -842150451
+  package: "W2105-04PS"
+  shape: "W2105-04PS_1"
+  pos: -117475000 231140000 0 90 0
+
+part: DA104
+  ref_text: 750000 150000 270 3334209 3968364 -842150451
+  package: "SO-8"
+  shape: "SO-8"
+  pos: -112700000 186800000 0 90 0
+
+part: X10*
+  ref_text: 500000 100000 90 -3165000 44000 -842150451
+  package: "BNC"
+  shape: "BNC"
+  pos: -111601250 242728750 0 0 0
+
+part: via_1
+  ref_text: 0 254000 0 2540000 5080000 1
+  package: ""
+  shape: "Via42-Hole26"
+  pos: -109200000 182300000 0 0 0
+
+part: via_2
+  ref_text: 0 254000 0 2540000 5080000 -842150451
+  package: ""
+  shape: "Via42-Hole26"
+  pos: -111100000 182300000 0 0 0
+
+[nets]
+
+net: "NET00106" 3 2 0 0 0 0 1
+  pin: 1 RP10.1
+  pin: 2 R100.2
+  pin: 3 RP11.1
+  connect: 1 0 1 5 0
+    vtx: 1 -108267500 221821250 12 0 0 0 0
+    seg: 1 12 200000 0 0
+    vtx: 2 -108743752 221773744 0 0 0 0 0
+    seg: 2 12 300000 0 0
+    vtx: 3 -108743752 221138752 0 0 0 0 0
+    seg: 3 12 300000 0 0
+    vtx: 4 -109378752 220503744 0 0 0 0 0
+    seg: 4 12 300000 0 0
+    vtx: 5 -109378752 219868752 0 0 0 0 0
+    seg: 5 12 200000 0 0
+    vtx: 6 -109855000 219821250 12 0 0 0 0
+  connect: 2 2 0 3 0
+    vtx: 1 -106680000 221821250 12 0 0 0 0
+    seg: 1 12 200000 0 0
+    vtx: 2 -106680000 221932496 0 0 0 0 0
+    seg: 2 12 300000 0 0
+    vtx: 3 -108267504 221932496 0 0 0 0 0
+    seg: 3 12 200000 0 0
+    vtx: 4 -108267500 221821250 12 0 0 0 0
+
+net: "NET00205" 3 2 0 0 0 0 1
+  pin: 1 R117.2
+  pin: 2 R112.2
+  pin: 3 DA104.5
+  connect: 1 2 0 3 0
+    vtx: 1 -107500000 182990000 12 0 0 0 0
+    seg: 1 6 0 0 0
+    vtx: 2 -107315000 183038752 0 0 0 0 0
+    seg: 2 12 300000 0 0
+    vtx: 3 -105092496 183038752 0 0 0 0 0
+    seg: 3 12 200000 0 0
+    vtx: 4 -104933750 183308750 12 0 0 0 0
+  connect: 2 2 1 2 0
+    vtx: 1 -107500000 182990000 12 0 0 0 0
+    seg: 1 6 0 0 0
+    vtx: 2 -107300000 182800000 0 0 0 0 0
+    seg: 2 12 304796 0 0
+    vtx: 3 -107300000 181300000 12 0 0 0 0
+
+net: "NET00107" 1 0 0 0 0 0 1
+  pin: 1 DA102.6
+
+net: "NET00119" 3 2 0 0 0 0 1
+  pin: 1 R113.1
+  pin: 2 R114.1
+  pin: 3 DA105.1
+  connect: 1 1 0 3 0
+    vtx: 1 -111236250 226218750 12 0 0 0 0
+    seg: 1 12 200000 0 0
+    vtx: 2 -111125000 226218752 0 0 0 0 0
+    seg: 2 12 300000 0 0
+    vtx: 3 -111125000 227647504 0 0 0 0 0
+    seg: 3 12 200000 0 0
+    vtx: 4 -111236250 227806250 12 0 0 0 0
+  connect: 2 2 0 3 0
+    vtx: 1 -108900000 227700000 12 0 0 0 0
+    seg: 1 6 0 0 0
+    vtx: 2 -109220000 227647504 0 0 0 0 0
+    seg: 2 12 300000 0 0
+    vtx: 3 -111125000 227647504 0 0 0 0 0
+    seg: 3 12 200000 0 0
+    vtx: 4 -111236250 227806250 12 0 0 0 0
+
+net: "NET00061" 4 3 0 0 0 0 1
+  pin: 1 R106.2
+  pin: 2 C106.2
+  pin: 3 R107.1
+  pin: 4 DA101.4
+  connect: 1 3 2 5 0
+    vtx: 1 -108390800 196905000 12 0 0 0 0
+    seg: 1 6 0 0 0
+    vtx: 2 -108267504 197008752 0 0 0 0 0
+    seg: 2 12 300000 0 0
+    vtx: 3 -107950000 197008752 0 0 0 0 0
+    seg: 3 12 300000 0 0
+    vtx: 4 -107791248 197167504 0 0 0 0 0
+    seg: 4 12 300000 0 0
+    vtx: 5 -107791248 198755008 0 0 0 0 0
+    seg: 5 12 200000 0 0
+    vtx: 6 -107680000 198913750 12 0 0 0 0
+  connect: 2 3 0 3 0
+    vtx: 1 -108390800 196905000 12 0 0 0 0
+    seg: 1 6 0 0 0
+    vtx: 2 -108426248 197008752 0 0 0 0 0
+    seg: 2 12 300000 0 0
+    vtx: 3 -110172496 197008752 0 0 0 0 0
+    seg: 3 12 200000 0 0
+    vtx: 4 -110172500 197120000 12 0 0 0 0
+  connect: 3 2 1 5 0
+    vtx: 1 -107680000 198913750 12 0 0 0 0
+    seg: 1 12 200000 0 0
+    vtx: 2 -107791248 199231248 0 0 0 0 0
+    seg: 2 12 300000 0 0
+    vtx: 3 -107791248 199866256 0 0 0 0 0
+    seg: 3 12 300000 0 0
+    vtx: 4 -108426248 200501248 0 0 0 0 0
+    seg: 4 12 300000 0 0
+    vtx: 5 -109537504 200501248 0 0 0 0 0
+    seg: 5 12 200000 0 0
+    vtx: 6 -109410500 202723750 12 0 0 0 0
+
+net: "NET00062" 4 3 0 0 0 0 1
+  pin: 1 C106.1
+  pin: 2 R107.2
+  pin: 3 DA102.8
+  pin: 4 DA101.1
+  connect: 1 2 1 9 0
+    vtx: 1 -112380000 193300000 12 0 0 0 0
+    seg: 1 6 0 0 0
+    vtx: 2 -112395000 192903744 0 0 0 0 0
+    seg: 2 12 300000 0 0
+    vtx: 3 -112395000 193992496 0 0 0 0 0
+    seg: 3 12 300000 0 0
+    vtx: 4 -110490000 195897504 0 0 0 0 0
+    seg: 4 12 300000 0 0
+    vtx: 5 -107156248 195897504 0 0 0 0 5031
+    seg: 5 12 300000 0 0
+    vtx: 6 -107156248 197326256 0 0 0 0 0
+    seg: 6 12 300000 0 0
+    vtx: 7 -106521248 197961248 0 0 0 0 0
+    seg: 7 12 300000 0 0
+    vtx: 8 -106045000 197961248 0 0 0 0 0
+    seg: 8 12 300000 0 0
+    vtx: 9 -106045000 198913744 0 0 0 0 0
+    seg: 9 12 250000 0 0
+    vtx: 10 -105680000 198913750 12 0 0 0 0
+  connect: 2 0 1 5 0
+    vtx: 1 -103314500 202723750 12 0 0 0 0
+    seg: 1 12 250000 0 0
+    vtx: 2 -103187504 200501248 0 0 0 0 0
+    seg: 2 12 300000 0 0
+    vtx: 3 -104933752 200501248 0 0 0 0 0
+    seg: 3 12 300000 0 0
+    vtx: 4 -105568752 199866256 0 0 0 0 0
+    seg: 4 12 300000 0 0
+    vtx: 5 -105568752 198913744 0 0 0 0 0
+    seg: 5 12 250000 0 0
+    vtx: 6 -105680000 198913750 12 0 0 0 0
+  connect: 3 3 -1 4 0
+    vtx: 1 -105800000 195000000 12 0 0 0 0
+    seg: 1 6 0 0 0
+    vtx: 2 -106045000 194944992 0 0 0 0 0
+    seg: 2 12 300000 0 0
+    vtx: 3 -106838752 194944992 0 0 0 0 0
+    seg: 3 12 300000 0 0
+    vtx: 4 -107156248 195262496 0 0 0 0 0
+    seg: 4 12 300000 0 0
+    vtx: 5 -107156248 195897504 0 0 0 0 5031
+
+net: "NET00041" 2 2 0 0 0 0 1
+  pin: 1 DA103.10
+  pin: 2 DA102.1
+  connect: 1 0 1 7 0
+    vtx: 1 -116160000 195400000 12 0 0 0 0
+    seg: 1 6 0 0 0
+    vtx: 2 -116157504 195193744 0 0 0 0 0
+    seg: 2 12 250000 0 0
+    vtx: 3 -116157504 196262496 0 0 0 0 0
+    seg: 3 12 250000 0 0
+    vtx: 4 -115887504 196532496 0 0 0 0 0
+    seg: 4 12 250000 0 0
+    vtx: 5 -112553752 196532496 0 0 0 0 0
+    seg: 5 12 250000 0 0
+    vtx: 6 -112395000 196691248 0 0 0 0 0
+    seg: 6 12 250000 0 0
+    vtx: 7 -112395000 197008752 0 0 0 0 0
+    seg: 7 6 0 0 0
+    vtx: 8 -112380000 197800000 12 0 0 0 0
+  connect: 2 1 -1 2 0
+    vtx: 1 -112380000 197800000 12 0 0 0 0
+    seg: 1 6 0 0 0
+    vtx: 2 -112395000 198120000 0 0 0 0 0
+    seg: 2 12 250000 0 0
+    vtx: 3 -111283752 198120000 0 0 0 0 0
+
+net: "NET00030" 3 2 0 0 0 0 1
+  pin: 1 R103.2
+  pin: 2 R102.2
+  pin: 3 DA100.2
+  connect: 1 2 0 3 0
+    vtx: 1 -113970000 210300000 12 0 0 0 0
+    seg: 1 6 0 0 0
+    vtx: 2 -113982496 210502496 0 0 0 0 0
+    seg: 2 12 300000 0 0
+    vtx: 3 -113982496 212724992 0 0 0 0 0
+    seg: 3 12 200000 0 0
+    vtx: 4 -113712500 212883750 12 0 0 0 0
+  connect: 2 0 1 2 0
+    vtx: 1 -113712500 212883750 12 0 0 0 0
+    seg: 1 12 200000 0 0
+    vtx: 2 -113665000 212883744 0 0 0 0 0
+    seg: 2 12 300000 0 0
+    vtx: 3 -113665000 214423750 12 0 0 0 0
+
+net: "+5V" 1 0 0 0 0 0 1
+  pin: 1 RP12.1
+
+net: "NET00042" 1 0 0 0 0 0 1
+  pin: 1 DA103.7
+
+net: "NET00031" 5 5 0 0 0 0 1
+  pin: 1 R101.1
+  pin: 2 R106.1
+  pin: 3 R103.1
+  pin: 4 DA102.2
+  pin: 5 DA100.1
+  connect: 1 4 1 13 0
+    vtx: 1 -112700000 210300000 12 0 0 0 0
+    seg: 1 6 0 0 0
+    vtx: 2 -112712496 210502496 0 0 0 0 0
+    seg: 2 12 300000 0 0
+    vtx: 3 -112712496 209073744 0 0 0 0 0
+    seg: 3 12 300000 0 0
+    vtx: 4 -112712500 209073750 0 1 1000000 600000 0
+    seg: 4 13 300000 0 0
+    vtx: 5 -112712496 209073744 0 0 0 0 0
+    seg: 5 13 300000 0 0
+    vtx: 6 -112712496 202247504 0 0 0 0 0
+    seg: 6 13 300000 0 0
+    vtx: 7 -112395000 201930000 0 0 0 0 0
+    seg: 7 13 300000 0 0
+    vtx: 8 -112395000 199548752 0 0 0 0 0
+    seg: 8 13 300000 0 0
+    vtx: 9 -112553752 199548752 0 0 0 0 0
+    seg: 9 13 300000 0 0
+    vtx: 10 -112553750 199548750 0 1 1000000 600000 14319
+    seg: 10 12 300000 0 0
+    vtx: 11 -112553752 199548752 0 0 0 0 0
+    seg: 11 12 300000 0 0
+    vtx: 12 -112236248 199231248 0 0 0 0 0
+    seg: 12 12 300000 0 0
+    vtx: 13 -110331248 199231248 0 0 0 0 0
+    seg: 13 12 250000 0 0
+    vtx: 14 -110172500 199120000 12 0 0 0 0
+  connect: 2 3 -1 6 0
+    vtx: 1 -113030000 197800000 12 0 0 0 0
+    seg: 1 6 0 0 0
+    vtx: 2 -113030000 197167504 0 0 0 0 0
+    seg: 2 12 250000 0 0
+    vtx: 3 -113030000 199072496 0 0 0 0 0
+    seg: 3 12 250000 0 0
+    vtx: 4 -112871248 199231248 0 0 0 0 0
+    seg: 4 12 250000 0 0
+    vtx: 5 -112700000 199400000 0 0 0 0 0
+    seg: 5 12 304796 0 0
+    vtx: 6 -112600000 199500000 0 0 0 0 0
+    seg: 6 12 304796 0 0
+    vtx: 7 -112553750 199548750 0 0 0 0 14319
+  connect: 3 4 -1 2 0
+    vtx: 1 -112700000 210300000 12 0 0 0 0
+    seg: 1 6 0 0 0
+    vtx: 2 -112712496 210502496 0 0 0 0 0
+    seg: 2 12 300000 0 0
+    vtx: 3 -111760000 211455008 0 0 0 0 0
+  connect: 4 4 2 3 0
+    vtx: 1 -112700000 210300000 12 0 0 0 0
+    seg: 1 6 0 0 0
+    vtx: 2 -112712496 211455008 0 0 0 0 0
+    seg: 2 12 300000 0 0
+    vtx: 3 -111760000 212407504 0 0 0 0 0
+    seg: 3 12 200000 0 0
+    vtx: 4 -111712500 212883750 12 0 0 0 0
+  connect: 5 2 0 2 0
+    vtx: 1 -111712500 212883750 12 0 0 0 0
+    seg: 1 12 200000 0 0
+    vtx: 2 -111760000 212883744 0 0 0 0 0
+    seg: 2 12 300000 0 0
+    vtx: 3 -111760000 214423750 12 0 0 0 0
+
+net: "NET00043" 3 2 0 0 0 0 1
+  pin: 1 R109.2
+  pin: 2 R117.1
+  pin: 3 DA104.8
+  connect: 1 1 0 2 0
+    vtx: 1 -104933750 185308750 12 0 0 0 0
+    seg: 1 12 250000 0 0
+    vtx: 2 -104933752 185308752 0 0 0 0 0
+    seg: 2 12 300000 0 0
+    vtx: 3 -104933750 186801250 12 0 0 0 0
+  connect: 2 2 0 3 0
+    vtx: 1 -107500000 186800000 12 0 0 0 0
+    seg: 1 6 0 0 0
+    vtx: 2 -107315000 186848752 0 0 0 0 0
+    seg: 2 12 300000 0 0
+    vtx: 3 -104933752 186848752 0 0 0 0 0
+    seg: 3 12 200000 0 0
+    vtx: 4 -104933750 186801250 12 0 0 0 0
+
+net: "NET00099" 1 0 0 0 0 0 1
+  pin: 1 R111.1
+
+net: "NET00044" 1 0 0 0 0 0 1
+  pin: 1 DA103.6
+
+net: "NET00198" 4 3 0 0 0 0 1
+  pin: 1 RP13.2
+  pin: 2 C102.1
+  pin: 3 RP12.2
+  pin: 4 X10.3
+  connect: 1 2 0 3 0
+    vtx: 1 -113188750 221821250 12 0 0 0 0
+    seg: 1 12 200000 0 0
+    vtx: 2 -113188752 221932496 0 0 0 0 0
+    seg: 2 12 500000 0 0
+    vtx: 3 -111490000 221932496 0 0 0 0 0
+    seg: 3 12 200000 0 0
+    vtx: 4 -111601250 221821250 12 0 0 0 0
+  connect: 2 1 3 7 0
+    vtx: 1 -114776250 221741250 12 0 0 0 0
+    seg: 1 12 200000 0 0
+    vtx: 2 -114776248 221932496 0 0 0 0 0
+    seg: 2 12 500000 0 0
+    vtx: 3 -114776248 222884992 0 0 0 0 0
+    seg: 3 12 500000 0 0
+    vtx: 4 -115252496 223361248 0 0 0 0 0
+    seg: 4 12 500000 0 0
+    vtx: 5 -115252496 225901248 0 0 0 0 0
+    seg: 5 12 500000 0 0
+    vtx: 6 -116522496 227171248 0 0 0 0 0
+    seg: 6 12 500000 0 0
+    vtx: 7 -117475000 227171248 0 0 0 0 0
+    seg: 7 12 200000 0 0
+    vtx: 8 -117475000 227140000 11 0 0 0 0
+  connect: 3 2 1 3 0
+    vtx: 1 -113188750 221821250 12 0 0 0 0
+    seg: 1 12 200000 0 0
+    vtx: 2 -113188752 221932496 0 0 0 0 0
+    seg: 2 12 500000 0 0
+    vtx: 3 -114776248 221932496 0 0 0 0 0
+    seg: 3 12 200000 0 0
+    vtx: 4 -114776250 221741250 12 0 0 0 0
+
+net: "NET00165" 3 2 0 0 0 0 1
+  pin: 1 R100.1
+  pin: 2 C119.2
+  pin: 3 DA105.4
+  connect: 1 2 1 4 0
+    vtx: 1 -108900000 223890000 12 0 0 0 0
+    seg: 1 6 0 0 0
+    vtx: 2 -109220000 223837504 0 0 0 0 0
+    seg: 2 12 300000 0 0
+    vtx: 3 -110490000 223837504 0 0 0 0 0
+    seg: 3 12 300000 0 0
+    vtx: 4 -110648752 223996256 0 0 0 0 0
+    seg: 4 12 300000 0 0
+    vtx: 5 -111316250 223996250 12 0 0 0 0
+  connect: 2 0 1 5 0
+    vtx: 1 -109855000 221821250 12 0 0 0 0
+    seg: 1 12 200000 0 0
+    vtx: 2 -110331248 221932496 0 0 0 0 0
+    seg: 2 12 300000 0 0
+    vtx: 3 -110331248 222408752 0 0 0 0 0
+    seg: 3 12 300000 0 0
+    vtx: 4 -111125000 223202496 0 0 0 0 0
+    seg: 4 12 300000 0 0
+    vtx: 5 -111125000 223837504 0 0 0 0 0
+    seg: 5 12 200000 0 0
+    vtx: 6 -111316250 223996250 12 0 0 0 0
+
+net: "+19.6V" 1 0 0 0 0 0 1
+  pin: 1 RP10.2
+
+net: "GND" 24 18 2 0 0 0 1
+  pin: 1 C104.2
+  pin: 2 C105.2
+  pin: 3 R116.1
+  pin: 4 C113.2
+  pin: 5 C114.2
+  pin: 6 C109.2
+  pin: 7 DA103.2
+  pin: 8 DA103.3
+  pin: 9 C108.1
+  pin: 10 C107.1
+  pin: 11 R102.1
+  pin: 12 C119.1
+  pin: 13 C115.1
+  pin: 14 C120.1
+  pin: 15 DA102.3
+  pin: 16 DA101.3
+  pin: 17 R105.2
+  pin: 18 DA100.5
+  pin: 19 C102.2
+  pin: 20 C103.2
+  pin: 21 X10.1
+  pin: 22 DA104.6
+  pin: 23 X10*.2
+  pin: 24 via_1.1
+  connect: 1 8 15 3 0
+    vtx: 1 -104140000 196976250 12 0 0 0 0
+    seg: 1 12 250000 0 0
+    vtx: 2 -104140000 196850000 0 0 0 0 0
+    seg: 2 12 500000 0 0
+    vtx: 3 -106045000 196850000 0 0 0 0 0
+    seg: 3 6 0 0 0
+    vtx: 4 -105800000 196905000 12 0 0 0 0
+  connect: 2 2 -1 4 0
+    vtx: 1 -104933750 219821250 12 0 0 0 0
+    seg: 1 12 250000 0 0
+    vtx: 2 -104933752 219821248 0 0 0 0 0
+    seg: 2 12 500000 0 0
+    vtx: 3 -104933752 218916256 0 0 0 0 0
+    seg: 3 12 500000 0 0
+    vtx: 4 -104933750 218916250 0 1 1000000 600000 0
+    seg: 4 12 200000 0 0
+    vtx: 5 -104933752 218916256 0 0 0 0 0
+  connect: 3 21 -1 3 0
+    vtx: 1 -107500000 184260000 12 0 0 0 0
+    seg: 1 6 0 0 0
+    vtx: 2 -107315000 184308752 0 0 0 0 0
+    seg: 2 12 635000 0 0
+    vtx: 3 -108902496 184308752 0 0 0 0 0
+    seg: 3 12 500000 0 0
+    vtx: 4 -108902500 184308750 0 0 0 0 0
+  connect: 4 14 -1 6 0
+    vtx: 1 -113680000 197800000 12 0 0 0 0
+    seg: 1 6 0 0 0
+    vtx: 2 -113665000 197643744 0 0 0 0 0
+    seg: 2 12 250000 0 0
+    vtx: 3 -113665000 199548752 0 0 0 0 0
+    seg: 3 12 250000 0 0
+    vtx: 4 -113347504 199866256 0 0 0 0 0
+    seg: 4 12 250000 0 0
+    vtx: 5 -113347504 200977504 0 0 0 0 0
+    seg: 5 12 250000 0 0
+    vtx: 6 -113347500 200977500 0 1 1000000 600000 0
+    seg: 6 12 200000 0 0
+    vtx: 7 -113347504 200977504 0 0 0 0 0
+  connect: 5 0 -1 4 0
+    vtx: 1 -111442500 201486250 12 0 0 0 0
+    seg: 1 12 200000 0 0
+    vtx: 2 -111442496 201481248 0 0 0 0 0
+    seg: 2 12 500000 0 0
+    vtx: 3 -111442496 200501248 0 0 0 0 0
+    seg: 3 12 500000 0 0
+    vtx: 4 -111442500 200501250 0 1 1000000 600000 0
+    seg: 4 12 200000 0 0
+    vtx: 5 -111442496 200501248 0 0 0 0 0
+  connect: 6 11 -1 4 0
+    vtx: 1 -113156250 223996250 12 0 0 0 0
+    seg: 1 12 200000 0 0
+    vtx: 2 -113161248 223996256 0 0 0 0 0
+    seg: 2 12 500000 0 0
+    vtx: 3 -113982496 223996256 0 0 0 0 0
+    seg: 3 12 500000 0 0
+    vtx: 4 -113982500 223996250 0 1 1000000 600000 0
+    seg: 4 12 200000 0 0
+    vtx: 5 -113982496 223996256 0 0 0 0 0
+  connect: 7 7 6 7 0
+    vtx: 1 -117160000 199900000 12 0 0 0 0
+    seg: 1 6 0 0 0
+    vtx: 2 -117157504 200056752 0 0 0 0 0
+    seg: 2 12 250000 0 0
+    vtx: 3 -117157504 198437504 0 0 0 0 0
+    seg: 3 12 250000 0 0
+    vtx: 4 -116840000 198120000 0 1 1000000 600000 0
+    seg: 4 12 250000 0 0
+    vtx: 5 -117157504 198437504 0 0 0 0 0
+    seg: 5 12 250000 0 0
+    vtx: 6 -116657504 198302496 0 0 0 0 0
+    seg: 6 12 250000 0 0
+    vtx: 7 -116657504 200093744 0 0 0 0 0
+    seg: 7 6 0 0 0
+    vtx: 8 -116660000 199900000 12 0 0 0 0
+  connect: 8 17 1 5 0
+    vtx: 1 -116510000 205100000 12 0 0 0 0
+    seg: 1 6 0 0 0
+    vtx: 2 -116522496 204787504 0 0 0 0 0
+    seg: 2 12 500000 0 0
+    vtx: 3 -116522496 206216256 0 0 0 0 0
+    seg: 3 12 500000 0 0
+    vtx: 4 -116998752 206692496 0 0 0 0 0
+    seg: 4 12 500000 0 0
+    vtx: 5 -118268752 206692496 0 0 0 0 0
+    seg: 5 12 200000 0 0
+    vtx: 6 -118268750 206725000 12 0 0 0 0
+  connect: 9 16 10 6 0
+    vtx: 1 -116522500 216423750 12 0 0 0 0
+    seg: 1 12 200000 0 0
+    vtx: 2 -116522496 216376256 0 0 0 0 0
+    seg: 2 12 500000 0 0
+    vtx: 3 -115411248 216376256 0 0 0 0 0
+    seg: 3 12 500000 0 0
+    vtx: 4 -115093750 216058750 0 1 1000000 600000 0
+    seg: 4 12 500000 0 0
+    vtx: 5 -115411248 216376256 0 0 0 0 0
+    seg: 5 12 500000 0 0
+    vtx: 6 -113823752 216376256 0 0 0 0 0
+    seg: 6 12 200000 0 0
+    vtx: 7 -113665000 216423750 12 0 0 0 0
+  connect: 10 18 -1 4 0
+    vtx: 1 -114776250 219901250 12 0 0 0 0
+    seg: 1 12 200000 0 0
+    vtx: 2 -114754352 219978224 0 0 0 0 0
+    seg: 2 12 500000 0 0
+    vtx: 3 -114776248 218916256 0 0 0 0 0
+    seg: 3 12 500000 0 0
+    vtx: 4 -114776250 218916250 0 1 1000000 600000 0
+    seg: 4 12 200000 0 0
+    vtx: 5 -114776248 218916256 0 0 0 0 0
+  connect: 11 19 -1 3 0
+    vtx: 1 -118110000 219901250 12 0 0 0 0
+    seg: 1 12 200000 0 0
+    vtx: 2 -118110000 219896256 0 0 0 0 0
+    seg: 2 12 500000 0 0
+    vtx: 3 -118110000 218916250 0 1 1000000 600000 0
+    seg: 3 12 200000 0 0
+    vtx: 4 -118110000 218916256 0 0 0 0 0
+  connect: 12 8 -1 3 0
+    vtx: 1 -104140000 196976250 12 0 0 0 0
+    seg: 1 12 200000 0 0
+    vtx: 2 -104140000 197008752 0 0 0 0 0
+    seg: 2 12 500000 0 0
+    vtx: 3 -104140000 197961250 0 1 1000000 600000 0
+    seg: 3 12 200000 0 0
+    vtx: 4 -104140000 197961248 0 0 0 0 0
+  connect: 13 12 -1 4 0
+    vtx: 1 -108426250 190308750 12 0 0 0 0
+    seg: 1 12 200000 0 0
+    vtx: 2 -108426248 190313744 0 0 0 0 0
+    seg: 2 12 500000 0 0
+    vtx: 3 -108426248 191293744 0 0 0 0 0
+    seg: 3 12 500000 0 0
+    vtx: 4 -108426250 191293750 0 1 1000000 600000 0
+    seg: 4 12 200000 0 0
+    vtx: 5 -108426248 191293744 0 0 0 0 0
+  connect: 14 3 -1 4 0
+    vtx: 1 -110172500 190308750 12 0 0 0 0
+    seg: 1 12 200000 0 0
+    vtx: 2 -110172496 190341248 0 0 0 0 0
+    seg: 2 12 500000 0 0
+    vtx: 3 -110172496 191293744 0 0 0 0 0
+    seg: 3 12 500000 0 0
+    vtx: 4 -110172500 191293750 0 1 1000000 600000 0
+    seg: 4 12 200000 0 0
+    vtx: 5 -110172496 191293744 0 0 0 0 0
+  connect: 15 5 -1 4 0
+    vtx: 1 -117157500 190850000 12 0 0 0 0
+    seg: 1 12 200000 0 0
+    vtx: 2 -117157504 190817504 0 0 0 0 0
+    seg: 2 12 500000 0 0
+    vtx: 3 -117157504 189864992 0 0 0 0 0
+    seg: 3 12 500000 0 0
+    vtx: 4 -117157500 189865000 0 1 1000000 600000 0
+    seg: 4 12 200000 0 0
+    vtx: 5 -117157504 189864992 0 0 0 0 0
+  connect: 16 1 -1 4 0
+    vtx: 1 -118268750 206725000 12 0 0 0 0
+    seg: 1 12 200000 0 0
+    vtx: 2 -118268752 206692496 0 0 0 0 0
+    seg: 2 12 500000 0 0
+    vtx: 3 -118268752 205740000 0 0 0 0 0
+    seg: 3 12 500000 0 0
+    vtx: 4 -118268750 205740000 0 1 1000000 600000 0
+    seg: 4 12 200000 0 0
+    vtx: 5 -118268752 205740000 0 0 0 0 0
+  connect: 17 9 -1 4 0
+    vtx: 1 -106712500 193516250 12 0 0 0 0
+    seg: 1 12 200000 0 0
+    vtx: 2 -106680000 193516256 0 0 0 0 0
+    seg: 2 12 500000 0 0
+    vtx: 3 -105727504 193516256 0 0 0 0 0
+    seg: 3 12 500000 0 0
+    vtx: 4 -105727500 193516250 0 1 1000000 600000 0
+    seg: 4 12 200000 0 0
+    vtx: 5 -105727504 193516256 0 0 0 0 0
+  connect: 18 13 -1 3 0
+    vtx: 1 -106680000 190308750 12 0 0 0 0
+    seg: 1 12 200000 0 0
+    vtx: 2 -106680000 190313744 0 0 0 0 0
+    seg: 2 12 500000 0 0
+    vtx: 3 -106680000 191293750 0 1 1000000 600000 0
+    seg: 3 12 200000 0 0
+    vtx: 4 -106680000 191293744 0 0 0 0 0
+  area: 1 4 14 1
+    corner: 1 -96560000 177200000 0 0
+    corner: 2 -120360000 177200000 0 0
+    corner: 3 -120360000 238300000 0 0
+    corner: 4 -96560000 238300000 0 1
+  area: 2 5 12 0
+    corner: 1 -108600000 180400000 0 0
+    corner: 2 -109900000 180400000 0 0
+    corner: 3 -109900000 184100000 0 0
+    corner: 4 -109300000 184700000 0 0
+    corner: 5 -108600000 184700000 0 1
+
+net: "+3V" 13 13 2 0 0 0 1
+  pin: 1 C104.1
+  pin: 2 RP13.1
+  pin: 3 C114.1
+  pin: 4 C109.1
+  pin: 5 DA103.8
+  pin: 6 C107.2
+  pin: 7 DA102.4
+  pin: 8 DA101.5
+  pin: 9 DA100.8
+  pin: 10 RP11.2
+  pin: 11 DA104.7
+  pin: 12 DA104.3
+  pin: 13 via_2.1
+  connect: 1 5 -1 4 0
+    vtx: 1 -108552500 193516250 12 0 0 0 0
+    seg: 1 12 200000 0 0
+    vtx: 2 -108585000 193516256 0 0 0 0 0
+    seg: 2 12 500000 0 0
+    vtx: 3 -109537504 193516256 0 0 0 0 0
+    seg: 3 12 500000 0 0
+    vtx: 4 -109537500 193516250 0 1 1000000 600000 0
+    seg: 4 12 200000 0 0
+    vtx: 5 -109537504 193516256 0 0 0 0 0
+  connect: 2 7 5 3 0
+    vtx: 1 -108390800 195000000 12 0 0 0 0
+    seg: 1 6 0 0 0
+    vtx: 2 -108585000 194627504 0 0 0 0 0
+    seg: 2 12 500000 0 0
+    vtx: 3 -108585000 193516256 0 0 0 0 0
+    seg: 3 12 200000 0 0
+    vtx: 4 -108552500 193516250 12 0 0 0 0
+  connect: 3 0 8 4 0
+    vtx: 1 -111442500 203326250 12 0 0 0 0
+    seg: 1 12 200000 0 0
+    vtx: 2 -111442496 203358752 0 0 0 0 0
+    seg: 2 12 500000 0 0
+    vtx: 3 -112395000 203358752 0 0 0 0 0
+    seg: 3 12 500000 0 0
+    vtx: 4 -112712496 203676256 0 0 0 0 0
+    seg: 4 6 0 0 0
+    vtx: 5 -112700000 205100000 12 0 0 0 0
+  connect: 4 0 -1 4 0
+    vtx: 1 -111442500 203326250 12 0 0 0 0
+    seg: 1 12 200000 0 0
+    vtx: 2 -111442496 203358752 0 0 0 0 0
+    seg: 2 12 500000 0 0
+    vtx: 3 -111442496 204311248 0 0 0 0 0
+    seg: 3 12 500000 0 0
+    vtx: 4 -111442500 204311250 0 1 1000000 600000 0
+    seg: 4 12 200000 0 0
+    vtx: 5 -111442496 204311248 0 0 0 0 0
+  connect: 5 1 -1 4 0
+    vtx: 1 -111601250 219821250 12 0 0 0 0
+    seg: 1 12 200000 0 0
+    vtx: 2 -111601248 219821248 0 0 0 0 0
+    seg: 2 12 500000 0 0
+    vtx: 3 -111601248 218916256 0 0 0 0 0
+    seg: 3 12 500000 0 0
+    vtx: 4 -111601250 218916250 0 1 1000000 600000 0
+    seg: 4 12 200000 0 0
+    vtx: 5 -111601248 218916256 0 0 0 0 0
+  connect: 6 3 -1 4 0
+    vtx: 1 -117157500 192690000 12 0 0 0 0
+    seg: 1 12 200000 0 0
+    vtx: 2 -117157504 192563744 0 0 0 0 0
+    seg: 2 12 500000 0 0
+    vtx: 3 -116046248 192563744 0 0 0 0 0
+    seg: 3 12 500000 0 0
+    vtx: 4 -116046250 192563750 0 1 1000000 600000 0
+    seg: 4 12 200000 0 0
+    vtx: 5 -116046248 192563744 0 0 0 0 0
+  connect: 7 4 3 3 0
+    vtx: 1 -117160000 195400000 12 0 0 0 0
+    seg: 1 6 0 0 0
+    vtx: 2 -117157504 195193744 0 0 0 0 0
+    seg: 2 12 300000 0 0
+    vtx: 3 -117157504 193040000 0 0 0 0 0
+    seg: 3 12 200000 0 0
+    vtx: 4 -117157500 192690000 12 0 0 0 0
+  connect: 8 6 -1 6 0
+    vtx: 1 -114330000 197800000 12 0 0 0 0
+    seg: 1 6 0 0 0
+    vtx: 2 -114322496 197793744 0 0 0 0 0
+    seg: 2 12 300000 0 0
+    vtx: 3 -114322496 200161248 0 0 0 0 0
+    seg: 3 12 300000 0 0
+    vtx: 4 -114300000 200183744 0 0 0 0 0
+    seg: 4 12 300000 0 0
+    vtx: 5 -114300000 200183750 0 1 1000000 600000 0
+    seg: 5 12 300000 0 0
+    vtx: 6 -114300000 200183744 0 0 0 0 0
+    seg: 6 12 300000 0 0
+    vtx: 7 -114322496 200161248 0 0 0 0 0
+  connect: 9 9 -1 3 0
+    vtx: 1 -106680000 219821250 12 0 0 0 0
+    seg: 1 12 200000 0 0
+    vtx: 2 -106680000 219821248 0 0 0 0 0
+    seg: 2 12 500000 0 0
+    vtx: 3 -106680000 218916250 0 1 1000000 600000 0
+    seg: 3 12 200000 0 0
+    vtx: 4 -106680000 218916256 0 0 0 0 0
+  connect: 10 11 -1 1 0
+    vtx: 1 -112700000 184260000 12 0 0 0 0
+    seg: 1 6 0 0 0
+    vtx: 2 -111408750 184308750 0 0 0 0 0
+  connect: 11 10 -1 1 0
+    vtx: 1 -107500000 185530000 12 0 0 0 0
+    seg: 1 6 0 0 0
+    vtx: 2 -108921250 185578750 0 0 0 0 0
+  connect: 12 12 11 1 0
+    vtx: 1 -111100000 182300000 11 0 0 0 0
+    seg: 1 6 0 0 0
+    vtx: 2 -112700000 184260000 12 0 0 0 0
+  connect: 13 12 10 1 0
+    vtx: 1 -111100000 182300000 11 0 0 0 0
+    seg: 1 6 0 0 0
+    vtx: 2 -107500000 185530000 12 0 0 0 0
+  area: 1 4 15 1
+    corner: 1 -96800000 177600000 0 0
+    corner: 2 -120000000 177600000 0 0
+    corner: 3 -120000000 238000000 0 0
+    corner: 4 -96800000 238000000 0 1
+  area: 2 8 12 0
+    corner: 1 -108600000 185200000 0 0
+    corner: 2 -109600000 185200000 0 0
+    corner: 3 -110500000 184300000 0 0
+    corner: 4 -110500000 180400000 0 0
+    corner: 5 -111800000 180400000 0 0
+    corner: 6 -111800000 185000000 0 0
+    corner: 7 -110300000 186500000 0 0
+    corner: 8 -108600000 186500000 0 1
+
+net: "NET00100" 1 0 0 0 0 0 1
+  pin: 1 R112.1
+
+net: "NET00045" 1 0 0 0 0 0 1
+  pin: 1 DA103.4
+
+net: "NET00035" 3 2 0 0 0 0 1
+  pin: 1 DA103.1
+  pin: 2 C110.1
+  pin: 3 DA100.6
+  connect: 1 2 1 4 0
+    vtx: 1 -115240000 205100000 12 0 0 0 0
+    seg: 1 6 0 0 0
+    vtx: 2 -115252496 203835008 0 0 0 0 0
+    seg: 2 12 250000 0 0
+    vtx: 3 -115252496 203676256 0 0 0 0 0
+    seg: 3 12 250000 0 0
+    vtx: 4 -115887504 203041248 0 0 0 0 0
+    seg: 4 12 200000 0 0
+    vtx: 5 -116172500 202406250 12 0 0 0 0
+  connect: 2 0 1 3 0
+    vtx: 1 -116160000 199900000 12 0 0 0 0
+    seg: 1 6 0 0 0
+    vtx: 2 -116157504 200093744 0 0 0 0 0
+    seg: 2 12 250000 0 0
+    vtx: 3 -116157504 202358752 0 0 0 0 0
+    seg: 3 12 200000 0 0
+    vtx: 4 -116172500 202406250 12 0 0 0 0
+
+net: "NET00046" 1 0 0 0 0 0 1
+  pin: 1 DA103.5
+
+net: "-3V" 6 5 0 0 0 0 1
+  pin: 1 C105.1
+  pin: 2 RP14.1
+  pin: 3 C108.2
+  pin: 4 DA102.7
+  pin: 5 DA101.2
+  pin: 6 DA100.4
+  connect: 1 3 2 8 0
+    vtx: 1 -113030000 193300000 12 0 0 0 0
+    seg: 1 6 0 0 0
+    vtx: 2 -113030000 193040000 0 0 0 0 0
+    seg: 2 12 300000 0 0
+    vtx: 3 -113030000 195580000 0 1 1000000 600000 5001
+    seg: 3 13 1000000 0 0
+    vtx: 4 -105568752 195580000 0 0 0 0 0
+    seg: 4 13 1000000 0 0
+    vtx: 5 -104140000 194151248 0 0 0 0 0
+    seg: 5 13 1000000 0 0
+    vtx: 6 -104140000 194151250 0 1 1000000 600000 0
+    seg: 6 12 1000000 0 0
+    vtx: 7 -104140000 194151248 0 0 0 0 0
+    seg: 7 12 500000 0 0
+    vtx: 8 -104140000 195103744 0 0 0 0 0
+    seg: 8 12 250000 0 0
+    vtx: 9 -104140000 195136250 12 0 0 0 0
+  connect: 2 0 -1 7 0
+    vtx: 1 -118268750 208565000 12 0 0 0 0
+    seg: 1 12 250000 0 0
+    vtx: 2 -118268752 208756256 0 0 0 0 0
+    seg: 2 12 500000 0 0
+    vtx: 3 -118268752 209550000 0 0 0 0 0
+    seg: 3 12 1000000 0 0
+    vtx: 4 -118268750 209550000 0 1 1000000 600000 0
+    seg: 4 13 1000000 0 0
+    vtx: 5 -118268752 209550000 0 0 0 0 0
+    seg: 5 13 1000000 0 0
+    vtx: 6 -115411248 206692496 0 0 0 0 0
+    seg: 6 13 1000000 0 0
+    vtx: 7 -115570000 195580000 0 0 0 0 0
+    seg: 7 13 1000000 0 0
+    vtx: 8 -113030000 195580000 0 0 0 0 5001
+  connect: 3 4 2 4 0
+    vtx: 1 -105800000 195939800 12 0 0 0 0
+    seg: 1 6 0 0 0
+    vtx: 2 -105568752 195897504 0 0 0 0 0
+    seg: 2 12 500000 0 0
+    vtx: 3 -105251248 195897504 0 0 0 0 0
+    seg: 3 12 500000 0 0
+    vtx: 4 -104457504 195103744 0 0 0 0 0
+    seg: 4 12 250000 0 0
+    vtx: 5 -104140000 195136250 12 0 0 0 0
+  connect: 4 5 0 5 0
+    vtx: 1 -116510000 210300000 12 0 0 0 0
+    seg: 1 6 0 0 0
+    vtx: 2 -116522496 210502496 0 0 0 0 0
+    seg: 2 12 500000 0 0
+    vtx: 3 -116522496 209073744 0 0 0 0 0
+    seg: 3 12 500000 0 0
+    vtx: 4 -116998752 208597504 0 0 0 0 0
+    seg: 4 12 500000 0 0
+    vtx: 5 -118268752 208597504 0 0 0 0 0
+    seg: 5 12 200000 0 0
+    vtx: 6 -118268750 208565000 12 0 0 0 0
+  connect: 5 5 1 1 0
+    vtx: 1 -116510000 210300000 12 0 0 0 0
+    seg: 1 6 0 0 0
+    vtx: 2 -116522500 219821250 12 0 0 0 0
+
+net: "NET00212" 2 1 0 0 0 0 1
+  pin: 1 C113.1
+  pin: 2 DA104.2
+  connect: 1 1 0 5 0
+    vtx: 1 -112700000 185530000 12 0 0 0 0
+    seg: 1 6 0 0 0
+    vtx: 2 -113030000 185578752 0 0 0 0 0
+    seg: 2 12 500000 0 0
+    vtx: 3 -111601248 185578752 0 0 0 0 0
+    seg: 3 12 500000 0 0
+    vtx: 4 -110172496 187007504 0 0 0 0 0
+    seg: 4 12 500000 0 0
+    vtx: 5 -110172496 188436256 0 0 0 0 0
+    seg: 5 12 200000 0 0
+    vtx: 6 -110172500 188468750 12 0 0 0 0
+
+net: "NET00036" 5 4 0 0 0 0 1
+  pin: 1 C112.2
+  pin: 2 DA103.9
+  pin: 3 C110.2
+  pin: 4 C111.2
+  pin: 5 DA100.7
+  connect: 1 4 2 3 0
+    vtx: 1 -113970000 205100000 12 0 0 0 0
+    seg: 1 6 0 0 0
+    vtx: 2 -113982496 204787504 0 0 0 0 0
+    seg: 2 12 250000 0 0
+    vtx: 3 -113982496 202485616 0 0 0 0 0
+    seg: 3 12 200000 0 0
+    vtx: 4 -114332500 202406250 12 0 0 0 0
+  connect: 2 1 3 9 0
+    vtx: 1 -116660000 195400000 12 0 0 0 0
+    seg: 1 6 0 0 0
+    vtx: 2 -116657504 195193744 0 0 0 0 0
+    seg: 2 12 250000 0 0
+    vtx: 3 -116657504 194127504 0 0 0 0 0
+    seg: 3 12 250000 0 0
+    vtx: 4 -116363752 193833744 0 0 0 0 0
+    seg: 4 12 250000 0 0
+    vtx: 5 -115887504 193833744 0 0 0 0 0
+    seg: 5 12 250000 0 0
+    vtx: 6 -115093752 193040000 0 0 0 0 0
+    seg: 6 12 250000 0 0
+    vtx: 7 -115093752 191135008 0 0 0 0 0
+    seg: 7 12 250000 0 0
+    vtx: 8 -114458752 190500000 0 0 0 0 0
+    seg: 8 12 250000 0 0
+    vtx: 9 -113665000 190500000 0 0 0 0 0
+    seg: 9 12 200000 0 0
+    vtx: 10 -113665000 190308750 12 0 0 0 0
+  connect: 3 1 2 7 0
+    vtx: 1 -116660000 195400000 12 0 0 0 0
+    seg: 1 6 0 0 0
+    vtx: 2 -116657504 195193744 0 0 0 0 0
+    seg: 2 12 250000 0 0
+    vtx: 3 -116657504 196873744 0 0 0 0 0
+    seg: 3 12 250000 0 0
+    vtx: 4 -115411248 198120000 0 0 0 0 0
+    seg: 4 12 250000 0 0
+    vtx: 5 -115411248 200342496 0 0 0 0 0
+    seg: 5 12 250000 0 0
+    vtx: 6 -114617504 201136256 0 0 0 0 0
+    seg: 6 12 250000 0 0
+    vtx: 7 -114617504 202406256 0 0 0 0 0
+    seg: 7 12 200000 0 0
+    vtx: 8 -114332500 202406250 12 0 0 0 0
+  connect: 4 0 3 3 0
+    vtx: 1 -111918750 190308750 12 0 0 0 0
+    seg: 1 12 200000 0 0
+    vtx: 2 -111918752 190500000 0 0 0 0 0
+    seg: 2 12 300000 0 0
+    vtx: 3 -113665000 190500000 0 0 0 0 0
+    seg: 3 12 200000 0 0
+    vtx: 4 -113665000 190308750 12 0 0 0 0
+
+net: "NET00026" 3 2 0 0 0 0 1
+  pin: 1 RP14.2
+  pin: 2 C103.1
+  pin: 3 X10.4
+  connect: 1 1 2 4 0
+    vtx: 1 -118110000 221741250 12 0 0 0 0
+    seg: 1 12 200000 0 0
+    vtx: 2 -118110000 221932496 0 0 0 0 0
+    seg: 2 12 500000 0 0
+    vtx: 3 -118110000 224472496 0 0 0 0 0
+    seg: 3 12 500000 0 0
+    vtx: 4 -117316248 225266256 0 0 0 0 0
+    seg: 4 12 200000 0 0
+    vtx: 5 -117475000 225140000 11 0 0 0 0
+  connect: 2 0 1 3 0
+    vtx: 1 -116522500 221821250 12 0 0 0 0
+    seg: 1 12 200000 0 0
+    vtx: 2 -116411248 221932496 0 0 0 0 0
+    seg: 2 12 500000 0 0
+    vtx: 3 -118110000 221932496 0 0 0 0 0
+    seg: 3 12 200000 0 0
+    vtx: 4 -118110000 221741250 12 0 0 0 0
+
+net: "NET00015" 9 8 0 0 0 0 1
+  pin: 1 R113.2
+  pin: 2 R114.2
+  pin: 3 R115.2
+  pin: 4 DA105.2
+  pin: 5 DA105.7
+  pin: 6 DA105.3
+  pin: 7 DA105.6
+  pin: 8 X10.2
+  pin: 9 X10*.1
+  connect: 1 2 4 7 0
+    vtx: 1 -103346250 221821250 12 0 0 0 0
+    seg: 1 12 250000 0 0
+    vtx: 2 -103346248 221821248 0 0 0 0 0
+    seg: 2 12 300000 0 0
+    vtx: 3 -103346248 222567504 0 0 0 0 0
+    seg: 3 12 300000 0 0
+    vtx: 4 -103663752 222884992 0 0 0 0 0
+    seg: 4 12 300000 0 0
+    vtx: 5 -105092496 222884992 0 0 0 0 0
+    seg: 5 12 300000 0 0
+    vtx: 6 -106362496 224155008 0 0 0 0 0
+    seg: 6 12 300000 0 0
+    vtx: 7 -106362496 226377504 0 0 0 0 5074
+    seg: 7 6 0 0 0
+    vtx: 8 -103700000 226430000 12 0 0 0 0
+  connect: 2 6 5 3 0
+    vtx: 1 -103700000 225160000 12 0 0 0 0
+    seg: 1 6 0 0 0
+    vtx: 2 -103505000 225107504 0 0 0 0 0
+    seg: 2 12 300000 0 0
+    vtx: 3 -106362496 225107504 0 0 0 0 0
+    seg: 3 6 0 0 0
+    vtx: 4 -108900000 225160000 12 0 0 0 0
+  connect: 3 1 0 3 0
+    vtx: 1 -113236250 226218750 12 0 0 0 0
+    seg: 1 12 200000 0 0
+    vtx: 2 -113347504 226218752 0 0 0 0 0
+    seg: 2 12 300000 0 0
+    vtx: 3 -113347504 227806256 0 0 0 0 0
+    seg: 3 12 200000 0 0
+    vtx: 4 -113236250 227806250 12 0 0 0 0
+  connect: 4 1 5 4 0
+    vtx: 1 -113236250 226218750 12 0 0 0 0
+    seg: 1 12 200000 0 0
+    vtx: 2 -113188752 226171248 0 0 0 0 0
+    seg: 2 12 300000 0 0
+    vtx: 3 -113188752 225266256 0 0 0 0 0
+    seg: 3 12 300000 0 0
+    vtx: 4 -113030000 225107504 0 0 0 0 0
+    seg: 4 6 0 0 0
+    vtx: 5 -108900000 225160000 12 0 0 0 0
+  connect: 5 7 0 4 0
+    vtx: 1 -117475000 229140000 11 0 0 0 0
+    seg: 1 12 300000 0 0
+    vtx: 2 -116427504 229140000 0 0 0 0 0
+    seg: 2 12 300000 0 0
+    vtx: 3 -115093752 227806256 0 0 0 0 0
+    seg: 3 12 300000 0 0
+    vtx: 4 -113347504 227806256 0 0 0 0 0
+    seg: 4 12 200000 0 0
+    vtx: 5 -113236250 227806250 12 0 0 0 0
+  connect: 6 8 0 4 0
+    vtx: 1 -111601250 230228750 11 0 0 0 0
+    seg: 1 12 200000 0 0
+    vtx: 2 -111601248 230228752 0 0 0 0 0
+    seg: 2 12 300000 0 0
+    vtx: 3 -113188752 228641248 0 0 0 0 0
+    seg: 3 12 300000 0 0
+    vtx: 4 -113188752 227806256 0 0 0 0 0
+    seg: 4 12 200000 0 0
+    vtx: 5 -113236250 227806250 12 0 0 0 0
+  connect: 7 3 -1 2 0
+    vtx: 1 -108900000 226430000 12 0 0 0 0
+    seg: 1 6 0 0 0
+    vtx: 2 -109220000 226377504 0 0 0 0 0
+    seg: 2 12 300000 0 0
+    vtx: 3 -106362496 226377504 0 0 0 0 5074
+  connect: 8 6 4 1 0
+    vtx: 1 -103700000 225160000 12 0 0 0 0
+    seg: 1 6 0 0 0
+    vtx: 2 -103700000 226430000 12 0 0 0 0
+
+net: "NET00037" 3 2 0 0 0 0 1
+  pin: 1 C112.1
+  pin: 2 R108.1
+  pin: 3 C111.1
+  connect: 1 0 2 3 0
+    vtx: 1 -111918750 188468750 12 0 0 0 0
+    seg: 1 12 200000 0 0
+    vtx: 2 -111918752 188277504 0 0 0 0 0
+    seg: 2 12 300000 0 0
+    vtx: 3 -113665000 188277504 0 0 0 0 0
+    seg: 3 12 200000 0 0
+    vtx: 4 -113665000 188468750 12 0 0 0 0
+  connect: 2 2 1 4 0
+    vtx: 1 -113665000 188468750 12 0 0 0 0
+    seg: 1 12 200000 0 0
+    vtx: 2 -113665000 188277504 0 0 0 0 0
+    seg: 2 12 300000 0 0
+    vtx: 3 -115252496 188277504 0 0 0 0 0
+    seg: 3 12 300000 0 0
+    vtx: 4 -115411248 188436256 0 0 0 0 0
+    seg: 4 12 200000 0 0
+    vtx: 5 -115411250 188801250 12 0 0 0 0
+
+net: "NET00213" 3 2 0 0 0 0 1
+  pin: 1 R109.1
+  pin: 2 C115.2
+  pin: 3 C120.2
+  connect: 1 2 0 4 0
+    vtx: 1 -106680000 188468750 12 0 0 0 0
+    seg: 1 12 250000 0 0
+    vtx: 2 -106680000 188277504 0 0 0 0 0
+    seg: 2 12 300000 0 0
+    vtx: 3 -105092496 188277504 0 0 0 0 0
+    seg: 3 12 300000 0 0
+    vtx: 4 -104933752 188436256 0 0 0 0 0
+    seg: 4 12 250000 0 0
+    vtx: 5 -104933750 188801250 12 0 0 0 0
+  connect: 2 2 1 3 0
+    vtx: 1 -106680000 188468750 12 0 0 0 0
+    seg: 1 12 200000 0 0
+    vtx: 2 -106680000 188277504 0 0 0 0 0
+    seg: 2 12 300000 0 0
+    vtx: 3 -108426248 188277504 0 0 0 0 0
+    seg: 3 12 200000 0 0
+    vtx: 4 -108426250 188468750 12 0 0 0 0
+
+net: "NET00038" 3 3 0 0 0 0 1
+  pin: 1 R108.2
+  pin: 2 R110.1
+  pin: 3 DA104.1
+  connect: 1 0 1 2 0
+    vtx: 1 -115411250 186801250 12 0 0 0 0
+    seg: 1 12 200000 0 0
+    vtx: 2 -115411248 186690000 0 0 0 0 0
+    seg: 2 12 400000 0 0
+    vtx: 3 -115411250 185308750 12 0 0 0 0
+  connect: 2 2 -1 2 0
+    vtx: 1 -112700000 186800000 12 0 0 0 0
+    seg: 1 6 0 0 0
+    vtx: 2 -113665000 186848752 0 0 0 0 0
+    seg: 2 12 300000 0 0
+    vtx: 3 -114300000 187483744 0 0 0 0 0
+  connect: 3 0 2 3 0
+    vtx: 1 -115411250 186801250 12 0 0 0 0
+    seg: 1 12 200000 0 0
+    vtx: 2 -115276144 186848752 0 0 0 0 0
+    seg: 2 12 400000 0 0
+    vtx: 3 -113823752 186848752 0 0 0 0 0
+    seg: 3 6 0 0 0
+    vtx: 4 -112700000 186800000 12 0 0 0 0
+
+net: "NET00027" 3 2 0 0 0 0 1
+  pin: 1 R101.2
+  pin: 2 C101.1
+  pin: 3 C100.1
+  connect: 1 2 1 5 0
+    vtx: 1 -109410500 214471250 12 0 0 0 0
+    seg: 1 12 250000 0 0
+    vtx: 2 -109696248 212248752 0 0 0 0 0
+    seg: 2 12 300000 0 0
+    vtx: 3 -107156248 212248752 0 0 0 0 0
+    seg: 3 12 300000 0 0
+    vtx: 4 -105727504 210820000 0 0 0 0 0
+    seg: 4 12 300000 0 0
+    vtx: 5 -103028752 210820000 0 0 0 0 0
+    seg: 5 12 250000 0 0
+    vtx: 6 -103314500 208597500 12 0 0 0 0
+  connect: 2 0 2 3 0
+    vtx: 1 -111760000 216423750 12 0 0 0 0
+    seg: 1 12 200000 0 0
+    vtx: 2 -111760000 216535008 0 0 0 0 0
+    seg: 2 12 300000 0 0
+    vtx: 3 -109696248 216535008 0 0 0 0 0
+    seg: 3 12 200000 0 0
+    vtx: 4 -109410500 214471250 12 0 0 0 0
+
+net: "NET00028" 3 2 0 0 0 0 1
+  pin: 1 C101.2
+  pin: 2 R105.1
+  pin: 3 DA100.3
+  connect: 1 0 2 6 0
+    vtx: 1 -109410500 208597500 12 0 0 0 0
+    seg: 1 12 200000 0 0
+    vtx: 2 -109696248 208597504 0 0 0 0 0
+    seg: 2 12 300000 0 0
+    vtx: 3 -110648752 208597504 0 0 0 0 0
+    seg: 3 12 300000 0 0
+    vtx: 4 -111125000 208121248 0 0 0 0 0
+    seg: 4 12 300000 0 0
+    vtx: 5 -114141248 208121248 0 0 0 0 0
+    seg: 5 12 300000 0 0
+    vtx: 6 -115252496 209232496 0 0 0 0 0
+    seg: 6 6 0 0 0
+    vtx: 7 -115240000 210300000 12 0 0 0 0
+  connect: 2 2 1 5 0
+    vtx: 1 -115240000 210300000 12 0 0 0 0
+    seg: 1 6 0 0 0
+    vtx: 2 -115252496 210502496 0 0 0 0 0
+    seg: 2 12 300000 0 0
+    vtx: 3 -115252496 212248752 0 0 0 0 0
+    seg: 3 12 300000 0 0
+    vtx: 4 -116522496 213518752 0 0 0 0 0
+    seg: 4 12 300000 0 0
+    vtx: 5 -116522496 214153744 0 0 0 0 0
+    seg: 5 12 200000 0 0
+    vtx: 6 -116522500 214423750 12 0 0 0 0
+
+net: "NET00039" 3 2 0 0 0 0 1
+  pin: 1 R111.2
+  pin: 2 R110.2
+  pin: 3 DA104.4
+  connect: 1 2 1 3 0
+    vtx: 1 -112700000 182990000 12 0 0 0 0
+    seg: 1 6 0 0 0
+    vtx: 2 -113347504 183038752 0 0 0 0 0
+    seg: 2 12 300000 0 0
+    vtx: 3 -115411248 183038752 0 0 0 0 0
+    seg: 3 12 200000 0 0
+    vtx: 4 -115411250 183308750 12 0 0 0 0
+  connect: 2 2 0 2 0
+    vtx: 1 -112700000 182990000 12 0 0 0 0
+    seg: 1 6 0 0 0
+    vtx: 2 -113100000 182800000 0 0 0 0 0
+    seg: 2 12 304796 0 0
+    vtx: 3 -113100000 181200000 12 0 0 0 0
+
+net: "NET00127" 3 2 0 0 0 0 1
+  pin: 1 R116.2
+  pin: 2 C100.2
+  pin: 3 R115.1
+  connect: 1 2 1 5 0
+    vtx: 1 -103346250 219821250 12 0 0 0 0
+    seg: 1 12 250000 0 0
+    vtx: 2 -103346248 219821248 0 0 0 0 0
+    seg: 2 12 300000 0 0
+    vtx: 3 -103346248 218598752 0 0 0 0 0
+    seg: 3 12 300000 0 0
+    vtx: 4 -103028752 218281248 0 0 0 0 0
+    seg: 4 12 300000 0 0
+    vtx: 5 -103028752 215582496 0 0 0 0 0
+    seg: 5 12 250000 0 0
+    vtx: 6 -103314500 214471250 12 0 0 0 0
+  connect: 2 0 2 5 0
+    vtx: 1 -104933750 221821250 12 0 0 0 0
+    seg: 1 12 250000 0 0
+    vtx: 2 -104457504 221773744 0 0 0 0 0
+    seg: 2 12 300000 0 0
+    vtx: 3 -104457504 221138752 0 0 0 0 0
+    seg: 3 12 300000 0 0
+    vtx: 4 -103822496 220503744 0 0 0 0 0
+    seg: 4 12 300000 0 0
+    vtx: 5 -103822496 219868752 0 0 0 0 0
+    seg: 5 12 250000 0 0
+    vtx: 6 -103346250 219821250 12 0 0 0 0
+
+[texts]
+
+text: "4" -118279350 225107500 12 180 0 1150000 125000 0
+
+text: "1" -119275400 231140000 12 180 0 1150000 125000 0
+
+text: "3" -120332500 227171250 8 0 1 750000 75000 0
+
+text: "4" -120367000 225107500 8 0 1 750000 75000 0
+
+text: "1" -120028000 231140000 8 0 1 750000 75000 0
+
+text: "X10" -114163450 235426250 8 0 1 1150000 125000 0
+
+text: "2" -120334750 229235000 8 0 1 750000 75000 0
+
+text: "+19v" -106948000 218122500 7 180 0 500000 50000 0
+
+text: "+3v" -110080000 218122500 7 180 0 500000 50000 0
+
+text: "-3v" -115160000 218122500 7 180 0 500000 50000 0
+
+text: "3" -119380000 227171250 7 180 0 750000 75000 0
+
+text: "4" -119345500 225107500 7 180 0 750000 75000 0
+
+text: "1" -119684500 231140000 7 180 0 750000 75000 0
+
+text: "2" -119377750 229235000 7 180 0 750000 75000 0
+
+text: "+3v" -105158750 218122500 7 180 0 500000 50000 0
+
+text: "+5v" -111983500 218281250 7 180 0 500000 50000 0
+
+[end]

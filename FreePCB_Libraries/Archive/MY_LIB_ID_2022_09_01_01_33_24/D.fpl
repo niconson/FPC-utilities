@@ -1,0 +1,42 @@
+name: "D_TYPE"
+package: "D_TYPE"
+author: "Duxah"
+description: "Capasitors"
+units: NM
+sel_rect: -6334760 -2275000 4875000 2275000
+ref_text: 600000 -4040000 2540000 0 100000
+value_text: 600000 -4025000 -275000 0 100000
+centroid: 0 0 0 0
+text: "+" 1000000 -6260000 1340000 0 150000 0 4
+outline_polyline: 150000 -4500000 2200000 1 0 4
+next_corner: -5225000 1975000 0
+next_corner: -4700000 1750000 0
+next_corner: -5265000 1485000 0
+next_corner: -4700000 1220000 0
+next_corner: -5250000 970000 0
+next_corner: -4700000 720000 0
+next_corner: -5220000 500000 0
+next_corner: -4700000 280000 0
+next_corner: -5240000 40000 0
+next_corner: -4700000 -200000 0
+next_corner: -5260000 -460000 0
+next_corner: -4700000 -720000 0
+next_corner: -5250000 -970000 0
+next_corner: -4700000 -1220000 0
+next_corner: -5265000 -1485000 0
+next_corner: -4700000 -1750000 0
+next_corner: -5225000 -1975000 0
+next_corner: -4500000 -2200000 0
+next_corner: 4350000 -2200000 0
+next_corner: 4800000 -1750000 2
+next_corner: 4800000 1750000 0
+next_corner: 4350000 2200000 2
+close_polyline: 0
+n_pins: 2
+pin: "1" 0 -2800000 0 0 ""
+top_pad: 4 3500000 1600000 1600000 0
+top_paste: 1 3000000 1500000 1500000 0
+pin: "2" 0 2800000 0 0 ""
+top_pad: 4 3500000 1600000 1600000 0
+top_paste: 1 3000000 1500000 1500000 0
+

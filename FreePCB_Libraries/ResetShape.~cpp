@@ -1,0 +1,139 @@
+//---------------------------------------------------------------------------
+
+
+#pragma hdrstop
+
+#include "ResetShape.h"
+#include "ABClibrary.h"
+#include "fstream.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+
+
+void ResetShape ( AnsiString Name, long StartIndex, long EndIndex, AnsiString Read, bool Play)
+        {
+        if (!Name.Length())     return;
+        if (!FileName.Length()) return;         //extern!
+        long i;
+        char s[255];
+        Form1->ListBox5->Clear();               //Список замененных PARTS
+        // Чтение фаила
+        AnsiString WrFILE = ExtractFilePath(Application->ExeName);
+        if (Read.SubString((Read.Length()-13),14) == "ResetShape.fpc" ) WrFILE = WrFILE + "ResetShape2.fpc";
+        else                                                            WrFILE = WrFILE + "ResetShape.fpc";
+        ifstream R (Read.c_str());
+        ofstream W (WrFILE.c_str());
+        AnsiString part;
+        AnsiString package;
+        bool FindPack = false;
+        while (A.SubString(1,5) != "[end]")
+                {
+                R.getline(s,250);
+                A = s;
+                A = A.Trim();
+                if (A.SubString(1,5) == "part:" )
+                        {
+                        part = A;
+                        }
+                else if (A.SubString(1,8) == "package:" )
+                        {
+                        i = 8;
+                        package = ex_str(A, &i);
+                        package = "name: \"" + package + "\"";
+                        if (package.SubString(1,package.Length()) == Name.SubString(1,Name.Length()))
+                                {
+                                Form1->ListBox5->Items->Add(part);
+                                }
+                        }
+                else if (A.SubString(1,5) == "name:" )
+                        {
+                        if (A.SubString(1,A.Length()) == Name.SubString(1,Name.Length())) FindPack = true;
+                        }
+                }
+        R.close();
+        i = 7;
+        AnsiString Shape = ex_str(Name, &i);
+        ifstream R2 (Read.c_str());
+        bool Flag = false;
+        A = "";
+        while (A.SubString(1,5) != "[end]")
+                {
+                R2.getline(s,250);
+                A = s;
+                A = A.Trim();
+                //
+                if (A.SubString(1,5) == "part:" )
+                        {
+                        if (Form1->ListBox5->Items->IndexOf(A) >= 0) Flag = true;
+                        else    Flag = false;
+                        }
+                //
+                if (A.SubString(1,6) == "shape:" )
+                        {
+                        if (Flag)
+                                {
+                                W << ("shape: \"" + Shape + "\"").c_str() << endl;
+                                Flag = false;
+                                }
+                        else    W << A.c_str() << endl;
+                        }
+                else if ((A.SubString(1,12) == "[footprints]" )&&(FindPack == false))
+                        {
+                        W << A.c_str() << endl;
+                        while (StartIndex <= EndIndex)
+                                {
+                                W << footprints[StartIndex].c_str() << endl;
+                                StartIndex++;
+                                }
+                        }
+                else    W << A.c_str() << endl;
+                }
+        R2.close();
+        W.close();
+        i = 0;
+        A = "";
+        while (i < Form1->ListBox5->Count)
+                {
+                A = A + "   " + Form1->ListBox5->Items->operator [](i);
+                A = A + "\n";
+                if (A.Length() > 150)
+                        {
+                        ShowMessage ("   Reset shape: \n" + A);
+                        A = "";
+                        }
+                i++;
+                }
+        if (A.Length())
+                {
+                ShowMessage ("   Reset shape: \n" + A);
+                A = "";
+                }
+        //-------------запуск ------------
+        if (!Play)
+                return;
+        Application->ProcessMessages();
+        Sleep(500);
+        AnsiString fn = ExtractFilePath(Application->ExeName);
+        AnsiString B = WrFILE;
+        //
+        SHELLEXECUTEINFO info = {0};
+        fn.SetLength(fn.Length()-1);
+        fn = ExtractFilePath(fn);
+        fn.SetLength(fn.Length()-1);
+        fn = ExtractFilePath(fn) + "freepcb.exe";
+        AnsiString FN = ("\""+fn+"\"");
+        AnsiString ps = B;
+        AnsiString PS = ("\""+ps+"\"");
+        info.cbSize = sizeof(SHELLEXECUTEINFO);
+        info.fMask = NULL;
+        info.hwnd = NULL;
+        info.lpVerb = NULL;
+        info.lpFile = FN.c_str();
+        info.lpParameters = PS.c_str();
+        info.lpDirectory = NULL;
+        info.nShow = SW_SHOW;//SW_MAXIMIZE; //SW_HIDE
+        info.hInstApp = NULL;
+        int INF = ShellExecuteEx(&info);
+        if( INF == 0 )
+                ShowMessage("Something went wrong .. If the problem persists more than once, report it to support at freepcb.dev");
+        }

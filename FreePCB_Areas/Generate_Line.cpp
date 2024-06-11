@@ -1,0 +1,103 @@
+//---------------------------------------------------------------------------
+
+
+#pragma hdrstop
+
+#include "Generate_Line.h"
+#include "Debug_Areas.h"
+#include "math.h"
+//---------------------------------------------------------------------------
+//---------------------------------------------------------------------------
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+
+
+//---------------------------------------------------------------------------
+//---------------------------------------------------------------------------
+//---------------------------------------------------------------------------
+//int Generate_Line (double X, double Y, double X2, double Y2,  int type_L , float *OutPut)
+int Generate_Line (double xi, double yi, double xf, double yf,  int type_L , float *OutPut, int inc)
+{
+long  lines = 0;
+if (type_L > 2) type_L = 0;
+if (type_L == 0 || ( abs(xi - xf) < 0.01 || abs(yi - yf) < 0.01 ))
+        { //прямая линия
+        *(OutPut + lines) = xi;
+        lines++;
+        *(OutPut + lines) = yi;
+        lines++;
+        *(OutPut + lines) = xf;
+        lines++;
+        *(OutPut + lines) = yf;
+        lines++;
+        }
+else    { // дуга
+        float xxi, xxf, yyi, yyf;
+		if( type_L == 2/*CPolyLine::ARC_CCW */)
+				{
+				xxi = xf;
+				xxf = xi;
+				yyi = yf;
+				yyf = yi;
+				}
+		else
+				{
+				xxi = xi;
+				xxf = xf;
+				yyi = yi;
+				yyf = yf;
+	        }
+			// find center and radii of ellipse
+		float xo, yo, rx, ry;
+		if( xxf > xxi && yyf > yyi )
+				{
+				xo = xxf;
+				yo = yyi;
+				}
+		else if( xxf < xxi && yyf > yyi )
+				{
+				xo = xxi;
+				yo = yyf;
+				}
+		else if( xxf < xxi && yyf < yyi )
+				{
+				xo = xxf;
+				yo = yyi;
+				}
+		else if( xxf > xxi && yyf < yyi )
+				{
+				xo = xxi;
+				yo = yyf;
+				}
+		rx = abs( (float)(xxi-xxf) );
+		ry = abs( (float)(yyi-yyf) );
+		float k = rx/ry;
+        *(OutPut + lines) = xi;
+        lines++;
+        *(OutPut + lines) = yi;
+        lines++;
+        xi = xi - xo;
+        yi = yi - yo;
+        xi = xi/k;
+        for (int step=0; step<(GEN_ARC_NUM_CORNERS-1); step++)
+                {
+                if (type_L == 1)
+                        Rotate_Vertex (&xi, &yi, -90.0/(float)GEN_ARC_NUM_CORNERS );
+                if (type_L == 2)
+                        Rotate_Vertex (&xi, &yi, 90.0/(float)GEN_ARC_NUM_CORNERS );
+                xi = xi*k + xo;
+                yi = yi + yo;
+                *(OutPut + lines) = xi;
+                lines++;
+                *(OutPut + lines) = yi;
+                lines++;
+                xi = (xi - xo)/k;
+                yi = yi - yo;
+                }
+        *(OutPut + lines) = xf;
+        lines++;
+        *(OutPut + lines) = yf;
+        lines++; 
+        }
+return lines;
+}

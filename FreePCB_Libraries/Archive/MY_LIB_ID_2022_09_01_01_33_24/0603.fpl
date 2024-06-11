@@ -1,0 +1,18 @@
+name: "0603"
+package: ""
+author: "Ivex"
+source: "SURFACE MOUNT DESIGN AND LAND PATTERN STANDARD SUBSECTION 8.2 (PAGE 3 OF 4)"
+units: NM
+sel_rect: -1053200 -1103200 2753200 1103200
+ref_text: 1270000 850000 1900000 0 177800
+outline_polyline: 177800 -850000 900000
+next_corner: 2550000 900000 0
+next_corner: 2550000 -900000 0
+next_corner: -850000 -900000 0
+close_polyline: 0
+n_pins: 2
+pin: 1 0 0 0 0
+top_pad: 3 1200000 550000 550000
+pin: 2 0 1700000 0 0
+top_pad: 3 1200000 550000 550000
+

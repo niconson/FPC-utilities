@@ -1,0 +1,17 @@
+[options]
+units: MM
+n_copper_layers: 2
+[footprints]
+[board]
+[solder_mask_cutouts]
+[parts]
+[nets]
+net: "invertion_areas" 0 0 1 0 0 0 0
+area: 1 4 12 1
+corner: 1 202230000 201660000 0 0
+corner: 2 202230000 284950016 0 0
+corner: 3 285390016 284950016 0 0
+corner: 4 285390016 201660000 0 1
+[texts]
+[merges]
+[end]

@@ -1,0 +1,116 @@
+//---------------------------------------------------------------------------
+
+
+#pragma hdrstop
+
+#include "Generate_Line.h"
+#include "To_DXF.h"
+#include "math.h"
+//---------------------------------------------------------------------------
+
+#pragma package(smart_init)
+
+
+//---------------------------------------------------------------------------
+//---------------------------------------------------------------------------
+//---------------------------------------------------------------------------
+int Generate_Line (float xi, float yi, float xf, float yf,  int type_L , float *OutPut)
+{
+long  lines = 0;
+if (type_L > 2) type_L = 0;
+if (type_L == 0 || ( ABS(xi - xf) < 0.01 || ABS(yi - yf) < 0.01 ))
+        { //прямая линия
+        *(OutPut + lines) = xi;
+        lines++;
+        *(OutPut + lines) = yi;
+        lines++;
+        *(OutPut + lines) = xf;
+        lines++;
+        *(OutPut + lines) = yf;
+        lines++;
+        }
+else    { // дуга
+        /*angL = Angle (dx,dy,0,0);
+        if (type_L == 1) angL = angL + 90;
+        if (type_L == 2) angL = angL - 90;
+        //len = Length_Line (0, 0, dx, dy);
+        //float H_arc = len/(float)2;
+        if (ABS(dx) < ABS(dy)) H_arc = H_arc*(float)dy/(float)dx;
+        else H_arc = H_arc*(float)dx/(float)dy;
+        if (H_arc < 0) H_arc = -H_arc;
+        if (angL < 0) angL = angL + 360;
+        if (angL > 360) angL = angL - 360;
+        //x0 = H_arc*cos(angL*M_PI/180) + xmid;
+        //y0 = H_arc*sin(angL*M_PI/180) + ymid; */
+        float xxi, xxf, yyi, yyf;
+	if( type_L == 2/*CPolyLine::ARC_CCW */)
+	        {
+		xxi = xf;
+		xxf = xi;
+		yyi = yf;
+		yyf = yi;
+	        }
+	else
+	        {
+		xxi = xi;
+		xxf = xf;
+		yyi = yi;
+		yyf = yf;
+	        }
+	// find center and radii of ellipse
+	double xo, yo, rx, ry;
+	if( xxf > xxi && yyf > yyi )
+	        {
+		xo = xxf;
+		yo = yyi;
+	        }
+	else if( xxf < xxi && yyf > yyi )
+	        {
+		xo = xxi;
+		yo = yyf;
+	        }
+	else if( xxf < xxi && yyf < yyi )
+	        {
+		xo = xxf;
+		yo = yyi;
+	        }
+	else if( xxf > xxi && yyf < yyi )
+	        {
+		xo = xxi;
+		yo = yyf;
+	        }
+        rx = ABS( (double)(xxi-xxf) );
+        ry = ABS( (double)(yyi-yyf) );
+        //double ang_end = Angle((xxf-xo),(yyf-yo),0,0) ;
+        //double angL =    Angle((xxi-xo),(yyi-yo),0,0) ;
+        double k = rx/ry;
+        *(OutPut + lines) = xi;
+        lines++;
+        *(OutPut + lines) = yi;
+        lines++;
+        xi = xi - xo;
+        yi = yi - yo;
+        xi = xi/k;
+        for (int step=0; step<6; step++)
+                {
+                if (type_L == 1)
+                        Rotate_Vertex (&xi, &yi, -15);
+                if (type_L == 2)
+                        Rotate_Vertex (&xi, &yi, 15);
+                xi = xi*k + xo;
+                yi = yi + yo;
+                *(OutPut + lines) = xi;
+                lines++;
+                *(OutPut + lines) = yi;
+                lines++;
+                xi = (xi - xo)/k;
+                yi = yi - yo;
+                //angL = Angle (xxi,yyi,0,0);
+                } // while (ang < ang_end)
+        *(OutPut + lines) = xf;
+        lines++;
+        *(OutPut + lines) = yf;
+        lines++; 
+        }
+return lines;
+}

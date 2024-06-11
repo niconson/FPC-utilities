@@ -1,0 +1,435 @@
+[options]
+units: MM
+m_scale_factor: 9999
+m_top_layer: 12
+m_org_x: -999
+m_org_y: -999
+placement_grid_spacing: 2540
+routing_grid_spacing: 2540
+default_trace_width: 558800
+default_via_pad_width: 1778000
+default_via_hole_width: 965200
+n_width_menu: 1
+width_menu_item: 1 558800 1778000 965200
+n_copper_layers: 2
+layer_info: "selection" 0 255 255 255 1
+layer_info: "background" 1 0 0 0 1
+layer_info: "visible grid" 2 255 255 255 1
+layer_info: "highlight" 3 255 255 255 1
+layer_info: "DRC error" 4 0 0 0 1
+layer_info: "board outline" 5 0 0 255 1
+layer_info: "rat line" 6 128 128 255 1
+layer_info: "top silk" 7 255 255 255 1
+layer_info: "bottom silk" 8 255 125 125 0
+layer_info: "top sm cutout" 9 160 160 160 1
+layer_info: "bot sm cutout" 10 95 95 95 1
+layer_info: "thru pad" 11 0 255 0 1
+layer_info: "top copper" 12 0 128 0 1
+[footprints]
+name: "DXF_0_ID1758"
+units: NM
+sel_rect: -254000 -2254000 25654000 254000
+ref_text: 300000 0 0 0 10000
+value_text: 300000 0 0 0 10000
+centroid: 0 0 0 0
+outline_polyline: 10000 -25079000 17047000
+next_corner: -25101788 17307472 0
+outline_polyline: 10000 -25101788 17307472
+next_corner: -25169462 17560030 0
+outline_polyline: 10000 -25169462 17560030
+next_corner: -25279962 17797000 0
+outline_polyline: 10000 -25279962 17797000
+next_corner: -25429934 18011182 0
+outline_polyline: 10000 -25429934 18011182
+next_corner: -25614818 18196066 0
+outline_polyline: 10000 -25614818 18196066
+next_corner: -25829000 18346038 0
+outline_polyline: 10000 -25829000 18346038
+next_corner: -26065970 18456538 0
+outline_polyline: 10000 -26065970 18456538
+next_corner: -26318528 18524212 0
+outline_polyline: 10000 -26318528 18524212
+next_corner: -26579000 18547000 0
+outline_polyline: 10000 -26579000 18547000
+next_corner: -26839472 18524212 0
+outline_polyline: 10000 -26839472 18524212
+next_corner: -27092030 18456538 0
+outline_polyline: 10000 -27092030 18456538
+next_corner: -27329000 18346038 0
+outline_polyline: 10000 -27329000 18346038
+next_corner: -27543182 18196066 0
+outline_polyline: 10000 -27543182 18196066
+next_corner: -27728066 18011182 0
+outline_polyline: 10000 -27728066 18011182
+next_corner: -27878038 17797000 0
+outline_polyline: 10000 -27878038 17797000
+next_corner: -27988538 17560030 0
+outline_polyline: 10000 -27988538 17560030
+next_corner: -28056212 17307472 0
+outline_polyline: 10000 -28056212 17307472
+next_corner: -28079000 17047000 0
+outline_polyline: 10000 -28079000 17047000
+next_corner: -28056212 16786528 0
+outline_polyline: 10000 -28056212 16786528
+next_corner: -27988538 16533970 0
+outline_polyline: 10000 -27988538 16533970
+next_corner: -27878038 16297000 0
+outline_polyline: 10000 -27878038 16297000
+next_corner: -27728066 16082819 0
+outline_polyline: 10000 -27728066 16082819
+next_corner: -27543182 15897933 0
+outline_polyline: 10000 -27543182 15897933
+next_corner: -27329000 15747962 0
+outline_polyline: 10000 -27329000 15747962
+next_corner: -27092030 15637461 0
+outline_polyline: 10000 -27092030 15637461
+next_corner: -26839472 15569788 0
+outline_polyline: 10000 -26839472 15569788
+next_corner: -26579000 15547000 0
+outline_polyline: 10000 -26579000 15547000
+next_corner: -26318528 15569788 0
+outline_polyline: 10000 -26318528 15569788
+next_corner: -26065970 15637461 0
+outline_polyline: 10000 -26065970 15637461
+next_corner: -25829000 15747962 0
+outline_polyline: 10000 -25829000 15747962
+next_corner: -25614818 15897933 0
+outline_polyline: 10000 -25614818 15897933
+next_corner: -25429934 16082819 0
+outline_polyline: 10000 -25429934 16082819
+next_corner: -25279962 16297000 0
+outline_polyline: 10000 -25279962 16297000
+next_corner: -25169462 16533970 0
+outline_polyline: 10000 -25169462 16533970
+next_corner: -25101788 16786528 0
+outline_polyline: 10000 -25101788 16786528
+next_corner: -25079000 17047000 0
+outline_polyline: 10000 -52744216 -3000
+next_corner: -52763292 215064 0
+outline_polyline: 10000 -52763292 215064
+next_corner: -52819948 426503 0
+outline_polyline: 10000 -52819948 426503
+next_corner: -52912460 624892 0
+outline_polyline: 10000 -52912460 624892
+next_corner: -53038012 804202 0
+outline_polyline: 10000 -53038012 804202
+next_corner: -53192796 958986 0
+outline_polyline: 10000 -53192796 958986
+next_corner: -53372108 1084541 0
+outline_polyline: 10000 -53372108 1084541
+next_corner: -53570496 1177051 0
+outline_polyline: 10000 -53570496 1177051
+next_corner: -53781936 1233706 0
+outline_polyline: 10000 -53781936 1233706
+next_corner: -54000000 1252784 0
+outline_polyline: 10000 -54000000 1252784
+next_corner: -54218064 1233706 0
+outline_polyline: 10000 -54218064 1233706
+next_corner: -54429504 1177051 0
+outline_polyline: 10000 -54429504 1177051
+next_corner: -54627892 1084541 0
+outline_polyline: 10000 -54627892 1084541
+next_corner: -54807204 958986 0
+outline_polyline: 10000 -54807204 958986
+next_corner: -54961988 804202 0
+outline_polyline: 10000 -54961988 804202
+next_corner: -55087540 624892 0
+outline_polyline: 10000 -55087540 624892
+next_corner: -55180052 426503 0
+outline_polyline: 10000 -55180052 426503
+next_corner: -55236708 215064 0
+outline_polyline: 10000 -55236708 215064
+next_corner: -55255784 -3000 0
+outline_polyline: 10000 -55255784 -3000
+next_corner: -55236708 -221064 0
+outline_polyline: 10000 -55236708 -221064
+next_corner: -55180052 -432503 0
+outline_polyline: 10000 -55180052 -432503
+next_corner: -55087540 -630892 0
+outline_polyline: 10000 -55087540 -630892
+next_corner: -54961988 -810202 0
+outline_polyline: 10000 -54961988 -810202
+next_corner: -54807204 -964986 0
+outline_polyline: 10000 -54807204 -964986
+next_corner: -54627892 -1090541 0
+outline_polyline: 10000 -54627892 -1090541
+next_corner: -54429504 -1183051 0
+outline_polyline: 10000 -54429504 -1183051
+next_corner: -54218064 -1239706 0
+outline_polyline: 10000 -54218064 -1239706
+next_corner: -54000000 -1258784 0
+outline_polyline: 10000 -54000000 -1258784
+next_corner: -53781936 -1239706 0
+outline_polyline: 10000 -53781936 -1239706
+next_corner: -53570496 -1183051 0
+outline_polyline: 10000 -53570496 -1183051
+next_corner: -53372108 -1090541 0
+outline_polyline: 10000 -53372108 -1090541
+next_corner: -53192796 -964986 0
+outline_polyline: 10000 -53192796 -964986
+next_corner: -53038012 -810202 0
+outline_polyline: 10000 -53038012 -810202
+next_corner: -52912460 -630892 0
+outline_polyline: 10000 -52912460 -630892
+next_corner: -52819948 -432503 0
+outline_polyline: 10000 -52819948 -432503
+next_corner: -52763292 -221064 0
+outline_polyline: 10000 -52763292 -221064
+next_corner: -52744216 -3000 0
+outline_polyline: 10000 1255821 0
+next_corner: 1236742 218071 0
+outline_polyline: 10000 1236742 218071
+next_corner: 1180086 429516 0
+outline_polyline: 10000 1180086 429516
+next_corner: 1087573 627910 0
+outline_polyline: 10000 1087573 627910
+next_corner: 962015 807226 0
+outline_polyline: 10000 962015 807226
+next_corner: 807226 962015 0
+outline_polyline: 10000 807226 962015
+next_corner: 627910 1087573 0
+outline_polyline: 10000 627910 1087573
+next_corner: 429516 1180086 0
+outline_polyline: 10000 429516 1180086
+next_corner: 218071 1236742 0
+outline_polyline: 10000 218071 1236742
+next_corner: 0 1255821 0
+outline_polyline: 10000 0 1255821
+next_corner: -218071 1236742 0
+outline_polyline: 10000 -218071 1236742
+next_corner: -429516 1180086 0
+outline_polyline: 10000 -429516 1180086
+next_corner: -627910 1087573 0
+outline_polyline: 10000 -627910 1087573
+next_corner: -807226 962015 0
+outline_polyline: 10000 -807226 962015
+next_corner: -962015 807226 0
+outline_polyline: 10000 -962015 807226
+next_corner: -1087573 627910 0
+outline_polyline: 10000 -1087573 627910
+next_corner: -1180086 429516 0
+outline_polyline: 10000 -1180086 429516
+next_corner: -1236742 218071 0
+outline_polyline: 10000 -1236742 218071
+next_corner: -1255821 0 0
+outline_polyline: 10000 -1255821 0
+next_corner: -1236742 -218071 0
+outline_polyline: 10000 -1236742 -218071
+next_corner: -1180086 -429516 0
+outline_polyline: 10000 -1180086 -429516
+next_corner: -1087573 -627910 0
+outline_polyline: 10000 -1087573 -627910
+next_corner: -962015 -807226 0
+outline_polyline: 10000 -962015 -807226
+next_corner: -807226 -962015 0
+outline_polyline: 10000 -807226 -962015
+next_corner: -627910 -1087573 0
+outline_polyline: 10000 -627910 -1087573
+next_corner: -429516 -1180086 0
+outline_polyline: 10000 -429516 -1180086
+next_corner: -218071 -1236742 0
+outline_polyline: 10000 -218071 -1236742
+next_corner: 0 -1255821 0
+outline_polyline: 10000 0 -1255821
+next_corner: 218071 -1236742 0
+outline_polyline: 10000 218071 -1236742
+next_corner: 429516 -1180086 0
+outline_polyline: 10000 429516 -1180086
+next_corner: 627910 -1087573 0
+outline_polyline: 10000 627910 -1087573
+next_corner: 807226 -962015 0
+outline_polyline: 10000 807226 -962015
+next_corner: 962015 -807226 0
+outline_polyline: 10000 962015 -807226
+next_corner: 1087573 -627910 0
+outline_polyline: 10000 1087573 -627910
+next_corner: 1180086 -429516 0
+outline_polyline: 10000 1180086 -429516
+next_corner: 1236742 -218071 0
+outline_polyline: 10000 1236742 -218071
+next_corner: 1255821 0 0
+outline_polyline: 10000 -22745532 34000000
+next_corner: -22764606 34218008 0
+outline_polyline: 10000 -22764606 34218008
+next_corner: -22821246 34429396 0
+outline_polyline: 10000 -22821246 34429396
+next_corner: -22913734 34627732 0
+outline_polyline: 10000 -22913734 34627732
+next_corner: -23039256 34807000 0
+outline_polyline: 10000 -23039256 34807000
+next_corner: -23194002 34961744 0
+outline_polyline: 10000 -23194002 34961744
+next_corner: -23373266 35087268 0
+outline_polyline: 10000 -23373266 35087268
+next_corner: -23571604 35179752 0
+outline_polyline: 10000 -23571604 35179752
+next_corner: -23782990 35236392 0
+outline_polyline: 10000 -23782990 35236392
+next_corner: -24001000 35255468 0
+outline_polyline: 10000 -24001000 35255468
+next_corner: -24219010 35236392 0
+outline_polyline: 10000 -24219010 35236392
+next_corner: -24430396 35179752 0
+outline_polyline: 10000 -24430396 35179752
+next_corner: -24628734 35087268 0
+outline_polyline: 10000 -24628734 35087268
+next_corner: -24807998 34961744 0
+outline_polyline: 10000 -24807998 34961744
+next_corner: -24962744 34807000 0
+outline_polyline: 10000 -24962744 34807000
+next_corner: -25088266 34627732 0
+outline_polyline: 10000 -25088266 34627732
+next_corner: -25180754 34429396 0
+outline_polyline: 10000 -25180754 34429396
+next_corner: -25237394 34218008 0
+outline_polyline: 10000 -25237394 34218008
+next_corner: -25256468 34000000 0
+outline_polyline: 10000 -25256468 34000000
+next_corner: -25237394 33781992 0
+outline_polyline: 10000 -25237394 33781992
+next_corner: -25180754 33570604 0
+outline_polyline: 10000 -25180754 33570604
+next_corner: -25088266 33372266 0
+outline_polyline: 10000 -25088266 33372266
+next_corner: -24962744 33193002 0
+outline_polyline: 10000 -24962744 33193002
+next_corner: -24807998 33038256 0
+outline_polyline: 10000 -24807998 33038256
+next_corner: -24628734 32912734 0
+outline_polyline: 10000 -24628734 32912734
+next_corner: -24430396 32820246 0
+outline_polyline: 10000 -24430396 32820246
+next_corner: -24219010 32763606 0
+outline_polyline: 10000 -24219010 32763606
+next_corner: -24001000 32744532 0
+outline_polyline: 10000 -24001000 32744532
+next_corner: -23782990 32763606 0
+outline_polyline: 10000 -23782990 32763606
+next_corner: -23571604 32820246 0
+outline_polyline: 10000 -23571604 32820246
+next_corner: -23373266 32912734 0
+outline_polyline: 10000 -23373266 32912734
+next_corner: -23194002 33038256 0
+outline_polyline: 10000 -23194002 33038256
+next_corner: -23039256 33193002 0
+outline_polyline: 10000 -23039256 33193002
+next_corner: -22913734 33372266 0
+outline_polyline: 10000 -22913734 33372266
+next_corner: -22821246 33570604 0
+outline_polyline: 10000 -22821246 33570604
+next_corner: -22764606 33781992 0
+outline_polyline: 10000 -22764606 33781992
+next_corner: -22745532 34000000 0
+outline_polyline: 10000 -23579000 20447000
+next_corner: -29579000 20447000 0
+outline_polyline: 10000 -23579000 13647000
+next_corner: -23579000 20447000 0
+outline_polyline: 10000 -29579000 13647000
+next_corner: -23579000 13647000 0
+outline_polyline: 10000 -29579000 20447000
+next_corner: -29579000 13647000 0
+outline_polyline: 10000 -13181070 17672000
+next_corner: -13181070 16422001 0
+outline_polyline: 10000 -11981071 17672000
+next_corner: -13181070 17672000 0
+outline_polyline: 10000 -11981071 16422001
+next_corner: -11981071 17672000 0
+outline_polyline: 10000 -13181070 16422001
+next_corner: -11981071 16422001 0
+outline_polyline: 10000 3030000 -2002000
+next_corner: -31186000 -2002000 0
+outline_polyline: 10000 -31186000 -2002000
+next_corner: -31575000 -1950000 0
+outline_polyline: 10000 -31575000 -1950000
+next_corner: -31937000 -1800000 0
+outline_polyline: 10000 -31937000 -1800000
+next_corner: -32249000 -1561000 0
+outline_polyline: 10000 -32249000 -1561000
+next_corner: -32487998 -1250000 0
+outline_polyline: 10000 -32487998 -1250000
+next_corner: -32638000 -888000 0
+outline_polyline: 10000 -32638000 -888000
+next_corner: -32737000 -137000 0
+outline_polyline: 10000 -32737000 -137000
+next_corner: -32876000 200000 0
+outline_polyline: 10000 -32876000 200000
+next_corner: -33098000 489000 0
+outline_polyline: 10000 -33098000 489000
+next_corner: -33387002 711000 0
+outline_polyline: 10000 -33387002 711000
+next_corner: -33724000 851000 0
+outline_polyline: 10000 -33724000 851000
+next_corner: -34086000 898000 0
+outline_polyline: 10000 -34086000 898000
+next_corner: -41406000 898000 0
+outline_polyline: 10000 -41406000 898000
+next_corner: -41764000 851000 0
+outline_polyline: 10000 -41764000 851000
+next_corner: -42098000 713000 0
+outline_polyline: 10000 -42098000 713000
+next_corner: -42385000 493000 0
+outline_polyline: 10000 -42385000 493000
+next_corner: -42605000 206000 0
+outline_polyline: 10000 -42605000 206000
+next_corner: -42744000 -128000 0
+outline_polyline: 10000 -42744000 -128000
+next_corner: -42842000 -878000 0
+outline_polyline: 10000 -42842000 -878000
+next_corner: -42994000 -1243000 0
+outline_polyline: 10000 -42994000 -1243000
+next_corner: -43234000 -1556000 0
+outline_polyline: 10000 -43234000 -1556000
+next_corner: -43547000 -1797000 0
+outline_polyline: 10000 -43547000 -1797000
+next_corner: -43912000 -1948000 0
+outline_polyline: 10000 -43912000 -1948000
+next_corner: -44304000 -1999000 0
+outline_polyline: 10000 -44304000 -1999000
+next_corner: -57001000 -1999000 0
+outline_polyline: 10000 -57001000 -1999000
+next_corner: -57001000 36095000 0
+outline_polyline: 10000 -57001000 36095000
+next_corner: 3030000 36095000 0
+outline_polyline: 10000 3030000 36095000
+next_corner: 3030000 -2002000 0
+outline_polyline: 10000 -28166748 -2002000
+next_corner: -28166748 -4073000 0
+outline_polyline: 10000 -27562280 -2002000
+next_corner: -27562280 -4073000 0
+outline_polyline: 10000 -20686000 -4073000
+next_corner: -29316000 -4073000 0
+outline_polyline: 10000 -22439718 -2002000
+next_corner: -22439718 -4073000 0
+outline_polyline: 10000 -21835250 -2002000
+next_corner: -21835250 -4073000 0
+outline_polyline: 10000 -28653860 -2002000
+next_corner: -28653860 -4073000 0
+outline_polyline: 10000 -21348138 -2002000
+next_corner: -21348138 -4073000 0
+outline_polyline: 10000 -28816000 -2002000
+next_corner: -28816000 -4073000 0
+outline_polyline: 10000 -21186000 -2002000
+next_corner: -21186000 -4073000 0
+outline_polyline: 10000 -21024208 -2002000
+next_corner: -21024208 -4073000 0
+outline_polyline: 10000 -28966052 -2002000
+next_corner: -28966052 -4073000 0
+outline_polyline: 10000 -29235558 -2002000
+next_corner: -29235558 -4073000 0
+outline_polyline: 10000 -20759900 -2002000
+next_corner: -20759900 -4073000 0
+outline_polyline: 10000 -29316000 -2002000
+next_corner: -29316000 -4073000 0
+n_pins: 0
+[board]
+[solder_mask_cutouts]
+[parts]
+part: 0
+ref_text: 0 200000 0 -500000 -500000 0
+package: "DXF_0"
+shape: "DXF_0_ID1758"
+pos: 0 0 0 0 1
+[nets]
+[texts]
+[merges]
+[end]

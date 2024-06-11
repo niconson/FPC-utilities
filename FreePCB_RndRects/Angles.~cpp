@@ -1,0 +1,130 @@
+//---------------------------------------------------------------------------
+
+
+#pragma hdrstop
+
+#include "Angles.h"
+#include "RND.h"
+#include "math.h"
+//---------------------------------------------------------------------------
+
+#pragma package(smart_init)
+//---------------------------------------------------------------------------
+//============================ angle ========================================
+//---------------------------------------------------------------------------
+float Angle (double dx, double dy)
+        {
+        double ANG_s;
+        if (ABS(dx) < BY_ZERO)
+                {
+                if (dy > 0)     ANG_s = 90;
+                else if (dy < 0)ANG_s = 270;
+                else            return 0;
+                }
+        else
+                {
+                double Dxy = dy/dx;
+                ANG_s = (atan(Dxy))*(double)180/(double)M_PI;
+                if ((dx > 0)&&(dy < 0)) ANG_s = 360 + ANG_s;
+                if (dx < 0) ANG_s = 180 + ANG_s;
+                }
+        return ANG_s;
+        }
+//---------------------------------------------------------------------------
+//=============================== test degree ===============================
+//---------------------------------------------------------------------------
+int Test_angle_between (        float x1, //point 1
+                                float y1,
+                                float x2, //point next
+                                float y2,
+                                float x3, //point next next
+                                float y3, int mode)
+{
+#define LESS            -1
+#define MORE            +1
+#define P3_CURS_TO_LEFT  -1
+#define P3_CURS_TO_RIGHT +1
+#define ZERO            0
+#define ERROR           0
+#define TEST_ON_45      1       //test on 45 (and 315) degree
+#define TEST_ON_90      2       //test on 90 (and 270) degree
+#define TEST_ON_135     3       //test on 135 (and 225) degree
+#define TEST_ON_180     4       //test on 180 degree
+        float ang = Angle(x1-x2,y1-y2);
+        Rotate_f_Vertex(&x1,&y1,-ang);
+        Rotate_f_Vertex(&x2,&y2,-ang);
+        Rotate_f_Vertex(&x3,&y3,-ang);
+        if (mode == TEST_ON_180)
+                {
+                if (y3 > y2)
+                        return P3_CURS_TO_LEFT;  //(less)
+                else if (y3 < y2)
+                        return P3_CURS_TO_RIGHT; //(more)
+                else    return ZERO;
+                }
+        if ((x1 < x2 && x3 > x2) || (x1 > x2 && x3 < x2))
+                {
+                if (mode == TEST_ON_45)
+                        return MORE;
+                if (mode == TEST_ON_90)
+                        return MORE;
+                if (mode == TEST_ON_135)
+                        {
+                        if (ABS(y3-y2) > ABS(x3-x2))
+                                return LESS;
+                        else if (ABS(y3-y2) < ABS(x3-x2))
+                                return MORE;
+                        else    return ZERO;
+                        }
+                }
+        if ((x1 < x2 && x3 < x2) || (x1 > x2 && x3 > x2))
+                {
+                if (mode == TEST_ON_45)
+                        {
+                        if (ABS(y3-y2) > ABS(x3-x2))
+                                return MORE;
+                        else if (ABS(y3-y2) < ABS(x3-x2))
+                                return LESS;
+                        else    return ZERO;
+                        }
+                if (mode == TEST_ON_90)
+                        return LESS;
+                if (mode == TEST_ON_135)
+                        return LESS;
+                }
+        if (x3 == x2)
+                {
+                if (mode == TEST_ON_45)
+                        return MORE;
+                if (mode == TEST_ON_90)
+                        return ZERO;
+                if (mode == TEST_ON_135)
+                        return LESS;
+                }
+        ShowMessage(" Error mode value in func: Test_angle_between.cpp");
+        return ERROR;
+}
+//---------------------------------------------------------------------------
+//========================= angle between 2 sides ===========================
+//---------------------------------------------------------------------------
+float angle_between (   float X1, //point 1
+                        float Y1,
+                        float X2, //point next
+                        float Y2,
+                        float X3, //point next next
+                        float Y3,
+                        bool range180)
+{
+        float dx12 = X1-X2;
+        float dy12 = Y1-Y2;
+        float dx23 = X3-X2;
+        float dy23 = Y3-Y2;
+        float ANGLE_BETWEEN = Angle( dx23,dy23 ) - Angle( dx12,dy12 );
+        if (ANGLE_BETWEEN < 0) ANGLE_BETWEEN = ANGLE_BETWEEN + 360;
+        if (!range180)                            // range: 0-360 degree
+                return ANGLE_BETWEEN;
+        if (ANGLE_BETWEEN > 180)                  // range: 0-180 degree
+                return (360 - ANGLE_BETWEEN);
+        else    return ANGLE_BETWEEN;
+}
+

@@ -1,0 +1,80 @@
+//---------------------------------------------------------------------------
+
+
+#pragma hdrstop
+#include "To_DXF.h"
+#include "PolyFace.h"
+float FirstX = -INT_DEF;
+float FirstY = -INT_DEF;
+#pragma package(smart_init)
+
+//---------------------------------------------------------------------------
+// class CContour
+//---------------------------------------------------------------------------
+void CContour::AddLine(float x1, float y1, float z1, float x2, float y2, float z2)
+{
+
+}
+void CContour::DelLine(int i)
+{
+
+}
+void CContour::Clear()
+{
+
+}
+int CContour::TestPointInsideContour(float x, float y, float z)
+{
+return 0;
+}
+int CContour::TestLineIntersection(cLINE * Line)
+{
+return 0;
+}
+//---------------------------------------------------------------------------
+// class CContourList
+//---------------------------------------------------------------------------
+void CContourList::CreateContour()
+{
+
+}
+void CContourList::DeleteContour(int i)
+{
+
+}
+void CContourList::RemoveAll()
+{
+
+}
+int CContourList::TestPointInside(float x, float y, float z)
+{
+return 0;
+}
+int CContourList::TestLineIntersection(cLINE * Line)
+{
+return 0;
+}
+//---------------------------------------------------------------------------
+//
+//---------------------------------------------------------------------------
+CContourList * PolyFace::PolygonTriangulation (CContour * Contour, CContourList * Holes)
+{
+return NULL;
+}
+
+int PolyFace::DRAW_FACETS( CContourList * FACETS )
+{
+return 0;
+}
+
+void PolyFace::AddVertex(float X, float Y)
+{
+if( FirstX < 1.0-INT_DEF )
+        {
+        FirstX = X;
+        FirstY = Y;
+        }
+else    {
+
+        }
+}

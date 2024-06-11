@@ -1,0 +1,33 @@
+[options]
+units: MM
+n_copper_layers: 2
+[footprints]
+name: "Ptr"
+  units: NM
+  sel_rect: -770670 -770670 770670 770670
+  ref_text: 0 1300000 700000 0 0
+  value_text: 0 1200000 -300000 0 0
+  centroid: 0 0 0 0
+  outline_polyline: 25400 0 2540000
+    next_corner: 0 -2540000 0
+  outline_polyline: 25400 -2540000 0
+    next_corner: 2540000 0 0
+  outline_polyline: 25400 0 2540000
+    next_corner: -2540000 0 2
+    next_corner: 0 -2540000 2
+    next_corner: 2540000 0 2
+    close_polyline: 2
+  n_pins: 1
+    pin: "1" 0 0 0 0
+      top_pad: 1 100000 500000 500000 0
+[board]
+[solder_mask_cutouts]
+[parts]
+part: ObjPtr
+ref_text: 0 0 0 1300000 700000 0
+package: ""
+shape: "Ptr"
+pos: 0 0 0 0 0
+[nets]
+[texts]
+[end]

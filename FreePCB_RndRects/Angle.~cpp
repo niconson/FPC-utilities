@@ -1,0 +1,29 @@
+//---------------------------------------------------------------------------
+
+
+#pragma hdrstop
+
+#include "Angle.h"
+#include "math.h"
+#include "RND.h"
+//---------------------------------------------------------------------------
+
+#pragma package(smart_init)
+
+float Angle (double dx, double dy)
+        {
+        double ANGs;
+        if (dx == 0)
+                {
+                if (dy > 0) ANGs = 90;
+                else ANGs = 270;
+                }
+        else
+                {
+                double Dxy = dy/dx;
+                ANGs = (atan(Dxy))*(double)573/(double)10;
+                if ((dx > 0)&&(dy < 0)) ANGs = 360 + ANGs;
+                if (dx < 0) ANGs = 180 + ANGs;
+                }
+        return ANGs;
+}

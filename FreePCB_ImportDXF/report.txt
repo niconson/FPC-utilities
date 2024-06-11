@@ -1,0 +1,15 @@
+FreePCB project report (default units = MIL)
+============================================
+Project name: ImportDXFH
+Project file: d:\Мои прогр\FreePCB_ImportDXF\ImportDXFH.fpc
+Default library folder: i:\рабочая папка\library for freepcb
+
+Board statistics
+==============
+Number of copper layers: 1
+Number of board outlines: 0
+Board outline(s) extent: X = 0 MIL; Y = 0 MIL
+Number of parts: 1292
+Number of pins: 1 (0 through-hole, 1 SMT)
+Number of vias: 0
+Number of holes: 0

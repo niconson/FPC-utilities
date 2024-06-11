@@ -1,0 +1,96 @@
+//---------------------------------------------------------------------------
+
+
+#pragma hdrstop
+
+#include "Enquary.h"
+#include "Comp_man.h"
+//---------------------------------------------------------------------------
+
+#pragma package(smart_init)
+
+bool Enquary (AnsiString H)
+{
+HWND FreePCB = FindWindow( NULL,H.c_str());
+if (FreePCB)
+        {
+        char data[8];
+        AnsiString mes = "enquary";
+        int len = MIN(mes.Length(),(CDS_SHORT_MAX_LEN-1));
+        data[7] = '\0';
+        for (int cp=(len-1); cp>=0; cp--)
+                data[cp] = mes[cp+1];
+        CDS_SHORT.lpData = data;
+        CDS_SHORT.cbData = len+1;
+        SendMessageA(FreePCB, WM_COPYDATA, 0, (LPARAM)&CDS_SHORT);
+        return true;
+        }
+return false;
+}
+//
+//
+//
+bool SendMessage_EP(AnsiString WindowName)
+{
+HWND EP = FindWindow( NULL,WindowName.c_str());
+if (EP) {
+        char data[CDS_LONG_MAX_LEN];
+        AnsiString mes = "";
+        for( int gI=0; gI<Form1->StringGridPins->RowCount; gI++ )
+                {
+                mes += Form1->StringGridPins->Cells[def_Pin][gI] + " ";
+                }
+        int len = MIN(mes.Length(),(CDS_LONG_MAX_LEN-1));
+        data[len] = '\0';
+        for (int cp=(len-1); cp>=0; cp--)
+                data[cp] = mes[cp+1];
+        CDS_LONG.lpData = data;
+        CDS_LONG.cbData = len+1;
+        SendMessageA(EP, WM_COPYDATA, 0, (LPARAM)&CDS_LONG);
+        return true;
+        }
+return false;
+}
+//
+//
+bool SendMessage_FILE(AnsiString WindowName, AnsiString*TEXT)
+{
+HWND EP = FindWindow( NULL,WindowName.c_str());
+if (EP) {
+        char data[CDS_LONG_MAX_LEN];
+        AnsiString mes = ExtractFilePath(FileName);
+        if( TEXT )
+                mes = *TEXT;
+        if( mes.Length() == 0 )
+                mes = ExtractFilePath(FileNameBack);
+        mes.SetLength(mes.Length()-1);
+        int len = MIN(mes.Length(),(CDS_LONG_MAX_LEN-1));
+        data[len] = '\0';
+        for (int cp=(len-1); cp>=0; cp--)
+                data[cp] = mes[cp+1];
+        CDS_LONG.lpData = data;
+        CDS_LONG.cbData = len+1;
+        SendMessageA(EP, WM_COPYDATA, 0, (LPARAM)&CDS_LONG);
+        return true;
+        }
+return false;
+}
+//
+bool SendMessage_UPDFILE(AnsiString WindowName)
+{
+HWND Ar = FindWindow( NULL,WindowName.c_str());
+if (Ar) {
+        char data[CDS_SHORT_MAX_LEN];
+        AnsiString mes = "ObjMan: \"" + FileName + "\"";
+        int len = MIN(mes.Length(),(CDS_SHORT_MAX_LEN-1));
+        data[len] = '\0';
+        for (int cp=(len-1); cp>=0; cp--)
+                data[cp] = mes[cp+1];
+        CDS_SHORT.lpData = data;
+        CDS_SHORT.cbData = len+1;
+        SendMessageA(Ar, WM_COPYDATA, 0, (LPARAM)&CDS_SHORT);
+        return true;
+        }
+return false;
+}
+

@@ -1,0 +1,36 @@
+name: "400"
+package: ""
+author: "Ivex"
+source: "JEDEC PUBLICATION NO.95 BOOK ONE PAGE 103"
+units: MIL
+sel_rect: -193 -293 193 93
+ref_text: 50 0 143 0 7
+outline_polyline: 7 185 -100
+next_corner: 0 85 2
+next_corner: -185 -100 2
+next_corner: 0 -285 2
+close_polyline: 2
+outline_polyline: 7 118 -242
+next_corner: 150 -274 0
+outline_polyline: 7 142 -218
+next_corner: 174 -250 0
+outline_polyline: 7 150 -274
+next_corner: 174 -250 0
+n_pins: 4
+pin: 1 20 100 -100 0
+top_pad: 1 50 25 25
+bottom_pad: 1 50 25 25
+inner_pad: 1 50 25 25
+pin: 2 20 0 0 0
+top_pad: 1 50 25 25
+bottom_pad: 1 50 25 25
+inner_pad: 1 50 25 25
+pin: 3 20 -100 -100 0
+top_pad: 1 50 25 25
+bottom_pad: 1 50 25 25
+inner_pad: 1 50 25 25
+pin: 4 20 0 -200 0
+top_pad: 1 50 25 25
+bottom_pad: 1 50 25 25
+inner_pad: 1 50 25 25
+

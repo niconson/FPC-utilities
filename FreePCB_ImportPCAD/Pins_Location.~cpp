@@ -1,0 +1,223 @@
+//---------------------------------------------------------------------------
+
+
+#pragma hdrstop
+
+#include "Pins_Location.h"
+#include "HEAD.h"
+#include "LSTBXS.h"
+#include "fstream.h"
+//---------------------------------------------------------------------------
+
+#pragma package(smart_init)
+
+static long POSX;
+static long POSY;
+static long PINX;
+static long PINY;
+static long RotatePin;
+static long ANGLE;
+static bool SIDE;
+static AnsiString SHAPE;
+static AnsiString REF;
+
+//=================================
+//ÎÒÐÀÆÅÍÈÅ ÏÎ Õ, ÏÎÂÎÐÎÒ ÊÎÎÐÄÈÍÀÒ
+void mirror_angle (double Part_angle, bool Part_layer, double *X, double *Y)
+{
+double D;
+if(Part_layer ){(*X) = -(*X);}
+Rotate_Vertex (X, Y, -Part_angle);
+}
+
+void RFoot (AnsiString SHAPE, AnsiString REF)
+        {
+        AnsiString header = "name: \"" + SHAPE + "\"";
+        long i = 0;
+        long IndexSG = -1;
+        char str[MAX_CHARS];
+        bool Flag = false;
+        AnsiString A;
+        //×ÒÅÍÈÅ FootPrints
+        A = ExtractFilePath (Application->ExeName)  ;
+        A = A + "Import_Tango\\FootPrints.txt";
+        ifstream FootPrints (A.c_str());
+        while (A.SubString(1,3) != "end" )
+                {
+                FootPrints.getline(str,sizeof(str));
+                A = str;
+                A = A.Trim();
+                if (A.SubString(1,4) == "name" )
+                        {
+                        PINX = 0;
+                        PINY = 0;
+                        RotatePin = 0;
+                        IndexSG = Form2->StringGrid1->RowCount-1;
+                        if (A.SubString(1,A.Length()) == header.SubString(1,header.Length()) ) Flag = true;
+                        else if (Flag) break;
+                        }
+                if (Flag)
+                        {
+                        if (A.SubString(1,3) == "pin" )
+                                {
+                                i = prob (A, 1);
+                                AnsiString PinDes = ex_str (A, &i);
+                                i = prob (A, 3);
+                                PINX = ex_float_NM (A, &i, -1);
+                                PINY = ex_float_NM (A, &i, -1);
+                                RotatePin = ex_float_NM (A, &i, -1);
+                                double X = (double)PINX;
+                                double Y = (double)PINY;
+                                mirror_angle ( (double)ANGLE, SIDE, &X, &Y );
+                                X += (double)POSX;
+                                Y += (double)POSY;
+                                AnsiString REFPIN = REF + "." + PinDes;
+                                i = Form2->StringGrid1->Cols[0]->IndexOf(REFPIN);
+                                IndexSG = Form2->StringGrid1->RowCount-1;
+                                if (i >= 0)
+                                        {
+                                        IndexSG = i;
+                                        Form2->StringGrid1->Cells[3][i] = AnsiString((long)X);
+                                        Form2->StringGrid1->Cells[4][i] = AnsiString((long)Y);
+                                        }
+                                }
+                        else if ((A.SubString(1,7) == "top_pad" ) ||
+                                (A.SubString(1,10) == "bottom_pad" ) ||
+                                (A.SubString(1,9) == "inner_pad" ) )
+                                {
+                                i = prob(A,1);
+                                long aperture = ex_float_NM(A, &i, -1);
+                                long W = ex_float_NM(A, &i, -1);
+                                W = W/(double)2;
+                                long L = ex_float_NM(A, &i, -1);
+                                if (aperture == 1)
+                                        {
+                                        W = W*(double)4/(double)5;
+                                        L = W;
+                                        }
+                                double X = -L;
+                                double Y = -W;
+                                Rotate_Vertex(&X, &Y, (double)RotatePin);
+                                X += (double)PINX;
+                                Y += (double)PINY;
+                                mirror_angle ( (double)ANGLE, SIDE, &X, &Y );
+                                X += (double)POSX;
+                                Y += (double)POSY;
+                                double P1 = X;
+                                double P2 = Y;
+                                X = L;
+                                Y = W;
+                                Rotate_Vertex(&X, &Y, (double)RotatePin);
+                                X += (double)PINX;
+                                Y += (double)PINY;
+                                mirror_angle ( (double)ANGLE, SIDE, &X, &Y );
+                                X += (double)POSX;
+                                Y += (double)POSY;
+                                double P3 = X;
+                                double P4 = Y;
+                                int COL = 5;
+                                if (A.SubString(1,7) == "top_pad" )
+                                        {
+                                        if (SIDE) COL += 4;
+                                        }
+                                if (A.SubString(1,10) == "bottom_pad" )
+                                        {
+                                        if (!SIDE) COL += 4;
+                                        }
+                                if (A.SubString(1,9) == "inner_pad" )
+                                        {
+                                        COL += 8;
+                                        }
+                                if (P1 < P3)
+                                        {
+                                        Form2->StringGrid1->Cells[COL][IndexSG] = AnsiString((long)P1);
+                                        Form2->StringGrid1->Cells[COL+2][IndexSG] = AnsiString((long)P3);
+                                        }
+                                else    {
+                                        Form2->StringGrid1->Cells[COL][IndexSG] = AnsiString((long)P3);
+                                        Form2->StringGrid1->Cells[COL+2][IndexSG] = AnsiString((long)P1);
+                                        }
+                                if (P2 < P4)
+                                        {
+                                        Form2->StringGrid1->Cells[COL+1][IndexSG] = AnsiString((long)P2);
+                                        Form2->StringGrid1->Cells[COL+3][IndexSG] = AnsiString((long)P4);
+                                        }
+                                else    {
+                                        Form2->StringGrid1->Cells[COL+1][IndexSG] = AnsiString((long)P4);
+                                        Form2->StringGrid1->Cells[COL+3][IndexSG] = AnsiString((long)P2);
+                                        }
+                                }
+                        }//if (Flag)
+                }
+        FootPrints.close();
+        }
+
+
+void Pins_Location (void)
+{
+long i = 1;
+char str[MAX_CHARS];
+AnsiString RefPinD;
+while (i < Form2->StringGrid1->RowCount)
+        {
+        RefPinD = Form2->StringGrid1->Cells[0][i];
+        if (RefPinD.UpperCase().SubString(1,RefPinD.Length()) != "VIA")
+                {
+                Form2->StringGrid1->Cells[3][i] = "0";
+                Form2->StringGrid1->Cells[4][i] = "0";
+                Form2->StringGrid1->Cells[5][i] = "0";
+                Form2->StringGrid1->Cells[6][i] = "0";
+                Form2->StringGrid1->Cells[7][i] = "0";
+                Form2->StringGrid1->Cells[8][i] = "0";
+                Form2->StringGrid1->Cells[9][i] = "0";
+                Form2->StringGrid1->Cells[10][i] = "0";
+                Form2->StringGrid1->Cells[11][i] = "0";
+                Form2->StringGrid1->Cells[12][i] = "0";
+                Form2->StringGrid1->Cells[13][i] = "0";
+                Form2->StringGrid1->Cells[14][i] = "0";
+                Form2->StringGrid1->Cells[15][i] = "0";
+                Form2->StringGrid1->Cells[16][i] = "0";
+                }
+        i++;
+        }
+i = 0;
+//×ÒÅÍÈÅ PART LIST
+Form1->Label4->Caption = "void Pins_Location (void)" ;
+Application->ProcessMessages();
+AnsiString A = ExtractFilePath (Application->ExeName)  ;
+A = A + "Import_Tango\\PartList.txt";
+ifstream PartList (A.c_str());
+AnsiString B;
+while (A.SubString(1,3) != "end" )
+        {
+        PartList.getline(str,sizeof(str));
+        A = str;
+        A = A.Trim();
+        if (A.SubString(1,3) == "pos" )
+                {
+                i = prob (A, 1);
+                POSX = ex_float_NM (A, &i, -1);
+                POSY = ex_float_NM (A, &i, -1);
+                long Sd = ex_float_NM (A, &i, -1);
+                if (Sd) SIDE = true;
+                else    SIDE = false;
+                ANGLE = ex_float_NM (A, &i, -1);
+                if (MaxLoc < ABS(POSX)) MaxLoc = ABS(POSX);
+                if (MaxLoc < ABS(POSY)) MaxLoc = ABS(POSY);
+                }
+        if (A.SubString(1,4) == "part" )
+                {
+                i = prob (A, 1);
+                REF = A.SubString(i,(A.Length()-i+1));
+                }
+        if (A.SubString(1,5) == "shape" )
+                {
+                i = prob (A, 1);
+                SHAPE = ex_str (A, &i);
+                Form1->Label4->Caption = "Pins_Location äëÿ: " + SHAPE;
+                Application->ProcessMessages();
+                RFoot (SHAPE, REF);
+                }
+        }
+PartList.close();
+}

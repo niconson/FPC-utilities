@@ -1,0 +1,230 @@
+name: "K73-17-10"
+package: "K73-17-10"
+author: "Duxah"
+description: "Connectors"
+units: NM
+sel_rect: -2938900 -2988900 13038900 2888900
+ref_text: 900000 1400000 1500000 0 127000
+value_text: 600000 1450000 350000 0 100000
+centroid: 0 5000000 0 0
+outline_polyline: 127000 0 2800000 1 0 4
+next_corner: -2850000 -50000 2
+next_corner: 0 -2900000 2
+next_corner: 10100000 -2900000 0
+next_corner: 12950000 -50000 2
+next_corner: 10100000 2800000 2
+close_polyline: 0
+n_pins: 2
+pin: "1" 1000000 0 0 0 ""
+top_pad: 1 4000000 2000000 2000000 0
+inner_pad: 0 0 0 0 0 0
+bottom_pad: 1 4000000 2000000 2000000 0
+pin: "2" 1000000 10000000 0 0 ""
+top_pad: 1 4000000 2000000 2000000 0
+inner_pad: 0 0 0 0 0 0
+bottom_pad: 1 4000000 2000000 2000000 0
+
+name: "K73-17-15"
+package: "K73-17-15"
+author: "Duxah"
+description: "Connectors"
+units: NM
+sel_rect: -1417500 -1417500 16417500 1417500
+ref_text: 900000 1400000 1500000 0 127000
+value_text: 600000 5700000 -300000 0 100000
+centroid: 1 7500000 0 0
+outline_polyline: 127000 0 1100000 1 0 4
+next_corner: -1100000 0 2
+next_corner: 0 -1100000 2
+next_corner: 15000000 -1100000 0
+next_corner: 16100000 0 2
+next_corner: 15000000 1100000 2
+close_polyline: 0
+n_pins: 2
+pin: "1" 1000000 0 0 0 ""
+top_pad: 1 1800000 0 0 0
+inner_pad: 0 0 0 0 0 0
+bottom_pad: 1 1800000 0 0 0
+pin: "2" 1000000 15000000 0 0 ""
+top_pad: 1 1800000 0 0 0
+inner_pad: 0 0 0 0 0 0
+bottom_pad: 1 1800000 0 0 0
+
+name: "K73-17-40"
+author: "Ivex"
+description: "none"
+source: "PRINTED CIRCUIT DESIGN METHODS PAGE 410"
+units: MIL
+sel_rect: -55 -125 1655 125
+ref_text: 50 800 175 0 7
+outline_polyline: 7 378 117
+next_corner: 1222 117 0
+next_corner: 1222 -117 0
+next_corner: 378 -117 0
+close_polyline: 0
+n_pins: 2
+pin: 1 45 0 0 0
+top_pad: 1 94 47 47
+bottom_pad: 1 94 47 47
+inner_pad: 1 94 47 47
+pin: 2 45 1600 0 0
+top_pad: 1 94 47 47
+bottom_pad: 1 94 47 47
+inner_pad: 1 94 47 47
+
+name: "KBPC25"
+author: "unknown"
+description: "none"
+units: NM
+sel_rect: -22738900 -6438900 6438900 22738900
+ref_text: 0 -20110000 -1270000 0 254000
+value_text: 0 -20110000 -6350000 0 254000
+centroid: 0 -22650000 -6350000 0
+text: "+" 2540000 -15950000 -1500000 0 254000 1 5
+text: "-" 2540000 -2400000 12500000 0 254000 1 5
+outline_polyline: 127000 -22650000 -6350000 1 0 4
+next_corner: 6350000 -6350000 0
+next_corner: 6350000 22650000 0
+next_corner: -22650000 22650000 0
+close_polyline: 0
+n_pins: 4
+pin: "+" 2000000 -12300000 0 0 ""
+top_pad: 2 5000000 2500000 2500000 0
+inner_pad: 0 0 0 0 0 0
+bottom_pad: 2 5000000 2500000 2500000 0
+pin: "AC2" 2000000 0 0 0 ""
+top_pad: 1 5000000 2500000 2500000 0
+inner_pad: 0 0 0 0 0 0
+bottom_pad: 1 5000000 2500000 2500000 0
+pin: "-" 2000000 0 16300000 0 ""
+top_pad: 1 5000000 2500000 2500000 0
+inner_pad: 0 0 0 0 0 0
+bottom_pad: 1 5000000 2500000 2500000 0
+pin: "AC1" 2000000 -16300000 16300000 0 ""
+top_pad: 1 5000000 2500000 2500000 0
+inner_pad: 0 0 0 0 0 0
+bottom_pad: 1 5000000 2500000 2500000 0
+
+name: "KPBA-3010"
+package: "KPBA-3010"
+author: "Duxah"
+description: "Control"
+units: NM
+sel_rect: -1950000 -1121760 2588260 1570190
+ref_text: 2540000 3040000 3580000 0 254000
+value_text: 2540000 3040000 -1500000 0 254000
+centroid: 1 0 0 0
+text: "1" 1000000 1647080 -824570 45 150000 0 4
+outline_polyline: 150000 -1399040 -704810 1 0 7
+next_corner: -1399040 715190 0
+next_corner: -999040 715190 0
+next_corner: -999040 795190 0
+next_corner: -299040 1495190 1
+next_corner: 300960 1495190 0
+next_corner: 1000960 795190 1
+next_corner: 1000960 715190 0
+next_corner: 1410960 715190 0
+next_corner: 1410960 -704810 0
+close_polyline: 0
+outline_polyline: 127000 -1163130 -658260 1 1 4
+next_corner: -1863130 -658260 0
+next_corner: -1863130 -858260 0
+next_corner: -1863130 -1058260 0
+next_corner: -1163130 -1058260 0
+next_corner: -1163130 -858260 0
+close_polyline: 0
+n_pins: 3
+pin: "3" 0 -1500000 0 0 ""
+top_pad: 2 900000 450000 450000 0
+pin: "1" 0 1500000 0 0 ""
+top_pad: 2 900000 450000 450000 0
+pin: "2" 0 0 -600000 0 ""
+top_pad: 2 900000 450000 450000 0
+
+name: "KPTB-1612SURKQBDC"
+package: "KPTB-1612SURKQBDC"
+author: "Duxer"
+description: "Graphics"
+units: NM
+sel_rect: -2349500 -1049020 1225000 1013000
+ref_text: 1000000 1600000 500000 0 100000
+value_text: 1000000 1600000 -900000 0 100000
+centroid: 0 0 0 0
+text: "." 5000000 -2100000 -800000 0 500000 0 4
+outline_polyline: 150000 -799000 785000 1 1 4
+next_corner: -799000 938000 0
+next_corner: 799000 938000 0
+next_corner: 799000 790000 0
+outline_polyline: 150000 -799660 -789600 1 1 4
+next_corner: -799660 -942600 0
+next_corner: 798340 -942600 0
+next_corner: 798340 -794600 0
+n_pins: 4
+pin: "1" 0 -825000 -430000 0 ""
+top_pad: 3 400000 400000 400000 0
+pin: "2" 0 825000 -430000 0 ""
+top_pad: 3 400000 400000 400000 0
+pin: "3" 0 -825000 430000 0 ""
+top_pad: 3 400000 400000 400000 0
+pin: "4" 0 825000 430000 0 ""
+top_pad: 3 400000 400000 400000 0
+
+name: "KX-7"
+package: "KX-7"
+author: "unknown"
+description: "none"
+units: NM
+sel_rect: -2319000 -2414460 1854000 1504000
+ref_text: 300000 0 500000 0 50000
+value_text: 300000 0 0 0 50000
+centroid: 0 0 0 0
+outline_polyline: 150000 -1600000 200000 1 0 4
+next_corner: -1600000 -200000 0
+outline_polyline: 150000 1600000 200000 1 0 4
+next_corner: 1600000 -200000 0
+outline_polyline: 150000 -350000 -1250000 1 0 4
+next_corner: 350000 -1250000 0
+outline_polyline: 150000 -350000 1250000 1 0 4
+next_corner: 350000 1250000 0
+outline_polyline: 300000 -2065000 -2011250 1 0 4
+next_corner: -2061730 -2042400 0
+next_corner: -2052060 -2072190 0
+next_corner: -2036420 -2099330 0
+next_corner: -2015480 -2122620 0
+next_corner: -1990160 -2141060 0
+next_corner: -1961560 -2153840 0
+next_corner: -1930940 -2160400 0
+next_corner: -1899620 -2160460 0
+next_corner: -1869000 -2154020 0
+next_corner: -1840380 -2141370 0
+next_corner: -1815010 -2123060 0
+next_corner: -1793990 -2099890 0
+next_corner: -1778240 -2072860 0
+next_corner: -1768430 -2043150 0
+next_corner: -1765000 -2012050 0
+next_corner: -1768100 -1980910 0
+next_corner: -1777620 -1951040 0
+next_corner: -1793140 -1923790 0
+next_corner: -1813980 -1900370 0
+next_corner: -1839240 -1881790 0
+next_corner: -1867810 -1868870 0
+next_corner: -1898440 -1862170 0
+next_corner: -1929800 -1861980 0
+next_corner: -1960470 -1868310 0
+next_corner: -1989170 -1880870 0
+next_corner: -2014630 -1899110 0
+next_corner: -2035740 -1922250 0
+next_corner: -2051590 -1949260 0
+next_corner: -2061490 -1978980 0
+next_corner: -2065000 -2010100 0
+next_corner: -2065000 -2011250 0
+n_pins: 4
+pin: "2" 0 1250000 -900000 270 ""
+top_pad: 3 1500000 550000 550000 275000
+pin: "1" 0 -1250000 -900000 90 ""
+top_pad: 3 1500000 550000 550000 275000
+pin: "4" 0 -1250000 900000 270 ""
+top_pad: 3 1500000 550000 550000 275000
+pin: "3" 0 1250000 900000 270 ""
+top_pad: 3 1500000 550000 550000 275000
+

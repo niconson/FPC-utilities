@@ -1,0 +1,240 @@
+//---------------------------------------------------------------------------
+
+
+#pragma hdrstop
+
+#include "Inicialization.h"
+#include "Comp_man.h"
+#include "fstream.h"
+#include "Path_EXE.h"
+//---------------------------------------------------------------------------
+
+#pragma package(smart_init)
+
+void TestColOrder()
+{
+bool bools[PartsColCount];
+for( int i=0; i<PartsColCount; i++ )
+        bools[i] = 0;
+for( int i=0; i<PartsColCount; i++ )
+        {
+        for( int ii=0; ii<PartsColCount; ii++ )
+                if( i == PartColOrder[ii] )
+                        {
+                        bools[ii] = true;
+                        break;
+                        }
+        }
+for( int i=0; i<PartsColCount; i++ )
+        {
+        bool f = false;
+        for( int ii=0; ii<PartsColCount; ii++ )
+                if( i == PartColOrder[ii] )
+                        {
+                        f = true;
+                        break;
+                        }
+        if( f == 0 )
+                for( int ii=0; ii<PartsColCount; ii++ )
+                        if( bools[ii] == 0 )
+                                {
+                                PartColOrder[ii] = i;
+                                bools[ii] = true;
+                                break;
+                                }
+        }
+}
+
+//========================= Inicialization ============================
+void Inicialization (void)
+{
+BEGIN = false;
+Form1->Visible = false;
+Application->ProcessMessages();
+while( Form1->SF->Items->Count > 4 )
+        Form1->SF->Items->Delete(4);
+Form1->Caption = "";
+//
+if (Form1->Values->Items->Count == 0)
+        ReadingStorages();
+//
+Form1->Top = 0;
+WindowHeader = "Res";
+FileName = "";
+//
+Form1->Caption = "Infobox";
+A = ExtractFilePath(Application->ExeName);
+A = A + "Path.txt";
+FILE* F;
+F = fopen(A.c_str(),"r");
+if(F)
+        {
+        fclose(F);
+        ifstream read_path (A.c_str());
+        int inc_i = 0;
+        while (!read_path.eof())
+                {
+                read_path.getline(s,sizeof(s));
+                A = s;
+                A = A.Trim();
+                if( A.SubString(1,A.Length()) == ColNames[col_RefDes].SubString(1,ColNames[col_RefDes].Length()) )
+                        def_RefDes = inc_i;
+                else if( A.SubString(1,A.Length()) == ColNames[col_RIRange].SubString(1,ColNames[col_RIRange].Length())  )
+                        def_RIRange = inc_i;
+                else if( A.SubString(1,A.Length()) == ColNames[col_ValueNL].SubString(1,ColNames[col_ValueNL].Length()) )
+                        def_ValueNL = inc_i;
+                else if( A.SubString(1,A.Length()) == ColNames[col_Value].SubString(1,ColNames[col_Value].Length()) )
+                        def_Value = inc_i;
+                else if( A.SubString(1,A.Length()) == ColNames[col_PackageNL].SubString(1,ColNames[col_PackageNL].Length()) )
+                        def_PackageNL = inc_i;
+                else if( A.SubString(1,A.Length()) == ColNames[col_Package].SubString(1,ColNames[col_Package].Length()) )
+                        def_Package = inc_i;
+                else if( A.SubString(1,A.Length()) == ColNames[col_FootPrint].SubString(1,ColNames[col_FootPrint].Length()) )
+                        def_FootPrint = inc_i;
+                else if( A.SubString(1,A.Length()) == ColNames[col_Merge].SubString(1,ColNames[col_Merge].Length()) )
+                        def_Merge = inc_i;
+                else if( A.SubString(1,A.Length()) == ColNames[col_Pins].SubString(1,ColNames[col_Pins].Length()) )
+                        def_Pins = inc_i;
+                else if( A.SubString(1,A.Length()) == ColNames[col_Holes].SubString(1,ColNames[col_Holes].Length()) )
+                        def_Holes = inc_i;
+                else if( A.SubString(1,A.Length()) == ColNames[col_Gl].SubString(1,ColNames[col_Gl].Length()) )
+                        def_Gl = inc_i;
+                else if( A.SubString(1,A.Length()) == ColNames[col_S].SubString(1,ColNames[col_S].Length()) )
+                        def_S = inc_i;
+                else if( A.SubString(1,A.Length()) == ColNames[col_Ang].SubString(1,ColNames[col_Ang].Length()) )
+                        def_Ang = inc_i;
+                else if( A.SubString(1,A.Length()) == ColNames[col_Xprt].SubString(1,ColNames[col_Xprt].Length()) )
+                        def_Xprt = inc_i;
+                else if( A.SubString(1,A.Length()) == ColNames[col_Yprt].SubString(1,ColNames[col_Yprt].Length()) )
+                        def_Yprt = inc_i;
+                else if( A.SubString(1,A.Length()) == ColNames[col_CompareNetlist].SubString(1,ColNames[col_CompareNetlist].Length()) )
+                        def_CompareNetlist = inc_i;
+                else if( A.SubString(1,7) == "Embed_T" )
+                        Form2->OnTop->Checked = true;
+                else if( A.SubString(1,7) == "Embed_R" )
+                        Form2->OnTheRight->Checked = true;
+                else if( A.SubString(1,7) == "Embed_B" )
+                        Form2->FromBelow->Checked = true;
+                else if (A.SubString(1,12)      == "Russian_lang" )
+                        Form2->Language->Checked = true;
+                else if (A.SubString(1,11) == "Ignore_case" )
+                        Form2->IgnoreCase->Checked = true;
+                else if (A.SubString(1,10) == "Only_Latin" )
+                        Form2->OnlyLatin->Checked = true;
+                else if (A.SubString(1,10) == "check_refs" )
+                        Form2->check_refs->Checked = true;
+                else if (A.SubString(1,15) == "check_ref_index" )
+                        Form2->check_ref_index->Checked = true;
+                else if (A.SubString(1,12) == "check_values" )
+                        {
+                        if(A.SubString(13,1) == "_")
+                                Form2->check_valuesNL->Checked = true;
+                        else
+                                Form2->check_values->Checked = true;
+                        }
+                else if (A.SubString(1,10) == "check_pack" )
+                        {
+                        if(A.SubString(14,1) == "_")
+                                Form2->check_packageNL->Checked = true;
+                        else
+                                Form2->check_package->Checked = true;
+                        }
+                else if (A.SubString(1,10) == "check_foot" )
+                        Form2->check_foot->Checked = true;
+                else if (A.SubString(1,10) == "check_merg" )
+                        Form2->check_merge->Checked = true;
+                else if (A.SubString(1,16) == "check_parts_pins" )
+                        Form2->check_parts_pins->Checked = true;
+                else if (A.SubString(1,17) == "check_parts_holes" )
+                        Form2->check_parts_holes->Checked = true;
+                else if (A.SubString(1,10) == "check_glue" )
+                        Form2->check_glueds->Checked = true;
+                else if (A.SubString(1,10) == "check_side" )
+                        Form2->check_sides->Checked = true;
+                else if (A.SubString(1,10) == "check_angl" )
+                        Form2->check_angles->Checked = true;
+                else if (A.SubString(1,11) == "check_partx" )
+                        Form2->check_partx->Checked = true;
+                else if (A.SubString(1,11) == "check_party" )
+                        Form2->check_party->Checked = true;
+                else if (A.SubString(1,16) == "check_comp_nlist" )
+                        Form2->check_comp_nlist->Checked = true;
+                else if (A.SubString(1,10) == "check_pinn" )
+                        Form2->check_pinname->Checked = true;
+                else if (A.SubString(1,10) == "check_netp" )
+                        Form2->check_netpcb->Checked = true;
+                else if (A.SubString(1,14) == "check_pins_cnt" )
+                        Form2->check_pins_cnt->Checked = true;
+                else if (A.SubString(1,11) == "check_ext_n" )
+                        Form2->check_ext_netlist->Checked = true;
+                else if (A.SubString(1,15) == "check_pins_type" )
+                        Form2->check_pins_type->Checked = true;
+                else if (A.SubString(1,12) == "check_pins_w" )
+                        Form2->check_pins_w->Checked = true;
+                else if (A.SubString(1,12) == "check_pins_l" )
+                        Form2->check_pins_l->Checked = true;
+                else if (A.SubString(1,10) == "check_thrm" )
+                        Form2->check_thrml->Checked = true;
+                else if (A.SubString(1,16) == "check_holes_diam" )
+                        Form2->check_holes_diam->Checked = true;
+                else if (A.SubString(1,10) == "check_past" )
+                        Form2->check_paste->Checked = true;
+                else if (A.SubString(1,11) == "check_pinsx" )
+                        Form2->check_pinsx->Checked = true;
+                else if (A.SubString(1,11) == "check_pinsy" )
+                        Form2->check_pinsy->Checked = true;
+                else if (A.SubString(1,10) == "check_vias" )
+                        Form2->check_vias->Checked = true;
+                inc_i++;
+                //
+                i = prob(A,1);
+                AnsiString add;
+                if (i>0)  {
+                        add = ex_str(A, &i);
+                        if      (add.Length())
+                                {
+                                if (A.SubString(1,10) == "Form1_Left" )
+                                        {
+                                        Form1_Left = StrToInt(add);
+                                        Form1->Left = Form1_Left;
+                                        }
+                                else if (A.SubString(1,9)  == "Form1_Top" )
+                                        {
+                                        Form1_Top = StrToInt(add);
+                                        Form1->Top = Form1_Top;
+                                        }
+                                else if (A.SubString(1,11) == "Form1_Width" )
+                                        {
+                                        Form1_Width = StrToInt(add);
+                                        Form1->Width = Form1_Width;
+                                        }
+                                else if (A.SubString(1,12) == "Form1_Height" )
+                                        {
+                                        Form1_Height = StrToInt(add);
+                                        Form1->Height = Form1_Height;
+                                        }
+                                }
+                        }
+                }
+        read_path.close();
+        }
+else    fclose(F);
+TestColOrder();
+Embed(Form1->ClientWidth,Form1->ClientHeight);
+Application->ProcessMessages();
+Pause = 99;
+Form1->CCNetlist->ItemIndex = -1;
+Form1->CType->ItemIndex = -1;
+Form1->CTrml->ItemIndex = -1;
+//
+INTER_FACE();
+SetFormComponentsSizes(true);
+//
+//
+BEGIN = true;//разрешение записи:  save_path_func()
+Form1->Visible = true;
+}
+
+
+
+

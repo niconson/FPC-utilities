@@ -1,0 +1,503 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+
+#include "IN.h"
+#include "fstream.h"
+#include "clipbrd.hpp"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+TForm1 *Form1;
+AnsiString A = "";
+float XPOS = 0;
+float YPOS = 0;
+float HEIGHT = 1;
+float WIDTH = 0.1;
+long i = 0;
+int LAYERINFO = 12;
+RECT Trect;
+
+//---------------------------------------------------------------------------
+long prob (AnsiString ANSI , long Pr)
+{
+long ind = 0;
+while (Pr)
+        {
+        ind++;
+        if (ind > ANSI.Length()) return 0;
+        if (ANSI.SubString(ind,1) == "\"")
+                {
+                ind++;
+                while (ANSI.SubString(ind,1) != "\"")
+                        {
+                        ind++;
+                        if (ind > ANSI.Length()) return 0;
+                        }
+                }
+        if (ANSI.SubString(ind,1) == " ")
+                {
+                Pr--;
+                while (ANSI.SubString(ind,1) == " ")
+                        {
+                        ind++;
+                        if (ind > ANSI.Length()) return 0;
+                        }
+                ind--;
+                }
+        }
+while (ANSI.SubString(ind,1) == " ") ind++;
+return ind;
+}
+
+
+
+
+
+//---------------------------------------------------------------------------
+AnsiString ex_str (AnsiString ANSI, long *n)
+{
+while (ANSI.SubString((*n),1) != "\"") {(*n)++; if ((*n) > ANSI.Length()) return "";}
+(*n)++;
+AnsiString A = "";
+while (ANSI.SubString((*n),1) != "\"")
+        {
+        A = A + ANSI.SubString(*n,1);
+        (*n)++;
+        if ((*n) > ANSI.Length()) return "";
+        }
+(*n)++;
+return A;
+}
+
+
+
+
+
+
+
+//---------------------------------------------------------------------------
+double ex_float_NM (AnsiString Str, long *index, int units)
+{
+if ((*index) == 0)              *index = 1;
+if ((*index) > Str.Length())    return 0;
+AnsiString Q = "";
+while ((Str.SubString(*index,1) < "0")||(Str.SubString(*index,1) > "9"))
+        {
+        if ((*index) >= Str.Length()) return 0;
+        if (Str.SubString(*index,1) == "-") Q = Q + Str.SubString(*index,1);
+        if (Str.SubString(*index,1) == "+") Q = Q + Str.SubString(*index,1);
+        (*index)++;
+        }
+while ((Str.SubString(*index,1) >= "0")&&(Str.SubString(*index,1) <= "9"))
+        {
+        if ((*index) > Str.Length()) return 0;
+        Q = Q + Str.SubString(*index,1);
+        (*index)++;
+        if ((Str.SubString(*index,1) == ".")||(Str.SubString(*index,1) == ","))
+                {
+                Q = Q + ",";
+                (*index)++;
+                }
+        }
+if (!Q.Length()) return 0;
+while (Str.SubString((*index),1) == " ") (*index)++;
+if (Q.SubString(Q.Length(),1) == ",") Q = Q + "0";
+double DE = StrToFloat(Q);
+if (units == 0)DE = DE*25400;
+return DE;
+}
+
+
+
+
+
+
+
+//---------------------------------------------------------------------------
+AnsiString Str_Float_Format (AnsiString STRING_2_DOUBLE)
+{
+STRING_2_DOUBLE = StringReplace(STRING_2_DOUBLE,".",",",TReplaceFlags()<<rfReplaceAll);
+int L = STRING_2_DOUBLE.Length();
+bool F = false;
+for (int x=1; x<=L; x++)
+        {
+        if (STRING_2_DOUBLE.SubString(1,1) == "-") continue;
+        if ((STRING_2_DOUBLE.SubString(x,1) < "0") || (STRING_2_DOUBLE.SubString(x,1) > "9"))
+        if  (F) {
+                STRING_2_DOUBLE = STRING_2_DOUBLE.SubString(1,(x-1));
+                break;
+                }
+        else    {
+                F = true;
+                AnsiString S = STRING_2_DOUBLE.SubString(x,1);
+                STRING_2_DOUBLE = StringReplace(STRING_2_DOUBLE,S,",",TReplaceFlags()<<rfReplaceAll);
+                }
+        }
+L = STRING_2_DOUBLE.Length();
+if  (((STRING_2_DOUBLE.SubString(L,1) == "-")&&(L<2))||(!L)) STRING_2_DOUBLE = "0";
+if  (STRING_2_DOUBLE.SubString(1,1) == ",") STRING_2_DOUBLE = "0" + STRING_2_DOUBLE;
+if  (STRING_2_DOUBLE.SubString(L,1) == ",") STRING_2_DOUBLE = STRING_2_DOUBLE + "0";
+return STRING_2_DOUBLE;
+}
+
+
+
+
+
+
+
+
+
+
+
+//---------------------------------------------------------------------------
+__fastcall TForm1::TForm1(TComponent* Owner)
+        : TForm(Owner)
+{
+DecimalSeparator = ',';
+Form1->ListBox1->Sorted = false;
+Form1->ListBox2->Sorted = false;
+Form1->ListBox1->Items->Add("Top Silk");
+Form1->ListBox1->Items->Add("Top Notes");
+Form1->ListBox1->Items->Add("Top Copper");
+Form1->ListBox1->Items->Add("Bottom Copper");
+Form1->ListBox1->Items->Add("Inner 1");
+Form1->ListBox1->Items->Add("Inner 2");
+Form1->ListBox1->Items->Add("Inner 3");
+Form1->ListBox1->Items->Add("Inner 4");
+Form1->ListBox1->Items->Add("Inner 5");
+Form1->ListBox1->Items->Add("Inner 6");
+Form1->ListBox1->Items->Add("Inner 7");
+Form1->ListBox1->Items->Add("Inner 8");
+Form1->ListBox1->Items->Add("Inner 9");
+Form1->ListBox1->Items->Add("Inner 10");
+Form1->ListBox1->Items->Add("Inner 11");
+Form1->ListBox1->Items->Add("Inner 12");
+Form1->ListBox1->Items->Add("Inner 13");
+Form1->ListBox1->Items->Add("Inner 14");
+Form1->ListBox1->ItemIndex = 0;
+Form1->ListBox3->MultiSelect = true;
+Form1->ListBox3->Sorted = true;
+
+Trect.left =  Trect.bottom = DEFAULT;
+Trect.right = Trect.top = -DEFAULT;
+
+A = Clipboard()->AsText;
+if (A.SubString(1,6) == "ObjMan")
+        {
+        long i = prob (A, 1);
+        OpenDialog1->FileName = ex_str(A, &i) ;
+        }
+else if (Form1->OpenDialog1->Execute())
+        {
+        if (Form1->OpenDialog1->FileName.Length() == 0) return;
+        A = Form1->OpenDialog1->FileName;
+        if (A.UpperCase().SubString((A.Length()-3),4) != ".FPC")
+                {
+                ShowMessage ("   Error format!");
+                exit(0);
+                }
+        }
+else exit(0);
+
+
+
+ifstream Load (OpenDialog1->FileName.c_str());
+A = "";
+char s[2501];
+int n_copper_layers = 1;
+while (A.SubString(1,5) != "[end]" )
+        {
+        Load.getline(s,2500);
+        A = s;
+        A = A.Trim();
+        Form1->ListBox2->Items->Add(A);
+        if (A.SubString(1,15) == "n_copper_layers" )
+                {
+                i = prob(A, 1);
+                n_copper_layers = ex_float_NM(A, &i, -1);
+                }
+        else if (A.SubString(1,4) == "net:" )
+                {
+                i = prob(A, 1);
+                AnsiString Net = ex_str(A, &i) ;
+                Form1->ListBox3->Items->Add(Net);
+                }
+        else if (A.SubString(1,7) == "corner:" )
+                {
+                i = prob(A, 2);
+                int getX = ex_float_NM(A, &i, -1);
+                int getY = ex_float_NM(A, &i, -1);
+                Trect.left = MIN(getX, Trect.left);
+                Trect.bottom = MIN(getY, Trect.bottom);
+                Trect.right = MAX(getX, Trect.right);
+                Trect.top = MAX(getY, Trect.top);
+                }
+        }
+Load.close();
+while (Form1->ListBox1->Items->Count > (n_copper_layers+2))Form1->ListBox1->Items->Delete(n_copper_layers+2);
+//
+if( Trect.left == DEFAULT )
+        {
+        ShowMessage("Board outline missing in PCB design! Add the line and try again.");
+        exit(0);
+        }
+}
+//---------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+void __fastcall TForm1::Button1Click(TObject *Sender)
+{
+if( Form1->ToRight->Checked )
+        {
+        XPOS = Trect.right + 2000000;
+        YPOS = Trect.top;
+        }
+else    {
+        XPOS = Trect.left;
+        YPOS = Trect.bottom - 500000;
+        }
+A = Form1->Edit3->Text;
+WIDTH = StrToFloat(Str_Float_Format(A));
+A = Form1->Edit4->Text;
+HEIGHT = StrToFloat(Str_Float_Format(A));
+if( HEIGHT > 5000000 || WIDTH > 2000000 || HEIGHT < 0 || WIDTH < 0 )
+        {
+        ShowMessage("Maximum Height value may be 5000000nm!");
+        ShowMessage("Maximum Width value may be 2000000nm!");
+        }
+if( Form1->ListBox3->SelCount == 0 )
+        {
+        ShowMessage( "Please select nets and try again!" );
+        return;
+        }
+
+if (Form1->ListBox1->ItemIndex == 0)
+        LAYERINFO = LAY_SILK_TOP ;
+else if (Form1->ListBox1->ItemIndex == 1)
+        LAYERINFO = LAY_TOP_NOTES;
+else
+        LAYERINFO = LAY_TOP_COPPER - 2 + Form1->ListBox1->ItemIndex;
+Form1->ListBox1->Items->Clear();
+Form1->ListBox3->CopySelection(Form1->ListBox1);
+
+
+
+long currentX = XPOS;
+long currentY = YPOS;
+AnsiString H;// = "text: \"[PROJECT NETS]\" ";
+//H += AnsiString(currentX-2000000) + " ";
+//H += AnsiString(currentY) + " ";
+//H += AnsiString(LAYERINFO);
+//H += " 0 0 ";
+//H += AnsiString(HEIGHT*1.5) + " ";
+//H += AnsiString(WIDTH*1.5) + " ";
+//Form1->ListBox1->Items->Add(H);
+//currentY = currentY - HEIGHT*2;
+
+//H = "text: \"(key 'N' for highlight net)\" ";
+//H += AnsiString(currentX-2000000) + " ";
+//H += AnsiString(currentY) + " ";
+//H += AnsiString(LAYERINFO);
+//H += " 0 0 ";
+//H += AnsiString((long)(HEIGHT/1.5)) + " ";
+//H += AnsiString((long)(WIDTH/1.5)) + " ";
+//currentY = currentY - HEIGHT*2;
+
+ofstream W (OpenDialog1->FileName.c_str());
+A = "";
+char s[250];
+int MaxLen = 0;
+for (int k=0; k>-1;k++)
+        {
+        A = Form1->ListBox2->Items->operator [](k);
+        if (!A.Length()) continue;
+        if (A.SubString(1,5) == "[end]" ) break;
+        if (A.SubString(1,4) == "net:" )
+                {
+                i = prob(A, 1);
+                AnsiString TEXT = ex_str(A, &i);
+                if( MaxLen < TEXT.Length()+1 )
+                        MaxLen = TEXT.Length()+1;
+                }
+        }
+int x_shift_number = 1;
+for(int i=0; i<Form1->ListBox3->Count; i++)
+        {
+        if( Form1->ListBox3->Selected[i] )
+                {
+                currentY = currentY - HEIGHT*2;
+                if( (Form1->ToRight->Checked && (YPOS-currentY) > (Trect.top-Trect.bottom)) || currentY < -200000000 )
+                                {
+                                x_shift_number++;
+                                if(x_shift_number > 5)
+                                        {
+                                        currentX = XPOS;
+                                        x_shift_number = 1;
+                                        YPOS -= (Trect.top-Trect.bottom);
+                                        }
+                                else    currentX += (HEIGHT*MaxLen + 3000000);
+                                currentY = YPOS;
+                                currentY = currentY - HEIGHT*2;
+                                }
+                currentX = MIN(currentX, 600000000);
+                currentY = MAX(currentY, -600000000);
+                A = Form1->ListBox3->Items->operator [](i);
+                AnsiString TEXT = "text: \"" + A + "\" ";
+                TEXT += AnsiString(currentX) + " ";
+                TEXT += AnsiString(currentY) + " ";
+                TEXT += AnsiString(LAYERINFO);
+                TEXT += " 0 0 ";
+                TEXT += AnsiString((long)HEIGHT) + " ";
+                TEXT += AnsiString((long)WIDTH) + " ";
+                Form1->ListBox1->Items->Add(TEXT);
+                }
+        }
+for (int k=0; k>-1;k++)
+        {
+        A = Form1->ListBox2->Items->operator [](k);
+        if (!A.Length()) continue;
+        if (A.SubString(1,5) == "[end]" ) break;
+        /*if (A.SubString(1,4) == "net:" )
+                {
+                if (countArea)
+                        {
+                        W << ("area: " + AnsiString(countArea) + " 4 "                  + AnsiString(LAYERINFO)                 + " 0").c_str() << endl;
+                        W << ("corner: 1 " + AnsiString(currentX-2000000) + " "         + AnsiString(currentY-(long)HEIGHT/4)         + " 0 0").c_str() << endl;
+                        W << ("corner: 2 " + AnsiString(currentX-2000000) + " "         + AnsiString(currentY+(long)HEIGHT*5/4)       + " 0 0").c_str() << endl;
+                        W << ("corner: 3 " + AnsiString(currentX + (long)HEIGHT*MaxLen) + " " + AnsiString(currentY+(long)HEIGHT*5/4)   + " 0 0").c_str() << endl;
+                        W << ("corner: 4 " + AnsiString(currentX + (long)HEIGHT*MaxLen) + " " + AnsiString(currentY-(long)HEIGHT/4)     + " 0 1").c_str() << endl;
+                        currentY = currentY - HEIGHT*2;
+                        }
+                if( netCount > 30 )
+                        {
+                        netCount = 0;
+                        currentY = YPOS;
+                        currentY = currentY - HEIGHT*4;
+                        currentX += (HEIGHT*MaxLen + 3000000);
+                        }
+                i = prob(A, 1);
+                AnsiString TEXT = ex_str(A, &i);
+                if (Form1->ListBox1->Items->IndexOf(TEXT) == -1 )countArea = 0;
+                else    {
+                        netCount++;
+                        i = prob(A, 4);
+                        AnsiString net1 = A.SubString(1,(i-1));
+                        countArea = ex_float_NM(A, &i, -1);
+                        countArea++;
+                        i = prob(A, 5);
+                        AnsiString net2 = A.SubString((i-1),(A.Length()-i+2));
+                        A = net1 + AnsiString(countArea) + net2;
+                        TEXT = "text: \"" + TEXT + "\" ";
+                        TEXT += AnsiString(currentX) + " ";
+                        TEXT += AnsiString(currentY) + " ";
+                        TEXT += AnsiString(LAYERINFO);
+                        TEXT += " 0 0 ";
+                        TEXT += AnsiString((long)HEIGHT) + " ";
+                        TEXT += AnsiString((long)WIDTH) + " ";
+                        Form1->ListBox1->Items->Add(TEXT);
+                        }
+                } */
+        if (A.SubString(1,7) == "[texts]" )
+                {
+                /*if (countArea)
+                        {
+                        W << ("area: " + AnsiString(countArea) + " 4 "                  + AnsiString(LAYERINFO)                 + " 0").c_str() << endl;
+                        W << ("corner: 1 " + AnsiString(currentX-2000000) + " "         + AnsiString(currentY-(long)HEIGHT/4)         + " 0 0").c_str() << endl;
+                        W << ("corner: 2 " + AnsiString(currentX-2000000) + " "         + AnsiString(currentY+(long)HEIGHT*5/4)       + " 0 0").c_str() << endl;
+                        W << ("corner: 3 " + AnsiString(currentX + (long)HEIGHT*MaxLen) + " " + AnsiString(currentY+(long)HEIGHT*5/4)   + " 0 0").c_str() << endl;
+                        W << ("corner: 4 " + AnsiString(currentX + (long)HEIGHT*MaxLen) + " " + AnsiString(currentY-(long)HEIGHT/4)     + " 0 1").c_str() << endl;
+                        currentY = currentY - HEIGHT*2;
+                        }   */
+                W << A.c_str() << endl;
+                for (int n=0; n<Form1->ListBox1->Items->Count; n++ )W << Form1->ListBox1->Items->operator [](n).c_str() << endl;
+                }
+        else    W << A.c_str() << endl;
+        }
+W << A.c_str() << endl;
+W.close();
+
+
+
+//-------------запуск ------------
+AnsiString B = Form1->OpenDialog1->FileName;
+//
+SHELLEXECUTEINFO info = {0};
+AnsiString fn = ExtractFilePath(Application->ExeName);
+fn.SetLength(fn.Length()-1);
+fn = ExtractFilePath(fn);
+fn.SetLength(fn.Length()-1);
+fn = ExtractFilePath(fn) + "freepcb.exe";
+AnsiString FN = ("\""+fn+"\"");
+AnsiString ps = B;
+AnsiString PS = ("\""+ps+"\"");
+info.cbSize = sizeof(SHELLEXECUTEINFO);
+info.fMask = NULL;
+info.hwnd = NULL;
+info.lpVerb = NULL;
+info.lpFile = FN.c_str();
+info.lpParameters = PS.c_str();
+info.lpDirectory = NULL;
+info.nShow = SW_SHOW;//SW_MAXIMIZE; //SW_HIDE
+info.hInstApp = NULL;
+int INF = ShellExecuteEx(&info);
+if( INF == 0 )
+        ShowMessage("Something went wrong .. If the problem persists more than once, report it to support at freepcb.dev");
+
+exit(0);
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Button2Click(TObject *Sender)
+{
+for( int i=0; i<Form1->ListBox3->Items->Count; i++ )
+        {
+        AnsiString s = Form1->ListBox3->Items->operator [](i);
+        if (s.SubString(1,2) == "N0")
+                Form1->ListBox3->Selected[i] = 0;
+        }
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Button3Click(TObject *Sender)
+{
+for( int i=0; i<Form1->ListBox3->Items->Count; i++ )
+        {
+        Form1->ListBox3->Selected[i] = 1;
+        }
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Label5Click(TObject *Sender)
+{
+ShellExecute(NULL, "open", "https://github.com/Duxah/FreePCB-2/blob/master/README.md", NULL, NULL, SW_SHOWNORMAL);         
+}
+//---------------------------------------------------------------------------
+
+
+
+
+void __fastcall TForm1::ToRightMouseUp(TObject *Sender,
+      TMouseButton Button, TShiftState Shift, int X, int Y)
+{
+Form1->Below->Checked = 0;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::BelowMouseUp(TObject *Sender, TMouseButton Button,
+      TShiftState Shift, int X, int Y)
+{
+Form1->ToRight->Checked = 0;
+}
+//---------------------------------------------------------------------------
+

@@ -1,0 +1,159 @@
+//---------------------------------------------------------------------------
+
+
+#pragma hdrstop
+
+#include "CanvasAll.h"
+#include "To_DXF.h"
+#include "DXF_library.h"
+#include "New.h"
+#include "math.h"
+//---------------------------------------------------------------------------
+
+#pragma package(smart_init)
+static int mode = 0;
+
+void CanvasAll(int MODE)
+{
+GlobalCurveXY = 0;
+GlobalCurveXZ = 0;
+GlobalCurveYZ = 0;
+static int CountOK = 0;
+static int sRowCount = 0;
+if ( sRowCount != Form2->StringGrid1->RowCount || MODE == -1 )
+        {
+        if (MARKS)
+                delete[] MARKS;
+        MARKS = NULL;
+        }
+sRowCount = Form2->StringGrid1->RowCount;
+GlobalShiftX = 0;
+GlobalShiftY = 0;
+Form2->Select->Clear();
+Form2->StringGrid1->Col = 0;
+Form2->StringGrid1->Row = Form2->StringGrid1->RowCount - 1;
+Form2->Draw->Enabled = false;
+int SvLibEn = Form2->SvLib->Enabled;
+Form2->SvLib->Enabled = false;
+Form2->StringGrid1->Visible = false;
+Form2->ProgressBar1->Visible = true;
+Form2->ProgressBar1->Position = 0;
+
+// save rect
+Form2->Canvas->Pen->Width = 1;
+Form2->Canvas->Pen->Color = Form2->Color;
+Form2->Canvas->Brush->Color = Form2->Color;
+Form2->Canvas->Rectangle(Fill_Rect);
+SaveRect.Left = Fill_Rect.Left;
+SaveRect.Top = Fill_Rect.Top;
+SaveRect.Right = Fill_Rect.Right;
+SaveRect.Bottom = Fill_Rect.Bottom;
+bool flagOK = false;
+AnsiString SaveTextGrid = Form2->GridValues->Text;
+Form2->GridValues->Text = "";
+AnsiString N = "";
+AnsiString Nb = "";
+float Percent = (float)100/(float)Form2->StringGrid1->RowCount;
+if (MARKS == NULL || MODE != mode)
+        {
+        CountOK = 0;
+        //Form2->ProgressBar1->Caption = "Please wait...";
+        Application->ProcessMessages();
+        if( MARKS == NULL )
+        try     {
+                MARKS = new(std::nothrow) int[Form2->StringGrid1->RowCount];
+                }
+        catch(std::bad_alloc)
+                {
+                ShowMessage("bool[" + AnsiString("Form2->StringGrid1->RowCount") + "]!" );
+                exit(0);
+                }
+        for (int r=0; r<Form2->StringGrid1->RowCount; r++)
+                {
+                Form2->ProgressBar1->Position = int((float)Percent*(float)r);
+                Application->ProcessMessages();
+                StringGridIndexRow = r;
+                MARKS[r] = 0;
+                N = Form2->StringGrid1->Cells[PACKAGES][r];
+                if (N.SubString(1,N.Length()) != Nb.SubString(1,Nb.Length()))
+                        {
+                        if (MODE == -1 || MODE == Form2->AllObj)
+                                flagOK = 1;
+                        else if (MODE == Form2->AllinThisProject)
+                                flagOK = Canva(GET_DATA);
+                        else if(MODE == Form2->UsedInOthersParts)
+                                flagOK = WhereElseIsThisPartUsed( &N, NULL );
+                        else if(MODE == Form2->AuxiliaryParts)
+                                flagOK = CheckPartOfPart(&N);
+                        if (flagOK)
+                                {
+                                CountOK++;
+                                MARKS[r] = 1;
+                                }
+                        }
+                Nb = N;
+                }
+        float DBL = CountOK;
+        DBL = sqrt(DBL);
+        CountOK = int(DBL) + 1;
+        }
+int SHX = (SaveRect.Right - SaveRect.Left)/CountOK;
+int SHY = (SaveRect.Bottom - SaveRect.Top)/CountOK;
+Fill_Rect.Top = SaveRect.Top;
+Fill_Rect.Bottom = SaveRect.Top + SHY-1;
+Fill_Rect.Left = SaveRect.Left;
+Fill_Rect.Right = SaveRect.Left + SHX-1;
+GlobalScaleFactor = 1;
+Form2->ProgressBar1->Position = 0;
+//Form2->GroupBoxCanvas->Caption = "Canvas all...";
+Application->ProcessMessages();
+Percent = (float)100/(float)Form2->StringGrid1->RowCount;
+StringGridIndexRow = Form2->StringGrid1->Row-1;
+Canva(GET_DATA);
+Form2->StringGrid1->Col = Form2->StringGrid1->ColCount-1;
+//
+Form2->FootPrints->Items->Clear();
+flagOK = 0;
+for (int r=1; r<Form2->StringGrid1->RowCount; r++)
+        {
+        Form2->ProgressBar1->Position = int((float)Percent*(float)r);
+        Application->ProcessMessages();
+        StringGridIndexRow = r;
+        if (MARKS[r] == 1)
+                {
+                N = Form2->StringGrid1->Cells[PACKAGES][r];
+                if(N.Trim().Length() == 0)
+                        continue;
+                if( MODE == -1 )
+                        Canva(SET_RECTS);
+                else    flagOK = Canva(CANVAS);
+                if( flagOK )
+                        {
+                        Form2->Select->Items->Add(N);
+                        Form2->FootPrints->Items->Add(N);
+                        Fill_Rect.Left += SHX;
+                        Fill_Rect.Right += SHX;
+                        if (Fill_Rect.Right > SaveRect.Right)
+                                {
+                                Fill_Rect.Top += SHY;
+                                Fill_Rect.Bottom += SHY;
+                                Fill_Rect.Left = SaveRect.Left;
+                                Fill_Rect.Right = SaveRect.Left + SHX-1;
+                                }
+                        }
+                }
+        }
+//
+mode = MODE;
+Form2->StringGrid1->Col = 0;
+SaveRect.Left = Fill_Rect.Left;
+SaveRect.Top = Fill_Rect.Top;
+SaveRect.Right = Fill_Rect.Right;
+SaveRect.Bottom = Fill_Rect.Bottom;
+Form2->ProgressBar1->Visible = false;
+Form2->StringGrid1->Visible = true;
+Form2->GridValues->Text = SaveTextGrid;
+// restore Fill_Rect...
+Form2->SvLib->Enabled = SvLibEn;
+Form2->myResize(0);
+}

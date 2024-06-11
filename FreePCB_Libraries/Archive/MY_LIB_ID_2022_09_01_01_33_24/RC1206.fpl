@@ -1,0 +1,19 @@
+name: "RC1206"
+author: "i"
+package: "1206"
+units: NM
+sel_rect: -944500 -1244500 4044500 1244500
+ref_text: 1270000 775000 0 0 127000
+value_text: 2540000 2540000 0 0 254000
+centroid: 0 1550000 0 0
+outline_polyline: 150000 -830200 -1130200 1 0 4
+next_corner: 3930200 -1130200 0
+next_corner: 3930200 1130200 0
+next_corner: -830200 1130200 0
+close_polyline: 0
+n_pins: 2
+pin: "1" 0 0 0 270 ""
+top_pad: 3 1000000 800000 800000 0
+pin: "2" 0 3100000 0 270 ""
+top_pad: 3 1000000 800000 800000 0
+

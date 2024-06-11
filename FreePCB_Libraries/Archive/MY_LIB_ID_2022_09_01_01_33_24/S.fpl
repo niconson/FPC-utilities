@@ -1,0 +1,728 @@
+name: "S08"
+author: "Ivex"
+description: "none"
+source: "SURFACE MOUNT DESIGN AND LAND PATTERN STANDARD SUBSECTION 9.1 (PAGE 3 OF 4)"
+units: NM
+sel_rect: -1403200 -1403200 5213200 6403200
+ref_text: 1270000 1905000 8000000 0 177800
+outline_polyline: 177800 -700000 1500000
+next_corner: 4410000 1500000 0
+next_corner: 4410000 3500000 0
+next_corner: -700000 3500000 0
+close_polyline: 0
+outline_polyline: 177800 -700000 2000000
+next_corner: -200000 2000000 0
+next_corner: -200000 3000000 0
+next_corner: -700000 3000000 0
+close_polyline: 0
+n_pins: 8
+pin: 1 0 0 0 0
+top_pad: 3 2400000 400000 400000
+pin: 2 0 1270000 0 0
+top_pad: 3 2400000 400000 400000
+pin: 3 0 2540000 0 0
+top_pad: 3 2400000 400000 400000
+pin: 4 0 3810000 0 0
+top_pad: 3 2400000 400000 400000
+pin: 5 0 3810000 5000000 0
+top_pad: 3 2400000 400000 400000
+pin: 6 0 2540000 5000000 0
+top_pad: 3 2400000 400000 400000
+pin: 7 0 1270000 5000000 0
+top_pad: 3 2400000 400000 400000
+pin: 8 0 0 5000000 0
+top_pad: 3 2400000 400000 400000
+
+name: "S1A"
+package: "S1A"
+author: "Duxah"
+description: "Diodes"
+units: NM
+sel_rect: -3249930 -1853000 3059000 2603500
+ref_text: 300000 -600000 2100000 0 50000
+value_text: 300000 -1000000 900000 0 50000
+centroid: 0 0 0 0
+text: "K" 1000000 -3200000 1600000 0 100000 0 4
+outline_polyline: 150000 -2286000 -1778000 1 0 4
+next_corner: -2286000 -1397000 0
+outline_polyline: 150000 -2286000 1778000 1 0 4
+next_corner: -2286000 1397000 0
+outline_polyline: 150000 2286000 -1778000 1 0 4
+next_corner: 2286000 -1397000 0
+outline_polyline: 150000 2286000 1397000 1 0 4
+next_corner: 2286000 1778000 0
+outline_polyline: 150000 -2286000 -1778000 1 0 4
+next_corner: 2286000 -1778000 0
+outline_polyline: 150000 2286000 1778000 1 0 4
+next_corner: -2286000 1778000 0
+outline_polyline: 150000 -1000000 0 1 0 4
+next_corner: -600000 0 0
+next_corner: -600000 600000 0
+next_corner: -600000 -600000 0
+next_corner: -600000 0 0
+next_corner: 600000 600000 0
+next_corner: 600000 -600000 0
+next_corner: -600000 0 0
+next_corner: 600000 -600000 0
+next_corner: 600000 0 0
+next_corner: 1000000 0 0
+n_pins: 2
+pin: "2" 0 -2159000 0 0 ""
+top_pad: 3 2500000 900000 900000 0
+pin: "1" 0 2159000 0 0 ""
+top_pad: 3 2500000 900000 900000 0
+
+name: "SC-70-5"
+package: "SC-70-5"
+author: "Duxah"
+description: "Chips"
+units: NM
+sel_rect: -200000 -425000 1500000 2625000
+ref_text: 900000 -500000 1800000 0 180000
+value_text: 750000 -600000 -1400000 0 180000
+centroid: 0 650000 1100000 0
+outline_polyline: 150000 1700000 1600000 1 0 4
+next_corner: -400000 1600000 0
+next_corner: -400000 1500000 0
+next_corner: 0 1100000 1
+next_corner: -400000 700000 1
+next_corner: -400000 600000 0
+next_corner: 1700000 600000 0
+next_corner: 1700000 1600000 0
+outline_polyline: 150000 -300000 700000 1 0 4
+next_corner: 0 700000 0
+next_corner: 0 800000 0
+next_corner: -100000 800000 0
+next_corner: 0 900000 0
+next_corner: 0 800000 0
+next_corner: 0 1300000 0
+next_corner: -100000 1400000 0
+next_corner: 0 1400000 0
+next_corner: 0 1500000 0
+next_corner: -300000 1500000 0
+next_corner: -100000 1500000 0
+next_corner: 0 1400000 0
+next_corner: 0 1300000 0
+n_pins: 5
+pin: "1" 0 0 0 0 ""
+top_pad: 3 850000 200000 200000 0
+pin: "2" 0 650000 0 0 ""
+top_pad: 3 850000 200000 200000 0
+pin: "3" 0 1300000 0 0 ""
+top_pad: 3 850000 200000 200000 0
+pin: "4" 0 1300000 2200000 0 ""
+top_pad: 3 850000 200000 200000 0
+pin: "5" 0 0 2200000 0 ""
+top_pad: 3 850000 200000 200000 0
+
+name: "SHield"
+author: "Duxah"
+description: "Pads"
+units: NM
+sel_rect: -524510 -524510 524510 524510
+ref_text: 900000 1300000 700000 0 150000
+value_text: 700000 1200000 -300000 0 100000
+centroid: 0 0 0 0
+n_pins: 1
+pin: "1" 0 0 0 0 ""
+top_pad: 2 1000000 500000 500000 0
+top_mask: 2 1000000 500000 500000 0
+
+name: "SIP15"
+author: "Duxah"
+description: "Connectors"
+units: NM
+sel_rect: -1417500 -1417500 16417500 1417500
+ref_text: 900000 1400000 1500000 0 127000
+value_text: 600000 5700000 -300000 0 100000
+centroid: 1 7500000 0 0
+outline_polyline: 127000 0 1100000 1 0 4
+next_corner: -1100000 0 2
+next_corner: 0 -1100000 2
+next_corner: 15000000 -1100000 0
+next_corner: 16100000 0 2
+next_corner: 15000000 1100000 2
+close_polyline: 0
+n_pins: 2
+pin: "1" 1000000 0 0 0 ""
+top_pad: 1 1800000 0 0 0
+inner_pad: 0 0 0 0 0 0
+bottom_pad: 1 1800000 0 0 0
+pin: "2" 1000000 15000000 0 0 ""
+top_pad: 1 1800000 0 0 0
+inner_pad: 0 0 0 0 0 0
+bottom_pad: 1 1800000 0 0 0
+
+name: "SMD3X5"
+author: "Duxah"
+description: "Pads"
+units: MIL
+sel_rect: -113.188976 -73.818898 113.188976 73.818898
+ref_text: 33 -94.488189 -47.244094 0 5
+value_text: 10 -86.614173 47.244094 0 1
+centroid: 0 0 0 0
+outline_polyline: 5.905512 -90.551181 70.866142 1 0 4
+next_corner: -110.23622 51.181102 2
+next_corner: -110.23622 -51.181102 0
+next_corner: -90.551181 -70.866142 2
+next_corner: 90.551181 -70.866142 0
+next_corner: 110.23622 -51.181102 2
+next_corner: 110.23622 51.181102 0
+next_corner: 90.551181 70.866142 2
+close_polyline: 0
+n_pins: 2
+pin: "1" 0 -68.897638 0 0 ""
+top_pad: 4 118 29.527559 29.527559 8
+pin: "2" 0 68.897638 0 0 ""
+top_pad: 4 118 29.527559 29.527559 8
+
+name: "SMTDIODE"
+author: "Ivex"
+description: "none"
+units: MIL
+sel_rect: -58 -60 266 60
+ref_text: 50 131 99 0 7
+value_text: 50 131 -1 0 7
+centroid: 0 104 0 0
+outline_polyline: 7 -57 59 1 0 4
+next_corner: 265 59 0
+outline_polyline: 7 265 59 1 0 4
+next_corner: 265 -59 0
+outline_polyline: 7 265 -59 1 0 4
+next_corner: -57 -59 0
+outline_polyline: 7 -57 -59 1 0 4
+next_corner: -57 59 0
+outline_polyline: 7 50 50 1 0 4
+next_corner: 50 -50 0
+outline_polyline: 7 -50 50 1 0 4
+next_corner: -50 -50 0
+outline_polyline: 7 60 50 1 0 4
+next_corner: 60 -50 0
+outline_polyline: 7 60 50 1 0 4
+next_corner: 60 55 0
+outline_polyline: 7 50 50 1 0 4
+next_corner: 50 55 0
+outline_polyline: 7 50 -50 1 0 4
+next_corner: 50 -55 0
+outline_polyline: 7 60 -50 1 0 4
+next_corner: 60 -55 0
+outline_polyline: 7 -50 50 1 0 4
+next_corner: -50 55 0
+outline_polyline: 7 -50 -50 1 0 4
+next_corner: -50 -55 0
+n_pins: 2
+pin: "1" 0 0 0 0 ""
+top_pad: 4 95 39 39 12
+pin: "2" 0 208 0 0 ""
+top_pad: 4 95 39 39 12
+
+name: "SMTOSC3"
+author: "Ivex"
+description: "none"
+units: MIL
+sel_rect: -97 -108 297 108
+ref_text: 50 142 160 0 7
+outline_polyline: 7 -40 100
+next_corner: 280 100 0
+outline_polyline: 7 280 100
+next_corner: 280 -100 0
+outline_polyline: 7 280 -100
+next_corner: -80 -100 0
+outline_polyline: 7 -80 -100
+next_corner: -80 100 0
+outline_polyline: 7 -80 100
+next_corner: -40 100 0
+n_pins: 3
+pin: "1" 0 0 0 0
+top_pad: 3 178 27 27
+pin: "2" 0 100 0 0
+top_pad: 3 178 27 27
+pin: "3" 0 200 0 0
+top_pad: 3 178 27 27
+
+name: "SO-16"
+package: "SO-16"
+author: "unknown"
+description: "none"
+units: NM
+sel_rect: -5327000 -5189220 5327000 4327000
+ref_text: 900000 -1200000 600000 0 100000
+value_text: 700000 -1600000 -1000000 0 100000
+centroid: 0 0 0 0
+text: "." 5000000 -4670000 -4940000 0 500000 0 4
+outline_polyline: 70000 -5200000 4200000 0 0 4
+next_corner: -5200000 1475740 0
+next_corner: -3728070 3810 1
+next_corner: -5200000 -1468120 1
+next_corner: -5200000 -4200000 0
+next_corner: 5200000 -4200000 0
+next_corner: 5200000 4200000 0
+close_polyline: 0
+n_pins: 16
+pin: "1" 0 -4445000 -2857500 90 ""
+top_pad: 3 800000 1000000 1000000 0
+pin: "3" 0 -1905000 -2857500 90 ""
+top_pad: 3 800000 1000000 1000000 0
+pin: "4" 0 -635000 -2857500 90 ""
+top_pad: 3 800000 1000000 1000000 0
+pin: "2" 0 -3175000 -2857500 90 ""
+top_pad: 3 800000 1000000 1000000 0
+pin: "16" 0 -4445000 2857500 90 ""
+top_pad: 3 800000 1000000 1000000 0
+pin: "13" 0 -635000 2857500 90 ""
+top_pad: 3 800000 1000000 1000000 0
+pin: "14" 0 -1905000 2857500 90 ""
+top_pad: 3 800000 1000000 1000000 0
+pin: "15" 0 -3175000 2857500 90 ""
+top_pad: 3 800000 1000000 1000000 0
+pin: "5" 0 635000 -2857500 90 ""
+top_pad: 3 800000 1000000 1000000 0
+pin: "6" 0 1905000 -2857500 90 ""
+top_pad: 3 800000 1000000 1000000 0
+pin: "7" 0 3175000 -2857500 90 ""
+top_pad: 3 800000 1000000 1000000 0
+pin: "8" 0 4445000 -2857500 90 ""
+top_pad: 3 800000 1000000 1000000 0
+pin: "10" 0 3175000 2857500 90 ""
+top_pad: 3 800000 1000000 1000000 0
+pin: "11" 0 1905000 2857500 90 ""
+top_pad: 3 800000 1000000 1000000 0
+pin: "12" 0 635000 2857500 90 ""
+top_pad: 3 800000 1000000 1000000 0
+pin: "9" 0 4445000 2857500 90 ""
+top_pad: 3 800000 1000000 1000000 0
+
+name: "SO-8"
+package: "SO-8"
+author: "i"
+description: "Chips"
+units: NM
+sel_rect: -3498850 -4538980 2525000 4000000
+ref_text: 900000 -1000000 2960000 0 180000
+value_text: 750000 -1780000 -2680000 0 180000
+centroid: 1 5000 0 0
+text: "." 5000000 -3250000 -4290000 0 500000 0 4
+text: "1" 1000000 -1400000 -3100000 270 100000 0 4
+outline_polyline: 150000 -2400000 1200000 0 1 4
+next_corner: -2400000 700000 0
+next_corner: -1700000 0 1
+next_corner: -2400000 -700000 1
+next_corner: -2400000 -1200000 0
+next_corner: -1400000 -1200000 0
+next_corner: -1400000 1200000 0
+close_polyline: 0
+outline_polyline: 150000 -1400000 1200000 0 1 4
+next_corner: 2450000 1200000 0
+next_corner: 2450000 -1200000 0
+next_corner: -1400000 -1200000 0
+outline_polyline: 50000 -1900000 -2200000 1 1 4
+next_corner: -2550000 -2850000 2
+next_corner: -1900000 -3500000 2
+next_corner: -1250000 -2850000 2
+next_corner: -1900000 -2200000 2
+n_pins: 8
+pin: "1" 0 -1900000 -2900000 0 ""
+top_pad: 4 2200000 350000 350000 0
+pin: "2" 0 -650000 -2900000 0 ""
+top_pad: 4 2200000 350000 350000 0
+pin: "3" 0 650000 -2900000 0 ""
+top_pad: 4 2200000 350000 350000 0
+pin: "4" 0 1900000 -2900000 0 ""
+top_pad: 4 2200000 350000 350000 0
+pin: "5" 0 1900000 2900000 0 ""
+top_pad: 4 2200000 350000 350000 0
+pin: "6" 0 650000 2900000 0 ""
+top_pad: 4 2200000 350000 350000 0
+pin: "7" 0 -650000 2900000 0 ""
+top_pad: 4 2200000 350000 350000 0
+pin: "8" 0 -1900000 2900000 0 ""
+top_pad: 4 2200000 350000 350000 0
+
+name: "SOD523"
+package: "SOD523"
+author: "i"
+description: "none"
+units: NM
+sel_rect: -869500 -869500 2369500 869500
+ref_text: 1270000 375000 0 0 127000
+value_text: 2540000 2540000 0 0 254000
+centroid: 0 750000 0 0
+outline_polyline: 177800 -755200 -755200 1 0 4
+next_corner: 2255200 -755200 0
+next_corner: 2255200 755200 0
+next_corner: -755200 755200 0
+close_polyline: 0
+n_pins: 2
+pin: "1" 0 0 0 270 ""
+top_pad: 1 850000 0 0 0
+pin: "2" 0 1500000 0 270 ""
+top_pad: 1 850000 0 0 0
+
+name: "SOT-223"
+author: "Ivex"
+description: "none"
+units: NM
+sel_rect: -1303200 -1603200 5903200 7803200
+ref_text: 1270000 2300000 9600000 0 177800
+value_text: 1270000 2300000 7060000 0 177800
+centroid: 0 2300000 3100000 0
+outline_polyline: 177800 -900000 7600000 1 0 4
+next_corner: 5500000 7600000 0
+next_corner: 5500000 -1400000 0
+next_corner: -900000 -1400000 0
+close_polyline: 0
+n_pins: 4
+pin: "1" 0 0 0 0 ""
+top_pad: 3 2200000 600000 600000 0
+pin: "2" 0 2300000 0 0 ""
+top_pad: 3 2200000 600000 600000 0
+pin: "3" 0 4600000 0 0 ""
+top_pad: 3 2200000 600000 600000 0
+pin: "4" 0 2300000 6200000 0 ""
+top_pad: 3 2200000 1800000 1800000 0
+
+name: "SOT-23-5"
+author: "Ivex"
+description: "none"
+source: "ELFA 48 CATALOG, INTERNATIONAL EDITION"
+units: MIL
+sel_rect: -30 -27 105 129
+ref_text: 50 37 -70 0 7
+outline_polyline: 7 -22 30
+next_corner: 97 30 0
+next_corner: 97 72 0
+next_corner: -22 72 0
+close_polyline: 0
+outline_polyline: 7 -22 41
+next_corner: 0 41 0
+next_corner: 0 61 0
+next_corner: -22 61 0
+close_polyline: 0
+n_pins: 5
+pin: 1 0 0 0 0
+top_pad: 3 39 13 13
+pin: 2 0 37 0 0
+top_pad: 3 39 13 13
+pin: 3 0 75 0 0
+top_pad: 3 39 13 13
+pin: 4 0 75 102 0
+top_pad: 3 39 13 13
+pin: 5 0 0 102 0
+top_pad: 3 39 13 13
+
+name: "SOT-23-6"
+author: "Ivex"
+description: "none"
+units: NM
+sel_rect: -703200 -703200 2603200 3003200
+ref_text: 1270000 950000 4300000 0 177800
+value_text: 1270000 950000 1760000 0 177800
+centroid: 0 950000 1150000 0
+outline_polyline: 150000 -450000 800000 1 0 4
+next_corner: 2350000 800000 0
+next_corner: 2350000 1500000 0
+next_corner: -450000 1500000 0
+close_polyline: 0
+n_pins: 6
+pin: "1" 0 0 0 0 ""
+top_pad: 3 1000000 300000 300000 0
+pin: "2" 0 950000 0 0 ""
+top_pad: 3 1000000 300000 300000 0
+pin: "3" 0 1900000 0 0 ""
+top_pad: 3 1000000 300000 300000 0
+pin: "4" 0 1900000 2300000 0 ""
+top_pad: 3 1000000 300000 300000 0
+pin: "5" 0 950000 2300000 0 ""
+top_pad: 3 1000000 300000 300000 0
+pin: "6" 0 0 2300000 0 ""
+top_pad: 3 1000000 300000 300000 0
+
+name: "SOT-23-8"
+package: "SOT-23-8"
+author: "i"
+description: "none"
+units: NM
+sel_rect: -400400 -625400 3250400 3425400
+ref_text: 1270000 950000 950000 0 127000
+value_text: 2540000 2540000 0 0 254000
+centroid: 0 1425000 1400000 0
+outline_polyline: 150000 0 833330 1 0 4
+next_corner: 2850000 833330 0
+next_corner: 2850000 1966670 0
+next_corner: 0 1966670 0
+next_corner: 0 1633330 0
+next_corner: 237500 1633330 0
+next_corner: 237500 1166670 0
+next_corner: 0 1166670 0
+close_polyline: 0
+n_pins: 8
+pin: "1" 0 0 0 270 ""
+top_pad: 4 750000 600000 600000 200000
+pin: "2" 0 950000 0 270 ""
+top_pad: 4 750000 600000 600000 200000
+pin: "3" 0 1900000 0 270 ""
+top_pad: 4 750000 600000 600000 200000
+pin: "4" 0 2850000 0 270 ""
+top_pad: 4 750000 600000 600000 200000
+pin: "5" 0 2850000 2800000 90 ""
+top_pad: 4 750000 600000 600000 200000
+pin: "6" 0 1900000 2800000 90 ""
+top_pad: 4 750000 600000 600000 200000
+pin: "7" 0 950000 2800000 90 ""
+top_pad: 4 750000 600000 600000 200000
+pin: "8" 0 0 2800000 90 ""
+top_pad: 4 750000 600000 600000 200000
+
+name: "S-Panel"
+author: "BOSS BLENDER"
+description: "none"
+  units: NM
+  sel_rect: -19700000 -4700000 19700000 5000000
+  ref_text: 0 -17800000 4200000 0 254000
+  value_text: 0 -17960000 -2500000 0 254000
+  centroid: 0 0 0 0
+  outline_polyline: 150000 -13700000 1500000 1 1 4
+    next_corner: -15100000 0 0
+    next_corner: -13700000 -1500000 0
+    close_polyline: 0
+  outline_polyline: 150000 3700000 1500000 1 1 4
+    next_corner: 6700000 0 0
+    next_corner: 3700000 -1500000 0
+    close_polyline: 0
+  outline_polyline: 800000 -15000000 3600000 1 0 15
+    next_corner: -18600000 0 2
+    next_corner: -15000000 -3600000 2
+    next_corner: -11400000 0 2
+    close_polyline: 2
+  outline_polyline: 800000 -15000000 2600000 1 0 15
+    next_corner: -17600000 0 2
+    next_corner: -15000000 -2600000 2
+    next_corner: -12400000 0 2
+    close_polyline: 2
+  outline_polyline: 800000 -15000000 1600000 1 1 15
+    next_corner: -16600000 0 2
+    next_corner: -15000000 -1600000 2
+    next_corner: -13400000 0 2
+    close_polyline: 2
+  outline_polyline: 800000 -5000000 1599790 1 1 15
+    next_corner: -6600000 -210 2
+    next_corner: -5000000 -1600210 2
+    next_corner: -3400000 -210 2
+    close_polyline: 2
+  outline_polyline: 800000 -5000000 2599790 1 0 15
+    next_corner: -7600000 -210 2
+    next_corner: -5000000 -2600210 2
+    next_corner: -2400000 -210 2
+    close_polyline: 2
+  outline_polyline: 800000 -5000000 3599790 1 0 15
+    next_corner: -8600000 -210 2
+    next_corner: -5000000 -3600210 2
+    next_corner: -1400000 -210 2
+    close_polyline: 2
+  outline_polyline: 800000 5000000 3599460 1 0 15
+    next_corner: 1400000 -540 2
+    next_corner: 5000000 -3600540 2
+    next_corner: 8600000 -540 2
+    close_polyline: 2
+  outline_polyline: 800000 5000000 2599460 1 0 15
+    next_corner: 2400000 -540 2
+    next_corner: 5000000 -2600540 2
+    next_corner: 7600000 -540 2
+    close_polyline: 2
+  outline_polyline: 800000 5000000 1599460 1 1 15
+    next_corner: 3400000 -540 2
+    next_corner: 5000000 -1600540 2
+    next_corner: 6600000 -540 2
+    close_polyline: 2
+  outline_polyline: 800000 15000000 1599770 1 1 15
+    next_corner: 13400000 -240 2
+    next_corner: 15000000 -1600240 2
+    next_corner: 16600000 -240 2
+    close_polyline: 2
+  outline_polyline: 800000 15000000 2599770 1 0 15
+    next_corner: 12400000 -240 2
+    next_corner: 15000000 -2600240 2
+    next_corner: 17600000 -240 2
+    close_polyline: 2
+  outline_polyline: 800000 15000000 3599770 1 0 15
+    next_corner: 11400000 -240 2
+    next_corner: 15000000 -3600240 2
+    next_corner: 18600000 -240 2
+    close_polyline: 2
+  outline_polyline: 150000 13800000 1200000 1 1 4
+    next_corner: 13800000 -1200000 0
+    next_corner: 16200000 -1200000 0
+    next_corner: 16200000 1200000 0
+    close_polyline: 0
+  outline_polyline: 150000 -15700000 1500000 1 1 4
+    next_corner: -17100000 0 0
+    next_corner: -15700000 -1500000 0
+    close_polyline: 0
+  outline_polyline: 150000 -4300000 1500000 1 1 4
+    next_corner: -2900000 0 0
+    next_corner: -4300000 -1500000 0
+    close_polyline: 0
+  outline_polyline: 150000 -6300000 1500000 1 1 4
+    next_corner: -4900000 0 0
+    next_corner: -6300000 -1500000 0
+    close_polyline: 0
+  outline_polyline: 1000000 -15000000 4200000 1 0 4
+    next_corner: -19200000 0 2
+    next_corner: -15000000 -4200000 2
+    next_corner: -10800000 0 2
+    close_polyline: 2
+  outline_polyline: 1000000 -5000000 4200000 1 0 4
+    next_corner: -9200000 0 2
+    next_corner: -5000000 -4200000 2
+    next_corner: -800000 0 2
+    close_polyline: 2
+  outline_polyline: 1000000 5000000 4200000 1 0 4
+    next_corner: 800000 0 2
+    next_corner: 5000000 -4200000 2
+    next_corner: 9200000 0 2
+    close_polyline: 2
+  outline_polyline: 1000000 15000000 4200000 1 0 4
+    next_corner: 10800000 0 2
+    next_corner: 15000000 -4200000 2
+    next_corner: 19200000 0 2
+    close_polyline: 2
+  n_pins: 16
+    pin: "1" 400000 -15000000 1600000 0 ""
+      top_pad: 1 800000 400000 400000 0
+      top_mask: 0 0 0 0 0
+      inner_pad: 0 0 0 0 0 0
+      bottom_pad: 3 800000 1000000 1000000 0
+    pin: "1" 400000 -15000000 2600000 0 ""
+      top_pad: 1 800000 400000 400000 0
+      top_mask: 0 0 0 0 0
+      inner_pad: 0 0 0 0 0 0
+      bottom_pad: 3 800000 1000000 1000000 0
+    pin: "1" 400000 -15000000 3600000 0 ""
+      top_pad: 1 800000 400000 400000 0
+      top_mask: 0 0 0 0 0
+      inner_pad: 0 0 0 0 0 0
+      bottom_pad: 3 800000 1000000 1000000 0
+    pin: "2" 400000 -5000000 3599800 0 ""
+      top_pad: 1 800000 400000 400000 0
+      top_mask: 0 0 0 0 0
+      inner_pad: 0 0 0 0 0 0
+      bottom_pad: 3 800000 1000000 1000000 0
+    pin: "2" 400000 -5000000 2599800 0 ""
+      top_pad: 1 800000 400000 400000 0
+      top_mask: 0 0 0 0 0
+      inner_pad: 0 0 0 0 0 0
+      bottom_pad: 3 800000 1000000 1000000 0
+    pin: "2" 400000 -5000000 1599800 0 ""
+      top_pad: 1 800000 400000 400000 0
+      top_mask: 0 0 0 0 0
+      inner_pad: 0 0 0 0 0 0
+      bottom_pad: 3 800000 1000000 1000000 0
+    pin: "3" 400000 5000000 1599500 0 ""
+      top_pad: 1 800000 400000 400000 0
+      top_mask: 0 0 0 0 0
+      inner_pad: 0 0 0 0 0 0
+      bottom_pad: 3 800000 1000000 1000000 0
+    pin: "3" 400000 5000000 2599500 0 ""
+      top_pad: 1 800000 400000 400000 0
+      top_mask: 0 0 0 0 0
+      inner_pad: 0 0 0 0 0 0
+      bottom_pad: 3 800000 1000000 1000000 0
+    pin: "3" 400000 5000000 3599500 0 ""
+      top_pad: 1 800000 400000 400000 0
+      top_mask: 0 0 0 0 0
+      inner_pad: 0 0 0 0 0 0
+      bottom_pad: 3 800000 1000000 1000000 0
+    pin: "4" 400000 15000000 3599800 0 ""
+      top_pad: 1 800000 400000 400000 0
+      top_mask: 0 0 0 0 0
+      inner_pad: 0 0 0 0 0 0
+      bottom_pad: 3 800000 1000000 1000000 0
+    pin: "4" 400000 15000000 2599800 0 ""
+      top_pad: 1 800000 400000 400000 0
+      top_mask: 0 0 0 0 0
+      inner_pad: 0 0 0 0 0 0
+      bottom_pad: 3 800000 1000000 1000000 0
+    pin: "4" 400000 15000000 1599800 0 ""
+      top_pad: 1 800000 400000 400000 0
+      top_mask: 0 0 0 0 0
+      inner_pad: 0 0 0 0 0 0
+      bottom_pad: 3 800000 1000000 1000000 0
+    pin: "gnd" 400000 -15000000 4600000 0 ""
+      top_pad: 1 800000 400000 400000 0
+      top_mask: 0 0 0 0 0
+      inner_pad: 0 0 0 0 0 0
+      bottom_pad: 3 800000 1000000 1000000 0
+    pin: "gnd" 400000 -5000000 4600000 0 ""
+      top_pad: 1 800000 400000 400000 0
+      top_mask: 0 0 0 0 0
+      inner_pad: 0 0 0 0 0 0
+      bottom_pad: 3 800000 1000000 1000000 0
+    pin: "gnd" 400000 5000000 4600000 0 ""
+      top_pad: 1 800000 400000 400000 0
+      top_mask: 0 0 0 0 0
+      inner_pad: 0 0 0 0 0 0
+      bottom_pad: 3 800000 1000000 1000000 0
+    pin: "gnd" 400000 15000000 4600000 0 ""
+      top_pad: 1 800000 400000 400000 0
+      top_mask: 0 0 0 0 0
+      inner_pad: 0 0 0 0 0 0
+      bottom_pad: 3 800000 1000000 1000000 0
+
+name: "SR0603"
+package: "SR0603"
+author: "DESHKOV"
+description: "Inductors"
+units: NM
+sel_rect: -3000000 -2900010 3000000 2900000
+ref_text: 1050000 -1676400 3378200 0 150000
+value_text: 1050000 -2844800 -381000 0 150000
+centroid: 0 0 0 0
+outline_polyline: 20000 -715250 -2707110 1 0 4
+next_corner: -477240 -2759030 0
+next_corner: -234980 -2790130 0
+next_corner: 9070 -2799990 0
+next_corner: 253050 -2788550 0
+next_corner: 495110 -2755880 0
+next_corner: 733400 -2702250 0
+next_corner: 743560 -2699470 0
+outline_polyline: 20000 715250 2707110 1 0 4
+next_corner: 476610 2759140 0
+next_corner: 234330 2790180 0
+next_corner: -9720 2799990 0
+next_corner: -253700 2788490 0
+next_corner: -495750 2755770 0
+next_corner: -734030 2702080 0
+next_corner: -743560 2699470 0
+n_pins: 6
+pin: "1" 0 -1925000 0 90 ""
+top_pad: 3 2150000 2900000 2900000 0 3
+top_paste: 0 0 0 0 0
+pin: "2" 0 1925000 -10 90 ""
+top_pad: 3 2150000 2900000 2900000 0 3
+top_paste: 0 0 0 0 0
+pin: "3" 0 1900000 1500000 90 ""
+top_paste: 3 2000000 1200000 1200000 0
+pin: "4" 0 1900000 -1500000 90 ""
+top_paste: 3 2000000 1200000 1200000 0
+pin: "5" 0 -1900000 1500000 90 ""
+top_paste: 3 2000000 1200000 1200000 0
+pin: "6" 0 -1900000 -1500000 90 ""
+top_paste: 3 2000000 1200000 1200000 0
+
+name: "SRP120"
+author: "Ivex"
+description: "none"
+units: NM
+sel_rect: -5203200 -3553200 19703200 3553200
+ref_text: 1270000 7250000 -4550000 0 177800
+outline_polyline: 177800 -5000000 -3350000
+next_corner: 19500000 -3350000 0
+next_corner: 19500000 3350000 0
+next_corner: -5000000 3350000 0
+close_polyline: 0
+n_pins: 2
+pin: 1 0 0 0 0
+top_pad: 3 6100000 4750000 4750000
+pin: 2 0 14500000 0 0
+top_pad: 3 6100000 4750000 4750000
+

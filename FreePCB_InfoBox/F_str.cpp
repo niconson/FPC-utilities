@@ -1,0 +1,32 @@
+//---------------------------------------------------------------------------
+
+
+#pragma hdrstop
+
+#include "F_str.h"
+#include "Comp_man.h"
+//---------------------------------------------------------------------------
+
+#pragma package(smart_init)
+
+
+AnsiString F_str (float DBL, int insert0)
+{
+ AnsiString STRNG = FormatFloat("0.00",DBL);
+ //int p = STRNG.Pos(",");
+ //if (p > 0)
+ //       STRNG[p] = '.';
+ //STRNG = StringReplace(STRNG,",",".",TReplaceFlags()<<rfReplaceAll);
+ int len = STRNG.Length();
+ bool f = true;
+ if (STRNG.SubString(1,1) == "-")
+        {
+        insert0++;
+        f = false;
+        }
+ if (insert0)
+        for (int q=0; q<insert0-len; q++)
+                if (f)  STRNG = "0" + STRNG;
+                else    STRNG.Insert("0",2);
+ return STRNG;
+}

@@ -1,0 +1,24 @@
+//---------------------------------------------------------------------------
+
+
+#pragma hdrstop
+
+#include "WRITE_LABELS.h"
+#include "Comp_man.h"
+#include "fstream.h"
+//---------------------------------------------------------------------------
+
+#pragma package(smart_init)
+
+
+void WRITE_LABELS (void)
+{
+
+}
+
+
+
+
+
+
+
