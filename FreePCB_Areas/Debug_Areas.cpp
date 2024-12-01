@@ -1277,9 +1277,15 @@ else */if (ObjMan)
         {
         COPYDATASTRUCT cd;
         AnsiString N = ExtractFileName(OpenD);
+
         HWND FPC = FindWindowA(NULL, ("FreePCB - "+N).c_str());
         if( FPC == NULL )
                 FPC = FindWindowA(NULL, ("FreePCB - "+N+"*").c_str());
+        AnsiString RusWinStr = "ПлатФорм - ";
+        if( FPC == NULL )
+                FPC = FindWindowA(NULL, (RusWinStr+N).c_str());
+        if( FPC == NULL )
+                FPC = FindWindowA(NULL, (RusWinStr+N+"*").c_str());
         if( FPC )
                 {
                 AnsiString FF = "paste: \""+OnlyAreas+"\"";
@@ -1300,6 +1306,8 @@ else    {
         fn = ExtractFilePath(fn);
         fn.SetLength(fn.Length()-1);
         fn = ExtractFilePath(fn) + "freepcb.exe";
+        if( FileExists(fn) == 0 )
+                fn = ExtractFilePath(fn) + "ПлатФорм.exe";
         AnsiString FN = ("\""+fn+"\"");
         AnsiString ps = Areas;
         AnsiString PS = ("\""+ps+"\"");
@@ -1314,7 +1322,7 @@ else    {
         info.hInstApp = NULL;
         int INF = ShellExecuteEx(&info);
         if( INF == 0 )
-                ShowMessage("Something went wrong .. If the problem persists more than once, report it to support at freepcb.dev");
+                ShowMessage("Something went wrong .. If the problem persists more than once, report it to support at niconson.com");
 
         }
 if (ObjMan)     Form1->Caption = "Areas";
@@ -1402,7 +1410,7 @@ if( Form1->Link->Font->Size != 10 )
 
 void __fastcall TForm1::LinkClick(TObject *Sender)
 {
-ShellExecute(NULL, "open", "https://freepcb.dev", NULL, NULL, SW_SHOWNORMAL);            
+ShellExecute(NULL, "open", "https://github.com/niconson", NULL, NULL, SW_SHOWNORMAL);
 }
 //---------------------------------------------------------------------------
 

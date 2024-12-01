@@ -122,7 +122,7 @@ Form1->PinNets->Items->Clear();
 Form1->File->Items->Clear();
 //Form1->NetsBox->Visible = false;
 ifstream READ (OpenD.c_str() );
-char str[2501;
+char str[2501];
 short int i;
 AnsiString A;
 do{
@@ -1277,9 +1277,15 @@ else */if (ObjMan)
         {
         COPYDATASTRUCT cd;
         AnsiString N = ExtractFileName(OpenD);
+
         HWND FPC = FindWindowA(NULL, ("FreePCB - "+N).c_str());
         if( FPC == NULL )
                 FPC = FindWindowA(NULL, ("FreePCB - "+N+"*").c_str());
+        AnsiString RusWinStr = "ПлатФорм - ";
+        if( FPC == NULL )
+                FPC = FindWindowA(NULL, (RusWinStr+N).c_str());
+        if( FPC == NULL )
+                FPC = FindWindowA(NULL, (RusWinStr+N+"*").c_str());
         if( FPC )
                 {
                 AnsiString FF = "paste: \""+OnlyAreas+"\"";

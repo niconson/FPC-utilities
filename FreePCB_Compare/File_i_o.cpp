@@ -1527,7 +1527,7 @@ if( !TEST )
         Form1->GridResult->Cells[2][Form1->GridResult->RowCount-1] = str;
         if( m_news==0 && m_matches!=0 && Form1->ProjectsList->Items->Count == 1 )
                 {
-                ShowMessage("FreePcb-2 congratulates you! There are no new parts in this PCB design.");
+                ShowMessage("There are no new parts in this PCB design.");
                 }
         }
 Form1->ProgressBar1->Position = 0;

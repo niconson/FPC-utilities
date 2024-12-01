@@ -24,18 +24,12 @@ int StorageIndexOf (AnsiString Value, AnsiString Package)
 for( int f=0; f<Form1->GridFeeders->RowCount; f++ )
         {
         AnsiString V = Form1->GridFeeders->Cells[VALUE_COL][f];
-        if( V.Length() == Value.Length() )
+        if( Value.Length() == 0 || V.SubString(1,V.Length()) == Value.SubString(1,Value.Length()) )
                 {
-                if( V.SubString(1,V.Length()) == Value.SubString(1,Value.Length()) )
+                AnsiString P = Form1->GridFeeders->Cells[PACKAGE_COL][f];
+                if( Package.Length() == 0 || P.SubString(1,P.Length()) == Package.SubString(1,Package.Length()) )
                         {
-                        AnsiString P = Form1->GridFeeders->Cells[PACKAGE_COL][f];
-                        if( P.Length() == Package.Length() )
-                                {
-                                if( P.SubString(1,P.Length()) == Package.SubString(1,Package.Length()) )
-                                        {
-                                        return f;
-                                        }
-                                }
+                        return f;
                         }
                 }
         }
@@ -1108,8 +1102,6 @@ AnsiString FindReplace (AnsiString C, int col, int * POSITION)
 for( (*POSITION)++; (*POSITION)<Form1->lbReplace->RowCount; (*POSITION)++ )
         {
         AnsiString getS = Form1->lbReplace->Cells[0][*POSITION];
-        if( C.Length() == 0 )
-                return Form1->lbReplace->Cells[1][*POSITION];
         if( getS.Length() )
         if( getS.SubString(1,getS.Length()) == C.SubString(1,C.Length()) )
                 return Form1->lbReplace->Cells[1][*POSITION];

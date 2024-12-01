@@ -597,7 +597,7 @@ Sort(0);
 //---------------------------------------------------------------------------
 void __fastcall TForm1::Label5Click(TObject *Sender)
 {
-ShellExecute(NULL, "open", "https://freepcb.dev", NULL, NULL, SW_SHOWNORMAL);         
+ShellExecute(NULL, "open", "https://github.com/niconson", NULL, NULL, SW_SHOWNORMAL);         
 }
 //---------------------------------------------------------------------------
 

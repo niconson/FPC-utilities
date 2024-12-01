@@ -1103,6 +1103,8 @@ fn.SetLength(fn.Length()-1);
 fn = ExtractFilePath(fn);
 fn.SetLength(fn.Length()-1);
 fn = ExtractFilePath(fn) + "freepcb.exe";
+if( FileExists(fn) == 0 )
+                fn = ExtractFilePath(fn) + "ПлатФорм.exe";
 AnsiString FN = ("\""+fn+"\"");
 AnsiString ps = OUTPUTFILE;
 AnsiString PS = ("\""+ps+"\"");
@@ -1117,7 +1119,7 @@ info.nShow = SW_SHOW;//SW_MAXIMIZE; //SW_HIDE
 info.hInstApp = NULL;
 int INF = ShellExecuteEx(&info);
 if( INF == 0 )
-        ShowMessage("Something went wrong .. If the problem persists more than once, report it to support at freepcb.dev");
+        ShowMessage("Something went wrong .. If the problem persists more than once, report it to support at niconson.com");
 //
 Form1->ProgressBar1->Position = 0;
 Form1->ChangeList->Clear();
@@ -1526,7 +1528,7 @@ void __fastcall TForm1::OnWMCopyData(TWMCopyData &Msg)
 
 void __fastcall TForm1::Label22Click(TObject *Sender)
 {
-ShellExecute(NULL, "open", "https://github.com/Duxah/FreePCB-2/blob/master/README.md", NULL, NULL, SW_SHOWNORMAL);
+ShellExecute(NULL, "open", "https://github.com/niconson", NULL, NULL, SW_SHOWNORMAL);
 }
 //---------------------------------------------------------------------------
 
