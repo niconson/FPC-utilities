@@ -15,7 +15,7 @@ void ResetShape ( AnsiString Name, long StartIndex, long EndIndex, AnsiString Re
         if (!Name.Length())     return;
         if (!FileName.Length()) return;         //extern!
         long i;
-        char s[255];
+        char s[2501];
         Form1->ListBox5->Clear();               //Список замененных PARTS
         // Чтение фаила
         AnsiString WrFILE = ExtractFilePath(Application->ExeName);
@@ -28,7 +28,7 @@ void ResetShape ( AnsiString Name, long StartIndex, long EndIndex, AnsiString Re
         bool FindPack = false;
         while (A.SubString(1,5) != "[end]")
                 {
-                R.getline(s,250);
+                R.getline(s,2500);
                 A = s;
                 A = A.Trim();
                 if (A.SubString(1,5) == "part:" )
@@ -58,7 +58,7 @@ void ResetShape ( AnsiString Name, long StartIndex, long EndIndex, AnsiString Re
         A = "";
         while (A.SubString(1,5) != "[end]")
                 {
-                R2.getline(s,250);
+                R2.getline(s,2500);
                 A = s;
                 A = A.Trim();
                 //
@@ -121,6 +121,11 @@ void ResetShape ( AnsiString Name, long StartIndex, long EndIndex, AnsiString Re
         fn = ExtractFilePath(fn);
         fn.SetLength(fn.Length()-1);
         fn = ExtractFilePath(fn) + "freepcb.exe";
+
+        // RUS
+        if( FileExists(fn) == 0 )
+                fn = ExtractFilePath(fn) + "ПлатФорм.exe";
+
         AnsiString FN = ("\""+fn+"\"");
         AnsiString ps = B;
         AnsiString PS = ("\""+ps+"\"");

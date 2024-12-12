@@ -102,6 +102,9 @@ if (CLPBRD.SubString(1,6) == "ObjMan")
         CLPBRD = ExtractFileName (FileName);
         Form1->Caption = "Connected to " + CLPBRD;
         WinHeader = "FreePCB - " + CLPBRD;
+        if( FindWindow( NULL,WinHeader.c_str()) == NULL )
+                if( FindWindow( NULL,(WinHeader+"*").c_str()) == NULL )
+                        WinHeader = "ПлатФорм - " + CLPBRD;
         bPaste->Visible = true;
         Button8->Enabled = false;
         Button7->Enabled = true;
@@ -2158,6 +2161,7 @@ if( bWarning1 == 0 )
 
 void __fastcall TForm1::Timer2Timer(TObject *Sender)
 {
+static bool rectDrawn = 0;
 static bool FVis2 = 0;
 static bool FVis3 = 0;
 if (Form2 == NULL || Form3 == NULL)
@@ -2197,8 +2201,10 @@ if (Form1->ListBox1->ItemIndex >= 0)
         {
         Form1->SpeedButton3->Enabled = true;
         Form1->bEditFoot->Enabled = true;
+        rectDrawn = 0;
         }
-else    {
+else if (rectDrawn == 0)
+        {
         Form1->bEditFoot->Enabled = false;
         Form1->bOpenPDF->Enabled = false;
         Form1->bOpenLib->Enabled = false;
@@ -2228,6 +2234,7 @@ else    {
                 Form1->ListBox1->ItemIndex = 0;
                 Draw();
                 }
+        else    rectDrawn = 1;
         return;
         }
 }
@@ -2274,6 +2281,11 @@ fn.SetLength(fn.Length()-1);
 fn = ExtractFilePath(fn);
 fn.SetLength(fn.Length()-1);
 fn = ExtractFilePath(fn) + "freepcb.exe";
+
+// RUS
+if( FileExists(fn) == 0 )
+        fn = ExtractFilePath(fn) + "ПлатФорм.exe";
+
 AnsiString FN = ("\""+fn+"\"");
 AnsiString ps = A+B;
 AnsiString PS = ("\""+ps+"\"");
@@ -2481,6 +2493,11 @@ fn.SetLength(fn.Length()-1);
 fn = ExtractFilePath(fn);
 fn.SetLength(fn.Length()-1);
 fn = ExtractFilePath(fn) + "freepcb.exe";
+
+// RUS
+if( FileExists(fn) == 0 )
+        fn = ExtractFilePath(fn) + "ПлатФорм.exe";
+
 AnsiString FN = ("\""+fn+"\"");
 AnsiString PS = ("\""+ps+"\"");
 info.cbSize = sizeof(SHELLEXECUTEINFO);
@@ -2679,7 +2696,7 @@ if( Form1->ListBox1->ItemIndex >= 0 )
 
 void __fastcall TForm1::Label3Click(TObject *Sender)
 {
-ShellExecute(NULL, "open", "https://github.com/Duxah/FreePCB-2/blob/master/README.md", NULL, NULL, SW_SHOWNORMAL);
+ShellExecute(NULL, "open", "https://github.com/niconson", NULL, NULL, SW_SHOWNORMAL);
 }
 //---------------------------------------------------------------------------
 

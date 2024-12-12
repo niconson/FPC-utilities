@@ -42,12 +42,12 @@ AnsiString Strng = Form2->Edit1->Text;
 AnsiString OldStrng = Form2->Edit2->Text;
 AnsiString NewStrng = Form2->Edit3->Text;
 int LStrng = Strng.Length();
-char s[200];
+char s[2501];
 bool NetsFlag = false;
 A = "";
 while (A.SubString(1,5) != "[end]")
         {
-        R.getline(s,200);
+        R.getline(s,2500);
         A = s;
         A = A.Trim();
         if (A.SubString(1,6) == "[nets]" )     NetsFlag = true;
@@ -283,7 +283,7 @@ if (Form2->ReplaceOrigFile->Checked)
         ofstream wr (FileName.c_str());
         while (!r.eof() )
                 {
-                r.getline(s,200);
+                r.getline(s,2500);
                 wr << s << endl;
                 }
         OutF = FileName;
@@ -301,6 +301,11 @@ fn.SetLength(fn.Length()-1);
 fn = ExtractFilePath(fn);
 fn.SetLength(fn.Length()-1);
 fn = ExtractFilePath(fn) + "freepcb.exe";
+
+// RUS
+if( FileExists(fn) == 0 )
+        fn = ExtractFilePath(fn) + "ПлатФорм.exe";
+
 AnsiString FN = ("\""+fn+"\"");
 AnsiString ps = B;
 AnsiString PS = ("\""+ps+"\"");

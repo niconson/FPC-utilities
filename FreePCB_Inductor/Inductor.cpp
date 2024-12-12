@@ -684,6 +684,11 @@ fn.SetLength(fn.Length()-1);
 fn = ExtractFilePath(fn);
 fn.SetLength(fn.Length()-1);
 fn = ExtractFilePath(fn) + "freepcb.exe";
+
+// RUS
+if( FileExists(fn) == 0 )
+        fn = ExtractFilePath(fn) + "ПлатФорм.exe";
+
 AnsiString FN = ("\""+fn+"\"");
 AnsiString ps = (Path + "Output.fpc");
 AnsiString PS = ("\""+ps+"\"");
@@ -698,13 +703,13 @@ info.nShow = SW_SHOW;//SW_MAXIMIZE; //SW_HIDE
 info.hInstApp = NULL;
 int INF = ShellExecuteEx(&info);
 if( INF == 0 )
-        ShowMessage("Something went wrong .. If the problem persists more than once, report it to support at freepcb.dev");
+        ShowMessage("Something went wrong .. If the problem persists more than once, report it to support at freepcb2");
 
 }
 //---------------------------------------------------------------------------
 void __fastcall TForm1::Label12Click(TObject *Sender)
 {
-ShellExecute(NULL, "open", "https://freepcb.dev", NULL, NULL, SW_SHOWNORMAL);        
+ShellExecute(NULL, "open", "https://github.com/niconson", NULL, NULL, SW_SHOWNORMAL);        
 }
 //---------------------------------------------------------------------------
 

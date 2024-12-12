@@ -1315,7 +1315,8 @@ else if (FRead_File)
         }
 Form1->Timer1->Enabled = 0;
 if (FindWindow( NULL,"Log") == NULL)
-        exit(0);
+        if (FindWindow( NULL,"Лог") == NULL)
+                exit(0);
 if (!BEGIN)
         {
         Inicialization();
@@ -1324,7 +1325,7 @@ if (!BEGIN)
                 char ch[200];
                 GetWindowText( Wind, ch, 200 );
                 A = ch;
-                if( A.SubString(1,10) == FREEPCB_HEADER )
+                if( A.SubString(1,FREEPCB_HEADER.Length()) == FREEPCB_HEADER )
                         break;
                 Wind = ::GetNextWindow (Wind, GW_HWNDNEXT);
                 } while( Wind );
@@ -1333,7 +1334,7 @@ else    {
         Wind = GetForegroundWindow();
         }
 // FreePcb change size
-if( WindowHeader.SubString(1,10) == FREEPCB_HEADER )
+if( WindowHeader.SubString(1,FREEPCB_HEADER.Length()) == FREEPCB_HEADER )
         if( Mouse->Capture == 0 )
                 if( prev_W != Form1->Width || prev_H != Form1->Height )
                         {
@@ -1378,7 +1379,7 @@ else if (WinName.SubString(1,WinName.Length()) != Form1->Caption.SubString(1,For
         //action window change
         if  ( WinName.SubString(1,WinName.Length()) != WindowHeader.SubString(1,WindowHeader.Length()) )
                 {
-                if( WinName.SubString(1,10) == FREEPCB_HEADER )
+                if( WinName.SubString(1,FREEPCB_HEADER.Length()) == FREEPCB_HEADER )
                         {
                         //
                         Enquary(WinName);
@@ -1614,6 +1615,7 @@ Form1->CType->Items->Clear();
 Form1->CTrml->Items->Clear();
 if (Form2->Language->Checked)
    { // русский
+     FREEPCB_HEADER = "ПлатФорм - "  ;
      // Form1
      Form1->BRefDes->Caption =          "Обозн.";
      Form1->BRIRange->Caption =         "Индекс";
@@ -1660,7 +1662,7 @@ if (Form2->Language->Checked)
      Form2->OnlyLatin->Caption =        "Только латинские обозначения";
      //Form2->GroupBoxPath->Caption =     "Пути к каталогу проекта";
      Form2->Memo1->Lines->Clear();
-     Form2->Memo1->Lines->Add("Для быстрого редактирования, некоторые функциональные кнопки  FREEPCB работают и в INFOBOX. В окне REF строки поиска или после щелчка мышью по выбранной детали вы можете запустить:");
+     Form2->Memo1->Lines->Add("Некоторые функциональные кнопки  PCB-редактора ПлатФорм работают и в INFOBOX. В окне строки поиска поз.обозначений или после щелчка мышью в списке деталей вы можете запустить:");
      Form2->Memo1->Lines->Add("F1 - Свойства открытой детали ");
      Form2->Memo1->Lines->Add("F4 - Переместить деталь в центр экрана");
      Form2->mem_pos_wnd->Caption = "Запомнить размер и положение окна ИНФОБОКСА";
@@ -1678,6 +1680,7 @@ if (Form2->Language->Checked)
    }
 else
    { // english
+     FREEPCB_HEADER = "FreePCB - "  ;
      // Form1
      Form1->BRefDes->Caption =          "Ref";
      Form1->BRIRange->Caption =         "Index";
@@ -4687,7 +4690,7 @@ void Embed(int ClientWidth,int ClientHeight)
 int CORR_H2 = 24;
 RECT w_rect;
 HWND FPC = FindWindow( NULL, WindowHeader.c_str() );
-if( FPC && WindowHeader.SubString(1,10) == FREEPCB_HEADER )
+if( FPC && WindowHeader.SubString(1,FREEPCB_HEADER.Length()) == FREEPCB_HEADER )
         {
         GetWindowRect( FPC, &w_rect );
         }
@@ -4697,7 +4700,7 @@ else    {
                 char ch[200];
                 GetWindowText( FPC, ch, 200 );
                 A = ch;
-                if( A.SubString(1,10) == FREEPCB_HEADER )
+                if( A.SubString(1,FREEPCB_HEADER.Length()) == FREEPCB_HEADER )
                         break;
                 FPC = ::GetNextWindow (FPC, GW_HWNDNEXT);
                 } while( FPC );

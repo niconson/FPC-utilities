@@ -76,12 +76,12 @@ if ((SHIFT > 30)||(SHIFT < 0))
 
 ifstream Load (REPORT.c_str());
 A = "";
-char s[250];
+char s[2501];
 int Shift = 0;
 AnsiString S;
 while (A.SubString(1,3) != "end" )
         {
-        Load.getline(s,250);
+        Load.getline(s,2500);
         s[199] = '\0';
         A = s;
         A = A.Trim();
@@ -148,7 +148,7 @@ FILE* F;
 F = fopen(REPORT.c_str(),"rb+");
 if(F == NULL)
         {
-        ShowMessage ("   FreePcb report file not found!");
+        ShowMessage ("   Pcb-report file not found!");
         exit(0);
         }
 fclose(F);
@@ -217,10 +217,10 @@ if ((HEIGHT > 10))
 
 ifstream Loading (Form1->OpenDialog1->FileName.c_str());
 A = "";
-char s[250];
+char s[2501];
 while (A.SubString(1,5) != "[end]")
         {
-        Loading.getline(s,250);
+        Loading.getline(s,2500);
         A = s;
         A = A.Trim();
         Form1->ListBox2->Items->Add(A);
@@ -288,6 +288,11 @@ fn.SetLength(fn.Length()-1);
 fn = ExtractFilePath(fn);
 fn.SetLength(fn.Length()-1);
 fn = ExtractFilePath(fn) + "freepcb.exe";
+
+// RUS
+if( FileExists(fn) == 0 )
+        fn = ExtractFilePath(fn) + "ПлатФорм.exe";
+
 AnsiString FN = ("\""+fn+"\"");
 AnsiString ps = B;
 AnsiString PS = ("\""+ps+"\"");
@@ -302,7 +307,7 @@ info.nShow = SW_SHOW;//SW_MAXIMIZE; //SW_HIDE
 info.hInstApp = NULL;
 int INF = ShellExecuteEx(&info);
 if( INF == 0 )
-        ShowMessage("Something went wrong .. If the problem persists more than once, report it to support at freepcb.dev");
+        ShowMessage("Something went wrong .. If the problem persists more than once, report it to support at freepcb2");
 
 exit(0);
 }
@@ -311,7 +316,7 @@ exit(0);
 
 void __fastcall TForm1::Label6Click(TObject *Sender)
 {
-ShellExecute(NULL, "open", "https://github.com/Duxah/FreePCB-2/blob/master/README.md", NULL, NULL, SW_SHOWNORMAL);         
+ShellExecute(NULL, "open", "https://github.com/niconson", NULL, NULL, SW_SHOWNORMAL);         
 }
 //---------------------------------------------------------------------------
 

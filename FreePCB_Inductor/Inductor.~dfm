@@ -3,8 +3,8 @@ object Form1: TForm1
   Top = 219
   BorderStyle = bsDialog
   Caption = 'Create inductor for FreePCB'
-  ClientHeight = 464
-  ClientWidth = 567
+  ClientHeight = 418
+  ClientWidth = 510
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
@@ -16,7 +16,7 @@ object Form1: TForm1
   Position = poScreenCenter
   OnClose = FormClose
   PixelsPerInch = 96
-  TextHeight = 20
+  TextHeight = 18
   object Image1: TImage
     Left = 0
     Top = 0
@@ -17414,262 +17414,262 @@ object Form1: TForm1
     Transparent = True
   end
   object Label1: TLabel
-    Left = 421
-    Top = 8
-    Width = 108
-    Height = 20
+    Left = 379
+    Top = 7
+    Width = 99
+    Height = 17
     Caption = 'Units:          MM'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -16
+    Font.Height = -15
     Font.Name = 'Tempus Sans ITC'
     Font.Style = []
     ParentFont = False
   end
   object Label2: TLabel
-    Left = 422
-    Top = 40
-    Width = 10
-    Height = 20
+    Left = 380
+    Top = 36
+    Width = 9
+    Height = 17
     Caption = 'X'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -16
+    Font.Height = -15
     Font.Name = 'Tempus Sans ITC'
     Font.Style = []
     ParentFont = False
   end
   object Label3: TLabel
-    Left = 422
-    Top = 72
+    Left = 380
+    Top = 65
     Width = 9
-    Height = 20
+    Height = 17
     Caption = 'Y'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -16
+    Font.Height = -15
     Font.Name = 'Tempus Sans ITC'
     Font.Style = []
     ParentFont = False
   end
   object Label4: TLabel
-    Left = 421
-    Top = 104
-    Width = 16
-    Height = 20
+    Left = 379
+    Top = 94
+    Width = 15
+    Height = 17
     Caption = 'W'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -16
+    Font.Height = -15
     Font.Name = 'Tempus Sans ITC'
     Font.Style = []
     ParentFont = False
   end
   object Label5: TLabel
-    Left = 422
-    Top = 136
-    Width = 10
-    Height = 20
+    Left = 380
+    Top = 122
+    Width = 11
+    Height = 17
     Caption = 'R'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -16
+    Font.Height = -15
     Font.Name = 'Tempus Sans ITC'
     Font.Style = []
     ParentFont = False
   end
   object Label6: TLabel
-    Left = 422
-    Top = 168
-    Width = 10
-    Height = 20
+    Left = 380
+    Top = 151
+    Width = 8
+    Height = 17
     Caption = 'Z'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -16
+    Font.Height = -15
     Font.Name = 'Tempus Sans ITC'
     Font.Style = []
     ParentFont = False
   end
   object Label7: TLabel
-    Left = 421
-    Top = 200
-    Width = 51
-    Height = 20
+    Left = 379
+    Top = 180
+    Width = 50
+    Height = 17
     Caption = 'Cirquits'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -16
+    Font.Height = -15
     Font.Name = 'Tempus Sans ITC'
     Font.Style = []
     ParentFont = False
   end
   object Label8: TLabel
-    Left = 421
-    Top = 232
-    Width = 40
-    Height = 20
+    Left = 379
+    Top = 209
+    Width = 44
+    Height = 17
     Caption = 'Layers'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -16
+    Font.Height = -15
     Font.Name = 'Tempus Sans ITC'
     Font.Style = []
     ParentFont = False
   end
   object Label9: TLabel
-    Left = 422
-    Top = 264
-    Width = 38
-    Height = 20
+    Left = 380
+    Top = 238
+    Width = 35
+    Height = 17
     Caption = 'ViaW'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -16
+    Font.Height = -15
     Font.Name = 'Tempus Sans ITC'
     Font.Style = []
     ParentFont = False
   end
   object Label10: TLabel
-    Left = 422
-    Top = 296
-    Width = 34
-    Height = 20
+    Left = 380
+    Top = 266
+    Width = 30
+    Height = 17
     Caption = 'ViaH'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -16
+    Font.Height = -15
     Font.Name = 'Tempus Sans ITC'
     Font.Style = []
     ParentFont = False
   end
   object Label11: TLabel
-    Left = 423
-    Top = 328
-    Width = 29
-    Height = 20
+    Left = 381
+    Top = 295
+    Width = 27
+    Height = 17
     Caption = 'shift'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -16
+    Font.Height = -15
     Font.Name = 'Tempus Sans ITC'
     Font.Style = []
     ParentFont = False
   end
   object Label12: TLabel
-    Left = 429
-    Top = 434
-    Width = 110
-    Height = 20
+    Left = 386
+    Top = 391
+    Width = 112
+    Height = 17
     Cursor = crHandPoint
     Caption = 'www.freepcb.dev'
     Font.Charset = ANSI_CHARSET
     Font.Color = clNavy
-    Font.Height = -16
+    Font.Height = -15
     Font.Name = 'Tempus Sans ITC'
     Font.Style = [fsUnderline]
     ParentFont = False
     OnClick = Label12Click
   end
   object Button1: TButton
-    Left = 416
-    Top = 378
-    Width = 137
-    Height = 23
+    Left = 374
+    Top = 340
+    Width = 124
+    Height = 21
     Caption = 'Generate inductor'
     TabOrder = 0
     OnClick = Button1Click
   end
   object Edit1: TEdit
-    Left = 488
-    Top = 36
-    Width = 57
-    Height = 28
+    Left = 439
+    Top = 32
+    Width = 52
+    Height = 26
     TabOrder = 1
     Text = '30'
   end
   object Edit2: TEdit
-    Left = 488
-    Top = 68
-    Width = 57
-    Height = 28
+    Left = 439
+    Top = 61
+    Width = 52
+    Height = 26
     TabOrder = 2
     Text = '30'
   end
   object Edit3: TEdit
-    Left = 488
-    Top = 100
-    Width = 57
-    Height = 28
+    Left = 439
+    Top = 90
+    Width = 52
+    Height = 26
     TabOrder = 3
     Text = '0.5'
   end
   object Edit4: TEdit
-    Left = 488
-    Top = 132
-    Width = 57
-    Height = 28
+    Left = 439
+    Top = 119
+    Width = 52
+    Height = 26
     TabOrder = 4
     Text = '8'
   end
   object Edit5: TEdit
-    Left = 488
-    Top = 164
-    Width = 57
-    Height = 28
+    Left = 439
+    Top = 148
+    Width = 52
+    Height = 26
     TabOrder = 5
     Text = '0,8'
   end
   object Edit6: TEdit
-    Left = 488
-    Top = 196
-    Width = 57
-    Height = 28
+    Left = 439
+    Top = 176
+    Width = 52
+    Height = 26
     TabOrder = 6
     Text = '7'
   end
   object Edit7: TEdit
-    Left = 488
-    Top = 228
-    Width = 57
-    Height = 28
+    Left = 439
+    Top = 205
+    Width = 52
+    Height = 26
     TabOrder = 7
     Text = '4'
   end
   object Edit8: TEdit
-    Left = 488
-    Top = 260
-    Width = 57
-    Height = 28
+    Left = 439
+    Top = 234
+    Width = 52
+    Height = 26
     TabOrder = 8
     Text = '1'
   end
   object Edit9: TEdit
-    Left = 488
-    Top = 292
-    Width = 57
-    Height = 28
+    Left = 439
+    Top = 263
+    Width = 52
+    Height = 26
     TabOrder = 9
     Text = '0.6'
   end
   object Edit10: TEdit
-    Left = 488
-    Top = 324
-    Width = 57
-    Height = 28
+    Left = 439
+    Top = 292
+    Width = 52
+    Height = 26
     TabOrder = 10
     Text = '2'
   end
   object RadioButton1: TRadioButton
-    Left = 243
-    Top = 386
-    Width = 105
-    Height = 17
+    Left = 219
+    Top = 347
+    Width = 94
+    Height = 16
     Caption = 'Area'
     Checked = True
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -16
+    Font.Height = -15
     Font.Name = 'Tempus Sans ITC'
     Font.Style = []
     ParentFont = False
@@ -17677,14 +17677,14 @@ object Form1: TForm1
     TabStop = True
   end
   object RadioButton2: TRadioButton
-    Left = 243
-    Top = 410
-    Width = 105
-    Height = 17
+    Left = 219
+    Top = 369
+    Width = 94
+    Height = 15
     Caption = 'Trace'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -16
+    Font.Height = -15
     Font.Name = 'Tempus Sans ITC'
     Font.Style = []
     ParentFont = False

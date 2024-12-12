@@ -102,6 +102,9 @@ if (CLPBRD.SubString(1,6) == "ObjMan")
         CLPBRD = ExtractFileName (FileName);
         Form1->Caption = "Connected to " + CLPBRD;
         WinHeader = "FreePCB - " + CLPBRD;
+        if( FindWindow( NULL,WinHeader.c_str()) == NULL )
+                if( FindWindow( NULL,(WinHeader+"*").c_str()) == NULL )
+                        WinHeader = "ПлатФорм - " + CLPBRD;
         bPaste->Visible = true;
         Button8->Enabled = false;
         Button7->Enabled = true;
@@ -2002,7 +2005,7 @@ if (FindWindow( NULL,"Log") == NULL)
         SaveCh();
         exit(0);
         }
-else    ShowMessage("  Close FreePcb window to modify the libraries!");
+else    ShowMessage("  Close Pcb-window to modify the libraries!");
 }
 
 
@@ -2278,6 +2281,11 @@ fn.SetLength(fn.Length()-1);
 fn = ExtractFilePath(fn);
 fn.SetLength(fn.Length()-1);
 fn = ExtractFilePath(fn) + "freepcb.exe";
+
+// RUS
+if( FileExists(fn) == 0 )
+        fn = ExtractFilePath(fn) + "ПлатФорм.exe";
+
 AnsiString FN = ("\""+fn+"\"");
 AnsiString ps = A+B;
 AnsiString PS = ("\""+ps+"\"");
@@ -2292,7 +2300,7 @@ info.nShow = SW_SHOW;//SW_MAXIMIZE; //SW_HIDE
 info.hInstApp = NULL;
 int INF = ShellExecuteEx(&info);
 if( INF == 0 )
-        ShowMessage("Something went wrong .. If the problem persists more than once, report it to support at freepcb.dev");
+        ShowMessage("Something went wrong .. If the problem persists more than once, report it to support at freepcb2");
 }
 //---------------------------------------------------------------------------
 
@@ -2485,6 +2493,11 @@ fn.SetLength(fn.Length()-1);
 fn = ExtractFilePath(fn);
 fn.SetLength(fn.Length()-1);
 fn = ExtractFilePath(fn) + "freepcb.exe";
+
+// RUS
+if( FileExists(fn) == 0 )
+        fn = ExtractFilePath(fn) + "ПлатФорм.exe";
+
 AnsiString FN = ("\""+fn+"\"");
 AnsiString PS = ("\""+ps+"\"");
 info.cbSize = sizeof(SHELLEXECUTEINFO);
@@ -2498,7 +2511,7 @@ info.nShow = SW_SHOW;//SW_MAXIMIZE; //SW_HIDE
 info.hInstApp = NULL;
 int INF = ShellExecuteEx(&info);
 if( INF == 0 )
-        ShowMessage("Something went wrong .. If the problem persists more than once, report it to support at freepcb.dev");
+        ShowMessage("Something went wrong .. If the problem persists more than once, report it to support at freepcb2");
 }
 //---------------------------------------------------------------------------
 
@@ -2683,7 +2696,7 @@ if( Form1->ListBox1->ItemIndex >= 0 )
 
 void __fastcall TForm1::Label3Click(TObject *Sender)
 {
-ShellExecute(NULL, "open", "https://github.com/Duxah/FreePCB-2/blob/master/README.md", NULL, NULL, SW_SHOWNORMAL);
+ShellExecute(NULL, "open", "https://github.com/niconson", NULL, NULL, SW_SHOWNORMAL);
 }
 //---------------------------------------------------------------------------
 

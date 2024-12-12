@@ -139,7 +139,7 @@ public:		// User declarations
 //---------------------------------------------------------------------------
 extern PACKAGE TForm1 *Form1;
 extern double D;
-extern char s[199];
+extern char s[2500];
 extern double F;
 extern double X_NEW[32];
 extern double Y_NEW[32];

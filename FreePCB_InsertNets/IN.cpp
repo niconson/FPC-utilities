@@ -438,6 +438,11 @@ fn.SetLength(fn.Length()-1);
 fn = ExtractFilePath(fn);
 fn.SetLength(fn.Length()-1);
 fn = ExtractFilePath(fn) + "freepcb.exe";
+
+// RUS
+if( FileExists(fn) == 0 )
+        fn = ExtractFilePath(fn) + "ПлатФорм.exe";
+
 AnsiString FN = ("\""+fn+"\"");
 AnsiString ps = B;
 AnsiString PS = ("\""+ps+"\"");
@@ -452,7 +457,7 @@ info.nShow = SW_SHOW;//SW_MAXIMIZE; //SW_HIDE
 info.hInstApp = NULL;
 int INF = ShellExecuteEx(&info);
 if( INF == 0 )
-        ShowMessage("Something went wrong .. If the problem persists more than once, report it to support at freepcb.dev");
+        ShowMessage("Something went wrong .. If the problem persists more than once, report it to support at freepcb2");
 
 exit(0);
 }
@@ -480,7 +485,7 @@ for( int i=0; i<Form1->ListBox3->Items->Count; i++ )
 
 void __fastcall TForm1::Label5Click(TObject *Sender)
 {
-ShellExecute(NULL, "open", "https://github.com/Duxah/FreePCB-2/blob/master/README.md", NULL, NULL, SW_SHOWNORMAL);         
+ShellExecute(NULL, "open", "https://github.com/niconson", NULL, NULL, SW_SHOWNORMAL);
 }
 //---------------------------------------------------------------------------
 

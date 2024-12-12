@@ -31,10 +31,10 @@ object Form2: TForm2
   object Label1: TLabel
     Left = 660
     Top = 439
-    Width = 97
+    Width = 57
     Height = 13
     Cursor = crHandPoint
-    Caption = 'www.freepcb.dev'
+    Caption = 'Freepcb-2'
     Font.Charset = RUSSIAN_CHARSET
     Font.Color = clGray
     Font.Height = -11

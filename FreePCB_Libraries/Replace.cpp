@@ -142,6 +142,11 @@ void Replace ( AnsiString Name, long StartIndex, long EndIndex)
         fn = ExtractFilePath(fn);
         fn.SetLength(fn.Length()-1);
         fn = ExtractFilePath(fn) + "freepcb.exe";
+
+        // RUS
+        if( FileExists(fn) == 0 )
+                fn = ExtractFilePath(fn) + "ПлатФорм.exe";
+
         AnsiString FN = ("\""+fn+"\"");
         AnsiString ps = B;
         AnsiString PS = ("\""+ps+"\"");
@@ -156,5 +161,5 @@ void Replace ( AnsiString Name, long StartIndex, long EndIndex)
         info.hInstApp = NULL;
         int INF = ShellExecuteEx(&info);
         if( INF == 0 )
-                ShowMessage("Something went wrong .. If the problem persists more than once, report it to support at freepcb.dev");
+                ShowMessage("Something went wrong .. If the problem persists more than once, report it to support at freepcb2");
         }

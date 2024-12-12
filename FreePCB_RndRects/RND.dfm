@@ -35710,7 +35710,7 @@ object Form1: TForm1
           Font.Height = -11
           Font.Name = 'Tahoma'
           Font.Style = [fsBold]
-          ItemHeight = 13
+          ItemHeight = 0
           ParentFont = False
           TabOrder = 0
         end
@@ -35725,7 +35725,7 @@ object Form1: TForm1
           Font.Height = -11
           Font.Name = 'Tahoma'
           Font.Style = [fsBold]
-          ItemHeight = 13
+          ItemHeight = 0
           ParentFont = False
           TabOrder = 1
         end

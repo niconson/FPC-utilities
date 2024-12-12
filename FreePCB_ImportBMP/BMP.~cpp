@@ -1064,7 +1064,7 @@ PADS[pds] = "  top_pad: 1 " + AnsiString((long long)WP) + " ";
 PADS[pds] += AnsiString((long long)WP) + " ";
 PADS[pds] += AnsiString((long long)WP) + " 0 0";
 pds++;
-if (pds > 30000)
+if (pds > 99000)
         Flag_MAXPOINT = true;
 }
 void __fastcall TForm1::RadioButton3Click(TObject *Sender)

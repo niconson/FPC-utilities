@@ -1,28 +1,8 @@
-Report for VPL storage (12.03.2020 12:47:14)
-    VIST-BT-1-11M.vpl
+Report for VPL storage (19.10.2020 11:23:28)
+    Armkor-1-1.vpl
         new elements
-            1) 1.5M||1.5M1%  0603
-            2) AD8613  SOT235
-            15K1%  0603 - replacement found
-                (15K  0603)
-            3) 3.01K1%  0603
-                similar? 3.01K1%  RC0805 (303)
-                similar? 3.01K1%  R0805 (538)
-                similar? 3.01K1%  RC0805NT (1016)
-                similar? 3.01K1%  0805 (1045)
-                similar? 3.01KOHM1%  R0805 (1633)
-                similar? 3.0   (1736)
-                Show more...
-                    (value? 3K  0603)
-            4) 3M1%  0603
-            5) 12K1%  0603
-            6) 47K1%  0603
-            7) 750K1%  0603
-            8) 30K  0603
-            9) 300PF  0603
-            10) 10.0  0603
-            11) OPA2333AIDGK  MINISO8
-            12) 15PF  0603
-            13) 22E1%  0603
-            14) ADP165160AUJZ3.0  SOT235
-            15) 1.62K1%  0603
+            1) DS18B20  TO92
+            2) INA826  SO8
+            3) 32M  NX2016
+            4) TPS80403DBV  SOT235
+            5) STLQ015M30R  SOT235

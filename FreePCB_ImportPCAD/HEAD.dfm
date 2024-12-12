@@ -209,7 +209,7 @@ object Form1: TForm1
     object Label6: TLabel
       Left = 24
       Top = 80
-      Width = 281
+      Width = 258
       Height = 13
       Caption = 'Mask clearance for Pads specified by polygon:'
     end

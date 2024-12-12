@@ -99,7 +99,7 @@ void Replace ( AnsiString Name, long StartIndex, long EndIndex)
                                         W << endl;
                                         while (1)
                                                 {
-                                                R.getline(s,250);
+                                                R.getline(s,2500);
                                                 A = s;
                                                 A = A.Trim();
                                                 if (A.SubString(1,5) == "name:" )        break;
@@ -142,6 +142,11 @@ void Replace ( AnsiString Name, long StartIndex, long EndIndex)
         fn = ExtractFilePath(fn);
         fn.SetLength(fn.Length()-1);
         fn = ExtractFilePath(fn) + "freepcb.exe";
+
+        // RUS
+        if( FileExists(fn) == 0 )
+                fn = ExtractFilePath(fn) + "ПлатФорм.exe";
+
         AnsiString FN = ("\""+fn+"\"");
         AnsiString ps = B;
         AnsiString PS = ("\""+ps+"\"");

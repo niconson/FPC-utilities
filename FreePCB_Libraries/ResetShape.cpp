@@ -121,6 +121,11 @@ void ResetShape ( AnsiString Name, long StartIndex, long EndIndex, AnsiString Re
         fn = ExtractFilePath(fn);
         fn.SetLength(fn.Length()-1);
         fn = ExtractFilePath(fn) + "freepcb.exe";
+
+        // RUS
+        if( FileExists(fn) == 0 )
+                fn = ExtractFilePath(fn) + "ПлатФорм.exe";
+
         AnsiString FN = ("\""+fn+"\"");
         AnsiString ps = B;
         AnsiString PS = ("\""+ps+"\"");
@@ -135,5 +140,5 @@ void ResetShape ( AnsiString Name, long StartIndex, long EndIndex, AnsiString Re
         info.hInstApp = NULL;
         int INF = ShellExecuteEx(&info);
         if( INF == 0 )
-                ShowMessage("Something went wrong .. If the problem persists more than once, report it to support at freepcb.dev");
+                ShowMessage("Something went wrong .. If the problem persists more than once, report it to support at freepcb2");
         }

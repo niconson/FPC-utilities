@@ -38,7 +38,6 @@ object Form1: TForm1
     Font.Name = 'MS Sans Serif'
     Font.Style = [fsUnderline]
     ParentFont = False
-    Visible = False
     OnClick = Label2Click
   end
   object CheckBox1: TCheckBox

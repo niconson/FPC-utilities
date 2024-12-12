@@ -807,7 +807,7 @@ A = ExtractFilePath(Application->ExeName);
 ifstream RNewFoot ((A + "Combine.txt").c_str());
 ofstream WNewFoot ((A + "Combine.fpl").c_str());
 A = "";
-char s[200];
+char s[2501];
 while (A.SubString(1,3) != "end" )
         {
         RNewFoot.getline(s,sizeof(s));
@@ -1016,6 +1016,11 @@ fn.SetLength(fn.Length()-1);
 fn = ExtractFilePath(fn);
 fn.SetLength(fn.Length()-1);
 fn = ExtractFilePath(fn) + "freepcb.exe";
+
+// RUS
+if( FileExists(fn) == 0 )
+        fn = ExtractFilePath(fn) + "ПлатФорм.exe";
+
 AnsiString FN = ("\""+fn+"\"");
 AnsiString ps = B;
 AnsiString PS = ("\""+ps+"\"");
@@ -1047,11 +1052,11 @@ Form3->ListBox2->Sorted = true;
 Form3->ListBox2->Clear();
 ifstream RComb (FileName.c_str());
 A = "";
-char s[250];
+char s[2501];
 Application->ProcessMessages();
 while(A.SubString(1,5) != "[end]" )
         {
-        RComb.getline(s,200);
+        RComb.getline(s,2500);
         A = s;
         A = A.Trim();
         Form1->ListBox6->Items->Add(A);

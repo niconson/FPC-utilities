@@ -220,12 +220,12 @@ else if (Form1->OpenDialog1->Execute())
 else exit(0);
 //
 UNITS = 1;
-char s[199];
+char s[2501];
 bool FOOTPRINT = true;
 ifstream R (Form1->OpenDialog1->FileName.c_str());
 while (!R.eof())
         {
-        R.getline(s,199);
+        R.getline(s,2500);
         A = s;
         A = A.Trim();
         if (A.LowerCase().SubString(1,12) == "[footprints]" )

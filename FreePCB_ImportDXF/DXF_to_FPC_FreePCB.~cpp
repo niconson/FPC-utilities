@@ -2511,6 +2511,13 @@ fn.SetLength(fn.Length()-1);
 if( Form1->Freeasy->Checked )
         fn = ExtractFilePath(fn) + "FreeCds.exe";
 else    fn = ExtractFilePath(fn) + "FreePcb.exe";
+//
+if( FileExists(fn) == 0 )
+        if( Form1->Freeasy->Checked )
+                fn = ExtractFilePath(fn) + "—ıÂÏ¿ÚÓ.exe";
+        else
+                fn = ExtractFilePath(fn) + "œÎ‡Ú‘ÓÏ.exe";
+//
 AnsiString FN = ("\""+fn+"\"");
 AnsiString ps = B;
 AnsiString PS = ("\""+ps+"\"");
@@ -2525,7 +2532,7 @@ info.nShow = SW_SHOW;//SW_MAXIMIZE; //SW_HIDE
 info.hInstApp = NULL;
 int INF = ShellExecuteEx(&info);
 if( INF == 0 )
-        ShowMessage("Something went wrong .. If the problem persists more than once, report it to support at freepcb.dev");
+        ShowMessage("Something went wrong .. If the problem persists more than once, report it to support at Freepcb2");
 
 ///exit(0);
 }// ŒÕ≈÷ œ–Œ√–¿ÃÃ€ «¿œ»—»
@@ -2580,7 +2587,7 @@ else
 
 void __fastcall TForm1::Label6Click(TObject *Sender)
 {
-ShellExecute(NULL, "open", "https://www.google.com/search?q=freepcb-2", NULL, NULL, SW_SHOWNORMAL);
+ShellExecute(NULL, "open", "https://github.com/niconson", NULL, NULL, SW_SHOWNORMAL);
 }
 //---------------------------------------------------------------------------
 

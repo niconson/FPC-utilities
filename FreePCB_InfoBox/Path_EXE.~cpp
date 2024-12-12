@@ -55,7 +55,7 @@ WindowHeader = "res";
 
 void __fastcall TForm2::Label1Click(TObject *Sender)
 {
-ShellExecute(NULL, "open", "https://freepcb.dev", NULL, NULL, SW_SHOWNORMAL);        
+ShellExecute(NULL, "open", "https://github.com/Duxah/FreePCB-2/blob/master/README.md", NULL, NULL, SW_SHOWNORMAL);        
 }
 //---------------------------------------------------------------------------
 

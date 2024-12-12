@@ -141,7 +141,7 @@ object Form1: TForm1
         Left = 768
         Top = 49
         Width = 21
-        Height = 17
+        Height = 16
         Caption = '000'
       end
       object R: TImage
@@ -863,7 +863,7 @@ object Form1: TForm1
         Left = 696
         Top = 49
         Width = 21
-        Height = 17
+        Height = 16
         Caption = '000'
       end
       object R2: TImage

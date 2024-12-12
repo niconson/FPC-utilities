@@ -39,7 +39,7 @@
 #define CDS_LONG_MAX_LEN 30000
 #define CDS_SHORT_MAX_LEN 1000
 //
-#define FREEPCB_HEADER "FreePCB - "
+AnsiString FREEPCB_HEADER = "FreePCB - "  ;
 //
 // PARTS
 #define col_RefDes                  0
