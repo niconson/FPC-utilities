@@ -122,6 +122,9 @@ ProductName=
 ProductVersion=1.0.0.0
 Comments=
 
+[Excluded Packages]
+c:\program files (x86)\borland\cbuilder6\Bin\dclite60.bpl=Borland Integrated Translation Environment
+
 [HistoryLists\hlIncludePath]
 Count=3
 Item0=..\..\..\res;C:\Documents and Settings\0\??????? ????\CM;C:\Program Files\Borland\CBuilder6\Bin;C:\Documents and Settings\0\??????? ????\??? ?????\Component manager;C:\Program Files\Borland\CBuilder6\Projects;C:\Documents and Settings\0\??????? ????\Rotate(FreePCB);$(BCB)\include;$(BCB)\include\vcl
@@ -166,10 +169,5 @@ LinkCGLIB=0
 AddServerUnit=1
 AddClientUnit=1
 PrecompiledHeaders=1
-
-[Language]
-ActiveLang=
-ProjectLang=
-RootDir=
   </IDEOPTIONS>
 </PROJECT>
