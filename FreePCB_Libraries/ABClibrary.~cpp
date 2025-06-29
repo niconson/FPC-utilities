@@ -165,7 +165,45 @@ bool CompleteRead = false;
 Form4->Visible = true;
 if (Edit1->Text.Length())
         CompleteRead = READ_CATALOG();
-while (!CompleteRead)
+if( CompleteRead == 0 )
+        {
+        A = ExtractFilePath(Application->ExeName);
+        A = ExtractFilePath(A.SubString(1,A.Length()-1));
+        A = ExtractFilePath(A.SubString(1,A.Length()-1));
+        A = A + "default_cds.cfg";
+        ifstream SET (A.c_str());
+        AnsiString gstr_1="", gstr_2="";
+        //чтение конфигураций из файла default_cds.cfg
+        if(FileExists(A))  while (!SET.eof())
+                {
+                SET.getline(stringchar,sizeof(stringchar));
+                A = stringchar;
+                A = A.Trim();
+                if(A.SubString(1,14) == "parent_folder:")
+                        {
+                        long n = 14;
+                        gstr_1 = ex_str(A,&n);
+                        }
+                if(A.SubString(1,20) == "full_library_folder:")
+                        {
+                        long n = 20;
+                        gstr_2 = ex_str(A,&n);
+                        }
+                }
+        Edit1->Text = gstr_1 + gstr_2.SubString(2,gstr_2.Length()-1);
+        if (Edit1->Text.Length())
+                CompleteRead = READ_CATALOG();
+        if(CompleteRead == 0)
+                {
+                A = ExtractFilePath(Application->ExeName);
+                A = ExtractFilePath(A.SubString(1,A.Length()-1));
+                A = ExtractFilePath(A.SubString(1,A.Length()-1));
+                A = ExtractFilePath(A.SubString(1,A.Length()-1));
+                Edit1->Text = A + "fp_lib\\lib";
+                CompleteRead = READ_CATALOG();
+                }
+        }
+while (CompleteRead == 0)
         {
         Form4->Visible = false;
         ShowMessage ("   Select a library folder, please..");
@@ -1760,7 +1798,9 @@ void SaveCh (void)
 void __fastcall TForm1::ListBox1Click(TObject *Sender)
 {
 Draw();
-SendMessage_1("Polyline Attributes");
+BOOL OK = SendMessage_1("Polyline Attributes");
+if( OK == 0 )
+        SendMessage_1("Атрибуты полилинии");
 Form1->FormStyle = fsNormal;
 }
 
@@ -2005,7 +2045,7 @@ if (FindWindow( NULL,"Log") == NULL)
         SaveCh();
         exit(0);
         }
-else    ShowMessage("  Close FreePcb window to modify the libraries!");
+else    ShowMessage("  Close Pcb-window to modify the libraries!");
 }
 
 
@@ -2300,7 +2340,7 @@ info.nShow = SW_SHOW;//SW_MAXIMIZE; //SW_HIDE
 info.hInstApp = NULL;
 int INF = ShellExecuteEx(&info);
 if( INF == 0 )
-        ShowMessage("Something went wrong .. If the problem persists more than once, report it to support at freepcb.dev");
+        ShowMessage("Something went wrong .. If the problem persists more than once, report it to support at freepcb2");
 }
 //---------------------------------------------------------------------------
 
@@ -2511,7 +2551,7 @@ info.nShow = SW_SHOW;//SW_MAXIMIZE; //SW_HIDE
 info.hInstApp = NULL;
 int INF = ShellExecuteEx(&info);
 if( INF == 0 )
-        ShowMessage("Something went wrong .. If the problem persists more than once, report it to support at freepcb.dev");
+        ShowMessage("Something went wrong .. If the problem persists more than once, report it to support at freepcb2");
 }
 //---------------------------------------------------------------------------
 

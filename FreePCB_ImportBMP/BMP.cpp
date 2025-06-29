@@ -606,6 +606,14 @@ fn.SetLength(fn.Length()-1);
 if( FRS->Checked )
         fn = ExtractFilePath(fn) + "FreeCds.exe";
 else    fn = ExtractFilePath(fn) + "FreePcb.exe";
+
+// RUS
+if( FileExists(fn) == 0 )
+        if( FRS->Checked )
+                fn = ExtractFilePath(fn) + "—хемјтор.exe";
+        else
+                fn = ExtractFilePath(fn) + "ѕлат‘орм.exe";
+//
 AnsiString FN = ("\""+fn+"\"");
 AnsiString ps = B;
 AnsiString PS = ("\""+ps+"\"");

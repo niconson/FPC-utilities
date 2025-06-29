@@ -1,6 +1,6 @@
 object Form1: TForm1
-  Left = 1228
-  Top = 300
+  Left = 926
+  Top = 94
   BorderStyle = bsDialog
   Caption = 'BMP to FreePCB file translator '
   ClientHeight = 644

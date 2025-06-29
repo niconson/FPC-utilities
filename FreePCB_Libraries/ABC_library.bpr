@@ -44,7 +44,7 @@
       -I&quot;C:\Program Files\Borland\CBuilder6\Projects&quot; 
       -I&quot;C:\Documents and Settings\0\??????? ????\Rotate(FreePCB)&quot; 
       -I$(BCB)\include -I$(BCB)\include\vcl -src_suffix cpp -boa"/>
-    <CFLAG1 value="-O2 -H=$(BCB)\lib\vcl60.csm -Hc -Vx -Ve -X- -a8 -b- -k- -vi -c -tW -tWM"/>
+    <CFLAG1 value="-Od -H=$(BCB)\lib\vcl60.csm -Hc -Vx -Ve -X- -a8 -b- -k- -vi -c -tW -tWM"/>
     <PFLAGS value="-$Y- -$L- -$D- -$A8 -v -JPHNE -M"/>
     <RFLAGS value=""/>
     <AFLAGS value="/mx /w2 /zn"/>
@@ -106,6 +106,9 @@ ProductName=
 ProductVersion=1.0.0.0
 Comments=
 
+[Excluded Packages]
+c:\program files (x86)\borland\cbuilder6\Bin\dclite60.bpl=Borland Integrated Translation Environment
+
 [Debugging]
 DebugSourceDirs=$(BCB)\source\vcl
 
@@ -130,10 +133,5 @@ LinkCGLIB=0
 AddServerUnit=1
 AddClientUnit=1
 PrecompiledHeaders=1
-
-[Language]
-ActiveLang=
-ProjectLang=
-RootDir=
   </IDEOPTIONS>
 </PROJECT>

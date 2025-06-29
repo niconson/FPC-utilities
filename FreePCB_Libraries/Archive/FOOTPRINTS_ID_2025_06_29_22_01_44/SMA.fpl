@@ -1,0 +1,62 @@
+name: "SMA"
+author: "Ivex"
+package: "SMA"
+  units: NM
+  sel_rect: -3475000 -2075000 3475000 2075000
+  ref_text: 1270000 0 2600000 0 177800
+  value_text: 1270000 0 60000 0 177800
+  centroid: 0 0 0 0
+  outline_polyline: 150000 -3400000 1600000 1 0 4
+    next_corner: -2500000 1600000 0
+    next_corner: -2500000 2000000 0
+    next_corner: 2500000 2000000 0
+    next_corner: 2500000 1600000 0
+    next_corner: 3400000 1600000 0
+    next_corner: 3400000 -1600000 0
+    next_corner: 2500000 -1600000 0
+    next_corner: 2500000 -2000000 0
+    next_corner: -2500000 -2000000 0
+    next_corner: -2500000 -1600000 0
+    next_corner: -3400000 -1600000 0
+    close_polyline: 0
+    openscad_data: "// Global lift 0.0mm //|// Global rotation 0.0 //|"
+  outline_polyline: 600000 -2300000 1700000 0 0 7
+    next_corner: -2300000 -1700000 0
+    next_corner: 2300000 -1700000 0
+    next_corner: 2300000 1700000 0
+    close_polyline: 0
+    openscad_data: "// Global lift 0.0mm //|// Global rotation 0.0 //|// Consider line width //|// matrix: 1 1 1 0.000 0.000 0.000 //|// resolution $fn = 8 //|color( `[0.2,0.2,0.2]` )|{|    minkowski()|    {|        $fn = 8;|        translate([ 0.000,  0.000,  1.200 ])|        {|            *corner1*, 0.0 ])|            {|                *center1*, 0.0 ])|                {|                    linear_extrude( 1.000, scale= 0.900, convexity=Convexity )|                    {|                        polygon([ *content* ]);|                    }|                }|            }|        }|        sphere( *width* );|    }|}|"
+  outline_polyline: 177800 1600000 1700000 0 1 7
+    next_corner: 1600000 -1700000 0
+    next_corner: 2200000 -1700000 0
+    next_corner: 2200000 1700000 0
+    close_polyline: 0
+    openscad_data: "// Global lift 0.0mm //|// Global rotation 0.0 //|// it's a hole //|// matrix: 1 1 1 0.000 0.000 0.000 //|// resolution $fn = 20 //|color( `White` )|{|    translate([ 0.000,  0.000,  2.400 ])|    {|        *corner1*, 0.0 ])|        {|            linear_extrude( 1.000, scale= 1.000, convexity=Convexity )|            {|                polygon([ *content* ]);|            }|        }|    }|}|"
+  outline_polyline: 177800 -2700000 1000000 0 0 7
+    next_corner: -2700000 -1000000 0
+    next_corner: 2700000 -1000000 0
+    next_corner: 2700000 1000000 0
+    close_polyline: 0
+    openscad_data: "// Global lift 0.0mm //|// Global rotation 0.0 //|// matrix: 1 1 1 0.000 0.000 0.000 //|// resolution $fn = 20 //|color( `Aqua` )|{|    *corner1*, 0.0 ])|    {|        linear_extrude( 1.500, scale= 1.000, convexity=Convexity )|        {|            polygon([ *content* ]);|        }|    }|}|"
+  outline_polyline: 600000 -2300000 0 0 0 7
+    next_corner: -2300000 -1700000 0
+    next_corner: 2300000 -1700000 0
+    next_corner: 2300000 1700000 0
+    next_corner: -2300000 1700000 0
+    close_polyline: 0
+    openscad_data: "// Consider line width //|// Global rotation 0.000 //|// Global lift 0.000mm //|// matrix: 1 1 1 0.000 0.000 0.000 //|// resolution $fn = 8 //|color( `[0.2,0.2,0.2]` )|{|    minkowski()|    {|        $fn = 8;|        translate([ 0.000,  0.000,  1.200 ])|        {|            *corner1*, 0.0 ])|            {|                rotate([ 180.000,  0.000,  0.000 ])|                {|                    *center1*, 0.0 ])|                    {|                        linear_extrude( 1.200, scale= 0.900, convexity=Convexity )|                        {|                            polygon([ *content* ]);|                        }|                    }|                }|            }|        }|        sphere( *width* );|    }|}|"
+  outline_polyline: 150000 -1000000 0 1 1 4
+    next_corner: 1000000 0 0
+  outline_polyline: 150000 -600000 0 1 1 4
+    next_corner: -600000 600000 0
+    next_corner: 600000 0 0
+    next_corner: -600000 -600000 0
+    close_polyline: 0
+  outline_polyline: 150000 600000 600000 1 1 4
+    next_corner: 600000 -600000 0
+  n_pins: 2
+    pin: "1" 0 -2200000 0 0 ""
+      top_pad: 3 2600000 900000 900000 0
+    pin: "2" 0 2200000 0 0 ""
+      top_pad: 3 2600000 900000 900000 0
+

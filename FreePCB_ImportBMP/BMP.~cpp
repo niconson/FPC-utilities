@@ -606,6 +606,14 @@ fn.SetLength(fn.Length()-1);
 if( FRS->Checked )
         fn = ExtractFilePath(fn) + "FreeCds.exe";
 else    fn = ExtractFilePath(fn) + "FreePcb.exe";
+
+// RUS
+if( FileExists(fn) == 0 )
+        if( Form1->FRS->Checked )
+                fn = ExtractFilePath(fn) + "ÑõåìÀòîð.exe";
+        else
+                fn = ExtractFilePath(fn) + "ÏëàòÔîðì.exe";
+//
 AnsiString FN = ("\""+fn+"\"");
 AnsiString ps = B;
 AnsiString PS = ("\""+ps+"\"");
@@ -1147,7 +1155,7 @@ Timer1->Enabled = true;
 
 void __fastcall TForm1::LinkClick(TObject *Sender)
 {
-ShellExecute(NULL, "open", "https://freepcb.dev", NULL, NULL, SW_SHOWNORMAL);          
+ShellExecute(NULL, "open", "https://github.com/niconson", NULL, NULL, SW_SHOWNORMAL);          
 }
 //---------------------------------------------------------------------------
 

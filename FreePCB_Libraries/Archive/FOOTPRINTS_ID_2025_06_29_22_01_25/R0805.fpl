@@ -1,0 +1,31 @@
+name: "R0805"
+author: "Ivex"
+package: "R0805"
+  units: NM
+  sel_rect: -1988899 -1088900 1988899 1088900
+  ref_text: 1270000 0 2000000 0 177800
+  value_text: 1270000 0 -540000 0 177800
+  centroid: 0 0 0 0
+  outline_polyline: 177800 -1899999 550000 1 0 4
+    next_corner: -1450000 1000000 1
+    next_corner: -550000 1000000 0
+    next_corner: -450000 900000 0
+    next_corner: 450002 899999 0
+    next_corner: 550000 999998 0
+    next_corner: 1450000 1000000 0
+    next_corner: 1899999 550000 1
+    next_corner: 1899998 -550001 0
+    next_corner: 1450000 -1000000 1
+    next_corner: 550000 -999998 0
+    next_corner: 450000 -900000 0
+    next_corner: -450000 -900000 0
+    next_corner: -550000 -999998 0
+    next_corner: -1450000 -1000000 0
+    next_corner: -1899999 -550001 1
+    close_polyline: 0
+  n_pins: 2
+    pin: "1" 0 -1050000 0 0 ""
+      top_pad: 4 1400000 550000 550000 200000
+    pin: "2" 0 1050000 0 0 ""
+      top_pad: 4 1400000 550000 550000 200000
+

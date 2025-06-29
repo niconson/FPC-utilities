@@ -1,0 +1,19 @@
+name: "C0805"
+author: "Ivex"
+package: "C0805"
+  units: NM
+  sel_rect: -1038900 -1188900 2938900 1188900
+  ref_text: 1270000 950000 2100000 0 177800
+  value_text: 1270000 950000 -440000 0 177800
+  centroid: 0 950000 0 0
+  outline_polyline: 177800 -950000 1100000 1 0 4
+    next_corner: 2850000 1100000 0
+    next_corner: 2850000 -1100000 0
+    next_corner: -950000 -1100000 0
+    close_polyline: 0
+  n_pins: 2
+    pin: "1" 0 -100000 0 0 ""
+      top_pad: 3 1600000 550000 550000 0
+    pin: "2" 0 2000000 0 0 ""
+      top_pad: 3 1600000 550000 550000 0
+
