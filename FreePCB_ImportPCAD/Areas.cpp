@@ -110,7 +110,7 @@ while (CNT)
                                 if (MaxLayerNumRef < (layerPlane+2)) MaxLayerNumRef = (layerPlane+2);
                                 Areas << "area: 1 4 ";
                                 Areas << AnsiString(layerPlane+2).c_str();
-                                Areas << " 0";
+                                Areas << " 1";
                                 Areas << endl;
 
                                 Areas << "corner: 1 ";
@@ -239,7 +239,7 @@ while (CNT)
                                 if (layerNumRef < 3)            Areas << AnsiString(layerNumRef+11).c_str();
                                 else if (layerNumRef > 11)      Areas << AnsiString(layerNumRef+2).c_str();
                                 //else ShowMessage ("    Ошибка! Полигон в неизвестном слое.");
-                                Areas << " 0";
+                                Areas << " 2";
                                 Areas << endl;
                                 i = 0;
                                 while (i < Form1->ListBox1->Items->Count)

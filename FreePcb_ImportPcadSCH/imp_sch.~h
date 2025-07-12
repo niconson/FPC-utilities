@@ -82,10 +82,10 @@ class List
 private:
 Line m_start;
 Line * m_end;
-Line * part_start;
 public:
 List();
 Line * GetStart();
+Line * part_start;
 void AddLine(   int x, int y, int x2, int y2,
                 AnsiString r,
                 AnsiString v,

@@ -93,6 +93,7 @@ void WrPin(     AnsiString refdes,
                 double pdscy,
                 double pdscrot,
                 double rotation,
+                BOOL isFlipped,
                 double movex,
                 double movey,
                 int nobj
@@ -196,6 +197,13 @@ void WrPin(     AnsiString refdes,
                 pnmrot -= rotation;
                 pdscrot -= rotation;
                 }
+        if( isFlipped )
+                {
+                pinptx = -pinptx;
+                x2 = -x2;
+                pnmx = -pnmx;
+                pdscx = -pdscx;
+                }
         pinptx += movex;
         pinpty += movey;
         x2 += movex;
@@ -210,7 +218,7 @@ void WrPin(     AnsiString refdes,
         A = svA;
 }
 //---------------------------------------------------------------------------
-void GetPartData(AnsiString symbol, AnsiString refDesRef, int x, int y, int rotation)
+void GetPartData(AnsiString symbol, AnsiString refDesRef, int x, int y, int rotation, int isFlippedTrue)
 {
 bool eFlag = false;
 AnsiString originalName = "";
@@ -259,16 +267,16 @@ eFlag = false;
 int n_obj = 0;
 double pinptx = 0;
 double pinpty = 0;
-double pinrot = 0;
+int pinrot = 0;
 double pinlen = 0;
 AnsiString pinname="";
 double pnmx = 0;
 double pnmy = 0;
-double pnmrot = 0;
+int pnmrot = 0;
 AnsiString pindesc="";
 double pdscx = 0;
 double pdscy = 0;
-double pdscrot = 0;
+int pdscrot = 0;
 for( int i=0; i<Form1->LB1->Items->Count; i++ )
         {
         if( eFlag == 0 && getbit( BOOLS[i], symbolDefPos ) == 0 )
@@ -317,10 +325,16 @@ for( int i=0; i<Form1->LB1->Items->Count; i++ )
                         x2 *= PER_MIL;
                         y2 *= PER_MIL;
                         }
+
                 if( rotation )
                         {
                         Rotate_Vertex( &x1, &y1, rotation );
                         Rotate_Vertex( &x2, &y2, rotation );
+                        }
+                if( isFlippedTrue )
+                        {
+                        x1 = -x1;
+                        x2 = -x2;
                         }
                 x1 += x;
                 y1 += y;
@@ -335,7 +349,7 @@ for( int i=0; i<Form1->LB1->Items->Count; i++ )
                 {
                 if( pinname.Length() )
                         {
-                        WrPin(refDesRef,compValue,patternName,pinptx,pinpty,pinrot,pinlen,pinname,pnmx,pnmy,pnmrot,pindesc,pdscx,pdscy,pdscrot,rotation,x,y,n_obj);
+                        WrPin(refDesRef,compValue,patternName,pinptx,pinpty,pinrot,pinlen,pinname,pnmx,pnmy,pnmrot,pindesc,pdscx,pdscy,pdscrot,rotation,isFlippedTrue,x,y,n_obj);
                         pinname = "";
                         n_obj++;
                         }
@@ -345,11 +359,13 @@ for( int i=0; i<Form1->LB1->Items->Count; i++ )
                 C = Extract(B," ","");
                 pinpty = C.ToDouble();
                 pinrot = 0;
+
                 if( A.Pos("(rotation ") > 0 )
                         {
                         B = Extract(A,"(rotation ",")");
                         pinrot = B.ToDouble();
                         }
+
                 if( fileUnits == MM )
                         pinlen = 2;
                 else if( fileUnits == MIL )
@@ -370,6 +386,7 @@ for( int i=0; i<Form1->LB1->Items->Count; i++ )
                 C = Extract(B," ","");
                 pnmy = C.ToDouble();
                 pnmrot = 0;
+
                 if( A.Pos("(rotation ") > 0 )
                         {
                         B = Extract(A,"(rotation ",")");
@@ -385,6 +402,7 @@ for( int i=0; i<Form1->LB1->Items->Count; i++ )
                 C = Extract(B," ","");
                 pdscy = C.ToDouble();
                 pdscrot = 0;
+
                 if( A.Pos("(rotation ") > 0 )
                         {
                         B = Extract(A,"(rotation ",")");
@@ -394,7 +412,7 @@ for( int i=0; i<Form1->LB1->Items->Count; i++ )
         }
 if( pinname.Length() )
         {
-        WrPin(refDesRef,compValue,patternName,pinptx,pinpty,pinrot,pinlen,pinname,pnmx,pnmy,pnmrot,pindesc,pdscx,pdscy,pdscrot,rotation,x,y,n_obj);
+        WrPin(refDesRef,compValue,patternName,pinptx,pinpty,pinrot,pinlen,pinname,pnmx,pnmy,pnmrot,pindesc,pdscx,pdscy,pdscrot,rotation,isFlippedTrue,x,y,n_obj);
         pinname = "";
         n_obj++;
         }
@@ -520,10 +538,12 @@ Application->ProcessMessages();
 AnsiString fileStr = Form1->OpenDialog1->FileName;
 if( fileStr.Length() == 0 )
         exit(0);
+int bReadNets = MessageBox(0, "Do you want to read net names of WIRE objects?", "...one moment", MB_YESNO);
 ifstream read (fileStr.c_str());
 char str[2540];
 int First = 0;
 int parts = 0;
+AnsiString PORTS;
 while( read.eof() == 0 )
         {
         read.getline(str,sizeof(str));
@@ -620,10 +640,24 @@ for( int i=0; i<Form1->LB1->Items->Count; i++ )
                         x2 *= PER_MIL;
                         y2 *= PER_MIL;
                         }
+                AnsiString Net = Extract(A,"(netNameRef ",")");
+                for( int io=Net.Pos("\""); io>0; io=Net.Pos("\"") )
+                        Net.Delete(io,1);
+
+                // ignoring ...
+                if( Net.SubString(1,3).UpperCase() == "NET" )
+                        Net = "";
+                if( Net.SubString(1,3).UpperCase() == "N00" )
+                        Net = "";
+                if( PORTS.Pos(" "+Net+" ") > 0 )
+                        Net = "";
+                if( bReadNets == 0 )
+                        Net = "";
+
                 Form1->Label1->Caption = "Wire" + AnsiString(nWire) + " creation";
                 Application->ProcessMessages();
                 nWire++;
-                mList[currentPage].AddLine(x1,y1,x2,y2,"","","","",0,0,0,"",0,0,0,"",0,0,0);
+                mList[currentPage].AddLine(x1,y1,x2,y2,"","","","",0,0,0,Net,x2,y2,0,"",0,0,0);
                 }
         if( A.Pos("(port ") == 1 )
                 {
@@ -637,6 +671,8 @@ for( int i=0; i<Form1->LB1->Items->Count; i++ )
                         Net.Delete(io,1);
                 if( Net.Pos("NET") == 1 )
                         Net = "?" + Net;
+                else    PORTS += " " + Net + " ";
+
                 int x2 = x1;
                 int y2 = y1;
                 if( fileUnits == MM )
@@ -706,6 +742,9 @@ for( int i=0; i<Form1->LB1->Items->Count; i++ )
                         B = Extract(A,"(rotation ",")");
                         ang = B.ToDouble();
                         }
+                int isFlipped = 0;
+                if( A.Pos("(isFlipped ") > 0 ) 
+                        isFlipped = TRUE;
                 if( fileUnits == MM )
                         {
                         x1 *= PER_MM;
@@ -720,7 +759,7 @@ for( int i=0; i<Form1->LB1->Items->Count; i++ )
                         bar_pos += step;
                 Form1->ProgressBar->Position = bar_pos;
                 Application->ProcessMessages();
-                GetPartData( symbolRef, refDesRef, x1, y1, ang );
+                GetPartData( symbolRef, refDesRef, x1, y1, ang, isFlipped );
                 }
         }
 

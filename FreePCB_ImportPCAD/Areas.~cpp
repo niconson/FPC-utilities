@@ -26,7 +26,7 @@ else    {
         //BRD_RECT[3] += 10000000;
         }
 //ЧТЕНИЕ Areas
-Form1->Label4->Caption = "Чтение Areas" ;
+Form1->Label4->Caption = "Reading Areas" ;
 Application->ProcessMessages();
 AnsiString A;
 ifstream read_Areas (OpenD.c_str());
@@ -239,7 +239,7 @@ while (CNT)
                                 if (layerNumRef < 3)            Areas << AnsiString(layerNumRef+11).c_str();
                                 else if (layerNumRef > 11)      Areas << AnsiString(layerNumRef+2).c_str();
                                 //else ShowMessage ("    Ошибка! Полигон в неизвестном слое.");
-                                Areas << " 0";
+                                Areas << " 2";
                                 Areas << endl;
                                 i = 0;
                                 while (i < Form1->ListBox1->Items->Count)

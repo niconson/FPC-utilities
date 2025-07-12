@@ -27,7 +27,7 @@
     <DEBUGLIBPATH value="$(BCB)\lib\debug"/>
     <RELEASELIBPATH value="$(BCB)\lib\release"/>
     <LINKER value="ilink32"/>
-    <USERDEFINES value=""/>
+    <USERDEFINES value="_DEBUG"/>
     <SYSDEFINES value="NO_STRICT"/>
     <MAINSOURCE value="import.cpp"/>
     <INCLUDEPATH value="C:\Borland\CBuilder6\Projects;C:\Users\duker\Downloads\FreePcb_ImportPcadSCH;$(BCB)\include;$(BCB)\include\vcl"/>
@@ -38,12 +38,13 @@
   <OPTIONS>
     <IDLCFLAGS value="-IC:\Borland\CBuilder6\Projects 
       -IC:\Users\duker\Downloads\FreePcb_ImportPcadSCH -I$(BCB)\include 
-      -I$(BCB)\include\vcl -src_suffix cpp -boa"/>
-    <CFLAG1 value="-O2 -H=$(BCB)\lib\vcl60.csm -Hc -Vx -Ve -X- -a8 -b- -k- -vi -c -tW -tWM"/>
-    <PFLAGS value="-$Y- -$L- -$D- -$A8 -v -JPHNE -M"/>
+      -I$(BCB)\include\vcl -src_suffix cpp -D_DEBUG -boa"/>
+    <CFLAG1 value="-Od -H=$(BCB)\lib\vcl60.csm -Hc -Vx -Ve -X- -r- -a8 -b- -k -y -v -vi- -c 
+      -tW -tWM"/>
+    <PFLAGS value="-$Y+ -$W -$O- -$A8 -v -JPHNE -M"/>
     <RFLAGS value=""/>
-    <AFLAGS value="/mx /w2 /zn"/>
-    <LFLAGS value="-D&quot;&quot; -aa -Tpe -x -Gn"/>
+    <AFLAGS value="/mx /w2 /zi"/>
+    <LFLAGS value="-D&quot;&quot; -aa -Tpe -x -Gn -v"/>
     <OTHERFILES value=""/>
   </OPTIONS>
   <LINKER>
@@ -89,7 +90,7 @@ ProductVersion=1.0.0.0
 Comments=
 
 [Excluded Packages]
-c:\borland\cbuilder6\Bin\dclite60.bpl=Borland Integrated Translation Environment
+c:\program files (x86)\borland\cbuilder6\Bin\dclite60.bpl=Borland Integrated Translation Environment
 
 [Debugging]
 DebugSourceDirs=$(BCB)\source\vcl
