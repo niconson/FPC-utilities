@@ -27,6 +27,22 @@ int ABS( int v )
         else    return -v;
 }
 //---------------------------------------------------------------------------
+AnsiString Check_A_for_MM_or_MIL()
+{
+int Units = fileUnits;
+if( A.Pos("mm") > 0 || A.Pos("MM") > 0 || A.Pos("Mm") > 0 )
+        {
+        Units = MM;
+        A = StringReplace(A,"mm","",TReplaceFlags()<<rfReplaceAll<<rfIgnoreCase);
+        }
+else if( A.Pos("mil") > 0 || A.Pos("MIL") > 0 || A.Pos("Mil") > 0 )
+        {
+        Units = MIL;
+        A = StringReplace(A,"mil","",TReplaceFlags()<<rfReplaceAll<<rfIgnoreCase);
+        }
+return Units;
+}
+//---------------------------------------------------------------------------
 void Rotate_Vertex (double *X, double *Y, double Ang)
 {
 double start_Ang = 0;
@@ -96,7 +112,8 @@ void WrPin(     AnsiString refdes,
                 BOOL isFlipped,
                 double movex,
                 double movey,
-                int nobj
+                int nobj,
+                int Units
                 )
 {
         AnsiString svA = A;
@@ -167,7 +184,7 @@ void WrPin(     AnsiString refdes,
                 }
         pnmrot -= pinrot;
         pdscrot -= pinrot;
-        if( fileUnits == MM )
+        if( Units == MM )
                 {
                 pinptx *= PER_MM;
                 pinpty *= PER_MM;
@@ -277,6 +294,7 @@ AnsiString pindesc="";
 double pdscx = 0;
 double pdscy = 0;
 int pdscrot = 0;
+int Units = fileUnits;
 for( int i=0; i<Form1->LB1->Items->Count; i++ )
         {
         if( eFlag == 0 && getbit( BOOLS[i], symbolDefPos ) == 0 )
@@ -301,6 +319,7 @@ for( int i=0; i<Form1->LB1->Items->Count; i++ )
 
         if( A.Pos("(line ") == 1 )
                 {
+                Units = Check_A_for_MM_or_MIL();
                 B = Extract(A,"(pt ",")");
                 C = Extract(B,""," ");
                 double x1 = C.ToDouble();
@@ -312,7 +331,7 @@ for( int i=0; i<Form1->LB1->Items->Count; i++ )
                 double x2 = C.ToDouble();
                 C = Extract(B," ","");
                 double y2 = C.ToDouble();
-                if( fileUnits == MM )
+                if( Units == MM )
                         {
                         x1 *= PER_MM;
                         y1 *= PER_MM;
@@ -349,10 +368,11 @@ for( int i=0; i<Form1->LB1->Items->Count; i++ )
                 {
                 if( pinname.Length() )
                         {
-                        WrPin(refDesRef,compValue,patternName,pinptx,pinpty,pinrot,pinlen,pinname,pnmx,pnmy,pnmrot,pindesc,pdscx,pdscy,pdscrot,rotation,isFlippedTrue,x,y,n_obj);
+                        WrPin(refDesRef,compValue,patternName,pinptx,pinpty,pinrot,pinlen,pinname,pnmx,pnmy,pnmrot,pindesc,pdscx,pdscy,pdscrot,rotation,isFlippedTrue,x,y,n_obj,Units);
                         pinname = "";
                         n_obj++;
                         }
+                Units = Check_A_for_MM_or_MIL();
                 B = Extract(A,"(pt ",")");
                 C = Extract(B,""," ");
                 pinptx = C.ToDouble();
@@ -366,9 +386,9 @@ for( int i=0; i<Form1->LB1->Items->Count; i++ )
                         pinrot = B.ToDouble();
                         }
 
-                if( fileUnits == MM )
+                if( Units == MM )
                         pinlen = 2;
-                else if( fileUnits == MIL )
+                else if( Units == MIL )
                         pinlen = 80;
                 else    pinlen = 0.1;
                 if( A.Pos("(pinLength ") > 0 )
@@ -380,13 +400,22 @@ for( int i=0; i<Form1->LB1->Items->Count; i++ )
         if( A.Pos("(pinDes ") == 1 )
                 {
                 pinname = Extract(A," \"","\" ");
+                Units = Check_A_for_MM_or_MIL();
                 B = Extract(A,"(pt ",")");
                 C = Extract(B,""," ");
                 pnmx = C.ToDouble();
                 C = Extract(B," ","");
                 pnmy = C.ToDouble();
                 pnmrot = 0;
-
+                /*if( Units == MM )
+                        {
+                        pnmx *= PER_MM;
+                        pnmy *= PER_MM;
+                        }
+                else    {
+                        pnmx *= PER_MIL;
+                        pnmy *= PER_MIL;
+                        } */
                 if( A.Pos("(rotation ") > 0 )
                         {
                         B = Extract(A,"(rotation ",")");
@@ -396,13 +425,22 @@ for( int i=0; i<Form1->LB1->Items->Count; i++ )
         if( A.Pos("(pinName ") == 1 )
                 {
                 pindesc = Extract(A," \"","\" ");
+                Units = Check_A_for_MM_or_MIL();
                 B = Extract(A,"(pt ",")");
                 C = Extract(B,""," ");
                 pdscx = C.ToDouble();
                 C = Extract(B," ","");
                 pdscy = C.ToDouble();
                 pdscrot = 0;
-
+                /*if( Units == MM )
+                        {
+                        pdscx *= PER_MM;
+                        pdscy *= PER_MM;
+                        }
+                else    {
+                        pdscx *= PER_MIL;
+                        pdscy *= PER_MIL;
+                        } */
                 if( A.Pos("(rotation ") > 0 )
                         {
                         B = Extract(A,"(rotation ",")");
@@ -412,7 +450,7 @@ for( int i=0; i<Form1->LB1->Items->Count; i++ )
         }
 if( pinname.Length() )
         {
-        WrPin(refDesRef,compValue,patternName,pinptx,pinpty,pinrot,pinlen,pinname,pnmx,pnmy,pnmrot,pindesc,pdscx,pdscy,pdscrot,rotation,isFlippedTrue,x,y,n_obj);
+        WrPin(refDesRef,compValue,patternName,pinptx,pinpty,pinrot,pinlen,pinname,pnmx,pnmy,pnmrot,pindesc,pdscx,pdscy,pdscrot,rotation,isFlippedTrue,x,y,n_obj,Units);
         pinname = "";
         n_obj++;
         }
@@ -610,6 +648,7 @@ for( int i=0; i<Form1->LB1->Items->Count; i++ )
                 }
         if( A.Pos("(wire ") == 1 )
                 {
+                int Units = Check_A_for_MM_or_MIL();
                 B = Extract(A,"(pt ",")");
                 C = Extract(B,""," ");
                 double x1 = C.ToDouble();
@@ -627,7 +666,7 @@ for( int i=0; i<Form1->LB1->Items->Count; i++ )
                                 y1 = y2 = max(y1,y2);
                         else    x1 = x2 = max(x1,x2);
                         }
-                if( fileUnits == MM )
+                if( Units == MM )
                         {
                         x1 *= PER_MM;
                         y1 *= PER_MM;
@@ -651,7 +690,7 @@ for( int i=0; i<Form1->LB1->Items->Count; i++ )
                         Net = "";
                 if( PORTS.Pos(" "+Net+" ") > 0 )
                         Net = "";
-                if( bReadNets == 0 )
+                if( bReadNets == IDNO )
                         Net = "";
 
                 Form1->Label1->Caption = "Wire" + AnsiString(nWire) + " creation";
@@ -661,6 +700,7 @@ for( int i=0; i<Form1->LB1->Items->Count; i++ )
                 }
         if( A.Pos("(port ") == 1 )
                 {
+                int Units = Check_A_for_MM_or_MIL();
                 B = Extract(A,"(pt ",")");
                 C = Extract(B,""," ");
                 double x1 = C.ToDouble();
@@ -675,7 +715,7 @@ for( int i=0; i<Form1->LB1->Items->Count; i++ )
 
                 int x2 = x1;
                 int y2 = y1;
-                if( fileUnits == MM )
+                if( Units == MM )
                         {
                         x1 *= PER_MM;
                         y1 *= PER_MM;
@@ -694,6 +734,7 @@ for( int i=0; i<Form1->LB1->Items->Count; i++ )
                 }
         if( A.Pos("(bus ") == 1 )
                 {
+                int Units = Check_A_for_MM_or_MIL();
                 B = Extract(A,"(pt ",")");
                 C = Extract(B,""," ");
                 double x1 = C.ToDouble();
@@ -705,7 +746,7 @@ for( int i=0; i<Form1->LB1->Items->Count; i++ )
                 double x2 = C.ToDouble();
                 C = Extract(B," ","");
                 double y2 = C.ToDouble();
-                if( fileUnits == MM )
+                if( Units == MM )
                         {
                         x1 *= PER_MM;
                         y1 *= PER_MM;
@@ -731,6 +772,7 @@ for( int i=0; i<Form1->LB1->Items->Count; i++ )
                 AnsiString refDesRef = Extract(A, "(refDesRef ", ")");
                 for( int io=refDesRef.Pos("\""); io>0; io=refDesRef.Pos("\"") )
                         refDesRef.Delete(io,1);
+                int Units = Check_A_for_MM_or_MIL();
                 B = Extract(A,"(pt ",")");
                 C = Extract(B,""," ");
                 double x1 = C.ToDouble();
@@ -745,7 +787,7 @@ for( int i=0; i<Form1->LB1->Items->Count; i++ )
                 int isFlipped = 0;
                 if( A.Pos("(isFlipped ") > 0 ) 
                         isFlipped = TRUE;
-                if( fileUnits == MM )
+                if( Units == MM )
                         {
                         x1 *= PER_MM;
                         y1 *= PER_MM;
@@ -959,5 +1001,4 @@ void __fastcall TForm1::Timer1Timer(TObject *Sender)
 Timer1->Enabled = false;
 Import();
 }
-//---------------------------------------------------------------------------
 
