@@ -66,6 +66,14 @@ bool WR_END = false;
 bool gLocked = false;
 int *DELETES = NULL;                           // ФЛАГИ УДАЛЕННЫХ ФАЙЛОВ
 
+struct PinSpacing
+{
+AnsiString txt1;
+AnsiString txt2;
+};
+
+PinSpacing PIN_SPACING;
+
 void FILTER (void);                             //фильтр
 void SaveCh (void);
 int prob (AnsiString ANSI , int Pr);            //курсор prob до заданного пробела
@@ -83,7 +91,7 @@ void Replace ( AnsiString Name, long StartIndex, long EndIndex);
 void ResetShape ( AnsiString Name, long StartIndex, long EndIndex, AnsiString Read, bool Play) ;
 AnsiString ex_str (AnsiString ANSI, long *n);
 AnsiString Str_Float_Format (AnsiString STRING_2_DOUBLE);
-
+PinSpacing Draw( bool bVALIDATE=0 );
 
 
 
@@ -279,13 +287,17 @@ AnsiString getDataPointInArray( long * LB_Index, bool includeDeletes, int * coun
         return mainS;
         }
 //==============================================================================================
-void Draw()
+PinSpacing Draw( bool bVALIDATE )
 {
+PinSpacing PIN_SPACING;
+PIN_SPACING.txt1 = "";
+PIN_SPACING.txt2 = "";
 if( Form1->ListBox1->Items->Count == 0 )
-        return;
+        return PIN_SPACING;
 if( Form1->ListBox1->ItemIndex < 0 || Form1->ListBox1->ItemIndex >= Form1->ListBox1->Items->Count )
         Form1->ListBox1->ItemIndex = 0;
-ATTRIBUTE_FOOT();
+if( bVALIDATE == 0 )
+        ATTRIBUTE_FOOT();
 
 i = Form1->ListBox1->ItemIndex;
 A = getDataPointInArray(&i,0);
@@ -295,7 +307,8 @@ if (i != -1)
         Canvas->Pen->Width = 1;
         Canvas->Pen->Color = clBlack;
         Canvas->Brush->Color = clBlack;//clBtnFace;
-        Canvas->Rectangle(Fill_Rect.Left,Fill_Rect.Top,Fill_Rect.Right,Fill_Rect.Bottom);
+        if( bVALIDATE == 0 )
+                Canvas->Rectangle(Fill_Rect.Left,Fill_Rect.Top,Fill_Rect.Right,Fill_Rect.Bottom);
         TRect Sel_Rect(0,0,0,0);
         TRect Pins_Rect(0,0,0,0);
         TPoint p1(0,0), p2(0,0), p3(0,0), p4(0,0);
@@ -316,6 +329,9 @@ if (i != -1)
         bool INV = 0;
         for (int cnt=n_str[i]; cnt<=end_str[i]; cnt++)
                 {
+                if( bVALIDATE )
+                        if( ((p2.x-p1.x)||(p2.y-p1.y)) && ((p4.x-p3.x)||(p4.y-p3.y)) )
+                                break;
                 if      (footprints[cnt].SubString(1,3) == "pin")
                         {
                         k = prob(footprints[cnt],2);
@@ -387,6 +403,13 @@ if (i != -1)
                         PinY = (Sel_Rect.Top - PinY) * K_selrect + Fill_Rect.Top + Shift;
                         Hole = Hole * K_selrect;
                         }
+                else if (footprints[cnt].SubString(1,5) == "units")
+                        {
+                        k = prob(footprints[cnt],1);
+                        units = footprints[cnt].SubString(k,(footprints[cnt].Length()-k+1));
+                        }
+                else if( bVALIDATE )
+                        continue;
                 else if (footprints[cnt].SubString(1,7) == "top_pad")
                         {
                         k = prob(footprints[cnt],1);
@@ -603,6 +626,34 @@ if (i != -1)
                         Canvas->Brush->Color = clBlue;
                         Canvas->Ellipse((PinX-Hole/2),(PinY-Hole/2),(PinX+Hole/2),(PinY+Hole/2));
                         }
+                else if (footprints[cnt].SubString(1,8) == "sel_rect")
+                        {
+                        k = prob(footprints[cnt],1);
+                        Sel_Rect.Left =         ex_float_NM(footprints[cnt], &k, &units)-m_scale-m_ccx;
+                        Sel_Rect.Bottom =       ex_float_NM(footprints[cnt], &k, &units)-m_scale+m_ccy;
+                        Sel_Rect.Right =        ex_float_NM(footprints[cnt], &k, &units)+m_scale-m_ccx;
+                        Sel_Rect.Top =          ex_float_NM(footprints[cnt], &k, &units)+m_scale+m_ccy;
+                        long DX = Sel_Rect.Right - Sel_Rect.Left;
+                        long DY = Sel_Rect.Top - Sel_Rect.Bottom;
+                        if( DX < 1.0 )
+                                K_selrect = 0.0;
+                        else
+                                K_selrect = (float)DX_fillRect/(float)DX;
+                        Shift = (DY_fillRect - DY * K_selrect)/2;
+                        if (Shift < 0)
+                                {
+                                K_selrect = 0.99 * K_selrect * (float)DY_fillRect / (((float)DY_fillRect - (float)Shift*(float)2));
+                                Shift = 0;
+                                }
+                        TRect CANVAS;
+                        CANVAS.Left = Fill_Rect.Left;
+                        CANVAS.Top = Shift + Fill_Rect.Top;
+                        CANVAS.Right = Fill_Rect.Right;
+                        CANVAS.Bottom = Shift + Fill_Rect.Top + DY * K_selrect;
+                        Canvas->Pen->Color = clGray;
+                        Canvas->Brush->Color = clBackground;
+                        //Canvas->Rectangle(CANVAS);
+                        }
                 else if (footprints[cnt].SubString(1,7) == "outline")
                         {
                         k = prob(footprints[cnt],1);
@@ -643,39 +694,6 @@ if (i != -1)
                         k = Generate_Line(xB,yB,xF,yF,(3-type), &ARC[0]);
                         for(int n=0; n<k; n=n+2) Canvas->LineTo((int)ARC[n],(int)ARC[n+1]);
                         }
-                else if (footprints[cnt].SubString(1,8) == "sel_rect")
-                        {
-                        k = prob(footprints[cnt],1);
-                        Sel_Rect.Left =         ex_float_NM(footprints[cnt], &k, &units)-m_scale-m_ccx;
-                        Sel_Rect.Bottom =       ex_float_NM(footprints[cnt], &k, &units)-m_scale+m_ccy;
-                        Sel_Rect.Right =        ex_float_NM(footprints[cnt], &k, &units)+m_scale-m_ccx;
-                        Sel_Rect.Top =          ex_float_NM(footprints[cnt], &k, &units)+m_scale+m_ccy;
-                        long DX = Sel_Rect.Right - Sel_Rect.Left;
-                        long DY = Sel_Rect.Top - Sel_Rect.Bottom;
-                        if( DX < 1.0 )
-                                K_selrect = 0.0;
-                        else
-                                K_selrect = (float)DX_fillRect/(float)DX;
-                        Shift = (DY_fillRect - DY * K_selrect)/2;
-                        if (Shift < 0)
-                                {
-                                K_selrect = 0.99 * K_selrect * (float)DY_fillRect / (((float)DY_fillRect - (float)Shift*(float)2));
-                                Shift = 0;
-                                }
-                        TRect CANVAS;
-                        CANVAS.Left = Fill_Rect.Left;
-                        CANVAS.Top = Shift + Fill_Rect.Top;
-                        CANVAS.Right = Fill_Rect.Right;
-                        CANVAS.Bottom = Shift + Fill_Rect.Top + DY * K_selrect;
-                        Canvas->Pen->Color = clGray;
-                        Canvas->Brush->Color = clBackground;
-                        //Canvas->Rectangle(CANVAS);
-                        }
-                else if (footprints[cnt].SubString(1,5) == "units")
-                        {
-                        k = prob(footprints[cnt],1);
-                        units = footprints[cnt].SubString(k,(footprints[cnt].Length()-k+1));
-                        }
                 }
         if( p2.x || p2.y )
                 {
@@ -692,10 +710,6 @@ if (i != -1)
                                 p4.y = p2.y;
                                 }
                         }
-                Canvas->Pen->Width = 1;
-                Canvas->Pen->Color = clWhite;
-                Canvas->Brush->Color = clWhite;
-                Canvas->Font->Size = 10;
                 double L = Length_Line( p1.x,p1.y,p2.x,p2.y );
                 AnsiString Tout;
                 if( units.LowerCase() == "nm" )
@@ -711,18 +725,26 @@ if (i != -1)
                         Tout = AnsiString((int)L) + "mil";
                         }
                 else    Tout = FormatFloat("0.0", L) + "mm";
-                p1.x = (p1.x - Sel_Rect.Left) * K_selrect + Fill_Rect.Left;
-                p1.y = (Sel_Rect.Top - p1.y) * K_selrect + Fill_Rect.Top + Shift;
-                p2.x = (p2.x - Sel_Rect.Left) * K_selrect + Fill_Rect.Left;
-                p2.y = (Sel_Rect.Top - p2.y) * K_selrect + Fill_Rect.Top + Shift;
-                Canvas->Pen->Width = 4;
-                Canvas->MoveTo(p1.x,p1.y);
-                Canvas->LineTo(p1.x,p1.y);
-                Canvas->MoveTo(p2.x,p2.y);
-                Canvas->LineTo(p2.x,p2.y);
-                Canvas->Pen->Width = 1;
-                Canvas->MoveTo(p1.x,p1.y);
-                Canvas->LineTo(p2.x,p2.y);
+
+                if(bVALIDATE == 0)
+                        {
+                        Canvas->Pen->Width = 1;
+                        Canvas->Pen->Color = clWhite;
+                        Canvas->Brush->Color = clWhite;
+                        Canvas->Font->Size = 10;
+                        p1.x = (p1.x - Sel_Rect.Left) * K_selrect + Fill_Rect.Left;
+                        p1.y = (Sel_Rect.Top - p1.y) * K_selrect + Fill_Rect.Top + Shift;
+                        p2.x = (p2.x - Sel_Rect.Left) * K_selrect + Fill_Rect.Left;
+                        p2.y = (Sel_Rect.Top - p2.y) * K_selrect + Fill_Rect.Top + Shift;
+                        Canvas->Pen->Width = 4;
+                        Canvas->MoveTo(p1.x,p1.y);
+                        Canvas->LineTo(p1.x,p1.y);
+                        Canvas->MoveTo(p2.x,p2.y);
+                        Canvas->LineTo(p2.x,p2.y);
+                        Canvas->Pen->Width = 1;
+                        Canvas->MoveTo(p1.x,p1.y);
+                        Canvas->LineTo(p2.x,p2.y);
+                        }
                 if( p4.x || p4.y )
                         {
                         L = Length_Line( p3.x,p3.y,p4.x,p4.y );
@@ -740,24 +762,36 @@ if (i != -1)
                                 Tout2 = AnsiString((int)L) + "mil";
                                 }
                         else    Tout2 = FormatFloat("0.0", L) + "mm";
-                        p3.x = (p3.x - Sel_Rect.Left) * K_selrect + Fill_Rect.Left;
-                        p3.y = (Sel_Rect.Top - p3.y) * K_selrect + Fill_Rect.Top + Shift;
-                        p4.x = (p4.x - Sel_Rect.Left) * K_selrect + Fill_Rect.Left;
-                        p4.y = (Sel_Rect.Top - p4.y) * K_selrect + Fill_Rect.Top + Shift;
-                        Canvas->Pen->Width = 4;
-                        Canvas->MoveTo(p3.x,p3.y);
-                        Canvas->LineTo(p3.x,p3.y);
-                        Canvas->MoveTo(p4.x,p4.y);
-                        Canvas->LineTo(p4.x,p4.y);
-                        Canvas->Pen->Width = 1;
-                        Canvas->MoveTo(p3.x,p3.y);
-                        Canvas->LineTo(p4.x,p4.y);
-                        tagSIZE S = Canvas->TextExtent(Tout2);
-                        Canvas->TextOutA( (p3.x+p4.x)/2-S.cx/2, (p3.y+p4.y)/2-S.cy/2, Tout2) ;
+                        if(bVALIDATE == 0)
+                                {
+                                p3.x = (p3.x - Sel_Rect.Left) * K_selrect + Fill_Rect.Left;
+                                p3.y = (Sel_Rect.Top - p3.y) * K_selrect + Fill_Rect.Top + Shift;
+                                p4.x = (p4.x - Sel_Rect.Left) * K_selrect + Fill_Rect.Left;
+                                p4.y = (Sel_Rect.Top - p4.y) * K_selrect + Fill_Rect.Top + Shift;
+                                Canvas->Pen->Width = 4;
+                                Canvas->MoveTo(p3.x,p3.y);
+                                Canvas->LineTo(p3.x,p3.y);
+                                Canvas->MoveTo(p4.x,p4.y);
+                                Canvas->LineTo(p4.x,p4.y);
+                                Canvas->Pen->Width = 1;
+                                Canvas->MoveTo(p3.x,p3.y);
+                                Canvas->LineTo(p4.x,p4.y);
+                                tagSIZE S = Canvas->TextExtent(Tout2);
+                                Canvas->TextOutA( (p3.x+p4.x)/2-S.cx/2, (p3.y+p4.y)/2-S.cy/2, Tout2) ;
+                                }
+                        PIN_SPACING.txt1 = Tout2;
                         }
-                tagSIZE S = Canvas->TextExtent(Tout);
-                Canvas->TextOutA( (p1.x+p2.x)/2-S.cx/2, (p1.y+p2.y)/2-S.cy/2, Tout) ;
+                if(bVALIDATE == 0)
+                        {
+                        tagSIZE S = Canvas->TextExtent(Tout);
+                        Canvas->TextOutA( (p1.x+p2.x)/2-S.cx/2, (p1.y+p2.y)/2-S.cy/2, Tout) ;
+                        }
+                PIN_SPACING.txt2 = Tout;
                 }
+        }
+if(bVALIDATE)
+        {
+        return PIN_SPACING;
         }
 //Canvas->Pen->Width = 1;
 //Canvas->Pen->Color = Form1->Color;
@@ -833,6 +867,7 @@ else    {
 if(FlagReplace) Form1->Button6->Enabled = true;
 else            Form1->Button6->Enabled = false;
 Form1->Button3->Refresh();
+return PIN_SPACING;
 }
 
 
@@ -1321,19 +1356,19 @@ Form1->CheckBox1->Checked = false;
 Form1->ListBox1->Visible = false;
 
 
-if (Form1->Edit3->Text.Length()||        //фильтр PINS
-    Form1->Edit4->Text.Length())         //фильтр HOLES
+if ( (Form1->Edit3->Text.Length()&& Form1->Edit3->Text != "n pins") ||        //фильтр PINS
+     (Form1->Edit4->Text.Length()&& Form1->Edit4->Text != "n holes") )         //фильтр HOLES
     {
     Form1->ListBox1->Clear();
     int np = -1;
     int nh = -1;
-    if(Form1->Edit3->Text.Length())
+    if(Form1->Edit3->Text.Length() && Form1->Edit3->Text != "n pins")
         {
         B = Form1->Edit3->Text;
         AnsiString ss = Str_Float_Format(B);
         np = (int)StrToFloat(ss);
         }
-    if(Form1->Edit4->Text.Length())
+    if(Form1->Edit4->Text.Length() && Form1->Edit4->Text != "n holes")
         {
         B = Form1->Edit4->Text;
         AnsiString ss = Str_Float_Format(B);
@@ -1367,7 +1402,29 @@ else    //полный список
         Attach_listbox1();
 //
 //FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-if (Form1->Edit2->Text.Length() != 0)         //фильтр по имени
+if (Form1->PinSpacing->Text.Length() != 0 && Form1->PinSpacing->Text != "pin spacing")         //фильтр по расстоянию между пинами
+        {
+        int VALIDATE = 1;
+        int L = Form1->PinSpacing->Text.Length();
+        for(int i=Form1->ListBox1->Items->Count-1; i>=0; i--)
+                {
+                Form1->ListBox1->ItemIndex = i;
+                PinSpacing pin_spacing = Draw( VALIDATE );
+                if(( pin_spacing.txt1.SubString(1,L) != Form1->PinSpacing->Text ) &&
+                   ( pin_spacing.txt2.SubString(1,L) != Form1->PinSpacing->Text ))
+                        {
+                        if( i%10 == 0)
+                                {
+                                Form1->Scan->Caption = "Scan footprints: " + AnsiString(i);
+                                Application->ProcessMessages();
+                                }
+                        Form1->ListBox1->Items->Delete(i);
+                        }
+                }
+        }
+//
+//FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+if (Form1->FootName->Text.Length() != 0 && Form1->FootName->Text != "name")         //фильтр по имени
         {
         i = Form1->ListBox1->Count-1;
         while (i >= 0 )
@@ -1376,7 +1433,7 @@ if (Form1->Edit2->Text.Length() != 0)         //фильтр по имени
                 long k=prob(A,1);
                 if (Form1->Sort_ABC->Checked==0)
                         A = A.SubString(k,(A.Length()-k+1));
-                B = Form1->Edit2->Text;
+                B = Form1->FootName->Text;
 
                 if( A.UpperCase().Pos( B.UpperCase() ) <= 0 )
                         Form1->ListBox1->Items->Delete(i);
@@ -1448,7 +1505,7 @@ if (Form1->CheckBox2->Checked)
                 }
         }
 
-A = " "+Form1->Edit2->Text;
+A = " "+Form1->FootName->Text;
 if(Form1->ListBox1->Items->Count)
         Form1->ListBox1->ItemIndex = 0;
 for(int i=Form1->ListBox1->Items->Count-1; i>=0; i--)
@@ -2081,7 +2138,7 @@ void DELETE_FILES (void)
 //
 //
 //
-void __fastcall TForm1::Edit2Change(TObject *Sender)
+void __fastcall TForm1::FootNameChange(TObject *Sender)
 {
 FILTER();
 Draw();
@@ -2265,7 +2322,7 @@ else if (rectDrawn == 0)
         //
         if( PartJump.Length() )
                 {
-                Edit2->Text = PartJump;
+                FootName->Text = PartJump;
                 PartJump = "";
                 Draw();
                 }
@@ -2789,7 +2846,7 @@ void __fastcall TForm1::Image1MouseMove(TObject *Sender, TShiftState Shift,
 int __fastcall TForm1::OnWMCopyData(TWMCopyData &Msg)
 {
         Form1->FormStyle = fsStayOnTop;
-        Form1->Edit2->Text = (char*)Msg.CopyDataStruct->lpData;
+        Form1->FootName->Text = (char*)Msg.CopyDataStruct->lpData;
         //Application->ProcessMessages();
         return 0;
 }
@@ -2862,6 +2919,13 @@ else    FILTER();
 void __fastcall TForm1::bPasteClick(TObject *Sender)
 {
 SendMessage_2(WinHeader);
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::PinSpacingChange(TObject *Sender)
+{
+FILTER();
+Draw();        
 }
 //---------------------------------------------------------------------------
 

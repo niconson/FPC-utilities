@@ -1,9 +1,9 @@
 object Form1: TForm1
   Left = 503
-  Top = 126
+  Top = 125
   BorderStyle = bsDialog
   Caption = 'FreePcb footprints library'
-  ClientHeight = 472
+  ClientHeight = 473
   ClientWidth = 625
   Color = clBtnFace
   Font.Charset = RUSSIAN_CHARSET
@@ -35,13 +35,6 @@ object Form1: TForm1
     ParentFont = False
     OnClick = Label3Click
   end
-  object Image1: TImage
-    Left = 5
-    Top = 200
-    Width = 311
-    Height = 265
-    OnMouseMove = Image1MouseMove
-  end
   object Button8: TLabel
     Left = 517
     Top = 339
@@ -69,6 +62,12 @@ object Form1: TForm1
     Font.Name = 'Tahoma'
     Font.Style = []
     ParentFont = False
+  end
+  object Image1: TImage
+    Left = 8
+    Top = 200
+    Width = 305
+    Height = 265
   end
   object Edit1: TEdit
     Left = 4
@@ -180,27 +179,6 @@ object Form1: TForm1
     Font.Style = []
     ParentFont = False
     TabOrder = 3
-    object Label7: TLabel
-      Left = 8
-      Top = 16
-      Width = 38
-      Height = 16
-      Caption = 'Name:'
-    end
-    object Label8: TLabel
-      Left = 147
-      Top = 17
-      Width = 35
-      Height = 16
-      Caption = 'nPins:'
-    end
-    object Label9: TLabel
-      Left = 225
-      Top = 16
-      Width = 43
-      Height = 16
-      Caption = 'nHoles:'
-    end
     object SpeedButton3: TSpeedButton
       Left = 229
       Top = 142
@@ -215,42 +193,58 @@ object Form1: TForm1
       ParentFont = False
       OnClick = SpeedButton3Click
     end
+    object Scan: TLabel
+      Left = 91
+      Top = 77
+      Width = 98
+      Height = 16
+      Caption = 'Scan footprints...'
+      Font.Charset = RUSSIAN_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+    end
     object ListBox1: TListBox
       Left = 7
-      Top = 38
+      Top = 40
       Width = 297
-      Height = 103
+      Height = 100
       ItemHeight = 16
       Sorted = True
       TabOrder = 0
       OnClick = ListBox1Click
       OnDblClick = ListBox1DblClick
     end
-    object Edit2: TEdit
-      Left = 53
+    object FootName: TEdit
+      Left = 7
       Top = 14
       Width = 91
-      Height = 20
+      Height = 24
       AutoSize = False
       TabOrder = 1
-      OnChange = Edit2Change
+      Text = 'name'
+      OnChange = FootNameChange
     end
     object Edit3: TEdit
-      Left = 184
+      Left = 200
       Top = 14
-      Width = 35
-      Height = 20
+      Width = 49
+      Height = 24
       AutoSize = False
       TabOrder = 2
+      Text = 'n pins'
       OnChange = Edit3Change
     end
     object Edit4: TEdit
-      Left = 269
+      Left = 253
       Top = 14
-      Width = 35
-      Height = 20
+      Width = 50
+      Height = 24
       AutoSize = False
       TabOrder = 3
+      Text = 'n holes'
       OnChange = Edit4Change
     end
     object bOpenPDF: TButton
@@ -297,6 +291,16 @@ object Form1: TForm1
       ParentFont = False
       TabOrder = 6
       OnClick = bEditFootClick
+    end
+    object PinSpacing: TComboBox
+      Left = 102
+      Top = 14
+      Width = 94
+      Height = 24
+      ItemHeight = 16
+      TabOrder = 7
+      Text = 'pin spacing'
+      OnChange = PinSpacingChange
     end
   end
   object Sname: TListBox

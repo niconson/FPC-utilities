@@ -34,10 +34,7 @@ __published:	// IDE-managed Components
         TRadioButton *Sort_n_holes;
         TGroupBox *GroupBox3;
         TListBox *ListBox1;
-        TLabel *Label7;
-        TLabel *Label8;
-        TLabel *Label9;
-        TEdit *Edit2;
+        TEdit *FootName;
         TEdit *Edit3;
         TEdit *Edit4;
         TSpeedButton *SpeedButton3;
@@ -57,7 +54,6 @@ __published:	// IDE-managed Components
         TListBox *Sdescript;
         TButton *R;
         TLabel *Label3;
-        TImage *Image1;
         TGroupBox *GroupBox2;
         TButton *Button2;
         TLabel *Button8;
@@ -89,6 +85,9 @@ __published:	// IDE-managed Components
         TLabel *Label10;
         TButton *Button3;
         TButton *bPaste;
+        TImage *Image1;
+        TLabel *Scan;
+        TComboBox *PinSpacing;
         void __fastcall Button1Click(TObject *Sender);
         //void __fastcall SpeedButton1Click(TObject *Sender);
         //void __fastcall SpeedButton2Click(TObject *Sender);
@@ -99,7 +98,7 @@ __published:	// IDE-managed Components
         void __fastcall ListBox1DblClick(TObject *Sender);
         void __fastcall Edit1Change(TObject *Sender);
         void __fastcall Button2Click(TObject *Sender);
-        void __fastcall Edit2Change(TObject *Sender);
+        void __fastcall FootNameChange(TObject *Sender);
         void __fastcall Edit3Change(TObject *Sender);
         void __fastcall Edit4Change(TObject *Sender);
         void __fastcall CheckBox2Click(TObject *Sender);
@@ -137,6 +136,7 @@ __published:	// IDE-managed Components
         void __fastcall Button3Click(TObject *Sender);
         void __fastcall CheckBox1Click(TObject *Sender);
         void __fastcall bPasteClick(TObject *Sender);
+        void __fastcall PinSpacingChange(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
         __fastcall TForm1(TComponent* Owner);

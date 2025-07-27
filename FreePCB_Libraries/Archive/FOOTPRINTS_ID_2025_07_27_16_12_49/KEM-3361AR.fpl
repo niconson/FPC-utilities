@@ -1,0 +1,111 @@
+name: "KEM-3361AR"
+package: "KEM-3361AR"
+  units: NM
+  sel_rect: -12127000 -7127000 12127000 7127000
+  ref_text: 300000 0 500000 0 50000
+  value_text: 300000 0 0 0 50000
+  centroid: 0 0 0 0
+  outline_polyline: 254000 -12000000 7000000 1 0 4
+    next_corner: -12000000 -7000000 0
+    next_corner: 12000000 -7000000 0
+    next_corner: 12000000 7000000 0
+    close_polyline: 0
+    openscad_data: "// Global lift -2.500mm //|// Global rotation 0.000 //|// matrix: 1 1 1 0.000 0.000 0.000 //|// resolution $fn = 20 //|color( `Chocolate` )|{|    *corner1*, 0.0 ])|    {|        linear_extrude( 7.200, scale= 1.000, convexity=Convexity )|        {|            polygon([ *content* ]);|        }|    }|}|"
+  outline_polyline: 100000 -6560000 5280000 0 0 4
+    next_corner: -6560000 4860000 0
+    next_corner: -6140000 4860000 0
+    next_corner: -6140000 5280000 0
+    close_polyline: 0
+    openscad_data: "// Global lift -2.500mm //|// Global rotation 0.000 //|// matrix: 6 2 1 2.540 -10.160 0.000 //|// resolution $fn = 20 //|color( `Aqua` )|{|    translate([ 0.000,  0.000,  -2.500 ])|    {|        *corner1*, 0.0 ])|        {|            linear_extrude( 3.000, scale= 1.000, convexity=Convexity )|            {|                polygon([ *content* ]);|            }|        }|    }|}|"
+  outline_polyline: 127000 -8000000 3800000 0 0 4
+    next_corner: -8000000 800000 0
+    next_corner: -7600000 200000 0
+    next_corner: -8000000 -400000 0
+    next_corner: -8000000 -3600000 0
+    next_corner: -7400000 -4200000 0
+    next_corner: -4000000 -4200000 0
+    next_corner: -3400000 -3600000 0
+    next_corner: -3400000 -400000 0
+    next_corner: -3800000 200000 0
+    next_corner: -3400000 800000 0
+    next_corner: -3400000 3800000 0
+    next_corner: -4000000 4400000 0
+    next_corner: -7400000 4400000 0
+    close_polyline: 0
+    openscad_data: "// Global lift -2.500mm //|// Global rotation 0.000 //|// it's a hole //|// matrix: 3 1 1 6.000 0.000 0.000 //|// resolution $fn = 20 //|color( `Navy` )|{|    translate([ 0.000,  0.000,  7.100 ])|    {|        *corner1*, 0.0 ])|        {|            linear_extrude( 1.000, scale= 1.000, convexity=Convexity )|            {|                polygon([ *content* ]);|            }|        }|    }|}|"
+  outline_polyline: 127000 -4600000 3800000 0 0 4
+    next_corner: -7000000 3800000 0
+    next_corner: -7600000 4000000 0
+    next_corner: -7200000 3400000 0
+    next_corner: -7200000 800000 0
+    next_corner: -7600000 200000 0
+    next_corner: -7200000 -400000 0
+    next_corner: -7200000 -3200000 0
+    next_corner: -7600000 -3800000 0
+    next_corner: -7000000 -3600000 0
+    next_corner: -4400000 -3600000 0
+    next_corner: -3800000 -3800000 0
+    next_corner: -4200000 -3200000 0
+    next_corner: -4200000 -400000 0
+    next_corner: -3800000 200000 0
+    next_corner: -4200000 800000 0
+    next_corner: -4200000 3400000 0
+    next_corner: -3800000 4000000 0
+    close_polyline: 0
+    openscad_data: "// Global lift -2.500mm //|// Global rotation 0.000 //|// it's a hole //|// matrix: 3 1 1 6.000 0.000 0.000 //|// resolution $fn = 20 //|color( `Chocolate` )|{|    translate([ 0.000,  0.000,  7.000 ])|    {|        *corner1*, 0.0 ])|        {|            linear_extrude( 1.000, scale= 1.000, convexity=Convexity )|            {|                polygon([ *content* ]);|            }|        }|    }|}|"
+  outline_polyline: 127000 -3000000 -3600000 0 0 4
+    next_corner: -3000000 -4400000 0
+    next_corner: -2200000 -4400000 0
+    next_corner: -2200000 -3600000 0
+    close_polyline: 0
+    openscad_data: "// it's a hole //|// Global rotation 0.000 //|// Global lift -2.500mm //|// matrix: 2 1 1 6.000 0.000 0.000 //|// resolution $fn = 20 //|color( `Navy` )|{|    translate([ 0.000,  0.000,  7.100 ])|    {|        *corner1*, 0.0 ])|        {|            linear_extrude( 1.000, scale= 1.000, convexity=Convexity )|            {|                polygon([ *content* ]);|            }|        }|    }|}|"
+  n_pins: 12
+    pin: "1" 800000 -6350000 -5080000 0 ""
+      top_pad: 1 1300000 650000 650000 0
+      inner_pad: 1 1300000 650000 650000 0 0
+      bottom_pad: 1 1300000 650000 650000 0
+    pin: "2" 800000 -3810000 -5080000 0 ""
+      top_pad: 1 1300000 650000 650000 0
+      inner_pad: 1 1300000 650000 650000 0 0
+      bottom_pad: 1 1300000 650000 650000 0
+    pin: "3" 800000 -1270000 -5080000 0 ""
+      top_pad: 1 1300000 650000 650000 0
+      inner_pad: 1 1300000 650000 650000 0 0
+      bottom_pad: 1 1300000 650000 650000 0
+    pin: "4" 800000 1270000 -5080000 0 ""
+      top_pad: 1 1300000 650000 650000 0
+      inner_pad: 1 1300000 650000 650000 0 0
+      bottom_pad: 1 1300000 650000 650000 0
+    pin: "5" 800000 3810000 -5080000 0 ""
+      top_pad: 1 1300000 650000 650000 0
+      inner_pad: 1 1300000 650000 650000 0 0
+      bottom_pad: 1 1300000 650000 650000 0
+    pin: "6" 800000 6350000 -5080000 0 ""
+      top_pad: 1 1300000 650000 650000 0
+      inner_pad: 1 1300000 650000 650000 0 0
+      bottom_pad: 1 1300000 650000 650000 0
+    pin: "7" 800000 6350000 5080000 0 ""
+      top_pad: 1 1300000 650000 650000 0
+      inner_pad: 1 1300000 650000 650000 0 0
+      bottom_pad: 1 1300000 650000 650000 0
+    pin: "8" 800000 3810000 5080000 0 ""
+      top_pad: 1 1300000 650000 650000 0
+      inner_pad: 1 1300000 650000 650000 0 0
+      bottom_pad: 1 1300000 650000 650000 0
+    pin: "9" 800000 1270000 5080000 0 ""
+      top_pad: 1 1300000 650000 650000 0
+      inner_pad: 1 1300000 650000 650000 0 0
+      bottom_pad: 1 1300000 650000 650000 0
+    pin: "10" 800000 -1270000 5080000 0 ""
+      top_pad: 1 1300000 650000 650000 0
+      inner_pad: 1 1300000 650000 650000 0 0
+      bottom_pad: 1 1300000 650000 650000 0
+    pin: "11" 800000 -3810000 5080000 0 ""
+      top_pad: 1 1300000 650000 650000 0
+      inner_pad: 1 1300000 650000 650000 0 0
+      bottom_pad: 1 1300000 650000 650000 0
+    pin: "12" 800000 -6350000 5080000 0 ""
+      top_pad: 1 1300000 650000 650000 0
+      inner_pad: 1 1300000 650000 650000 0 0
+      bottom_pad: 1 1300000 650000 650000 0
+

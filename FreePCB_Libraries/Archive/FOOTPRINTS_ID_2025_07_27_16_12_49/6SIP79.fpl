@@ -1,0 +1,56 @@
+name: "6SIP79"
+author: "Ivex"
+package: "6SIP79"
+  units: NM
+  sel_rect: -1358900 -1358900 11341100 1358900
+  ref_text: 1270000 800000 1800000 0 177800
+  value_text: 1270000 5200000 1800000 0 177800
+  centroid: 0 5000000 0 0
+  outline_polyline: 177800 -1270000 1270000 1 0 4
+    next_corner: 11252200 1270000 0
+    next_corner: 11252200 -1270000 0
+    next_corner: -1270000 -1270000 0
+    close_polyline: 0
+    openscad_data: "// Global lift -2mm //|// Global rotation 0.0 //|"
+  outline_polyline: 127000 -200000 200000 0 0 7
+    next_corner: -200000 -200000 0
+    next_corner: 200000 -200000 0
+    next_corner: 200000 200000 0
+    close_polyline: 0
+    openscad_data: "// Global lift -2mm //|// Global rotation 0.0 //|// matrix: 6 1 1 2.000 0.000 0.000 //|// resolution $fn = 20 //|color( `Aqua` )|{|    translate([ 0.000,  0.000,  -2.000 ])|    {|        *corner1*, 0.0 ])|        {|            linear_extrude( 8.800, scale= 1.000, convexity=Convexity )|            {|                polygon([ *content* ]);|            }|        }|    }|}|"
+  outline_polyline: 127000 1000000 500000 0 0 7
+    next_corner: 500000 1000000 0
+    next_corner: -500000 1000000 0
+    next_corner: -1000000 500000 0
+    next_corner: -1000000 -500000 0
+    next_corner: -500000 -1000000 0
+    next_corner: 500000 -1000000 0
+    next_corner: 1000000 -500000 0
+    close_polyline: 0
+    openscad_data: "// Global rotation 0.000 //|// Global lift -2.000mm //|// matrix: 6 1 1 2.000 0.000 0.000 //|// resolution $fn = 20 //|color( `Black` )|{|    *corner1*, 0.0 ])|    {|        linear_extrude( 2.000, scale= 1.000, convexity=Convexity )|        {|            polygon([ *content* ]);|        }|    }|}|"
+  n_pins: 6
+    pin: "1" 1000000 0 0 0 ""
+      top_pad: 2 1500000 750000 750000 0
+      inner_pad: 0 0 0 0 0 0
+      bottom_pad: 2 1500000 750000 750000 0
+    pin: "2" 1000000 2000000 0 0 ""
+      top_pad: 1 1500000 750000 750000 0
+      inner_pad: 0 0 0 0 0 0
+      bottom_pad: 1 1500000 750000 750000 0
+    pin: "3" 1000000 4000000 0 0 ""
+      top_pad: 1 1500000 750000 750000 0
+      inner_pad: 0 0 0 0 0 0
+      bottom_pad: 1 1500000 750000 750000 0
+    pin: "4" 1000000 6000000 0 0 ""
+      top_pad: 1 1500000 750000 750000 0
+      inner_pad: 0 0 0 0 0 0
+      bottom_pad: 1 1500000 750000 750000 0
+    pin: "5" 1000000 8000000 0 0 ""
+      top_pad: 1 1500000 750000 750000 0
+      inner_pad: 0 0 0 0 0 0
+      bottom_pad: 1 1500000 750000 750000 0
+    pin: "6" 1000000 10000000 0 0 ""
+      top_pad: 1 1500000 750000 750000 0
+      inner_pad: 0 0 0 0 0 0
+      bottom_pad: 1 1500000 750000 750000 0
+

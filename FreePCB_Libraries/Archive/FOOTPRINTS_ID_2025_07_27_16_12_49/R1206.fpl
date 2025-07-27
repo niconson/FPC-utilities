@@ -1,0 +1,18 @@
+name: "R1206"
+package: ""
+author: "Ivex"
+source: "SURFACE MOUNT DESIGN AND LAND PATTERN STANDARD SUBSECTION 8.1 (PAGE 3 OF 4)"
+units: NM
+sel_rect: -1303200 -1303200 4103200 1303200
+ref_text: 1270000 1400000 2100000 0 177800
+outline_polyline: 177800 -1100000 1100000
+next_corner: 3900000 1100000 0
+next_corner: 3900000 -1100000 0
+next_corner: -1100000 -1100000 0
+close_polyline: 0
+n_pins: 2
+pin: 1 0 0 0 0
+top_pad: 2 1600000 800000 800000
+pin: 2 0 2800000 0 0
+top_pad: 2 1600000 800000 800000
+

@@ -1,0 +1,1464 @@
+name: "AS5600"
+package: "AS5600"
+units: NM
+sel_rect: -28525400 -28525400 28525400 28525400
+ref_text: 300000 0 0 0 10000
+value_text: 300000 0 0 0 10000
+centroid: 0 180000 -500000 0
+openscad_code: "translate([0.000,0.000,0.000]) // (automatic adjustment when moving the footprint origin)"
+openscad_code: "scale([1,1,1])     // (automatic adjustment when changing the project units)"
+openscad_code: "{"
+openscad_code: "    //-------------------"
+openscad_code: "    color(`silver`)"
+openscad_code: "    {"
+openscad_code: "        if( MODE == 2 )"
+openscad_code: "        translate([0,0,0.1])"
+openscad_code: "        rotate([0,0,0])"
+openscad_code: "        import(`SpacerCube.stl`);"
+openscad_code: "        else"
+openscad_code: "        translate([0,0,0.1])"
+openscad_code: "        rotate([0,0,0])"
+openscad_code: "        import(`Spacer.stl`);"
+openscad_code: "    }"
+openscad_code: "    //-------------------"
+openscad_code: "}"
+openscad_hole: "translate([0,0,0]) // (automatic adjustment when moving the footprint origin)"
+openscad_hole: "scale([1,1,1])     // (automatic adjustment when changing the project units)"
+openscad_hole: "{"
+openscad_hole: "    //-------------------"
+openscad_hole: "    //-------------------"
+openscad_hole: "    //-------------------"
+openscad_hole: "}"
+text: "DIR" 1000000 -3908180 7722410 90 150000 1 5
+text: "SCL" 1000000 -1488690 7722770 90 150000 1 5
+text: "SDA" 1000000 1011700 7722680 90 150000 1 5
+text: "PGO" 1000000 3510300 7722320 90 150000 1 5
+text: "VCC" 1000000 -2988940 -5538050 90 150000 1 5
+text: "OUT" 1000000 -489450 -5537690 90 150000 1 5
+text: "GND" 1000000 2010940 -5537780 90 150000 1 5
+outline_polyline: 10000 17118000 -28402100 1 0 4
+next_corner: 17675600 -28118000 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 17675600 -28118000 1 0 4
+next_corner: 18118000 -27675600 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 18118000 -27675600 1 0 4
+next_corner: 18402100 -27118000 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 18402100 -27118000 1 0 4
+next_corner: 18500000 -26500000 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 18500000 -26500000 1 0 4
+next_corner: 18500000 -23500000 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 18500000 -23500000 1 0 4
+next_corner: 18744700 -21954900 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 18744700 -21954900 1 0 4
+next_corner: 19454900 -20561100 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 19454900 -20561100 1 0 4
+next_corner: 20561100 -19454900 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 20561100 -19454900 1 0 4
+next_corner: 21954900 -18744700 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 21954900 -18744700 1 0 4
+next_corner: 23500000 -18500000 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 23500000 -18500000 1 0 4
+next_corner: 26500000 -18500000 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 26500000 -18500000 1 0 4
+next_corner: 27118000 -18402100 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 27118000 -18402100 1 0 4
+next_corner: 27675600 -18118000 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 27675600 -18118000 1 0 4
+next_corner: 28118000 -17675600 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 28118000 -17675600 1 0 4
+next_corner: 28402100 -17118000 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 28402100 -17118000 1 0 4
+next_corner: 28500000 -16500000 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 28500000 -16500000 1 0 4
+next_corner: 28500000 16500000 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 28500000 16500000 1 0 4
+next_corner: 28402100 17118000 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 28402100 17118000 1 0 4
+next_corner: 28118000 17675600 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 28118000 17675600 1 0 4
+next_corner: 27675600 18118000 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 27675600 18118000 1 0 4
+next_corner: 27118000 18402100 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 27118000 18402100 1 0 4
+next_corner: 26500000 18500000 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 26500000 18500000 1 0 4
+next_corner: 23500000 18500000 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 23500000 18500000 1 0 4
+next_corner: 21954900 18744700 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 21954900 18744700 1 0 4
+next_corner: 20561100 19454900 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 20561100 19454900 1 0 4
+next_corner: 19454900 20561100 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 19454900 20561100 1 0 4
+next_corner: 18744700 21954900 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 18744700 21954900 1 0 4
+next_corner: 18500000 23500000 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 18500000 23500000 1 0 4
+next_corner: 18500000 26500000 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 18500000 26500000 1 0 4
+next_corner: 18402100 27118000 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 18402100 27118000 1 0 4
+next_corner: 18118000 27675600 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 18118000 27675600 1 0 4
+next_corner: 17675600 28118000 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 17675600 28118000 1 0 4
+next_corner: 17118000 28402100 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 17118000 28402100 1 0 4
+next_corner: 16500000 28500000 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 16500000 28500000 1 0 4
+next_corner: -16500000 28500000 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -16500000 28500000 1 0 4
+next_corner: -17118000 28402100 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -17118000 28402100 1 0 4
+next_corner: -17675600 28118000 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -17675600 28118000 1 0 4
+next_corner: -18018700 27801400 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -18018700 27801400 1 0 4
+next_corner: -18118000 27675600 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -18118000 27675600 1 0 4
+next_corner: -18402100 27118000 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -18402100 27118000 1 0 4
+next_corner: -18500000 26500000 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -18500000 26500000 1 0 4
+next_corner: -18500000 23500000 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -18500000 23500000 1 0 4
+next_corner: -18744700 21954900 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -18744700 21954900 1 0 4
+next_corner: -19454900 20561100 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -19454900 20561100 1 0 4
+next_corner: -20561100 19454900 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -20561100 19454900 1 0 4
+next_corner: -21954900 18744700 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -21954900 18744700 1 0 4
+next_corner: -23500000 18500000 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -23500000 18500000 1 0 4
+next_corner: -26500000 18500000 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -26500000 18500000 1 0 4
+next_corner: -27118000 18402100 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -27118000 18402100 1 0 4
+next_corner: -27675600 18118000 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -27675600 18118000 1 0 4
+next_corner: -28118000 17675600 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -28118000 17675600 1 0 4
+next_corner: -28402100 17118000 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -28402100 17118000 1 0 4
+next_corner: -28500000 16500000 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -28500000 16500000 1 0 4
+next_corner: -28500000 -16500000 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -28500000 -16500000 1 0 4
+next_corner: -28402100 -17118000 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -28402100 -17118000 1 0 4
+next_corner: -28118000 -17675600 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -28118000 -17675600 1 0 4
+next_corner: -27675600 -18118000 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -27675600 -18118000 1 0 4
+next_corner: -27118000 -18402100 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -27118000 -18402100 1 0 4
+next_corner: -26500000 -18500000 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -26500000 -18500000 1 0 4
+next_corner: -23500000 -18500000 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -23500000 -18500000 1 0 4
+next_corner: -21954900 -18744700 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -21954900 -18744700 1 0 4
+next_corner: -20561100 -19454900 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -20561100 -19454900 1 0 4
+next_corner: -19454900 -20561100 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -19454900 -20561100 1 0 4
+next_corner: -18744700 -21954900 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -18744700 -21954900 1 0 4
+next_corner: -18500000 -23500000 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -18500000 -23500000 1 0 4
+next_corner: -18500000 -26500000 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -18500000 -26500000 1 0 4
+next_corner: -18402100 -27118000 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -18402100 -27118000 1 0 4
+next_corner: -18118000 -27675600 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -18118000 -27675600 1 0 4
+next_corner: -18018700 -27801400 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -18018700 -27801400 1 0 4
+next_corner: -17675600 -28118000 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -17675600 -28118000 1 0 4
+next_corner: -17118000 -28402100 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -17118000 -28402100 1 0 4
+next_corner: -16500000 -28500000 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -16500000 -28500000 1 0 4
+next_corner: 16500000 -28500000 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 16500000 -28500000 1 0 4
+next_corner: 17118000 -28402100 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 25553600 14618400 1 0 4
+next_corner: 25135400 14831500 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 25135400 14831500 1 0 4
+next_corner: 24803600 15163400 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 24803600 15163400 1 0 4
+next_corner: 24590500 15581500 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 24590500 15581500 1 0 4
+next_corner: 24517100 16045000 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 24517100 16045000 1 0 4
+next_corner: 24590500 16508600 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 24590500 16508600 1 0 4
+next_corner: 24803600 16926700 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 24803600 16926700 1 0 4
+next_corner: 25135400 17258600 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 25135400 17258600 1 0 4
+next_corner: 25553600 17471600 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 25553600 17471600 1 0 4
+next_corner: 26017100 17545000 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 26017100 17545000 1 0 4
+next_corner: 26480600 17471600 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 26480600 17471600 1 0 4
+next_corner: 26898800 17258600 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 26898800 17258600 1 0 4
+next_corner: 27230600 16926700 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 27230600 16926700 1 0 4
+next_corner: 27443700 16508600 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 27443700 16508600 1 0 4
+next_corner: 27517100 16045000 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 27517100 16045000 1 0 4
+next_corner: 27443700 15581500 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 27443700 15581500 1 0 4
+next_corner: 27230600 15163400 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 27230600 15163400 1 0 4
+next_corner: 26898800 14831500 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 26898800 14831500 1 0 4
+next_corner: 26480600 14618400 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 26480600 14618400 1 0 4
+next_corner: 26017100 14545000 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 26017100 14545000 1 0 4
+next_corner: 25553600 14618400 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 8869270 6505710 1 0 7
+next_corner: 8739530 6522790 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 8739530 6522790 1 0 7
+next_corner: 8611770 6551110 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 8611770 6551110 1 0 7
+next_corner: 8486970 6590460 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 8486970 6590460 1 0 7
+next_corner: 8366070 6640540 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 8366070 6640540 1 0 7
+next_corner: 8250000 6700960 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 8250000 6700960 1 0 7
+next_corner: 8139640 6771270 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 8139640 6771270 1 0 7
+next_corner: 8035820 6850930 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 8035820 6850930 1 0 7
+next_corner: 7939340 6939340 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 7939340 6939340 1 0 7
+next_corner: 7850930 7035820 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 7850930 7035820 1 0 7
+next_corner: 7771270 7139640 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 7771270 7139640 1 0 7
+next_corner: 7700960 7250000 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 7700960 7250000 1 0 7
+next_corner: 7640540 7366070 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 7640540 7366070 1 0 7
+next_corner: 7590460 7486970 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 7590460 7486970 1 0 7
+next_corner: 7551110 7611770 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 7551110 7611770 1 0 7
+next_corner: 7522790 7739530 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 7522790 7739530 1 0 7
+next_corner: 7505710 7869270 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 7505710 7869270 1 0 7
+next_corner: 7500000 8000000 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 7500000 8000000 1 0 7
+next_corner: 7505710 8130730 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 7505710 8130730 1 0 7
+next_corner: 7522790 8260470 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 7522790 8260470 1 0 7
+next_corner: 7551110 8388230 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 7551110 8388230 1 0 7
+next_corner: 7590460 8513030 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 7590460 8513030 1 0 7
+next_corner: 7640540 8633930 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 7640540 8633930 1 0 7
+next_corner: 7700960 8750000 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 7700960 8750000 1 0 7
+next_corner: 7771270 8860360 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 7771270 8860360 1 0 7
+next_corner: 7850930 8964180 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 7850930 8964180 1 0 7
+next_corner: 7939340 9060660 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 7939340 9060660 1 0 7
+next_corner: 8035820 9149070 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 8035820 9149070 1 0 7
+next_corner: 8139640 9228730 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 8139640 9228730 1 0 7
+next_corner: 8250000 9299040 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 8250000 9299040 1 0 7
+next_corner: 8366070 9359460 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 8366070 9359460 1 0 7
+next_corner: 8486970 9409540 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 8486970 9409540 1 0 7
+next_corner: 8611770 9448890 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 8611770 9448890 1 0 7
+next_corner: 8739530 9477210 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 8739530 9477210 1 0 7
+next_corner: 8869270 9494290 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 8869270 9494290 1 0 7
+next_corner: 9000000 9500000 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 9000000 9500000 1 0 7
+next_corner: 9130730 9494290 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 9130730 9494290 1 0 7
+next_corner: 9260470 9477210 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 9260470 9477210 1 0 7
+next_corner: 9388230 9448890 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 9388230 9448890 1 0 7
+next_corner: 9513030 9409540 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 9513030 9409540 1 0 7
+next_corner: 9633930 9359460 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 9633930 9359460 1 0 7
+next_corner: 9750000 9299040 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 9750000 9299040 1 0 7
+next_corner: 9860360 9228730 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 9860360 9228730 1 0 7
+next_corner: 9964180 9149070 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 9964180 9149070 1 0 7
+next_corner: 10060700 9060660 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 10060700 9060660 1 0 7
+next_corner: 10149100 8964180 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 10149100 8964180 1 0 7
+next_corner: 10228700 8860360 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 10228700 8860360 1 0 7
+next_corner: 10299000 8750000 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 10299000 8750000 1 0 7
+next_corner: 10359500 8633930 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 10359500 8633930 1 0 7
+next_corner: 10409500 8513030 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 10409500 8513030 1 0 7
+next_corner: 10448900 8388230 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 10448900 8388230 1 0 7
+next_corner: 10477200 8260470 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 10477200 8260470 1 0 7
+next_corner: 10494300 8130730 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 10494300 8130730 1 0 7
+next_corner: 10500000 8000000 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 10500000 8000000 1 0 7
+next_corner: 10494300 7869270 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 10494300 7869270 1 0 7
+next_corner: 10477200 7739530 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 10477200 7739530 1 0 7
+next_corner: 10448900 7611770 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 10448900 7611770 1 0 7
+next_corner: 10409500 7486970 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 10409500 7486970 1 0 7
+next_corner: 10359500 7366070 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 10359500 7366070 1 0 7
+next_corner: 10299000 7250000 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 10299000 7250000 1 0 7
+next_corner: 10228700 7139640 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 10228700 7139640 1 0 7
+next_corner: 10149100 7035820 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 10149100 7035820 1 0 7
+next_corner: 10060700 6939340 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 10060700 6939340 1 0 7
+next_corner: 9964180 6850930 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 9964180 6850930 1 0 7
+next_corner: 9860360 6771270 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 9860360 6771270 1 0 7
+next_corner: 9750000 6700960 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 9750000 6700960 1 0 7
+next_corner: 9633930 6640540 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 9633930 6640540 1 0 7
+next_corner: 9513030 6590460 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 9513030 6590460 1 0 7
+next_corner: 9388230 6551110 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 9388230 6551110 1 0 7
+next_corner: 9260470 6522790 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 9260470 6522790 1 0 7
+next_corner: 9130730 6505710 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 9130730 6505710 1 0 7
+next_corner: 9000000 6500000 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 9000000 6500000 1 0 7
+next_corner: 8869270 6505710 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -8130730 6505710 1 0 7
+next_corner: -8260470 6522790 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -8260470 6522790 1 0 7
+next_corner: -8388230 6551110 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -8388230 6551110 1 0 7
+next_corner: -8513030 6590460 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -8513030 6590460 1 0 7
+next_corner: -8633930 6640540 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -8633930 6640540 1 0 7
+next_corner: -8750000 6700960 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -8750000 6700960 1 0 7
+next_corner: -8860360 6771270 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -8860360 6771270 1 0 7
+next_corner: -8964180 6850930 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -8964180 6850930 1 0 7
+next_corner: -9060660 6939340 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -9060660 6939340 1 0 7
+next_corner: -9149070 7035820 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -9149070 7035820 1 0 7
+next_corner: -9228730 7139640 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -9228730 7139640 1 0 7
+next_corner: -9299040 7250000 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -9299040 7250000 1 0 7
+next_corner: -9359460 7366070 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -9359460 7366070 1 0 7
+next_corner: -9409540 7486970 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -9409540 7486970 1 0 7
+next_corner: -9448890 7611770 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -9448890 7611770 1 0 7
+next_corner: -9477210 7739530 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -9477210 7739530 1 0 7
+next_corner: -9494290 7869270 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -9494290 7869270 1 0 7
+next_corner: -9500000 8000000 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -9500000 8000000 1 0 7
+next_corner: -9494290 8130730 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -9494290 8130730 1 0 7
+next_corner: -9477210 8260470 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -9477210 8260470 1 0 7
+next_corner: -9448890 8388230 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -9448890 8388230 1 0 7
+next_corner: -9409540 8513030 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -9409540 8513030 1 0 7
+next_corner: -9359460 8633930 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -9359460 8633930 1 0 7
+next_corner: -9299040 8750000 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -9299040 8750000 1 0 7
+next_corner: -9228730 8860360 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -9228730 8860360 1 0 7
+next_corner: -9149070 8964180 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -9149070 8964180 1 0 7
+next_corner: -9060660 9060660 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -9060660 9060660 1 0 7
+next_corner: -8964180 9149070 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -8964180 9149070 1 0 7
+next_corner: -8860360 9228730 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -8860360 9228730 1 0 7
+next_corner: -8750000 9299040 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -8750000 9299040 1 0 7
+next_corner: -8633930 9359460 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -8633930 9359460 1 0 7
+next_corner: -8513030 9409540 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -8513030 9409540 1 0 7
+next_corner: -8388230 9448890 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -8388230 9448890 1 0 7
+next_corner: -8260470 9477210 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -8260470 9477210 1 0 7
+next_corner: -8130730 9494290 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -8130730 9494290 1 0 7
+next_corner: -8000000 9500000 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -8000000 9500000 1 0 7
+next_corner: -7869270 9494290 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -7869270 9494290 1 0 7
+next_corner: -7739530 9477210 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -7739530 9477210 1 0 7
+next_corner: -7611770 9448890 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -7611770 9448890 1 0 7
+next_corner: -7486970 9409540 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -7486970 9409540 1 0 7
+next_corner: -7366070 9359460 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -7366070 9359460 1 0 7
+next_corner: -7250000 9299040 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -7250000 9299040 1 0 7
+next_corner: -7139640 9228730 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -7139640 9228730 1 0 7
+next_corner: -7035820 9149070 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -7035820 9149070 1 0 7
+next_corner: -6939340 9060660 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -6939340 9060660 1 0 7
+next_corner: -6850930 8964180 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -6850930 8964180 1 0 7
+next_corner: -6771270 8860360 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -6771270 8860360 1 0 7
+next_corner: -6700960 8750000 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -6700960 8750000 1 0 7
+next_corner: -6640540 8633930 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -6640540 8633930 1 0 7
+next_corner: -6590460 8513030 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -6590460 8513030 1 0 7
+next_corner: -6551110 8388230 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -6551110 8388230 1 0 7
+next_corner: -6522790 8260470 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -6522790 8260470 1 0 7
+next_corner: -6505710 8130730 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -6505710 8130730 1 0 7
+next_corner: -6500000 8000000 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -6500000 8000000 1 0 7
+next_corner: -6505710 7869270 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -6505710 7869270 1 0 7
+next_corner: -6522790 7739530 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -6522790 7739530 1 0 7
+next_corner: -6551110 7611770 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -6551110 7611770 1 0 7
+next_corner: -6590460 7486970 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -6590460 7486970 1 0 7
+next_corner: -6640540 7366070 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -6640540 7366070 1 0 7
+next_corner: -6700960 7250000 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -6700960 7250000 1 0 7
+next_corner: -6771270 7139640 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -6771270 7139640 1 0 7
+next_corner: -6850930 7035820 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -6850930 7035820 1 0 7
+next_corner: -6939340 6939340 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -6939340 6939340 1 0 7
+next_corner: -7035820 6850930 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -7035820 6850930 1 0 7
+next_corner: -7139640 6771270 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -7139640 6771270 1 0 7
+next_corner: -7250000 6700960 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -7250000 6700960 1 0 7
+next_corner: -7366070 6640540 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -7366070 6640540 1 0 7
+next_corner: -7486970 6590460 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -7486970 6590460 1 0 7
+next_corner: -7611770 6551110 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -7611770 6551110 1 0 7
+next_corner: -7739530 6522790 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -7739530 6522790 1 0 7
+next_corner: -7869270 6505710 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -7869270 6505710 1 0 7
+next_corner: -8000000 6500000 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -8000000 6500000 1 0 7
+next_corner: -8130730 6505710 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -8130730 -10494300 1 0 7
+next_corner: -8260470 -10477200 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -8260470 -10477200 1 0 7
+next_corner: -8388230 -10448900 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -8388230 -10448900 1 0 7
+next_corner: -8513030 -10409500 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -8513030 -10409500 1 0 7
+next_corner: -8633930 -10359500 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -8633930 -10359500 1 0 7
+next_corner: -8750000 -10299000 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -8750000 -10299000 1 0 7
+next_corner: -8860360 -10228700 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -8860360 -10228700 1 0 7
+next_corner: -8964180 -10149100 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -8964180 -10149100 1 0 7
+next_corner: -9060660 -10060700 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -9060660 -10060700 1 0 7
+next_corner: -9149070 -9964180 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -9149070 -9964180 1 0 7
+next_corner: -9228730 -9860360 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -9228730 -9860360 1 0 7
+next_corner: -9299040 -9750000 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -9299040 -9750000 1 0 7
+next_corner: -9359460 -9633930 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -9359460 -9633930 1 0 7
+next_corner: -9409540 -9513030 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -9409540 -9513030 1 0 7
+next_corner: -9448890 -9388230 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -9448890 -9388230 1 0 7
+next_corner: -9477210 -9260470 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -9477210 -9260470 1 0 7
+next_corner: -9494290 -9130730 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -9494290 -9130730 1 0 7
+next_corner: -9500000 -9000000 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -9500000 -9000000 1 0 7
+next_corner: -9494290 -8869270 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -9494290 -8869270 1 0 7
+next_corner: -9477210 -8739530 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -9477210 -8739530 1 0 7
+next_corner: -9448890 -8611770 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -9448890 -8611770 1 0 7
+next_corner: -9409540 -8486970 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -9409540 -8486970 1 0 7
+next_corner: -9359460 -8366070 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -9359460 -8366070 1 0 7
+next_corner: -9299040 -8250000 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -9299040 -8250000 1 0 7
+next_corner: -9228730 -8139640 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -9228730 -8139640 1 0 7
+next_corner: -9149070 -8035820 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -9149070 -8035820 1 0 7
+next_corner: -9060660 -7939340 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -9060660 -7939340 1 0 7
+next_corner: -8964180 -7850930 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -8964180 -7850930 1 0 7
+next_corner: -8860360 -7771270 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -8860360 -7771270 1 0 7
+next_corner: -8750000 -7700960 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -8750000 -7700960 1 0 7
+next_corner: -8633930 -7640540 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -8633930 -7640540 1 0 7
+next_corner: -8513030 -7590460 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -8513030 -7590460 1 0 7
+next_corner: -8388230 -7551110 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -8388230 -7551110 1 0 7
+next_corner: -8260470 -7522790 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -8260470 -7522790 1 0 7
+next_corner: -8130730 -7505710 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -8130730 -7505710 1 0 7
+next_corner: -8000000 -7500000 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -8000000 -7500000 1 0 7
+next_corner: -7869270 -7505710 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -7869270 -7505710 1 0 7
+next_corner: -7739530 -7522790 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -7739530 -7522790 1 0 7
+next_corner: -7611770 -7551110 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -7611770 -7551110 1 0 7
+next_corner: -7486970 -7590460 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -7486970 -7590460 1 0 7
+next_corner: -7366070 -7640540 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -7366070 -7640540 1 0 7
+next_corner: -7250000 -7700960 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -7250000 -7700960 1 0 7
+next_corner: -7139640 -7771270 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -7139640 -7771270 1 0 7
+next_corner: -7035820 -7850930 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -7035820 -7850930 1 0 7
+next_corner: -6939340 -7939340 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -6939340 -7939340 1 0 7
+next_corner: -6850930 -8035820 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -6850930 -8035820 1 0 7
+next_corner: -6771270 -8139640 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -6771270 -8139640 1 0 7
+next_corner: -6700960 -8250000 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -6700960 -8250000 1 0 7
+next_corner: -6640540 -8366070 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -6640540 -8366070 1 0 7
+next_corner: -6590460 -8486970 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -6590460 -8486970 1 0 7
+next_corner: -6551110 -8611770 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -6551110 -8611770 1 0 7
+next_corner: -6522790 -8739530 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -6522790 -8739530 1 0 7
+next_corner: -6505710 -8869270 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -6505710 -8869270 1 0 7
+next_corner: -6500000 -9000000 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -6500000 -9000000 1 0 7
+next_corner: -6505710 -9130730 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -6505710 -9130730 1 0 7
+next_corner: -6522790 -9260470 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -6522790 -9260470 1 0 7
+next_corner: -6551110 -9388230 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -6551110 -9388230 1 0 7
+next_corner: -6590460 -9513030 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -6590460 -9513030 1 0 7
+next_corner: -6640540 -9633930 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -6640540 -9633930 1 0 7
+next_corner: -6700960 -9750000 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -6700960 -9750000 1 0 7
+next_corner: -6771270 -9860360 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -6771270 -9860360 1 0 7
+next_corner: -6850930 -9964180 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -6850930 -9964180 1 0 7
+next_corner: -6939340 -10060700 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -6939340 -10060700 1 0 7
+next_corner: -7035820 -10149100 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -7035820 -10149100 1 0 7
+next_corner: -7139640 -10228700 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -7139640 -10228700 1 0 7
+next_corner: -7250000 -10299000 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -7250000 -10299000 1 0 7
+next_corner: -7366070 -10359500 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -7366070 -10359500 1 0 7
+next_corner: -7486970 -10409500 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -7486970 -10409500 1 0 7
+next_corner: -7611770 -10448900 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -7611770 -10448900 1 0 7
+next_corner: -7739530 -10477200 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -7739530 -10477200 1 0 7
+next_corner: -7869270 -10494300 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -7869270 -10494300 1 0 7
+next_corner: -8000000 -10500000 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -8000000 -10500000 1 0 7
+next_corner: -8130730 -10494300 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 8869270 -10494300 1 0 7
+next_corner: 8739530 -10477200 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 8739530 -10477200 1 0 7
+next_corner: 8611770 -10448900 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 8611770 -10448900 1 0 7
+next_corner: 8486970 -10409500 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 8486970 -10409500 1 0 7
+next_corner: 8366070 -10359500 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 8366070 -10359500 1 0 7
+next_corner: 8250000 -10299000 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 8250000 -10299000 1 0 7
+next_corner: 8139640 -10228700 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 8139640 -10228700 1 0 7
+next_corner: 8035820 -10149100 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 8035820 -10149100 1 0 7
+next_corner: 7939340 -10060700 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 7939340 -10060700 1 0 7
+next_corner: 7850930 -9964180 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 7850930 -9964180 1 0 7
+next_corner: 7771270 -9860360 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 7771270 -9860360 1 0 7
+next_corner: 7700960 -9750000 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 7700960 -9750000 1 0 7
+next_corner: 7640540 -9633930 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 7640540 -9633930 1 0 7
+next_corner: 7590460 -9513030 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 7590460 -9513030 1 0 7
+next_corner: 7551110 -9388230 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 7551110 -9388230 1 0 7
+next_corner: 7522790 -9260470 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 7522790 -9260470 1 0 7
+next_corner: 7505710 -9130730 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 7505710 -9130730 1 0 7
+next_corner: 7500000 -9000000 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 7500000 -9000000 1 0 7
+next_corner: 7505710 -8869270 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 7505710 -8869270 1 0 7
+next_corner: 7522790 -8739530 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 7522790 -8739530 1 0 7
+next_corner: 7551110 -8611770 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 7551110 -8611770 1 0 7
+next_corner: 7590460 -8486970 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 7590460 -8486970 1 0 7
+next_corner: 7640540 -8366070 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 7640540 -8366070 1 0 7
+next_corner: 7700960 -8250000 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 7700960 -8250000 1 0 7
+next_corner: 7771270 -8139640 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 7771270 -8139640 1 0 7
+next_corner: 7850930 -8035820 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 7850930 -8035820 1 0 7
+next_corner: 7939340 -7939340 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 7939340 -7939340 1 0 7
+next_corner: 8035820 -7850930 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 8035820 -7850930 1 0 7
+next_corner: 8139640 -7771270 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 8139640 -7771270 1 0 7
+next_corner: 8250000 -7700960 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 8250000 -7700960 1 0 7
+next_corner: 8366070 -7640540 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 8366070 -7640540 1 0 7
+next_corner: 8486970 -7590460 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 8486970 -7590460 1 0 7
+next_corner: 8611770 -7551110 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 8611770 -7551110 1 0 7
+next_corner: 8739530 -7522790 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 8739530 -7522790 1 0 7
+next_corner: 8869270 -7505710 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 8869270 -7505710 1 0 7
+next_corner: 9000000 -7500000 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 9000000 -7500000 1 0 7
+next_corner: 9130730 -7505710 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 9130730 -7505710 1 0 7
+next_corner: 9260470 -7522790 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 9260470 -7522790 1 0 7
+next_corner: 9388230 -7551110 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 9388230 -7551110 1 0 7
+next_corner: 9513030 -7590460 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 9513030 -7590460 1 0 7
+next_corner: 9633930 -7640540 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 9633930 -7640540 1 0 7
+next_corner: 9750000 -7700960 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 9750000 -7700960 1 0 7
+next_corner: 9860360 -7771270 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 9860360 -7771270 1 0 7
+next_corner: 9964180 -7850930 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 9964180 -7850930 1 0 7
+next_corner: 10060700 -7939340 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 10060700 -7939340 1 0 7
+next_corner: 10149100 -8035820 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 10149100 -8035820 1 0 7
+next_corner: 10228700 -8139640 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 10228700 -8139640 1 0 7
+next_corner: 10299000 -8250000 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 10299000 -8250000 1 0 7
+next_corner: 10359500 -8366070 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 10359500 -8366070 1 0 7
+next_corner: 10409500 -8486970 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 10409500 -8486970 1 0 7
+next_corner: 10448900 -8611770 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 10448900 -8611770 1 0 7
+next_corner: 10477200 -8739530 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 10477200 -8739530 1 0 7
+next_corner: 10494300 -8869270 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 10494300 -8869270 1 0 7
+next_corner: 10500000 -9000000 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 10500000 -9000000 1 0 7
+next_corner: 10494300 -9130730 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 10494300 -9130730 1 0 7
+next_corner: 10477200 -9260470 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 10477200 -9260470 1 0 7
+next_corner: 10448900 -9388230 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 10448900 -9388230 1 0 7
+next_corner: 10409500 -9513030 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 10409500 -9513030 1 0 7
+next_corner: 10359500 -9633930 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 10359500 -9633930 1 0 7
+next_corner: 10299000 -9750000 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 10299000 -9750000 1 0 7
+next_corner: 10228700 -9860360 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 10228700 -9860360 1 0 7
+next_corner: 10149100 -9964180 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 10149100 -9964180 1 0 7
+next_corner: 10060700 -10060700 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 10060700 -10060700 1 0 7
+next_corner: 9964180 -10149100 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 9964180 -10149100 1 0 7
+next_corner: 9860360 -10228700 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 9860360 -10228700 1 0 7
+next_corner: 9750000 -10299000 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 9750000 -10299000 1 0 7
+next_corner: 9633930 -10359500 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 9633930 -10359500 1 0 7
+next_corner: 9513030 -10409500 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 9513030 -10409500 1 0 7
+next_corner: 9388230 -10448900 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 9388230 -10448900 1 0 7
+next_corner: 9260470 -10477200 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 9260470 -10477200 1 0 7
+next_corner: 9130730 -10494300 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 9130730 -10494300 1 0 7
+next_corner: 9000000 -10500000 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 9000000 -10500000 1 0 7
+next_corner: 8869270 -10494300 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 25560200 -17436300 1 0 4
+next_corner: 25142000 -17223200 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 25142000 -17223200 1 0 4
+next_corner: 24810200 -16891400 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 24810200 -16891400 1 0 4
+next_corner: 24597100 -16473200 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 24597100 -16473200 1 0 4
+next_corner: 24523700 -16009700 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 24523700 -16009700 1 0 4
+next_corner: 24597100 -15546200 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 24597100 -15546200 1 0 4
+next_corner: 24810200 -15128000 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 24810200 -15128000 1 0 4
+next_corner: 25142000 -14796200 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 25142000 -14796200 1 0 4
+next_corner: 25560200 -14583100 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 25560200 -14583100 1 0 4
+next_corner: 26023700 -14509700 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 26023700 -14509700 1 0 4
+next_corner: 26487200 -14583100 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 26487200 -14583100 1 0 4
+next_corner: 26905400 -14796200 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 26905400 -14796200 1 0 4
+next_corner: 27237200 -15128000 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 27237200 -15128000 1 0 4
+next_corner: 27450300 -15546200 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 27450300 -15546200 1 0 4
+next_corner: 27523700 -16009700 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 27523700 -16009700 1 0 4
+next_corner: 27450300 -16473200 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 27450300 -16473200 1 0 4
+next_corner: 27237200 -16891400 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 27237200 -16891400 1 0 4
+next_corner: 26905400 -17223200 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 26905400 -17223200 1 0 4
+next_corner: 26487200 -17436300 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 26487200 -17436300 1 0 4
+next_corner: 26023700 -17509700 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 26023700 -17509700 1 0 4
+next_corner: 25560200 -17436300 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -26474500 -17437900 1 0 4
+next_corner: -26892600 -17224800 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -26892600 -17224800 1 0 4
+next_corner: -27224500 -16893000 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -27224500 -16893000 1 0 4
+next_corner: -27437500 -16474800 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -27437500 -16474800 1 0 4
+next_corner: -27510900 -16011300 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -27510900 -16011300 1 0 4
+next_corner: -27437500 -15547800 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -27437500 -15547800 1 0 4
+next_corner: -27224500 -15129600 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -27224500 -15129600 1 0 4
+next_corner: -26892600 -14797800 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -26892600 -14797800 1 0 4
+next_corner: -26474500 -14584700 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -26474500 -14584700 1 0 4
+next_corner: -26010900 -14511300 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -26010900 -14511300 1 0 4
+next_corner: -25547400 -14584700 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -25547400 -14584700 1 0 4
+next_corner: -25129300 -14797800 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -25129300 -14797800 1 0 4
+next_corner: -24797400 -15129600 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -24797400 -15129600 1 0 4
+next_corner: -24584400 -15547800 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -24584400 -15547800 1 0 4
+next_corner: -24510900 -16011300 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -24510900 -16011300 1 0 4
+next_corner: -24584400 -16474800 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -24584400 -16474800 1 0 4
+next_corner: -24797400 -16893000 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -24797400 -16893000 1 0 4
+next_corner: -25129300 -17224800 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -25129300 -17224800 1 0 4
+next_corner: -25547400 -17437900 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -25547400 -17437900 1 0 4
+next_corner: -26010900 -17511300 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 10000 -26010900 -17511300 1 0 4
+next_corner: -26474500 -17437900 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 50800 -8000000 11500000 0 1 10
+next_corner: -11500000 8000000 2
+next_corner: -8000000 4500000 2
+next_corner: -4500000 8000000 2
+close_polyline: 2
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 50800 9000000 11500000 0 1 10
+next_corner: 5500000 8000000 2
+next_corner: 9000000 4500000 2
+next_corner: 12500000 8000000 2
+close_polyline: 2
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 50800 -8000000 -5500000 0 1 10
+next_corner: -11500000 -9000000 2
+next_corner: -8000000 -12500000 2
+next_corner: -4500000 -9000000 2
+close_polyline: 2
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 50800 9000000 -5500000 0 1 10
+next_corner: 5500000 -9000000 2
+next_corner: 9000000 -12500000 2
+next_corner: 12500000 -9000000 2
+close_polyline: 2
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|"
+outline_polyline: 127000 -26000000 17500000 0 0 4
+next_corner: -27500000 16000000 2
+next_corner: -26000000 14500000 2
+next_corner: -24500000 16000000 2
+close_polyline: 2
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|// it's a hole //|// matrix: 2 2 1 52.000 -32.000 0.000 //|// resolution $fn = 20 //|color( `[0.5,0.5,0.5]` )|{|    translate([ 0.000,  0.000,  -1.000 ])|    {|        *corner1*, 0.0 ])|        {|            linear_extrude( 7.000, scale= 1.000, convexity=Convexity )|            {|                polygon([ *content* ]);|            }|        }|    }|}|"
+outline_polyline: 127000 -26000000 16000000 0 0 4
+next_corner: -28500000 16000000 0
+next_corner: -27000000 17500000 1
+next_corner: -26000000 17500000 0
+close_polyline: 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|// matrix: 2 2 1 52.000 -32.000 0.000 //|// resolution $fn = 20 //|color( `[0.5,0.5,0.5]` )|{|    translate([ 0.000,  0.000,  -1.700 ])|    {|        *corner1*, 0.0 ])|        {|            rotate([ 180.000,  0.000,  0.000 ])|            {|                $fn = 40;|                rotate_extrude( angle= 360.000, convexity=Convexity ) |                {|                    polygon([ *content* ]);|                }|            }|        }|    }|}|"
+outline_polyline: 150000 -1170000 -5984000 1 0 4
+next_corner: -1678000 -5476000 0
+next_corner: -3456000 -5476000 0
+next_corner: -3964000 -5984000 0
+next_corner: -3964000 -8016000 0
+next_corner: -3456000 -8524000 0
+next_corner: -1678000 -8524000 0
+next_corner: -1170000 -8016000 0
+next_corner: -662000 -8524000 0
+next_corner: 862000 -8524000 0
+next_corner: 1370000 -8016000 0
+next_corner: 1878000 -8524000 0
+next_corner: 3656000 -8524000 0
+next_corner: 4164000 -8016000 0
+next_corner: 4164000 -5984000 0
+next_corner: 3656000 -5476000 0
+next_corner: 1878000 -5476000 0
+next_corner: 1370000 -5984000 0
+next_corner: 862000 -5476000 0
+next_corner: -662000 -5476000 0
+close_polyline: 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|// matrix: 1 1 1 0.000 0.000 0.000 //|// resolution $fn = 20 //|color( `Black` )|{|    *corner1*, 0.0 ])|    {|        linear_extrude( 2.540, scale= 1.000, convexity=Convexity )|        {|            polygon([ *content* ]);|        }|    }|}|"
+outline_polyline: 400000 -3770000 6150000 1 0 7
+next_corner: -3770000 5850000 0
+next_corner: -3470000 5850000 0
+next_corner: -3470000 6150000 0
+close_polyline: 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|// Consider line width //|// matrix: 4 1 1 2.540 0.000 0.000 //|// resolution $fn = 8 //|color( `Aqua` )|{|    minkowski()|    {|        $fn = 8;|        translate([ 0.000,  0.000,  -2.500 ])|        {|            *corner1*, 0.0 ])|            {|                linear_extrude( 11.540, scale= 1.000, convexity=Convexity )|                {|                    polygon([ *content* ]);|                }|            }|        }|        sphere( *width* );|    }|}|"
+outline_polyline: 150000 -2350000 6996000 1 0 4
+next_corner: -2858000 7504000 0
+next_corner: -4636000 7504000 0
+next_corner: -5144000 6996000 0
+next_corner: -5144000 4964000 0
+next_corner: -4636000 4456000 0
+next_corner: -2858000 4456000 0
+next_corner: -2350000 4964000 0
+next_corner: -1842000 4456000 0
+next_corner: -318000 4456000 0
+next_corner: 190000 4964000 0
+next_corner: 698000 4456000 0
+next_corner: 2206000 4456000 0
+next_corner: 2710000 4964000 0
+next_corner: 3218000 4456000 0
+next_corner: 4996000 4456000 0
+next_corner: 5504000 4964000 0
+next_corner: 5504000 6996000 0
+next_corner: 4996000 7504000 0
+next_corner: 3218000 7504000 0
+next_corner: 2710000 6996000 0
+next_corner: 2202000 7504000 0
+next_corner: 698000 7504000 0
+next_corner: 190000 6996000 0
+next_corner: -318000 7504000 0
+next_corner: -1842000 7504000 0
+close_polyline: 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|// matrix: 1 1 1 0.000 0.000 0.000 //|// resolution $fn = 20 //|color( `Black` )|{|    *corner1*, 0.0 ])|    {|        linear_extrude( 2.540, scale= 1.000, convexity=Convexity )|        {|            polygon([ *content* ]);|        }|    }|}|"
+outline_polyline: 400000 -2590000 -6850000 1 0 7
+next_corner: -2590000 -7150000 0
+next_corner: -2290000 -7150000 0
+next_corner: -2290000 -6850000 0
+close_polyline: 0
+openscad_data: "// Global lift -2.7mm //|// Global rotation 0.0 //|// Consider line width //|// matrix: 3 1 1 2.540 0.000 0.000 //|// resolution $fn = 8 //|color( `Aqua` )|{|    minkowski()|    {|        $fn = 8;|        translate([ 0.000,  0.000,  -2.500 ])|        {|            *corner1*, 0.0 ])|            {|                linear_extrude( 11.540, scale= 1.000, convexity=Convexity )|                {|                    polygon([ *content* ]);|                }|            }|        }|        sphere( *width* );|    }|}|"
+n_pins: 11
+pin: "1" 1000000 -3620000 6000000 0 "DIR"
+top_pad: 1 2000000 1000000 1000000 0
+inner_pad: 0 0 0 0 0 0
+bottom_pad: 1 2000000 1000000 1000000 0
+pin: "2" 1000000 -1080000 6000000 0 "SCL"
+top_pad: 1 2000000 1000000 1000000 0
+inner_pad: 0 0 0 0 0 0
+bottom_pad: 1 2000000 1000000 1000000 0
+pin: "3" 1000000 1460000 6000000 0 "SDA"
+top_pad: 1 2000000 1000000 1000000 0
+inner_pad: 0 0 0 0 0 0
+bottom_pad: 1 2000000 1000000 1000000 0
+pin: "4" 1000000 4000000 6000000 0 "PGO"
+top_pad: 1 2000000 1000000 1000000 0
+inner_pad: 0 0 0 0 0 0
+bottom_pad: 1 2000000 1000000 1000000 0
+pin: "5" 1000000 -2440000 -7000000 0 "VCC"
+top_pad: 1 2000000 1000000 1000000 0
+inner_pad: 0 0 0 0 0 0
+bottom_pad: 1 2000000 1000000 1000000 0
+pin: "6" 1000000 100000 -7000000 0 "OUT"
+top_pad: 1 2000000 1000000 1000000 0
+inner_pad: 0 0 0 0 0 0
+bottom_pad: 1 2000000 1000000 1000000 0
+pin: "7" 1000000 2640000 -7000000 0 "GND"
+top_pad: 1 2000000 1000000 1000000 0
+inner_pad: 0 0 0 0 0 0
+bottom_pad: 1 2000000 1000000 1000000 0
+pin: "HOLE" 3000000 -26000000 16040000 0 ""
+top_pad: 0 2000000 1000000 1000000 0
+top_mask: 0 0 0 0 0
+top_paste: 0 0 0 0 0
+inner_pad: 0 0 0 0 0 0
+bottom_pad: 0 2000000 1000000 1000000 0
+bottom_mask: 0 0 0 0 0
+bottom_paste: 0 0 0 0 0
+pin: "HOLE" 3000000 26000000 16040000 0 ""
+top_pad: 0 2000000 1000000 1000000 0
+top_mask: 0 0 0 0 0
+top_paste: 0 0 0 0 0
+inner_pad: 0 0 0 0 0 0
+bottom_pad: 0 2000000 1000000 1000000 0
+bottom_mask: 0 0 0 0 0
+bottom_paste: 0 0 0 0 0
+pin: "HOLE" 3000000 -26000000 -16020000 0 ""
+top_pad: 0 2000000 1000000 1000000 0
+top_mask: 0 0 0 0 0
+top_paste: 0 0 0 0 0
+inner_pad: 0 0 0 0 0 0
+bottom_pad: 0 2000000 1000000 1000000 0
+bottom_mask: 0 0 0 0 0
+bottom_paste: 0 0 0 0 0
+pin: "HOLE" 3000000 26000000 -16020000 0 ""
+top_pad: 0 2000000 1000000 1000000 0
+top_mask: 0 0 0 0 0
+top_paste: 0 0 0 0 0
+inner_pad: 0 0 0 0 0 0
+bottom_pad: 0 2000000 1000000 1000000 0
+bottom_mask: 0 0 0 0 0
+bottom_paste: 0 0 0 0 0
+

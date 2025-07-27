@@ -1,0 +1,25 @@
+name: "R_0603"
+package: "R_0603"
+units: NM
+sel_rect: -1249680 -547900 1249680 547900
+ref_text: 300000 0 500000 0 50000
+value_text: 300000 0 0 0 50000
+centroid: 0 0 0 0
+outline_polyline: 120000 -237300 522500 1 0 4
+next_corner: 237300 522500 0
+outline_polyline: 120000 -237300 -522500 1 0 4
+next_corner: 237300 -522500 0
+outline_polyline: 100000 800000 -412500 1 0 7
+next_corner: -800000 -412500 0
+outline_polyline: 100000 800000 412500 1 0 7
+next_corner: 800000 -412500 0
+outline_polyline: 100000 -800000 -412500 1 0 7
+next_corner: -800000 412500 0
+outline_polyline: 100000 -800000 412500 1 0 7
+next_corner: 800000 412500 0
+n_pins: 2
+pin: "1" 0 -825000 200 0 ""
+top_pad: 4 1000000 400000 400000 200000 3
+pin: "2" 0 825000 0 0 ""
+top_pad: 4 1000000 400000 400000 200000 3
+

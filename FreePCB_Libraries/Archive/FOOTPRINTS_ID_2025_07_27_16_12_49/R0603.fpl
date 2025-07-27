@@ -1,0 +1,32 @@
+name: "R0603"
+author: "Ivex"
+package: "R0603"
+  units: NM
+  sel_rect: -1460000 -710000 1460000 710000
+  ref_text: 1270000 850000 1900000 0 177800
+  value_text: 1270000 850000 -640000 0 177800
+  centroid: 0 0 100 0
+  outline_polyline: 120000 299999 499999 1 0 4
+    next_corner: -300000 500000 0
+    next_corner: -450000 650000 0
+    next_corner: -1050000 650000 0
+    next_corner: -1400000 300000 2
+    next_corner: -1400000 -250000 0
+    next_corner: -1000000 -650000 2
+    next_corner: -450000 -650000 0
+    next_corner: -300000 -500000 0
+    next_corner: 300000 -500000 0
+    next_corner: 450000 -650000 0
+    next_corner: 1000000 -650000 0
+    next_corner: 1400000 -250000 2
+    next_corner: 1400000 300000 0
+    next_corner: 1050000 650000 2
+    next_corner: 450000 650000 0
+    close_polyline: 0
+    openscad_data: "// Global lift 0.0 mm //|// Global rotation 0.0 //|"
+  n_pins: 2
+    pin: "1" 0 -825000 200 0 ""
+      top_pad: 4 1000000 400000 400000 200000
+    pin: "2" 0 825000 0 0 ""
+      top_pad: 4 1000000 400000 400000 200000
+

@@ -1,0 +1,89 @@
+name: "K73-17-63-0.1"
+author: "Ivex"
+package: "K73-17-63-0.1"
+  units: NM
+  sel_rect: -6032500 -2562500 6032500 6062500
+  ref_text: 1270000 0 2443200 0 177800
+  value_text: 1270000 0 -96800 0 177800
+  centroid: 0 0 0 0
+  openscad_code: "translate([0,0.00,0.000]) // (automatic adjustment when moving the footprint origin)"
+  openscad_code: "scale([1,1,1])     // (automatic adjustment when changing the project units)"
+  openscad_code: "{"
+  openscad_code: "    //-------------------"
+  openscad_code: "    // add your code here, for example:"
+  openscad_code: "    //color(`brown`)"
+  openscad_code: "    //rotate([0,0,0])"
+  openscad_code: "    //translate([0,0,0])"
+  openscad_code: "    //rotate([0,0,0])"
+  openscad_code: "    //import(`..\\..\\..\\LIB\\3D\\model.stl`);"
+  openscad_code: "    color(`white`)"
+  openscad_code: "    {"
+  openscad_code: "      translate([-2,-1.8,7])"
+  openscad_code: "      rotate([90,0,0])"
+  openscad_code: "      linear_extrude(0.5)"
+  openscad_code: "      text(`0.1`,2);"
+  openscad_code: "      "
+  openscad_code: "      rotate(180)"
+  openscad_code: "      translate([-2,-1.8,7])"
+  openscad_code: "      rotate([90,0,0])"
+  openscad_code: "      linear_extrude(0.5)"
+  openscad_code: "      text(`0.1`,2);"
+  openscad_code: "    }"
+  openscad_code: "    //-------------------"
+  openscad_code: "}"
+  outline_polyline: 150000 -2794000 970000 1 0 4
+    next_corner: 2794000 970000 0
+    next_corner: 2794000 -1570000 0
+    next_corner: -2794000 -1570000 0
+    close_polyline: 0
+    openscad_data: "// Global lift -2.3mm //|// Global rotation 0.0 //|"
+  outline_polyline: 150000 -5280000 -312500 0 0 4
+    next_corner: -4880000 -312500 0
+    next_corner: -4880000 1987500 0
+    next_corner: -4680000 2187500 1
+    next_corner: -3280000 3587500 2
+    next_corner: -4680000 4987500 2
+    next_corner: -4880000 5187500 1
+    next_corner: -4880000 5987500 0
+    next_corner: -5280000 5987500 0
+    next_corner: -5280000 5187500 0
+    next_corner: -4680000 4587500 2
+    next_corner: -3680000 3587500 1
+    next_corner: -4680000 2587500 1
+    next_corner: -5280000 1987500 2
+    close_polyline: 0
+    openscad_data: "// Global lift -2.3mm //|// Global rotation 0.0 //|// matrix: 1 1 1 0.000 0.000 0.000 //|// resolution $fn = 20 //|color( `Aqua` )|{|    *corner1*, 0.0 ])|    {|        rotate([ 90.000,  0.000,  0.000 ])|        {|            linear_extrude( 0.500, scale= 1.000, convexity=Convexity )|            {|                polygon([ *content* ]);|            }|        }|    }|}|"
+  outline_polyline: 150000 4920000 -312500 0 0 4
+    next_corner: 4920000 1987500 0
+    next_corner: 4720000 2187500 2
+    next_corner: 3320000 3587500 1
+    next_corner: 4720000 4987500 1
+    next_corner: 4920000 5187500 2
+    next_corner: 4920000 5987500 0
+    next_corner: 5320000 5987500 0
+    next_corner: 5320000 5187500 0
+    next_corner: 4720000 4587500 1
+    next_corner: 3720000 3587500 2
+    next_corner: 4720000 2587500 2
+    next_corner: 5320000 1987500 1
+    next_corner: 5320000 -312500 0
+    close_polyline: 0
+    openscad_data: "// Global rotation 0.000 //|// Global lift -2.300mm //|// matrix: 1 1 1 0.000 0.000 0.000 //|// resolution $fn = 20 //|color( `Aqua` )|{|    *corner1*, 0.0 ])|    {|        rotate([ 90.000,  0.000,  0.000 ])|        {|            linear_extrude( 0.500, scale= 1.000, convexity=Convexity )|            {|                polygon([ *content* ]);|            }|        }|    }|}|"
+  outline_polyline: 1500000 -3180000 1287500 0 0 7
+    next_corner: -4780000 -312500 2
+    next_corner: -3280000 -1812500 2
+    next_corner: 3320000 -1812500 0
+    next_corner: 4820000 -312500 2
+    next_corner: 3220000 1287500 2
+    close_polyline: 0
+    openscad_data: "// Global lift -2.3mm //|// Global rotation 0.0 //|// Consider line width //|// matrix: 1 1 1 0.000 0.000 0.000 //|// resolution $fn = 20 //|color( `SkyBlue` )|{|    minkowski()|    {|        $fn = 20;|        translate([ 0.000,  0.000,  6.500 ])|        {|            *corner1*, 0.0 ])|            {|                linear_extrude( 7.000, scale= 1.000, convexity=Convexity )|                {|                    polygon([ *content* ]);|                }|            }|        }|        sphere( *width* );|    }|}|"
+  n_pins: 2
+    pin: "1" 1000000 -5080000 -300000 0 ""
+      top_pad: 1 1905000 952500 952500 0
+      inner_pad: 0 0 0 0 0 0
+      bottom_pad: 1 1905000 952500 952500 0
+    pin: "2" 1000000 5080000 -300000 0 ""
+      top_pad: 1 1905000 952500 952500 0
+      inner_pad: 0 0 0 0 0 0
+      bottom_pad: 1 1905000 952500 952500 0
+
