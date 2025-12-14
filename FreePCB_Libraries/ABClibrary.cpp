@@ -242,6 +242,7 @@ while (CompleteRead == 0)
         else    exit(0);
         }
 Timer2->Enabled = true;
+Form1->FormStyle = fsStayOnTop;
 }
 
 
@@ -1873,7 +1874,8 @@ Draw();
 BOOL OK = SendMessage_1("Polyline Attributes");
 if( OK == 0 )
         SendMessage_1("Атрибуты полилинии");
-Form1->FormStyle = fsNormal;
+//Form1->FormStyle = fsNormal;
+Form1->FormStyle = fsStayOnTop;
 }
 
 
@@ -2104,7 +2106,8 @@ if (gLocked)
         return;
 if( MessageBox(NULL, "WARNING! By clicking the button to rewrite the footprint libraries, you agree to the total sorting of the footprints, their redistribution by files, the creation of new file names according to the selected sorting style, the deletion of old fpl file names and the inability to restore custom fpl names. If this is the first sorting of the selected library, then it is strongly recommended that you back up your library before modifying it.","", MB_OKCANCEL | MB_ICONWARNING) == IDCANCEL )
         return;
-Form1->FormStyle = fsNormal;
+//Form1->FormStyle = fsNormal;
+Form1->FormStyle = fsStayOnTop;
 //Если FreePCB не запущена...
 if (FindWindow( NULL,"Log") == NULL)
         {

@@ -11,6 +11,7 @@ object Form1: TForm1
   Font.Height = -13
   Font.Name = 'Tahoma'
   Font.Style = [fsBold]
+  FormStyle = fsStayOnTop
   OldCreateOrder = False
   Position = poScreenCenter
   Visible = True
