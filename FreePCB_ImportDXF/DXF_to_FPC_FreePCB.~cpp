@@ -2511,7 +2511,8 @@ fn.SetLength(fn.Length()-1);
 if( Form1->Freeasy->Checked )
         fn = ExtractFilePath(fn) + "FreeCds.exe";
 else    fn = ExtractFilePath(fn) + "FreePcb.exe";
-//
+
+// RUS
 if( FileExists(fn) == 0 )
         if( Form1->Freeasy->Checked )
                 fn = ExtractFilePath(fn) + "—хемјтор.exe";

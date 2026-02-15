@@ -1248,6 +1248,7 @@ while (!Read.eof())
                         double FIRSTX = 0;
                         double FIRSTY = 0;
                         LAYER_L[ln] = "Unnamed";
+                        Th = 0;
                         W_L[ln] = 0;
                         type_Line = 0;
                         while (1)     //пока не конец линии читаем параметры
@@ -1373,7 +1374,7 @@ while (!Read.eof())
                                                 }
                                         FLG++;
                                         }
-                                else if ( SPLINE == false && (A.SubString(1,A.Length()) == "43" || A.SubString(1,A.Length()) == "40"))        //толщина линии
+                                else if ( /*SPLINE == false && */(A.SubString(1,A.Length()) == "43" || A.SubString(1,A.Length()) == "40"))        //толщина линии
                                         {
                                         Read.getline(stringchar,sizeof(stringchar));
                                         lines++;
