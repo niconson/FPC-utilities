@@ -15,7 +15,7 @@ void CombNetList_and_Area (AnsiString OpenD, long CNT)
 //×ÒÅÍÈÅ CombNetList.txt
 long i = 0;
 char str[MAX_CHARS];
-Form1->Label4->Caption = "×òåíèå CombNetList.txt" ;
+Form1->Label4->Caption = "Reading CombNetList.txt" ;
 Application->ProcessMessages();
 AnsiString A = ExtractFilePath (Application->ExeName)  ;
 A = A + "Import_Tango\\CombNetList.txt";

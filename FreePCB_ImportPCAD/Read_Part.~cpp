@@ -176,7 +176,7 @@ void Read_Part (AnsiString OpenD, long CNT)
 //ЧТЕНИЕ PATTERN PCAD
 long i = 0;
 char str[MAX_CHARS];
-Form1->Label4->Caption = "Чтение Parts" ;
+Form1->Label4->Caption = "Reading parts" ;
 Application->ProcessMessages();
 AnsiString A;
 ifstream read_P (OpenD.c_str());
@@ -268,7 +268,7 @@ while (CNT>=0)
                         Ref = ex_str (A,&i);
                         }
                 else    ShowMessage ("    Error Ref!");
-                Form1->Label4->Caption = "Чтение Parts: " + Ref;
+                Form1->Label4->Caption = "Reading part: " + Ref;
                 Application->ProcessMessages();
                 //(pt
                 i = go (A, 1, "(pt ");
@@ -348,7 +348,7 @@ while (CNT>=0)
                         }
                 Count_Part++;
                 PadIndex++;
-                Ref = AnsiString("FreePad__") + AnsiString(PadIndex);
+                Ref = AnsiString("VIA") + AnsiString(PadIndex);
                 Value = "";
                 Package = "";
                 Shape = "";
@@ -396,8 +396,9 @@ while (CNT>=0)
                         i = go(A, i, " ");
                         Net = ex_str(A,&i);
                         }
-                if (StrBegin(A, "(pad "))       ViaFlag = 1;
-                else                            ViaFlag = 2;
+                if (StrBegin(A, "(pad "))
+                        ViaFlag = 1;
+                else    ViaFlag = 2;
                 }
         if (!CNT) break;
         CNT--;
@@ -406,7 +407,7 @@ if (Count_Part)
         {
         write_parts ();
         }
-Form1->Label4->Caption = "Чтение Parts завершено" ;
+Form1->Label4->Caption = "Reading parts completed" ;
 Application->ProcessMessages();
 read_P.close();
 

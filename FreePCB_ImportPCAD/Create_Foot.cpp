@@ -984,7 +984,7 @@ while (A.SubString(1,3) != "end" )
                         }
                 i = Form2->ListBox1_FootPrintsName->Count;
                 bool FLAGPOLY;
-                if (StrBegin (Reference, "FREEPAD__" ))
+                if (StrBegin (Reference, "VIA" ))
                         {
                         ///if (StrBegin (shape, "VIA" )) FlagVia = true;
                         n_pins = 0;

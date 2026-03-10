@@ -967,7 +967,7 @@ while (A.SubString(1,3) != "end" )
                 rotateFoot = 0;
                 i = prob (A, 1);
                 shape = ex_str (A, &i);
-                Form1->Label4->Caption = "Создание футпринта: " + shape;
+                Form1->Label4->Caption = "Footprint creation: " + shape;
                 Application->ProcessMessages();
                 i = 1;
                 while ((shape.SubString(i,1) != "^")&&(i <= shape.Length())) i++;
@@ -1034,7 +1034,7 @@ else                    A = "";
 AnsiString Sh;
 AnsiString ShBack;
 i = 0;
-Form1->Label4->Caption = "Создание переходных отверстий" ;
+Form1->Label4->Caption = "Vias are created" ;
 Application->ProcessMessages();
 while (A.UpperCase().SubString(1,A.Length()) == "VIA")
         {

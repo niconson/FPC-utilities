@@ -52,7 +52,7 @@ while (1)
                 indexPin++;
                 i = prob (A,1);
                 CombNetList << "pin: ";
-                CombNetList << indexPin;
+                CombNetList << AnsiString(indexPin-1).c_str();
                 CombNetList << " ";
                 CombNetList << A.SubString(i,(A.Length()-i+1)).c_str() << endl;
                 Form2->StringGrid1->Cells[0][Form2->StringGrid1->Row] = A.SubString(i,(A.Length()-i+1));
@@ -82,14 +82,14 @@ while (1)
                         NetListVias.getline(str,sizeof(str));
                         B = str;
                         B = B.Trim();
-                        if (B.UpperCase().SubString(1,9) != "FREEPAD__") net2 = B;
+                        if (B.UpperCase().SubString(1,3) != "VIA") net2 = B;
                         else
                                 {
                                 if (net.SubString(1,net.Length()) == net2.SubString(1,net2.Length()))
                                         {
                                         indexPin++;
                                         CombNetList << "pin: ";
-                                        CombNetList << indexPin;
+                                        CombNetList << AnsiString(indexPin-1).c_str();
                                         CombNetList << " ";
                                         CombNetList <<  B.c_str() << endl;
                                         Form2->StringGrid1->Cells[0][Form2->StringGrid1->Row] = B;
@@ -101,7 +101,7 @@ while (1)
                                         Form2->StringGrid1->Cells[1][Form2->StringGrid1->Row] = "-1";
                                         Form2->StringGrid1->Cells[2][Form2->StringGrid1->Row] = "Unconnected";
                                         }
-                                }
+                                } 
                         }
                 NetListVias.close();
                 }

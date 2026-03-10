@@ -1374,7 +1374,7 @@ while (!Read.eof())
                                                 }
                                         FLG++;
                                         }
-                                else if ( /*SPLINE == false && */(A.SubString(1,A.Length()) == "43" || A.SubString(1,A.Length()) == "40"))        //толщина линии
+                                else if ( SPLINE == false && (A.SubString(1,A.Length()) == "43" || A.SubString(1,A.Length()) == "40"))        //толщина линии
                                         {
                                         Read.getline(stringchar,sizeof(stringchar));
                                         lines++;

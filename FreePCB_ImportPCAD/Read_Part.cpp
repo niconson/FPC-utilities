@@ -157,7 +157,8 @@ void write_parts ( void )
         else    {
                 Form2->StringGrid1->Cells[0][Form2->StringGrid1->Row] = "Via";
                 Form2->StringGrid1->Cells[1][Form2->StringGrid1->Row] = Shape;
-                Form2->StringGrid1->Cells[2][Form2->StringGrid1->Row] = Net;
+                if( Net.Length() )
+                        Form2->StringGrid1->Cells[2][Form2->StringGrid1->Row] = Net;
                 Form2->StringGrid1->Cells[3][Form2->StringGrid1->Row] = PosX;
                 Form2->StringGrid1->Cells[4][Form2->StringGrid1->Row] = PosY;
                 Form2->StringGrid1->RowCount++;
@@ -348,7 +349,7 @@ while (CNT>=0)
                         }
                 Count_Part++;
                 PadIndex++;
-                Ref = AnsiString("FreePad__") + AnsiString(PadIndex);
+                Ref = AnsiString("VIA") + AnsiString(PadIndex);
                 Value = "";
                 Package = "";
                 Shape = "";
@@ -396,8 +397,9 @@ while (CNT>=0)
                         i = go(A, i, " ");
                         Net = ex_str(A,&i);
                         }
-                if (StrBegin(A, "(pad "))       ViaFlag = 1;
-                else                            ViaFlag = 2;
+                if (StrBegin(A, "(pad "))
+                        ViaFlag = 1;
+                else    ViaFlag = 2;
                 }
         if (!CNT) break;
         CNT--;

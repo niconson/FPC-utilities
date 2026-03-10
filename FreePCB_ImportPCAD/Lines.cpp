@@ -1530,7 +1530,7 @@ for (int k = 0; k<Form2->StringGrid1->RowCount; k++)
                 B = ExtractFilePath (Application->ExeName)  ;
                 ofstream PartSV;
                 PartSV.open((B + "Import_Tango\\PartList.txt").c_str(), std::ios_base::app );
-                PartSV << "part: Via__";
+                PartSV << "part: VIA";
                 PartSV << AnsiString(k).c_str() << endl;
                 PartSV << "ref_text: 0 0 0 0 0" << endl;
                 PartSV << "shape: \"";
@@ -1545,7 +1545,7 @@ for (int k = 0; k<Form2->StringGrid1->RowCount; k++)
 
                 //Добавление NET VIA
                 AnsiString NetVia = Form2->StringGrid1->Cells[2][k];
-                A = "Via__" + AnsiString(k) + ".1";
+                A = "VIA" + AnsiString(k) + ".1";
                 Form1->ListBox4_Lines->Items->Add(NetVia);
                 Form1->ListBox4_Lines->Items->Add(A);
                 }
